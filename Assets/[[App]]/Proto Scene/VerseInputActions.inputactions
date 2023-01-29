@@ -1,0 +1,56 @@
+{
+    "name": "VerseInputActions",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "13a77f1b-ce03-4ac5-ae96-05aa1c9c656d",
+            "actions": [
+                {
+                    "name": "VoiceBroadcastGlobal",
+                    "type": "Button",
+                    "id": "849b63f0-2a77-422b-9f52-673c0389d8f1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b8182c0e-42fc-4539-bb5e-7c4d09c64420",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VoiceBroadcastGlobal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dfa59ee8-b2be-4043-aa96-b7d34ea9eba1",
+                    "path": "<WebXRControllerRight>/primaryButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VoiceBroadcastGlobal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d366ee98-2199-4e38-9123-91048e8ee173",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VoiceBroadcastGlobal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

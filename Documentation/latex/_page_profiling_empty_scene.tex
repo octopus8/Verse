@@ -1,0 +1,59 @@
+\hypertarget{_page_profiling_empty_scene_SectionProEmptySpecs}{}\doxysection{Specifications}\label{_page_profiling_empty_scene_SectionProEmptySpecs}
+
+\begin{DoxyItemize}
+\item Empty scene with only the {\ttfamily Platform Rig} Game\+Object. No lights or anything.
+\item CPU\+: Locked at Level 2
+\item GPU\+: Locked at Level 2
+\item FOV\+: Locked at Level 0
+\item FPS\+: Max of 60
+\item MSAA\+: off
+\end{DoxyItemize}\hypertarget{_page_profiling_empty_scene_SectionProEmptyAndroid}{}\doxysection{Android Results}\label{_page_profiling_empty_scene_SectionProEmptyAndroid}
+\hypertarget{_page_profiling_empty_scene_SectionProEmptyAndroidFrameDebug}{}\doxysubsection{Frame Debugger}\label{_page_profiling_empty_scene_SectionProEmptyAndroidFrameDebug}
+
+\begin{DoxyItemize}
+\item Only 3 draw calls; all clear calls (color+\+Z+stencil) ~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/AndroidEmptySceneFrameDebug.png}{\texttt{  }} ~\newline
+ ~\newline
+
+\item As displayed in the CPU Usage Profiler ~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/AndroidEmptySceneFrameCPU.png}{\texttt{  }} ~\newline
+
+\end{DoxyItemize}\hypertarget{_page_profiling_empty_scene_SectionProEmptyAndroidOVRMT}{}\doxysubsection{OVRMT}\label{_page_profiling_empty_scene_SectionProEmptyAndroidOVRMT}
+
+\begin{DoxyItemize}
+\item CPU\+: ≈20\%
+\item GPU\+: 9\% ~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/AndroidEmptySceneOVRMT.jpg}{\texttt{  }}
+\end{DoxyItemize}\hypertarget{_page_profiling_empty_scene_SectionProEmptyBaseWebGL}{}\doxysection{Web\+GL Results}\label{_page_profiling_empty_scene_SectionProEmptyBaseWebGL}
+\hypertarget{_page_profiling_empty_scene_SectionProEmptyWebGLDevTools}{}\doxysubsection{Chrome Dev\+Tools}\label{_page_profiling_empty_scene_SectionProEmptyWebGLDevTools}
+
+\begin{DoxyItemize}
+\item CPU\+: ≈5.5ms ~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/WebGLEmptySceneDevToolsCPU.png}{\texttt{  }} ~\newline
+ ~\newline
+
+\item GPU\+: ≈1.0ms ~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/WebGLEmptySceneDevToolsGPU.png}{\texttt{  }} ~\newline
+
+\end{DoxyItemize}\hypertarget{_page_profiling_empty_scene_SectionProEmptyWebGLOVRMT}{}\doxysubsection{OVRMT}\label{_page_profiling_empty_scene_SectionProEmptyWebGLOVRMT}
+{\bfseries{OVRMT}}
+\begin{DoxyItemize}
+\item CPU\+: ≈30\%
+\item GPU\+: 22\% ~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/WebGLEmptySceneOVRMT.jpg}{\texttt{  }}
+\end{DoxyItemize}\hypertarget{_page_profiling_empty_scene_SectionProEmptyBaseConclusions}{}\doxysection{Conclusions}\label{_page_profiling_empty_scene_SectionProEmptyBaseConclusions}
+
+\begin{DoxyItemize}
+\item Android
+\begin{DoxyItemize}
+\item CPU\+: ≈20\%
+\item GPU\+: 9\%
+\end{DoxyItemize}
+\item Web\+GL
+\begin{DoxyItemize}
+\item CPU\+: ≈30\%
+\item GPU\+: 22\% ~\newline
+
+\end{DoxyItemize}
+\item Running an app as a Web\+GL app has about a 10\% overhead on both the GPU \& CPU than running the app as a standalone application. 
+\end{DoxyItemize}

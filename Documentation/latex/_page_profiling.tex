@@ -1,0 +1,90 @@
+\hypertarget{_page_profiling_SectionProfNotes}{}\doxysection{Notes}\label{_page_profiling_SectionProfNotes}
+\hypertarget{_page_profiling_SubsectionProfQuest2}{}\doxysubsection{Profiling on Quest 2}\label{_page_profiling_SubsectionProfQuest2}
+
+\begin{DoxyItemize}
+\item Locking CPU, GPU, FPS, and FOV allows for meaningful values to be obtained
+\item OVR Metrics Tool used to obtain FPS, GPU\%, and CPU\%
+\item App profiled as a deployed Android app and as a deployed Web\+GL app ~\newline
+
+\end{DoxyItemize}\hypertarget{_page_profiling_SubsectionProfAndroid}{}\doxysubsection{Profiling on Android}\label{_page_profiling_SubsectionProfAndroid}
+
+\begin{DoxyItemize}
+\item Stats obtained from OVR Profiler
+\item Stats also obtained from editor profiler
+\begin{DoxyItemize}
+\item draw calls per frame
+\item Frame debugger
+\item script debugging \& profiling ~\newline
+
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{_page_profiling_SubsectionProfWebGL}{}\doxysubsection{Profiling on Web\+GL}\label{_page_profiling_SubsectionProfWebGL}
+
+\begin{DoxyItemize}
+\item Stats obtained from OVR Profiler
+\item Stats also obtained from Chrome Dev\+Tools
+\begin{DoxyItemize}
+\item CPU time
+\item GPU time
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{_page_profiling_SectionProfConclusions}{}\doxysection{Conclusions}\label{_page_profiling_SectionProfConclusions}
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{_page_profiling_empty_scene}{Profiling Empty Scene}}
+\begin{DoxyItemize}
+\item Android
+\begin{DoxyItemize}
+\item CPU\+: ≈20\%
+\item GPU\+: 9\%
+\end{DoxyItemize}
+\item Web\+GL
+\begin{DoxyItemize}
+\item CPU\+: ≈30\%
+\item GPU\+: 22\% ~\newline
+
+\end{DoxyItemize}
+\item In an empty scene, Web\+GL uses about 10\% more GPU \& CPU than Android.
+\end{DoxyItemize}
+\item \mbox{\hyperlink{_page_profiling_fill_rate}{Profiling Fill Rate}}
+\begin{DoxyItemize}
+\item Android\+: Filling the view resulted in a 25\% increase in GPU usage (from 9\% up to 35\%); no increase in CPU usage (≈20\%).
+\item Web\+GL\+: Filling the view resulted in a 40\% increase in GPU usage (from 22\% up to 60\%); no increase in CPU usage (≈40\%).
+\item General
+\begin{DoxyItemize}
+\item GPU usage seems to drop linearly as the fill decreases.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item \mbox{\hyperlink{_page_profiling_m_s_a_a}{Profiling MSAA}}
+\begin{DoxyItemize}
+\item Android\+: MSAA had a minor effect with x2 resulted in about 2\% increase (from 20\% up to 22\%); MSAA x4 resulted in about 4\% increase (from 20\% up to 24\%). Increasing MSAA seemed to have a minor effect on CPU usage (from 20\% to 25\%).
+\item Web\+GL\+: MSAA had a major effect with x2 resulted in about 30\% increase (from 60\% to 75\%); MSAA x4 resulted in about 60\% increase (from 60\% to 95\%). Increasing MSAA seemed to have no effect on CPU usage.
+\end{DoxyItemize}
+\item \mbox{\hyperlink{_page_profiling_terrain}{Profiling Terrain}}
+\begin{DoxyItemize}
+\item General
+\begin{DoxyItemize}
+\item The Tiny Terrain test demonstrates the terrain has minimal effect on GPU or CPU when it does not take up much of the screen.
+\item Since the Tiny Terrain test had minimal effect, an increase in load is due to shader complexity.
+\item The terrain took 50\% more GPU than the simple quad.
+\end{DoxyItemize}
+\item Android
+\begin{DoxyItemize}
+\item The terrain took 50\% more GPU than the simple quad.
+\begin{DoxyItemize}
+\item Half fill\+: from 20\% to 33\%
+\item Full fill\+: from 35\% to 50\%
+\end{DoxyItemize}
+\item The CPU load did not change relative to the Empty Scene, regardless of how much of the terrain was displayed. ~\newline
+
+\end{DoxyItemize}
+\item Web\+GL
+\begin{DoxyItemize}
+\item The terrain took 50\% more GPU than the simple quad.
+\begin{DoxyItemize}
+\item Half fill\+: from 40\% to 60\%
+\item Full fill\+: from 60\% to 90\%
+\end{DoxyItemize}
+\item The CPU load did not change relative to how much of the terrain was displayed, but did generally increase the CPU load 25\% (from 40\% to 50\%) ~\newline
+ 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}

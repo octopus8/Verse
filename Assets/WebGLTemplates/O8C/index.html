@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-XP1K36XSL9"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-XP1K36XSL9');
+		</script>
+  
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{{{ PRODUCT_NAME }}}</title>
+    <meta name="description" content="{{{ DESCRIPTION }}}">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+	<script src="TemplateData/Settings.js"></script>
+	
+  </head>
+  <body>
+    <div id="unity-container">
+      <div id="unity-canvas-container" style="width: 100%; height: 100%;">
+        <canvas id="unity-canvas" style="width: 100%; height: 100%;"></canvas>
+      </div>
+      <div id="unity-loading-bar">
+<!--        <div id="app-logo"></div>		-->
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+	  <div id="building-message" hidden>
+	    <div id="building-message-text" style="font-family: 'App';">Please wait...</div>
+      </div>
+	  <div id="vr-required" hidden>
+	    <div id="vr-required-message" style="font-family: 'App';">
+			This page is designed for VR-capable devices only.<br/>
+		</div>
+	  </div>
+      <div id="unity-footer">
+		<div id="version-number">
+			Version: {{{ PRODUCT_VERSION }}}
+		</div>
+		<div id="debug-buttons">
+			<button id="entervr" value="Enter VR" disabled>VR</button>
+			<button id="enterar" value="Enter AR" disabled>AR</button>
+			<div id="debug-button-text">Debug:</div>
+		</div>		
+      </div>
+	  <div id='start-vr' hidden>
+	    <div id='start-vr-message'>
+			<button id='start-vr-button' style="font-family: 'App';">Start</button>
+		</div>
+	  </div>	  
+
+    <div id="AcceptMicrophonePrivilegesMessage" style="position:absolute; visibility:hidden; left:0;top:0;width:100%; height:100%; background-color:black;">
+		<div class="dialogBox" style="display:flex; padding:2vmin; justify-content:center; align-items:center; width:50vw; height:25vh;  background-color:aqua; text-align:center;">
+			To talk to other players,<br/> accept microphone permissions.
+		</div>
+	</div>
+
+    <div id="MicrophonePrivilegesDeniedMessage" style="position:absolute; visibility:hidden; left:0;top:0;width:100%; height:100%; background-color:black;">
+		<div class="dialogBox" style="width:50vw; height:25vh;  background-color:aqua; text-align:center;">
+			<div style="text-align:center;">To talk to other players, change microphone permissions in the site permissions.</div>
+			<div style="height:4vh;"></div>						
+			<div style="display:flex;  justify-content:center; width:100%;">
+				<button id="MicrophonePrivilegesDeniedContinueButton" style="width:10vmin; height:6vmin; font-size:2vmin; font-family: 'App';">OK</button>
+			</div>			
+		</div>
+	</div>
+	  
+	  
+		<div id="requestVRPermission" style="position:absolute; visibility:hidden; left:0;top:0;width:100%; height:100%; background-color:black;">
+			<div class="dialogBox" style="display:flex; padding:2vmin; justify-content:center; align-items:center; width:50vw; height:25vh;  background-color:aqua; text-align:center;">
+				To continue, accept VR permissions.
+			</div>
+		</div>
+
+		<div id="vrPermissionDeclined" style="position:absolute; visibility:hidden; left:0;top:0;width:100%; height:100%; background-color:black;">
+			<div class="dialogBox" style="display:flex; padding:2vmin; justify-content:center; align-items:center; width:50vw; height:25vh;  background-color:aqua; text-align:center;">
+				To continue you must accept VR permissions.<br/><br/>Please reload and accept VR permissions.
+			</div>
+		</div>
+
+    </div>
+    <script>
+	
+		var isMicrophonePermissionChecked = false;
+		
+		var acceptMicrophonePrivilegesMessage = document.getElementById("AcceptMicrophonePrivilegesMessage");
+		var microphonePrivilegesDeniedMessage = document.getElementById("MicrophonePrivilegesDeniedMessage");
+		var microphonePrivilegesDeniedContinueButton = document.getElementById('MicrophonePrivilegesDeniedContinueButton');
+		
+		microphonePrivilegesDeniedContinueButton.addEventListener('click', function (event) {
+			microphonePrivilegesDeniedMessage.style.visibility = "hidden";					
+		}, false);
+		
+		function RequestMicrophonePermissions() {
+			acceptMicrophonePrivilegesMessage.style.visibility = "visible";
+			navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+				.then(function(stream) {
+					acceptMicrophonePrivilegesMessage.style.visibility = "hidden";					
+				})
+				.catch(function(err) {
+					acceptMicrophonePrivilegesMessage.style.visibility = "hidden";					
+					microphonePrivilegesDeniedMessage.style.visibility = "visible";					
+				})
+				.finally(function() {
+				isMicrophonePermissionChecked = true;
+				});									
+		}
+			
+		
+		function GetMicrophonePermission() {
+			navigator.permissions.query({name:'microphone'}).then(function(result) {
+				if (result.state == 'granted') {
+					isMicrophonePermissionChecked = true;
+				} else {
+					RequestMicrophonePermissions();
+				}
+			});
+		}
+		
+		GetMicrophonePermission();
+	
+	
+	
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
+      var config = {
+        dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
+        frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
+        codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
+#if MEMORY_FILENAME
+        memoryUrl: buildUrl + "/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+        symbolsUrl: buildUrl + "/{{{ SYMBOLS_FILENAME }}}",
+#endif
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "{{{ COMPANY_NAME }}}",
+        productName: "{{{ PRODUCT_NAME }}}",
+        productVersion: "{{{ PRODUCT_VERSION }}}",
+      };
+
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var canvasContainer = document.querySelector("#unity-canvas-container");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var buildingMessage = document.querySelector("#building-message");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var debugButtons = document.querySelector("#debug-buttons");
+	  debugButtons.hidden = true;
+	  
+      var unityInstance = null;
+      {{{ WEBXR_POLYFILL_CONFIG }}}
+
+#if BACKGROUND_FILENAME
+      canvas.style.background = "url('" + buildUrl + "/{{{ BACKGROUND_FILENAME.replace(/'/g, '%27') }}}') center / cover";
+#endif
+      loadingBar.style.display = "block";
+
+      let enterARButton = document.getElementById('enterar');
+      let enterVRButton = document.getElementById('entervr');
+      let startVRButton = document.getElementById('start-vr');
+	  let vrPermissionDeclined = document.getElementById('vrPermissionDeclined');
+	  let requestVRPermission = document.getElementById('requestVRPermission');
+	  let startButtonButton = document.getElementById('start-vr-button');
+	  
+	  var isLoadingUnity = false;
+	  var isVRSupported = false;
+
+      document.addEventListener('onARSupportedCheck', function (event) {
+        enterARButton.disabled = !event.detail.supported;
+      }, false);
+      document.addEventListener('onVRSupportedCheck', function (event) {
+        enterVRButton.disabled = !event.detail.supported;
+		isVRSupported = event.detail.supported;
+		
+		// If require VR, not already loading, and haven't previously loaded Unity,
+		// then handle.
+  		if (requireVR && !isLoadingUnity && (null == unityInstance))
+		{
+          // If VR is supported, then load Unity.
+          if (event.detail.supported)
+          {
+            LoadUnity();
+          }
+          // Otherwise, show VR required message.
+          else
+          {
+			  document.getElementById('vr-required').hidden = false;
+          }
+		}				
+      }, false);
+
+      enterARButton.addEventListener('click', function (event) {
+        unityInstance.Module.WebXR.toggleAR();
+      }, false);
+      enterVRButton.addEventListener('click', function (event) {
+        unityInstance.Module.WebXR.toggleVR();
+      }, false);
+	  startButtonButton.addEventListener('click', function (event) {
+	    if (requireVR || isVRSupported) {
+			startButtonButton.style.visibility = "hidden";		
+			setTimeout(() => {
+			  startVRButton.hidden = true;
+			  requestVRPermission.style.visibility = "visible";		
+			}, 750);
+			unityInstance.Module.WebXR.toggleVR();
+		}
+		else
+		{
+			  startVRButton.hidden = true;
+		}
+      }, false);
+	  
+      if (requireVR)
+      {
+        CheckVRSupport();	  
+      }	
+      else
+      {	  
+        LoadUnity();
+      }
+
+	  function LoadUnity()
+	  {
+	    isLoadingUnity = true;
+        var script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+          createUnityInstance(canvas, config, (progress) => {
+		    if (progress >= 0.8)
+			{
+			  buildingMessage.hidden = false;
+			}
+            progressBarFull.style.width = 100 * progress + "%";
+          }).then((instance) => {
+		    isLoadingUnity = false;
+            unityInstance = instance;
+            loadingBar.style.display = "none";
+			buildingMessage.hidden = true;			
+            if (fullscreenButton)
+            {
+              fullscreenButton.onclick = () => {
+                unityInstance.SetFullscreen(1);
+              };
+            }
+			startVRButton.hidden = false;
+			document.addEventListener('onStartVR', function() {
+			  console.log('VR Session Start');
+			  startVRButton.hidden = true;
+			  requestVRPermission.style.visibility = "hidden";		
+			}, false);			  
+			document.addEventListener('onEndXR', function() {
+			  console.log('XR Session End');
+			  requestVRPermission.style.visibility = "hidden";		
+			  startVRButton.hidden = false;
+			  startButtonButton.style.visibility = "visible";		
+			  startButtonButton.style.fontSize = '14pt';
+			  startButtonButton.textContent = 'Return to VR';
+			}, false);
+			document.addEventListener('onVRDeclined', function() {
+			  requestVRPermission.style.visibility = "hidden";		
+			  vrPermissionDeclined.style.visibility = "visible";		
+			  startVRButton.hidden = true;
+			  unityInstance.Quit();
+			}, false);			  
+			
+          }).catch((message) => {
+            alert(message);
+			isLoadingUnity = false;
+          });
+        };
+        document.body.appendChild(script);
+	  }
+	  
+	  
+	  function CheckVRSupport()
+	  {
+        navigator.xr.isSessionSupported('immersive-vr').then(function (supported) {
+            document.dispatchEvent(new CustomEvent('onVRSupportedCheck', { detail:{supported:supported} }));
+        });		
+	  }
+
+	  
+	  
+    </script>
+  </body>
+</html>

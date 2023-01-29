@@ -1,0 +1,152 @@
+\hypertarget{_page_deployment_SectionServer}{}\doxysection{Server}\label{_page_deployment_SectionServer}
+\hypertarget{_page_deployment_SubsectionBuild}{}\doxysubsection{1. Building}\label{_page_deployment_SubsectionBuild}
+
+\begin{DoxyEnumerate}
+\item Open project in Unity.
+\item Switch platform to Dedicated Server. Verify type is set to Linux.
+\item Build app.
+\begin{DoxyItemize}
+\item The target build directory will be zipped in an upcoming next step, therefore, it makes sense to build to a directory named appropriately (e.\+g. Verse\+Server-\/\+Dev). 
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{_page_deployment_SectionUpload}{}\doxysubsection{2. Uploading}\label{_page_deployment_SectionUpload}
+
+\begin{DoxyEnumerate}
+\item Delete the debug directory created.
+\item Zip the directory.
+\item Copy the project to the server~\newline
+ {\ttfamily scp ./\+Verse\+Server-\/\+Dev.zip \texorpdfstring{$<$}{<}username\texorpdfstring{$>$}{>}@\texorpdfstring{$<$}{<}ip address\texorpdfstring{$>$}{>}\+:$\sim$}
+\item Log into the server~\newline
+ {\ttfamily ssh \texorpdfstring{$<$}{<}username\texorpdfstring{$>$}{>}@\texorpdfstring{$<$}{<}ip address\texorpdfstring{$>$}{>}}
+\item Check if the server is running~\newline
+ {\ttfamily ps -\/ef $\vert$ grep \char`\"{}\+Server\char`\"{}}
+\begin{DoxyItemize}
+\item If the server is running, kill it~\newline
+ {\ttfamily kill -\/9 \texorpdfstring{$<$}{<}process ID\texorpdfstring{$>$}{>}}
+\end{DoxyItemize}
+\item Execute the following 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rm\ -\/rf\ ./VerseServer-\/Dev}
+\DoxyCodeLine{unzip\ ./VerseServer-\/Dev.zip}
+\DoxyCodeLine{rm\ ./VerseServer-\/Dev.zip}
+\DoxyCodeLine{cp\ ./cert/*\ ./VerseServer-\/Dev}
+\DoxyCodeLine{cd\ ./VerseServer-\/Dev}
+\DoxyCodeLine{chmod\ +x\ ./VerseServer-\/Dev.x86\_64}
+\DoxyCodeLine{./VerseServer-\/Dev.x86\_64}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{_page_deployment_SectionUsefulBashCommands}{}\doxysection{Useful Server Commands}\label{_page_deployment_SectionUsefulBashCommands}
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{nohup\ ./VerseServer-\/Dev.x86\_64\ >\ out.txt\ \&\ disown}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item When executed in the {\ttfamily Verse\+Server-\/\+Dev} directory, this will execute the dev server in the background with the output sent to {\ttfamily out.\+txt}.
+\end{DoxyItemize}
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{tail\ -\/f\ ./out.txt}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item Use this to watch the output of the server sent to {\ttfamily out.\+txt}.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{_page_deployment_SectionUsefulADBCommands}{}\doxysection{Useful ADB Commands}\label{_page_deployment_SectionUsefulADBCommands}
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{adb\ kill-\/server}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item Kills the ADB server.
+\end{DoxyItemize}
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{adb\ tcpip\ 5555}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item Starts the ADB server listening to port 5555.
+\end{DoxyItemize}
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{adb\ devices}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item Lists devices connected to ADB.
+\end{DoxyItemize}
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{adb\ connect\ <ip\ address>}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item Establishes a wireless ADB connection to the specified device.
+\end{DoxyItemize}
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{adb\ logcat\ -\/c}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item Clears the ADB log.
+\end{DoxyItemize}
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{adb\ logcat\ -\/s\ Unity}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item Use this to watch Unity ADB log output.
+\end{DoxyItemize}
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{adb\ shell\ setprop\ debug.oculus.refreshrate\ 60}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item Locks the device to 60 FPS.
+\end{DoxyItemize}
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{adb\ shell\ setprop\ debug.oculus.cpulevel\ 2}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item Locks the device\textquotesingle{}s CPU level to 2.
+\end{DoxyItemize}
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{adb\ shell\ setprop\ debug.oculus.gpulevel\ 2}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item Locks the device\textquotesingle{}s GPU level to 2.
+\end{DoxyItemize}
+\item 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{adb\ shell\ setprop\ debug.oculus.foveation.level\ 0}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item Locks the device\textquotesingle{}s foveation level to 0. 
+\end{DoxyItemize}
+\end{DoxyItemize}

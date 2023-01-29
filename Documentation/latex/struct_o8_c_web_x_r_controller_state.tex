@@ -1,0 +1,93 @@
+\hypertarget{struct_o8_c_web_x_r_controller_state}{}\doxysection{O8\+CWeb\+XRController\+State Struct Reference}
+\label{struct_o8_c_web_x_r_controller_state}\index{O8CWebXRControllerState@{O8CWebXRControllerState}}
+
+
+Holds Web\+XR controller state info.  
+
+
+Inheritance diagram for O8\+CWeb\+XRController\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_o8_c_web_x_r_controller_state}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_o8_c_web_x_r_controller_state_a2ab3cd5215897341bac0242e8de1a28b}\label{struct_o8_c_web_x_r_controller_state_a2ab3cd5215897341bac0242e8de1a28b}} 
+enum {\bfseries Controller\+Button} \{ \newline
+{\bfseries Primary\+Button}
+, {\bfseries Primary\+Touch}
+, {\bfseries Secondary\+Button}
+, {\bfseries Secondary\+Touch}
+, \newline
+{\bfseries Grip\+Button}
+, {\bfseries Trigger\+Button}
+, {\bfseries Menu\+Button}
+, {\bfseries Primary2\+DAxis\+Click}
+, \newline
+{\bfseries Primary2\+DAxis\+Touch}
+, {\bfseries Secondary2\+DAxis\+Click}
+, {\bfseries Secondary2\+DAxis\+Touch}
+, {\bfseries User\+Presence}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_o8_c_web_x_r_controller_state_af627236ff428a4350ad9a5efd5b955e2}\label{struct_o8_c_web_x_r_controller_state_af627236ff428a4350ad9a5efd5b955e2}} 
+void {\bfseries Reset} ()
+\item 
+\mbox{\Hypertarget{struct_o8_c_web_x_r_controller_state_a8341e77bd17a4df3619f853509c719a6}\label{struct_o8_c_web_x_r_controller_state_a8341e77bd17a4df3619f853509c719a6}} 
+\mbox{\hyperlink{struct_o8_c_web_x_r_controller_state}{O8\+CWeb\+XRController\+State}} {\bfseries With\+Button} (Controller\+Button button, bool state=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_o8_c_web_x_r_controller_state_a18975b09e9cdc3e3288916d323390e01}\label{struct_o8_c_web_x_r_controller_state_a18975b09e9cdc3e3288916d323390e01}} 
+Vector2 {\bfseries primary2\+DAxis}
+\item 
+\mbox{\Hypertarget{struct_o8_c_web_x_r_controller_state_af0fd2db37a540455690e7e9cd0ea9c1c}\label{struct_o8_c_web_x_r_controller_state_af0fd2db37a540455690e7e9cd0ea9c1c}} 
+float {\bfseries trigger}
+\item 
+\mbox{\Hypertarget{struct_o8_c_web_x_r_controller_state_a65cb9a5fb474f7771a2a0c1ea5a3309c}\label{struct_o8_c_web_x_r_controller_state_a65cb9a5fb474f7771a2a0c1ea5a3309c}} 
+float {\bfseries grip}
+\item 
+\mbox{\Hypertarget{struct_o8_c_web_x_r_controller_state_a7453cfea5eb06791c4c8fa21c89533b1}\label{struct_o8_c_web_x_r_controller_state_a7453cfea5eb06791c4c8fa21c89533b1}} 
+Vector2 {\bfseries secondary2\+DAxis}
+\item 
+\mbox{\Hypertarget{struct_o8_c_web_x_r_controller_state_abd12f55f8521d63368c92a76ccf62883}\label{struct_o8_c_web_x_r_controller_state_abd12f55f8521d63368c92a76ccf62883}} 
+ushort {\bfseries buttons}
+\item 
+\mbox{\Hypertarget{struct_o8_c_web_x_r_controller_state_ad4f3b7fc6541af93a717ccf8bf3cca23}\label{struct_o8_c_web_x_r_controller_state_ad4f3b7fc6541af93a717ccf8bf3cca23}} 
+float {\bfseries battery\+Level}
+\item 
+\mbox{\Hypertarget{struct_o8_c_web_x_r_controller_state_a21c0a50a5320357cbc2aba9ff1e2bd79}\label{struct_o8_c_web_x_r_controller_state_a21c0a50a5320357cbc2aba9ff1e2bd79}} 
+int {\bfseries tracking\+State}
+\item 
+\mbox{\Hypertarget{struct_o8_c_web_x_r_controller_state_a4699f21644321314d41de4a0fdeea18a}\label{struct_o8_c_web_x_r_controller_state_a4699f21644321314d41de4a0fdeea18a}} 
+bool {\bfseries is\+Tracked}
+\item 
+\mbox{\Hypertarget{struct_o8_c_web_x_r_controller_state_af7961687d65cf56cb3868d724eab5c80}\label{struct_o8_c_web_x_r_controller_state_af7961687d65cf56cb3868d724eab5c80}} 
+Vector3 {\bfseries device\+Position}
+\item 
+\mbox{\Hypertarget{struct_o8_c_web_x_r_controller_state_a132a6b52a5a6860b22d0b9ddc92c9a3d}\label{struct_o8_c_web_x_r_controller_state_a132a6b52a5a6860b22d0b9ddc92c9a3d}} 
+Quaternion {\bfseries device\+Rotation}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_o8_c_web_x_r_controller_state_a3a6c0aeb4691bd75348ac355d3a73ca0}\label{struct_o8_c_web_x_r_controller_state_a3a6c0aeb4691bd75348ac355d3a73ca0}} 
+static Four\+CC {\bfseries format\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{struct_o8_c_web_x_r_controller_state_ae3ea48afe36cb6f31f607c2743547bc9}\label{struct_o8_c_web_x_r_controller_state_ae3ea48afe36cb6f31f607c2743547bc9}} 
+Four\+CC {\bfseries format}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Holds Web\+XR controller state info. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Business/\+Projects/\+O8\+C/\+Verse/\+Verse -\/ Web\+GL/\+Assets/\mbox{[}\+O8\+CSystem\mbox{]}/\+Scripts/\+System/\+Web\+GL/O8\+CWeb\+XRController\+State.\+cs\end{DoxyCompactItemize}

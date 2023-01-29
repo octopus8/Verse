@@ -1,0 +1,123 @@
+\hypertarget{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager}{}\doxysection{O8\+C.\+System.\+O8\+CMirror\+Network\+Manager Class Reference}
+\label{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager}\index{O8C.System.O8CMirrorNetworkManager@{O8C.System.O8CMirrorNetworkManager}}
+
+
+Manages starting/stopping the server/client.  
+
+
+Inheritance diagram for O8\+C.\+System.\+O8\+CMirror\+Network\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a2df72be6cb8a9f3b5a9398e1f4f8c15c}\label{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a2df72be6cb8a9f3b5a9398e1f4f8c15c}} 
+override void {\bfseries On\+Start\+Server} ()
+\begin{DoxyCompactList}\small\item\em Called on the server upon server start, registers a handler for voice messages. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_ab29c55b8bba3b3cef99d1d92623c1b53}\label{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_ab29c55b8bba3b3cef99d1d92623c1b53}} 
+override void {\bfseries On\+Stop\+Server} ()
+\begin{DoxyCompactList}\small\item\em Called on the server upon server stop, unregisters a handler for voice messages. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_ab20896d117e758177598c2aa85a76596}{On\+Server\+Connect}} (Network\+Connection\+To\+Client conn)
+\begin{DoxyCompactList}\small\item\em Called on the server upon a player connection, this method simply logs the connection. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a29fdce8a17667e8820aa428b1f629e6f}{On\+Server\+Disconnect}} (Network\+Connection\+To\+Client conn)
+\begin{DoxyCompactList}\small\item\em Called on the server upon a player disconnect, this method simply logs the disconnect. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_afe45f1d20f33ed807d4d2f25e70daa9c}\label{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_afe45f1d20f33ed807d4d2f25e70daa9c}} 
+override void {\bfseries On\+Client\+Connect} ()
+\begin{DoxyCompactList}\small\item\em Called upon the client connecting, the On\+Connect event is invoked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a2d17d2ea69c858ac8462cbd76ac10408}\label{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a2d17d2ea69c858ac8462cbd76ac10408}} 
+override void {\bfseries On\+Client\+Disconnect} ()
+\begin{DoxyCompactList}\small\item\em Called upon the client disconnecting, the On\+Disconnect event is invoked and a reconnection is attempted. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_ab4323f7f42ee889f4f2d43d5b3df67c1}{On\+Client\+Error}} (Exception exception)
+\begin{DoxyCompactList}\small\item\em Called upon a client connection error, the error is logged and a reconnection is attempted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a1b9c5d0e2b009ff560036b2c90704c73}\label{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a1b9c5d0e2b009ff560036b2c90704c73}} 
+Telepathy\+Transport {\bfseries telepathy\+Transport}
+\begin{DoxyCompactList}\small\item\em The Telepathy transport used for all platforms except for Web\+GL. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a7d7f5e1f6fe7125006ae3e1fb292ecf8}\label{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a7d7f5e1f6fe7125006ae3e1fb292ecf8}} 
+Simple\+Web\+Transport {\bfseries simple\+Web\+Transport}
+\begin{DoxyCompactList}\small\item\em The Simple Web transport used for Web\+GL. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a173a4c5a0fd90ca3d4d3b2f851434bff}\label{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a173a4c5a0fd90ca3d4d3b2f851434bff}} 
+ushort {\bfseries telepathy\+Transport\+Dev\+Port} = 7775
+\begin{DoxyCompactList}\small\item\em Port used for the Telepathy transport in Dev mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_ae7224779415bae1a90c3ef61fce65eaf}\label{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_ae7224779415bae1a90c3ef61fce65eaf}} 
+ushort {\bfseries simple\+Web\+Transport\+Dev\+Port} = 7776
+\begin{DoxyCompactList}\small\item\em Port used for the Simple Web transport in Dev mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a25d70d3c17515724504daa296a67888a}\label{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a25d70d3c17515724504daa296a67888a}} 
+ushort {\bfseries telepathy\+Transport\+Prod\+Port} = 7777
+\begin{DoxyCompactList}\small\item\em Port used for the Telepathy transport in Production mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_aa0c0a93069076052678409ee3606c906}\label{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_aa0c0a93069076052678409ee3606c906}} 
+ushort {\bfseries simple\+Web\+Transport\+Prod\+Port} = 7778
+\begin{DoxyCompactList}\small\item\em Port used for the Simple Web transport in Production mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a729eeffdc57510fa5394414c4c71df4a}\label{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a729eeffdc57510fa5394414c4c71df4a}} 
+bool {\bfseries has\+Connected} = false
+\begin{DoxyCompactList}\small\item\em Flag indicating the client has made a connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_ac81a9f9588e89f05223fa6ebfe38da0d}\label{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_ac81a9f9588e89f05223fa6ebfe38da0d}} 
+Action {\bfseries On\+Connect}
+\begin{DoxyCompactList}\small\item\em Action called on network connect. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a351877e71abfc568d8e615033ff88c97}\label{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a351877e71abfc568d8e615033ff88c97}} 
+Action {\bfseries On\+Disconnect}
+\begin{DoxyCompactList}\small\item\em Action called on nectork disconnect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages starting/stopping the server/client. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_ab4323f7f42ee889f4f2d43d5b3df67c1}\label{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_ab4323f7f42ee889f4f2d43d5b3df67c1}} 
+\index{O8C.System.O8CMirrorNetworkManager@{O8C.System.O8CMirrorNetworkManager}!OnClientError@{OnClientError}}
+\index{OnClientError@{OnClientError}!O8C.System.O8CMirrorNetworkManager@{O8C.System.O8CMirrorNetworkManager}}
+\doxysubsubsection{\texorpdfstring{OnClientError()}{OnClientError()}}
+{\footnotesize\ttfamily override void O8\+C.\+System.\+O8\+CMirror\+Network\+Manager.\+On\+Client\+Error (\begin{DoxyParamCaption}\item[{Exception}]{exception }\end{DoxyParamCaption})}
+
+
+
+Called upon a client connection error, the error is logged and a reconnection is attempted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exception} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_ab20896d117e758177598c2aa85a76596}\label{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_ab20896d117e758177598c2aa85a76596}} 
+\index{O8C.System.O8CMirrorNetworkManager@{O8C.System.O8CMirrorNetworkManager}!OnServerConnect@{OnServerConnect}}
+\index{OnServerConnect@{OnServerConnect}!O8C.System.O8CMirrorNetworkManager@{O8C.System.O8CMirrorNetworkManager}}
+\doxysubsubsection{\texorpdfstring{OnServerConnect()}{OnServerConnect()}}
+{\footnotesize\ttfamily override void O8\+C.\+System.\+O8\+CMirror\+Network\+Manager.\+On\+Server\+Connect (\begin{DoxyParamCaption}\item[{Network\+Connection\+To\+Client}]{conn }\end{DoxyParamCaption})}
+
+
+
+Called on the server upon a player connection, this method simply logs the connection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a29fdce8a17667e8820aa428b1f629e6f}\label{class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager_a29fdce8a17667e8820aa428b1f629e6f}} 
+\index{O8C.System.O8CMirrorNetworkManager@{O8C.System.O8CMirrorNetworkManager}!OnServerDisconnect@{OnServerDisconnect}}
+\index{OnServerDisconnect@{OnServerDisconnect}!O8C.System.O8CMirrorNetworkManager@{O8C.System.O8CMirrorNetworkManager}}
+\doxysubsubsection{\texorpdfstring{OnServerDisconnect()}{OnServerDisconnect()}}
+{\footnotesize\ttfamily override void O8\+C.\+System.\+O8\+CMirror\+Network\+Manager.\+On\+Server\+Disconnect (\begin{DoxyParamCaption}\item[{Network\+Connection\+To\+Client}]{conn }\end{DoxyParamCaption})}
+
+
+
+Called on the server upon a player disconnect, this method simply logs the disconnect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Business/\+Projects/\+O8\+C/\+Verse/\+Verse -\/ Web\+GL/\+Assets/\mbox{[}\+O8\+CSystem\mbox{]}/\+Scripts/\+System/O8\+CMirror\+Network\+Manager.\+cs\end{DoxyCompactItemize}

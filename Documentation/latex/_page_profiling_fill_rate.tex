@@ -1,0 +1,55 @@
+\hypertarget{_page_profiling_fill_rate_SectionProFillDesc}{}\doxysection{Scene Description}\label{_page_profiling_fill_rate_SectionProFillDesc}
+The scene contains the {\ttfamily Platform Rig} and a single static lightmapped \& textured quad that sits in front of the camera such that when looking straight forward it takes up the full view. If the user looks up a certain amount, the view can be changed such that the quad takes up only the bottom half of the view. Looking away from the quad results in an empty view. A color is used to clear the view.\hypertarget{_page_profiling_fill_rate_SectionProFillSpecs}{}\doxysection{Specifications}\label{_page_profiling_fill_rate_SectionProFillSpecs}
+
+\begin{DoxyItemize}
+\item CPU\+: Locked at Level 2
+\item GPU\+: Locked at Level 2
+\item FOV\+: Locked at Level 0
+\item FPS\+: Max of 60
+\item MSAA\+: off
+\end{DoxyItemize}\hypertarget{_page_profiling_fill_rate_SectionProFillFrameDebugger}{}\doxysection{Frame Debugger}\label{_page_profiling_fill_rate_SectionProFillFrameDebugger}
+
+\begin{DoxyItemize}
+\item 1 draw call ~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/AndroidFillFrameDebug.png}{\texttt{  }} ~\newline
+
+\end{DoxyItemize}\hypertarget{_page_profiling_fill_rate_SectionProFillAndroid}{}\doxysection{Android Results}\label{_page_profiling_fill_rate_SectionProFillAndroid}
+\hypertarget{_page_profiling_fill_rate_SubsectionProFillAndroidFilled}{}\doxysubsection{OVRMT Filled View}\label{_page_profiling_fill_rate_SubsectionProFillAndroidFilled}
+
+\begin{DoxyItemize}
+\item CPU\+: ≈20\%
+\item GPU\+: ≈35\% ~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/AndroidFillFullOVRMT.jpg}{\texttt{  }} ~\newline
+
+\end{DoxyItemize}\hypertarget{_page_profiling_fill_rate_SubsectionProFillAndroidHalfFilled}{}\doxysubsection{OVRMT Half-\/\+Filled View}\label{_page_profiling_fill_rate_SubsectionProFillAndroidHalfFilled}
+
+\begin{DoxyItemize}
+\item CPU\+: ≈20\%
+\item GPU\+: ≈20\% ~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/AndroidFillHalfOVRMT.jpg}{\texttt{  }} ~\newline
+
+\end{DoxyItemize}\hypertarget{_page_profiling_fill_rate_SectionProFillWebGL}{}\doxysection{Web\+GL Results}\label{_page_profiling_fill_rate_SectionProFillWebGL}
+\hypertarget{_page_profiling_fill_rate_SubsectionProFillWebGLFilled}{}\doxysubsection{OVRMT Filled View}\label{_page_profiling_fill_rate_SubsectionProFillWebGLFilled}
+
+\begin{DoxyItemize}
+\item CPU\+: ≈40\%
+\item GPU\+: ≈60\% ~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/WebGLFillFullOVRMT.jpg}{\texttt{  }} ~\newline
+
+\end{DoxyItemize}\hypertarget{_page_profiling_fill_rate_SubsectionProFillWebGLHalfFilled}{}\doxysubsection{OVRMT Half-\/\+Filled View}\label{_page_profiling_fill_rate_SubsectionProFillWebGLHalfFilled}
+
+\begin{DoxyItemize}
+\item CPU\+: ≈40\%
+\item GPU\+: ≈40\% ~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/WebGLFillHalfOVRMT.jpg}{\texttt{  }} ~\newline
+
+\end{DoxyItemize}\hypertarget{_page_profiling_fill_rate_SubsectionProFillConclusions}{}\doxysection{Conclusions}\label{_page_profiling_fill_rate_SubsectionProFillConclusions}
+
+\begin{DoxyItemize}
+\item Android\+: Filling the view resulted in a 25\% increase in GPU usage (from 9\% up to 35\%); no increase in CPU usage (≈20\%).
+\item Web\+GL\+: Filling the view resulted in a 40\% increase in GPU usage (from 22\% up to 60\%); no increase in CPU usage (≈40\%).
+\item General
+\begin{DoxyItemize}
+\item GPU usage seems to drop linearly as the fill decreases. 
+\end{DoxyItemize}
+\end{DoxyItemize}

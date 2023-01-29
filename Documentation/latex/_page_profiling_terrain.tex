@@ -1,0 +1,85 @@
+\hypertarget{_page_profiling_terrain_SectionProTerrainTiny}{}\doxysection{Tiny Test}\label{_page_profiling_terrain_SectionProTerrainTiny}
+\hypertarget{_page_profiling_terrain_SubsectionProTerrainTinyFrameDesc}{}\doxysubsection{Description}\label{_page_profiling_terrain_SubsectionProTerrainTinyFrameDesc}
+In this test, the terrain is made small and at a distance. This tests rendering the whole terrain, but minimizes fillrate.\hypertarget{_page_profiling_terrain_SubsectionProTerrainTinyFrameDebugger}{}\doxysubsection{Frame Debugger}\label{_page_profiling_terrain_SubsectionProTerrainTinyFrameDebugger}
+~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/TerrainTinyFrameDebugger.png}{\texttt{  }} ~\newline
+\hypertarget{_page_profiling_terrain_SubsectionProTerrainTinyAndroid}{}\doxysubsection{Android OVRMT Results}\label{_page_profiling_terrain_SubsectionProTerrainTinyAndroid}
+
+\begin{DoxyItemize}
+\item CPU\+: ≈20\%
+\item GPU\+: 9\% ~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/TerrainTinyAndroid.jpg}{\texttt{  }} ~\newline
+
+\end{DoxyItemize}\hypertarget{_page_profiling_terrain_SubsectionProTerrainTinyWebGL}{}\doxysubsection{Web\+GL OVRMT Results}\label{_page_profiling_terrain_SubsectionProTerrainTinyWebGL}
+
+\begin{DoxyItemize}
+\item CPU\+: ≈20\%
+\item GPU\+: 9\% ~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/TerrainTinyWebGL.jpg}{\texttt{  }} ~\newline
+
+\end{DoxyItemize}\hypertarget{_page_profiling_terrain_SectionProTerrainHalf}{}\doxysection{Half-\/\+Filled View}\label{_page_profiling_terrain_SectionProTerrainHalf}
+\hypertarget{_page_profiling_terrain_SubsectionProTerrainHalfDesc}{}\doxysubsection{Description}\label{_page_profiling_terrain_SubsectionProTerrainHalfDesc}
+In this test, the terrain is at normal scale and the view is as if the user was standing on the terrain and looking straight forward. This tests rendering the terrain such that it fills about half the view. This could be considered nominal behaviour. ~\newline
+\hypertarget{_page_profiling_terrain_SubsectionProTerrainHalfFrameDebugger}{}\doxysubsection{Frame Debugger}\label{_page_profiling_terrain_SubsectionProTerrainHalfFrameDebugger}
+~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/TerrainHalfFrameDebugger.png}{\texttt{  }} ~\newline
+\hypertarget{_page_profiling_terrain_SubsectionProTerrainHalfAndroid}{}\doxysubsection{Android OVRMT Results}\label{_page_profiling_terrain_SubsectionProTerrainHalfAndroid}
+
+\begin{DoxyItemize}
+\item CPU\+: ≈20\%
+\item GPU\+: 9\% ~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/TerrainHalfAndroid.jpg}{\texttt{  }} ~\newline
+
+\end{DoxyItemize}\hypertarget{_page_profiling_terrain_SubsectionProTerrainHalfWebGL}{}\doxysubsection{Web\+GL OVRMT Results}\label{_page_profiling_terrain_SubsectionProTerrainHalfWebGL}
+
+\begin{DoxyItemize}
+\item CPU\+: ≈20\%
+\item GPU\+: 9\% ~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/TerrainHalfWebGL.jpg}{\texttt{  }} ~\newline
+
+\end{DoxyItemize}\hypertarget{_page_profiling_terrain_SectionProTerrainFull}{}\doxysection{Filled View}\label{_page_profiling_terrain_SectionProTerrainFull}
+\hypertarget{_page_profiling_terrain_SubsectionProTerrainFullDesc}{}\doxysubsection{Description}\label{_page_profiling_terrain_SubsectionProTerrainFullDesc}
+\hypertarget{_page_profiling_terrain_SubsectionProTerrainFullFrameDebugger}{}\doxysubsection{Frame Debugger}\label{_page_profiling_terrain_SubsectionProTerrainFullFrameDebugger}
+~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/TerrainFullFrameDebugger.png}{\texttt{  }} ~\newline
+\hypertarget{_page_profiling_terrain_SubsectionProTerrainFullAndroid}{}\doxysubsection{Android OVRMT Results}\label{_page_profiling_terrain_SubsectionProTerrainFullAndroid}
+
+\begin{DoxyItemize}
+\item CPU\+: ≈20\%
+\item GPU\+: ≈50\% ~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/TerrainFullAndroid.jpg}{\texttt{  }} ~\newline
+
+\end{DoxyItemize}\hypertarget{_page_profiling_terrain_SubsectionProTerrainFullWebGL}{}\doxysubsection{Web\+GL OVRMT Results}\label{_page_profiling_terrain_SubsectionProTerrainFullWebGL}
+
+\begin{DoxyItemize}
+\item CPU\+: ≈50\%
+\item GPU\+: ≈90\% ~\newline
+ \href{../Resources/Doxygen/Profiling/Resources/TerrainFullWebGL.jpg}{\texttt{  }} ~\newline
+
+\end{DoxyItemize}\hypertarget{_page_profiling_terrain_SectionProTerrainConclusions}{}\doxysection{Conclusions}\label{_page_profiling_terrain_SectionProTerrainConclusions}
+\hypertarget{_page_profiling_terrain_SubsectionProTerrainConclusionsGeneral}{}\doxysubsection{General}\label{_page_profiling_terrain_SubsectionProTerrainConclusionsGeneral}
+
+\begin{DoxyItemize}
+\item The Tiny Terrain test demonstrates the terrain has minimal effect on GPU or CPU when it does not take up much of the screen.
+\item Since the Tiny Terrain test had minimal effect, an increase in load is due to shader complexity.
+\item The terrain took 50\% more GPU than the simple quad.
+\end{DoxyItemize}\hypertarget{_page_profiling_terrain_SubsectionProTerrainConclusionsAndroid}{}\doxysubsection{Android}\label{_page_profiling_terrain_SubsectionProTerrainConclusionsAndroid}
+
+\begin{DoxyItemize}
+\item The terrain took 50\% more GPU than the simple quad.
+\begin{DoxyItemize}
+\item Half fill\+: from 20\% to 33\%
+\item Full fill\+: from 35\% to 50\%
+\end{DoxyItemize}
+\item The CPU load did not change relative to the Empty Scene, regardless of how much of the terrain was displayed.
+\end{DoxyItemize}\hypertarget{_page_profiling_terrain_SubsectionProTerrainConclusionsWebGL}{}\doxysubsection{Web\+GL}\label{_page_profiling_terrain_SubsectionProTerrainConclusionsWebGL}
+
+\begin{DoxyItemize}
+\item The terrain took 50\% more GPU than the simple quad.
+\begin{DoxyItemize}
+\item Half fill\+: from 40\% to 60\%
+\item Full fill\+: from 60\% to 90\%
+\end{DoxyItemize}
+\item The CPU load did not change relative to how much of the terrain was displayed, but did generally increase the CPU load 25\% (from 40\% to 50\%) ~\newline
+ 
+\end{DoxyItemize}

@@ -1,0 +1,16 @@
+\hypertarget{_maintenance_SectionServer}{}\doxysection{Server}\label{_maintenance_SectionServer}
+\hypertarget{_maintenance_SubsectionCertificate}{}\doxysubsection{Lets\+Encrypt Certificate}\label{_maintenance_SubsectionCertificate}
+Mirror web transport requires SSL. The certificate used is the same used for the website, which is a \char`\"{}\+Let\textquotesingle{}s Encrypt\char`\"{} certificate. These certificates are only valid for 90 days, and are automatically renewed by the server. When this certificate is renewed, the PFX file used by the application also needs to be updated. The following is executed on the server to update the PFX file used by the app\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo\ -\/i}
+\DoxyCodeLine{cd\ /etc/letsencrypt/live/o8c.us/}
+\DoxyCodeLine{openssl\ pkcs12\ -\/export\ -\/out\ cert.pfx\ -\/inkey\ privkey.pem\ -\/in\ cert.pem\ -\/certfile\ chain.pem}
+\DoxyCodeLine{mv\ ./cert.pfx\ /home/octo}
+\DoxyCodeLine{exit}
+\DoxyCodeLine{sudo\ chown\ -\/R\ \$USER:\$USER\ ./cert.pfx}
+\DoxyCodeLine{sudo\ chmod\ 644\ ./cert.pfx}
+\DoxyCodeLine{rm\ ./cert/cert.pfx}
+\DoxyCodeLine{mv\ ./cert.pfx\ ./cert}
+
+\end{DoxyCode}
+ 
