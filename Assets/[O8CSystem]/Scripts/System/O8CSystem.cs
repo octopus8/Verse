@@ -28,9 +28,11 @@ namespace O8C.System {
         [SerializeField] private O8CAppFocusState appFocusState;
 
         /// <summary>The PlayerConnection component in the O8CSystem.</summary>
-        [Tooltip("The AppFocusState component in the O8CSystem.")]
+        [Tooltip("The O8CPlayerConnection component in the O8CSystem.")]
         [SerializeField] private O8CPlayerConnection playerConnection;
 
+        /// <summary>The O8CMicrophoneSupport component in the O8CSystem.</summary>
+        [Tooltip("The O8CMicrophoneSupport component in the O8CSystem.")]
         [SerializeField] private O8CMicrophoneSupport microphoneSupport;
 
         #endregion
@@ -43,19 +45,19 @@ namespace O8C.System {
         static public O8CSystem Instance { get; private set; }
 
         /// <summary>Accessor for the Network functionality.</summary>
-        public O8CNetwork Network { get { return network; } }
+        public IO8CNetwork Network { get { return network; } }
 
         /// <summary>Accessor for the DeviceTracking functionality.</summary>
-        public O8CDeviceTracking DeviceTracking { get { return deviceTracking; } }
+        public IO8CDeviceTracking DeviceTracking { get { return deviceTracking; } }
 
         /// <summary>Accessor for the AppFocusEvent functionality.</summary>
-        public O8CAppFocusState AppFocusState { get { return appFocusState; } }
+        public IO8CAppFocusState AppFocusState { get { return appFocusState; } }
 
         /// <summary>Accessor for the PlayerConnection functionality.</summary>
-        public O8CPlayerConnection PlayerConnection { get { return playerConnection; } }
+        public IO8CPlayerConnection PlayerConnection { get { return playerConnection; } }
 
         /// <summary>Accessor for the MicrophoneSupport functionality.</summary>
-        public O8CMicrophoneSupport MicrophoneSupport { get { return microphoneSupport; } }
+        public IO8CMicrophoneSupport MicrophoneSupport { get { return microphoneSupport; } }
 
         #endregion
 
@@ -107,12 +109,10 @@ namespace O8C.System {
 
 
             if (IsDeployedWebGL()) {
-                microphoneSupport.gameObject.SetActive(false);
-                O8CSystemWebGLEnableMicrophoneSupport micSupport = gameObject.AddComponent<O8CSystemWebGLEnableMicrophoneSupport>();
-                micSupport.MicrophoneSupport = microphoneSupport.gameObject;
+                microphoneSupport.SetSupportActive(false);
             }
             else {
-                microphoneSupport.gameObject.SetActive(true);
+                microphoneSupport.SetSupportActive(true);
             }
 
         }

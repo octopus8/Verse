@@ -13,7 +13,7 @@ namespace O8C.Util {
         /// Add the GameObject as a head follower.
         /// </summary>
         void Start() {
-            O8CSystem.Instance.DeviceTracking.Head.AddTarget(gameObject);
+            O8CSystem.Instance.DeviceTracking.AddHeadTarget(gameObject);
         }
 
 
@@ -21,7 +21,7 @@ namespace O8C.Util {
         /// Removes the GameObject as a head follower.
         /// </summary>
         private void OnDestroy() {
-            O8CSystem.Instance.DeviceTracking.Head.RemoveTarget(gameObject);
+            O8CSystem.Instance.DeviceTracking.RemoveHeadTarget(gameObject);
         }
 
 

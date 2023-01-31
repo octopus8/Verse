@@ -16,7 +16,7 @@ public class StartScenePlayerConnection : MonoBehaviour
     /// </summary>
     void Start()
     {
-        O8CSystem.Instance.PlayerConnection.OnPlayerConnected += OnPlayerConnected;
+        O8CSystem.Instance.PlayerConnection.AddPlayerConnectedObserver(OnPlayerConnected);
     }
 
 
@@ -24,7 +24,7 @@ public class StartScenePlayerConnection : MonoBehaviour
     /// Unregisters callbacks.
     /// </summary>
     private void OnDestroy() {
-        O8CSystem.Instance.PlayerConnection.OnPlayerConnected -= OnPlayerConnected;
+        O8CSystem.Instance.PlayerConnection.RemovePlayerConnectedObserver(OnPlayerConnected);
     }
 
 

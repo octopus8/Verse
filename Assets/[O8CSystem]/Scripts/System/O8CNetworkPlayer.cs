@@ -38,9 +38,9 @@ namespace O8C.System {
         /// </summary>
         private void Start() {
             if (isLocalPlayer) {
-                O8CSystem.Instance.DeviceTracking.Head.AddTarget(head);
-                O8CSystem.Instance.DeviceTracking.RightHand.AddTarget(handLeft);
-                O8CSystem.Instance.DeviceTracking.LeftHand.AddTarget(handRight);
+                O8CSystem.Instance.DeviceTracking.AddHeadTarget(head);
+                O8CSystem.Instance.DeviceTracking.AddRightHandTarget(handRight);
+                O8CSystem.Instance.DeviceTracking.AddLeftHandTarget(handLeft);
             }
             O8CSystem.Instance.PlayerConnection.PlayerConnected(gameObject, isLocalPlayer);
         }
@@ -72,9 +72,9 @@ namespace O8C.System {
             O8CSystem.Instance.PlayerConnection.PlayerDisconnected(gameObject, isLocalPlayer);
 
             if (isLocalPlayer) {
-                O8CSystem.Instance.DeviceTracking.Head.RemoveTarget(head);
-                O8CSystem.Instance.DeviceTracking.RightHand.RemoveTarget(handLeft);
-                O8CSystem.Instance.DeviceTracking.LeftHand.RemoveTarget(handRight);
+                O8CSystem.Instance.DeviceTracking.RemoveHeadTarget(head);
+                O8CSystem.Instance.DeviceTracking.RemoveRightHandTarget(handRight);
+                O8CSystem.Instance.DeviceTracking.RemoveLeftHandTarget(handLeft);
             }
         }
 

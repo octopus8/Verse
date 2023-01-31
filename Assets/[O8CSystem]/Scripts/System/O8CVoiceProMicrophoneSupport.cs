@@ -9,7 +9,7 @@ namespace O8C.System {
     /// Waits a period of time after start, then sets the microphone for the attached recorder component.
     /// </summary>
     [RequireComponent(typeof(Recorder))]
-    public class O8CMicrophoneSupport : MonoBehaviour {
+    public class O8CVoiceProMicrophoneSupport : O8CMicrophoneSupport {
 
         /// <summary>The Recorder component.</summary>
         protected Recorder recorder;
@@ -43,7 +43,7 @@ namespace O8C.System {
         /// <summary>
         /// Starts microphone record.
         /// </summary>
-        public void StartRecord() {
+        override public void StartRecord() {
             recorder.StartRecord();
         }
 
@@ -51,10 +51,13 @@ namespace O8C.System {
         /// <summary>
         /// Stops microphone record.
         /// </summary>
-        public void StopRecord() {
+        override public void StopRecord() {
             recorder.StopRecord();
         }
 
+        public override void SetSupportActive(bool supportActive) {
+            gameObject.SetActive(supportActive);
+        }
 
     }
 }

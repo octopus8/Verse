@@ -1,4 +1,3 @@
-using O8C;
 using System;
 using UnityEngine;
 using WebXR;
@@ -8,15 +7,15 @@ namespace O8C.System {
     /// <summary>
     /// This class provides a "Bridge" to platform specific application focus state functionality.
     /// </summary>
-    public class O8CAppFocusState : MonoBehaviour {
+    public class O8CAppFocusStateDefault : O8CAppFocusState {
 
         #region Class Variables
 
         /// <summary>The current visibility state.</summary>
-        protected VisibilityState currentVisiblityState;
+        protected IO8CAppFocusState.VisibilityState currentVisiblityState;
 
         /// <summary>The current XR state.</summary>
-        protected XRState currentXRState;
+        protected IO8CAppFocusState.XRState currentXRState;
 
         #endregion
 
@@ -25,16 +24,13 @@ namespace O8C.System {
         #region Public Actions & Accessors
 
         /// <summary>Observers of the "visibility changed" event.</summary>
-        public event Action<VisibilityState> OnVisibilityChange;
+        public event Action<IO8CAppFocusState.VisibilityState> OnVisibilityChange;
 
         /// <summary>Observers of the "XR state changed" event.</summary>
-        public event Action<XRState> OnXRChange;
+        public event Action<IO8CAppFocusState.XRState> OnXRChange;
 
         /// <summary>Accessor for the current visibility state.</summary>
-        public VisibilityState CurrentVisiblityState { get { return currentVisiblityState; } }
-
-        /// <summary>Accessor for the current XR state.</summary>
-        public XRState CurrentXRState { get { return currentXRState; } }
+        public IO8CAppFocusState.VisibilityState CurrentVisiblityState { get { return currentVisiblityState; } }
 
         #endregion
 
@@ -81,19 +77,19 @@ namespace O8C.System {
         /// <param name="leftRect">Unused</param>
         /// <param name="rightRect">Unused</param>
         private void OnXRChangeWebXR(WebXRState state, int viewsCount, Rect leftRect, Rect rightRect) {
-            XRState xrState;
+            IO8CAppFocusState.XRState xrState;
             switch (state) {
                 case WebXRState.VR:
-                    xrState = XRState.VR;
+                    xrState = IO8CAppFocusState.XRState.VR;
                     break;
                 case WebXRState.AR:
-                    xrState = XRState.AR;
+                    xrState = IO8CAppFocusState.XRState.AR;
                     break;
                 case WebXRState.NORMAL:
-                    xrState = XRState.normal;
+                    xrState = IO8CAppFocusState.XRState.normal;
                     break;
                 default:
-                    xrState = XRState.unknown;
+                    xrState = IO8CAppFocusState.XRState.unknown;
                     break;
             }
 
@@ -108,19 +104,19 @@ namespace O8C.System {
         /// </summary>
         /// <param name="visibilityState">The new WebXRVisibilityState.</param>
         private void OnVisibilityChangeWebXR(WebXRVisibilityState visibilityState) {
-            VisibilityState state;
+            IO8CAppFocusState.VisibilityState state;
             switch (visibilityState) {
                 case WebXRVisibilityState.VISIBLE:
-                    state = VisibilityState.visible;
+                    state = IO8CAppFocusState.VisibilityState.visible;
                     break;
                 case WebXRVisibilityState.VISIBLE_BLURRED:
-                    state = VisibilityState.visibleBlurred;
+                    state = IO8CAppFocusState.VisibilityState.visibleBlurred;
                     break;
                 case WebXRVisibilityState.HIDDEN:
-                    state = VisibilityState.hidden;
+                    state = IO8CAppFocusState.VisibilityState.hidden;
                     break;
                 default:
-                    state = VisibilityState.unknown;
+                    state = IO8CAppFocusState.VisibilityState.unknown;
                     break;
             }
             currentVisiblityState = state;
@@ -131,6 +127,15 @@ namespace O8C.System {
         #endregion
 
 
+        override public void AddOnXRChangeObserver(Action<IO8CAppFocusState.XRState> observer) {
+            OnXRChange += observer;
+        }
+
+        override public void RemoveOnXRChangeObserver(Action<IO8CAppFocusState.XRState> observer) {
+            OnXRChange -= observer;
+        }
+
+
 
         #region Non-Web Callbacks
 
@@ -138,7 +143,7 @@ namespace O8C.System {
         /// Callback called on OVRManager.InputFocusAcquired, OnVisibilityChange is invoked.
         /// </summary>
         private void OnInputFocusAcquiredApp() {
-            OnVisibilityChange?.Invoke(VisibilityState.visible);
+            OnVisibilityChange?.Invoke(IO8CAppFocusState.VisibilityState.visible);
         }
 
 
@@ -146,32 +151,22 @@ namespace O8C.System {
         /// Callback called upon OVRManager.InputFocusLost, OnVisibilityChange is invoked.
         /// </summary>
         private void OnInputFocusLostApp() {
-            OnVisibilityChange?.Invoke(VisibilityState.visibleBlurred);
+            OnVisibilityChange?.Invoke(IO8CAppFocusState.VisibilityState.visibleBlurred);
         }
+
+        public override IO8CAppFocusState.XRState GetCurrentXRState() {
+            return currentXRState;
+        }
+
+        public override IO8CAppFocusState.VisibilityState GetCurrentVisibilityState() {
+            return currentVisiblityState;
+        }
+
 
         #endregion
 
 
 
-        #region Data Structures
-
-        /// <summary>App visibility states.</summary>
-        public enum VisibilityState {
-            visible,
-            hidden,
-            visibleBlurred,
-            unknown,
-        }
-
-        /// <summary>XR states.</summary>
-        public enum XRState {
-            normal,
-            VR,
-            AR,
-            unknown,
-        }
-
-        #endregion
 
     }
 

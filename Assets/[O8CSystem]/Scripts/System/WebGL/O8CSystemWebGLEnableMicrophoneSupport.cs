@@ -9,17 +9,6 @@ namespace O8C.System.WebGL {
     /// </summary>
     public class O8CSystemWebGLEnableMicrophoneSupport : MonoBehaviour {
 
-        #region Class Variables and Accessors
-
-        /// <summary>Microphone support</summary>
-        protected GameObject microphoneSupport;
-
-        /// <summary>Setter for the microphoneSupport variable. This is set after being added to the GameObject.</summary>
-        public GameObject MicrophoneSupport { set { microphoneSupport = value; } }
-
-        #endregion
-
-
 
         #region Base Methods
 
@@ -27,7 +16,7 @@ namespace O8C.System.WebGL {
         /// Registers an XR change callback.
         /// </summary>
         private void Start() {
-            O8CSystem.Instance.AppFocusState.OnXRChange += OnXRChange;
+            O8CSystem.Instance.AppFocusState.AddOnXRChangeObserver(OnXRChange);
         }
 
 
@@ -35,7 +24,7 @@ namespace O8C.System.WebGL {
         /// Unregisters an XR change callback.
         /// </summary>
         private void OnDestroy() {
-            O8CSystem.Instance.AppFocusState.OnXRChange -= OnXRChange;
+            O8CSystem.Instance.AppFocusState.RemoveOnXRChangeObserver(OnXRChange);
         }
 
         #endregion
@@ -49,9 +38,9 @@ namespace O8C.System.WebGL {
         /// microphone support object as active.
         /// </summary>
         /// <param name="state">The new XR state.</param>
-        private void OnXRChange(O8CAppFocusState.XRState state) {
-            if (state == O8CAppFocusState.XRState.VR) {
-                microphoneSupport.SetActive(true);
+        private void OnXRChange(IO8CAppFocusState.XRState state) {
+            if (state == IO8CAppFocusState.XRState.VR) {
+                O8CSystem.Instance.MicrophoneSupport.SetSupportActive(true);
                 Destroy(this);
             }
         }

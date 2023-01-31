@@ -6,7 +6,7 @@ namespace O8C.System {
     /// <summary>
     /// Provides actions for Observers of player connection events.
     /// </summary>
-    public class O8CPlayerConnection : MonoBehaviour {
+    public class O8CPlayerConnectionDefault : O8CPlayerConnection {
 
         #region Public Events
 
@@ -15,6 +15,7 @@ namespace O8C.System {
 
         /// <summary>"on player disconnected" event.</summary>
         public event Action<GameObject, bool> OnPlayerDisconnected;
+
 
         #endregion
 
@@ -28,7 +29,7 @@ namespace O8C.System {
         /// </remarks>
         /// <param name="player">The new player GameObject.</param>
         /// <param name="isLocalPlayer">Flag indicating if the new player is a local player.</param>
-        public void PlayerConnected(GameObject player, bool isLocalPlayer) {
+        override public void PlayerConnected(GameObject player, bool isLocalPlayer) {
             OnPlayerConnected.Invoke(player, isLocalPlayer);
         }
 
@@ -42,10 +43,18 @@ namespace O8C.System {
         /// </remarks>
         /// <param name="player">The player GameObject for the player disconnecting.</param>
         /// <param name="isLocalPlayer">Flag indicating if the player leaving is a local player.</param>
-        public void PlayerDisconnected(GameObject player, bool isLocalPlayer) {
+        override public void PlayerDisconnected(GameObject player, bool isLocalPlayer) {
             OnPlayerDisconnected?.Invoke(player, isLocalPlayer);
         }
 
+
+        public override void AddPlayerConnectedObserver(Action<GameObject, bool> observer) {
+            OnPlayerConnected += observer;
+        }
+
+        public override void RemovePlayerConnectedObserver(Action<GameObject, bool> observer) {
+            OnPlayerConnected -= observer;
+        }
     }
 
 }

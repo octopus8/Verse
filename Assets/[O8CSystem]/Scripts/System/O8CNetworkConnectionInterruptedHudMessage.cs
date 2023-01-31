@@ -48,8 +48,8 @@ namespace O8C.System {
         /// Subscribes to events.
         /// </summary>
         private void Start() {
-            O8CSystem.Instance.Network.OnConnect += OnNetworkConnect;
-            O8CSystem.Instance.Network.OnDisconnect += OnNetworkDisconnect;
+            O8CSystem.Instance.Network.AddOnConnectObserver(OnNetworkConnect);
+            O8CSystem.Instance.Network.AddOnDisconnectObserver(OnNetworkDisconnect);
         }
 
 
@@ -57,8 +57,8 @@ namespace O8C.System {
         /// Unsubscribes to events.
         /// </summary>
         private void OnDestroy() {
-            O8CSystem.Instance.Network.OnConnect -= OnNetworkConnect;
-            O8CSystem.Instance.Network.OnDisconnect -= OnNetworkDisconnect;
+            O8CSystem.Instance.Network.RemoveOnConnectObserver(OnNetworkConnect);
+            O8CSystem.Instance.Network.RemoveOnDisconnectObserver(OnNetworkDisconnect);
         }
 
 

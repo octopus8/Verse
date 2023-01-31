@@ -206,9 +206,9 @@ namespace O8C.System {
 #if UNITY_EDITOR
             if (true) {
 #else
-        if ((O8CSystem.Instance.AppFocusState.CurrentVisiblityState == O8CAppFocusState.VisibilityState.visible) && (O8CSystem.Instance.AppFocusState.CurrentXRState == O8CAppFocusState.XRState.VR)) {
+            if ((O8CSystem.Instance.AppFocusState.GetCurrentVisibilityState() == IO8CAppFocusState.VisibilityState.visible) && (O8CSystem.Instance.AppFocusState.GetCurrentXRState() == IO8CAppFocusState.XRState.VR)) {
 #endif
-                Debug.Log("Attempting to restart client.");
+            Debug.Log("Attempting to restart client.");
                 StartClient();
             }
         }

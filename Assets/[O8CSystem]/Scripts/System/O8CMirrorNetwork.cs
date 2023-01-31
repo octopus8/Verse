@@ -5,10 +5,10 @@ using UnityEngine;
 namespace O8C.System {
 
     /// <summary>
-    /// This class provides a "Bridge" to imported network functionality.
+    /// The Mirror implementation of O8CNetwork.
     /// </summary>
     [RequireComponent(typeof(O8CMirrorNetworkManager))]
-    public class O8CNetwork : MonoBehaviour {
+    public class O8CMirrorNetwork : O8CNetwork {
 
         #region Class Variables
 
@@ -22,7 +22,6 @@ namespace O8C.System {
         protected O8CMirrorNetworkManager o8CMirrorNetworkManager;
 
         #endregion
-
 
 
         #region Base Methods
@@ -52,6 +51,25 @@ namespace O8C.System {
             o8CMirrorNetworkManager.OnDisconnect -= HandleDisconnectEvent;
         }
 
+
+        override public void AddOnConnectObserver(Action observer) {
+            OnConnect += observer;
+        }
+
+        override public void RemoveOnConnectObserver(Action observer) {
+            OnConnect -= observer;
+        }
+
+        override public void AddOnDisconnectObserver(Action observer) {
+            OnDisconnect += observer;
+        }
+
+        override public void RemoveOnDisconnectObserver(Action observer) {
+            OnDisconnect -= observer;
+        }
+
+
+
         #endregion
 
 
@@ -74,6 +92,8 @@ namespace O8C.System {
         private void HandleDisconnectEvent() {
             OnDisconnect?.Invoke();
         }
+
+
 
         #endregion
     }
