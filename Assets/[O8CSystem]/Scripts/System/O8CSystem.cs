@@ -1,3 +1,4 @@
+using O8C.WebGL;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -108,6 +109,7 @@ namespace O8C {
 
 
             if (IsDeployedWebGL()) {
+                gameObject.AddComponent<O8CSystemWebGLEnableMicrophoneSupport>();
                 microphoneSupport.SetSupportActive(false);
             }
             else {
