@@ -7,8 +7,15 @@ namespace O8C {
     /// </summary>
     public class O8CFPSCounter : MonoBehaviour {
 
+        #region Inspector Variables
+
         /// <summary>The FPS display text.</summary>
         [SerializeField] protected TextMesh text;
+
+        #endregion
+
+
+        #region Class Variables
 
         /// <summary>The computed FPS.</summary>
         private float fps = 0;
@@ -21,6 +28,8 @@ namespace O8C {
 
         /// <summary>Update rate</summary>
         private float updateRate = 0.5f;
+
+        #endregion
 
 
         /// <summary>
@@ -35,6 +44,7 @@ namespace O8C {
                 text.text = fps.ToString("F0");
             }
         }
+
     }
 
 }

@@ -2,64 +2,123 @@
 \label{class_o8_c_1_1_o8_c_app_focus_state}\index{O8C.O8CAppFocusState@{O8C.O8CAppFocusState}}
 
 
-This class provides a \char`\"{}\+Bridge\char`\"{} to platform specific application focus state functionality.  
+Parent class for IO8\+CApp\+Focus\+State Mono\+Behaviour implementations.  
 
 
 Inheritance diagram for O8\+C.\+O8\+CApp\+Focus\+State\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_o8_c_1_1_o8_c_app_focus_state}
+\includegraphics[height=3.000000cm]{class_o8_c_1_1_o8_c_app_focus_state}
 \end{center}
 \end{figure}
-\doxysubsection*{Public Types}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_o8_c_1_1_o8_c_app_focus_state_a0267ce578708a4c148c0d7acd231db15}\label{class_o8_c_1_1_o8_c_app_focus_state_a0267ce578708a4c148c0d7acd231db15}} 
-enum \mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_a0267ce578708a4c148c0d7acd231db15}{Visibility\+State}} \{ {\bfseries visible}
+abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_a4bdbf007ce12dcde1a65dd502d05b0be}{Add\+On\+XRChange\+Observer}} (Action$<$ \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}{IO8\+CApp\+Focus\+State.\+XRState}} $>$ observer)
+\item 
+abstract \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a82c5b45e91bdbc3019fffc35733a3777}{IO8\+CApp\+Focus\+State.\+Visibility\+State}} \mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_aada98e38a3d9b708c0df62de9fdccd37}{Get\+Current\+Visibility\+State}} ()
+\item 
+abstract \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}{IO8\+CApp\+Focus\+State.\+XRState}} \mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_a66737cdcff26404af36c7c8bee279d6e}{Get\+Current\+XRState}} ()
+\item 
+abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_af71a0e951ff3c14e84db9a07f9208714}{Remove\+On\+XRChange\+Observer}} (Action$<$ \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}{IO8\+CApp\+Focus\+State.\+XRState}} $>$ observer)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state}{O8\+C.\+IO8\+CApp\+Focus\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a02379c59207529a396f0699f1a431f60}{Add\+On\+XRChange\+Observer}} (Action$<$ \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}{XRState}} $>$ observer)
+\begin{DoxyCompactList}\small\item\em Add an observer to the \char`\"{}\+XR change\char`\"{} event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a5eb18dcf50642a1fe975cc45c420b996}{Remove\+On\+XRChange\+Observer}} (Action$<$ \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}{XRState}} $>$ observer)
+\begin{DoxyCompactList}\small\item\em Remmoves an observer to the \char`\"{}\+XR change\char`\"{} event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}{XRState}} \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a1ca52ab58b71b13b459af6785ffa7f0a}{Get\+Current\+XRState}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current XR state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a82c5b45e91bdbc3019fffc35733a3777}{Visibility\+State}} \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a908dc2d727cca734286b5ba4b1170c6f}{Get\+Current\+Visibility\+State}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current visibility state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Public Types inherited from \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state}{O8\+C.\+IO8\+CApp\+Focus\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_o8_c_1_1_i_o8_c_app_focus_state_a82c5b45e91bdbc3019fffc35733a3777}\label{interface_o8_c_1_1_i_o8_c_app_focus_state_a82c5b45e91bdbc3019fffc35733a3777}} 
+enum \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a82c5b45e91bdbc3019fffc35733a3777}{Visibility\+State}} \{ {\bfseries visible}
 , {\bfseries hidden}
 , {\bfseries visible\+Blurred}
 , {\bfseries unknown}
  \}
 \begin{DoxyCompactList}\small\item\em App visibility states. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_o8_c_1_1_o8_c_app_focus_state_af8c85c539d5f697c1bd8b00d11429627}\label{class_o8_c_1_1_o8_c_app_focus_state_af8c85c539d5f697c1bd8b00d11429627}} 
-enum \mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_af8c85c539d5f697c1bd8b00d11429627}{XRState}} \{ {\bfseries normal}
+\mbox{\Hypertarget{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}\label{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}} 
+enum \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}{XRState}} \{ {\bfseries normal}
 , {\bfseries VR}
 , {\bfseries AR}
 , {\bfseries unknown}
  \}
 \begin{DoxyCompactList}\small\item\em XR states. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_o8_c_1_1_o8_c_app_focus_state_a1a3b066caa018122b23af9b43af8d5af}\label{class_o8_c_1_1_o8_c_app_focus_state_a1a3b066caa018122b23af9b43af8d5af}} 
-\mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_a0267ce578708a4c148c0d7acd231db15}{Visibility\+State}} {\bfseries current\+Visiblity\+State}
-\begin{DoxyCompactList}\small\item\em The current visibility state. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_o8_c_1_1_o8_c_app_focus_state_acc369b7a36e3b0a6cef7f32f3d36d057}\label{class_o8_c_1_1_o8_c_app_focus_state_acc369b7a36e3b0a6cef7f32f3d36d057}} 
-\mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_af8c85c539d5f697c1bd8b00d11429627}{XRState}} {\bfseries current\+XRState}
-\begin{DoxyCompactList}\small\item\em The current XR state. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Properties}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_o8_c_1_1_o8_c_app_focus_state_ac3e0f8e8a819f39f49a9ac68be80d09c}\label{class_o8_c_1_1_o8_c_app_focus_state_ac3e0f8e8a819f39f49a9ac68be80d09c}} 
-\mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_a0267ce578708a4c148c0d7acd231db15}{Visibility\+State}} {\bfseries Current\+Visiblity\+State}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Accessor for the current visibility state. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_o8_c_1_1_o8_c_app_focus_state_adfd868c4cfae11bf53631b0d721e5348}\label{class_o8_c_1_1_o8_c_app_focus_state_adfd868c4cfae11bf53631b0d721e5348}} 
-\mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_af8c85c539d5f697c1bd8b00d11429627}{XRState}} {\bfseries Current\+XRState}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Accessor for the current XR state. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Events}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_o8_c_1_1_o8_c_app_focus_state_ac1d16b91fc911230ea5ad60fc376155b}\label{class_o8_c_1_1_o8_c_app_focus_state_ac1d16b91fc911230ea5ad60fc376155b}} 
-Action$<$ \mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_a0267ce578708a4c148c0d7acd231db15}{Visibility\+State}} $>$ {\bfseries On\+Visibility\+Change}
-\begin{DoxyCompactList}\small\item\em Observers of the \char`\"{}visibility changed\char`\"{} event. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_o8_c_1_1_o8_c_app_focus_state_ae88db0e972018caa4fa6e43369bdf956}\label{class_o8_c_1_1_o8_c_app_focus_state_ae88db0e972018caa4fa6e43369bdf956}} 
-Action$<$ \mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_af8c85c539d5f697c1bd8b00d11429627}{XRState}} $>$ {\bfseries On\+XRChange}
-\begin{DoxyCompactList}\small\item\em Observers of the \char`\"{}\+XR state changed\char`\"{} event. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-This class provides a \char`\"{}\+Bridge\char`\"{} to platform specific application focus state functionality. 
+Parent class for IO8\+CApp\+Focus\+State Mono\+Behaviour implementations. 
+
+This class only contains abstract implementations of the interface and is intended to allow implementors of the interface to be used in the inspector. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_app_focus_state_a4bdbf007ce12dcde1a65dd502d05b0be}\label{class_o8_c_1_1_o8_c_app_focus_state_a4bdbf007ce12dcde1a65dd502d05b0be}} 
+\index{O8C.O8CAppFocusState@{O8C.O8CAppFocusState}!AddOnXRChangeObserver@{AddOnXRChangeObserver}}
+\index{AddOnXRChangeObserver@{AddOnXRChangeObserver}!O8C.O8CAppFocusState@{O8C.O8CAppFocusState}}
+\doxysubsubsection{\texorpdfstring{AddOnXRChangeObserver()}{AddOnXRChangeObserver()}}
+{\footnotesize\ttfamily abstract void O8\+C.\+O8\+CApp\+Focus\+State.\+Add\+On\+XRChange\+Observer (\begin{DoxyParamCaption}\item[{Action$<$ \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}{IO8\+CApp\+Focus\+State.\+XRState}} $>$}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\{\} 
+
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_default_a56a8f0d8876fd65a4b640e4cf5178107}{O8\+C.\+O8\+CApp\+Focus\+State\+Default}}.
+
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_app_focus_state_aada98e38a3d9b708c0df62de9fdccd37}\label{class_o8_c_1_1_o8_c_app_focus_state_aada98e38a3d9b708c0df62de9fdccd37}} 
+\index{O8C.O8CAppFocusState@{O8C.O8CAppFocusState}!GetCurrentVisibilityState@{GetCurrentVisibilityState}}
+\index{GetCurrentVisibilityState@{GetCurrentVisibilityState}!O8C.O8CAppFocusState@{O8C.O8CAppFocusState}}
+\doxysubsubsection{\texorpdfstring{GetCurrentVisibilityState()}{GetCurrentVisibilityState()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a82c5b45e91bdbc3019fffc35733a3777}{IO8\+CApp\+Focus\+State.\+Visibility\+State}} O8\+C.\+O8\+CApp\+Focus\+State.\+Get\+Current\+Visibility\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\{Returns the current visibility state.
+
+\begin{DoxyReturn}{Returns}
+The current visibility state.
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a908dc2d727cca734286b5ba4b1170c6f}{O8\+C.\+IO8\+CApp\+Focus\+State}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_default_a41576b44624d8bd3585aacfe8d48d21d}{O8\+C.\+O8\+CApp\+Focus\+State\+Default}}.
+
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_app_focus_state_a66737cdcff26404af36c7c8bee279d6e}\label{class_o8_c_1_1_o8_c_app_focus_state_a66737cdcff26404af36c7c8bee279d6e}} 
+\index{O8C.O8CAppFocusState@{O8C.O8CAppFocusState}!GetCurrentXRState@{GetCurrentXRState}}
+\index{GetCurrentXRState@{GetCurrentXRState}!O8C.O8CAppFocusState@{O8C.O8CAppFocusState}}
+\doxysubsubsection{\texorpdfstring{GetCurrentXRState()}{GetCurrentXRState()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}{IO8\+CApp\+Focus\+State.\+XRState}} O8\+C.\+O8\+CApp\+Focus\+State.\+Get\+Current\+XRState (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\{Returns the current XR state.
+
+\begin{DoxyReturn}{Returns}
+The current XR state.
+\end{DoxyReturn}
+\} 
+
+Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a1ca52ab58b71b13b459af6785ffa7f0a}{O8\+C.\+IO8\+CApp\+Focus\+State}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_default_a36a255ec7bae250011b407117e31bec1}{O8\+C.\+O8\+CApp\+Focus\+State\+Default}}.
+
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_app_focus_state_af71a0e951ff3c14e84db9a07f9208714}\label{class_o8_c_1_1_o8_c_app_focus_state_af71a0e951ff3c14e84db9a07f9208714}} 
+\index{O8C.O8CAppFocusState@{O8C.O8CAppFocusState}!RemoveOnXRChangeObserver@{RemoveOnXRChangeObserver}}
+\index{RemoveOnXRChangeObserver@{RemoveOnXRChangeObserver}!O8C.O8CAppFocusState@{O8C.O8CAppFocusState}}
+\doxysubsubsection{\texorpdfstring{RemoveOnXRChangeObserver()}{RemoveOnXRChangeObserver()}}
+{\footnotesize\ttfamily abstract void O8\+C.\+O8\+CApp\+Focus\+State.\+Remove\+On\+XRChange\+Observer (\begin{DoxyParamCaption}\item[{Action$<$ \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}{IO8\+CApp\+Focus\+State.\+XRState}} $>$}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\{\} 
+
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_default_ab4f47b8a557d20a95de3e0c9cb427be2}{O8\+C.\+O8\+CApp\+Focus\+State\+Default}}.
+
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-E\+:/\+Business/\+Projects/\+O8\+C/\+Verse/\+Verse -\/ Web\+GL/\+Assets/\mbox{[}\+O8\+CSystem\mbox{]}/\+Scripts/\+System/O8\+CApp\+Focus\+State.\+cs\end{DoxyCompactItemize}
+E\+:/\+Business/\+Projects/\+O8\+C/\+Verse/\+Verse -\/ Web\+GL/\+Assets/\mbox{[}\+O8\+CSystem\mbox{]}/\+Scripts/\+System/\+Interfaces/O8\+CApp\+Focus\+State.\+cs\end{DoxyCompactItemize}

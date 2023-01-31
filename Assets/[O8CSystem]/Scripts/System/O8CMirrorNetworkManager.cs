@@ -15,14 +15,18 @@ namespace O8C {
     /// Manages starting/stopping the server/client.
     /// </summary>
     public class O8CMirrorNetworkManager : NetworkManager {
+
+        #region Inspector Variables
+
         /// <summary>The Telepathy transport used for all platforms except for WebGL.</summary>
         [Tooltip("The Telepathy transport used for all platforms except for WebGL.")]
         [SerializeField] protected TelepathyTransport telepathyTransport;
 
-
         /// <summary>The Simple Web transport used for WebGL.</summary>
         [Tooltip("The Simple Web transport used for WebGL.")]
         [SerializeField] protected SimpleWebTransport simpleWebTransport;
+
+        #endregion
 
 
         // Avoid unnecessary warnings on these.
@@ -47,15 +51,13 @@ namespace O8C {
 
 
 
-        #region Network Connection Actions
+        #region Public Network Connection Actions
 
         /// <summary>Action called on network connect.</summary>
         public event Action OnConnect;
 
         /// <summary>Action called on nectork disconnect.</summary>
         public event Action OnDisconnect;
-
-
 
         #endregion
 

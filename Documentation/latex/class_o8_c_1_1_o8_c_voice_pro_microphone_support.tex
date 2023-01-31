@@ -1,0 +1,101 @@
+\hypertarget{class_o8_c_1_1_o8_c_voice_pro_microphone_support}{}\doxysection{O8\+C.\+O8\+CVoice\+Pro\+Microphone\+Support Class Reference}
+\label{class_o8_c_1_1_o8_c_voice_pro_microphone_support}\index{O8C.O8CVoiceProMicrophoneSupport@{O8C.O8CVoiceProMicrophoneSupport}}
+
+
+Waits a period of time after start, then sets the microphone for the attached recorder component.  
+
+
+Inheritance diagram for O8\+C.\+O8\+CVoice\+Pro\+Microphone\+Support\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_o8_c_1_1_o8_c_voice_pro_microphone_support}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_o8_c_1_1_o8_c_voice_pro_microphone_support_a2f9c34c45525bcd6e2fc1baaaa935944}{Start\+Record}} ()
+\begin{DoxyCompactList}\small\item\em Starts microphone record. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_o8_c_1_1_o8_c_voice_pro_microphone_support_a0cd919b46c42e08b14f3ec17bfec3aca}{Stop\+Record}} ()
+\begin{DoxyCompactList}\small\item\em Stops microphone record. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_o8_c_1_1_o8_c_voice_pro_microphone_support_aba70e36003957ba54172946d7cea9931}{Set\+Support\+Active}} (bool support\+Active)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_microphone_support_a127e672a39782987d363caf867b1ad79}{Set\+Support\+Active}} (bool support\+Active)
+\item 
+abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_microphone_support_a1af3097c5c7c0ed49c3915e1374b6b20}{Start\+Record}} ()
+\item 
+abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_microphone_support_aac222436909b2f5a13a1ff5ee0c8985f}{Stop\+Record}} ()
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_microphone_support_af29f4d2327c3cc5b49da586b5fc73df3}{Set\+Support\+Active}} (bool support\+Active)
+\begin{DoxyCompactList}\small\item\em Sets the active state for support. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_microphone_support_abc73a6f9dc877b69e1aa91634b3ab355}{Start\+Record}} ()
+\begin{DoxyCompactList}\small\item\em Start record. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_microphone_support_ab449df5abcf3e594b3ef48cbf450bf06}{Stop\+Record}} ()
+\begin{DoxyCompactList}\small\item\em Stop record. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_voice_pro_microphone_support_adc6ae8ad67f0d6f9119a8f5a357b856f}\label{class_o8_c_1_1_o8_c_voice_pro_microphone_support_adc6ae8ad67f0d6f9119a8f5a357b856f}} 
+Recorder {\bfseries recorder}
+\begin{DoxyCompactList}\small\item\em The Recorder component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_voice_pro_microphone_support_a2f56570b4fe9e2b53abfffe6193313d4}\label{class_o8_c_1_1_o8_c_voice_pro_microphone_support_a2f56570b4fe9e2b53abfffe6193313d4}} 
+bool {\bfseries Is\+Recording}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Flag indicating the recorder is recording. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Waits a period of time after start, then sets the microphone for the attached recorder component. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_voice_pro_microphone_support_aba70e36003957ba54172946d7cea9931}\label{class_o8_c_1_1_o8_c_voice_pro_microphone_support_aba70e36003957ba54172946d7cea9931}} 
+\index{O8C.O8CVoiceProMicrophoneSupport@{O8C.O8CVoiceProMicrophoneSupport}!SetSupportActive@{SetSupportActive}}
+\index{SetSupportActive@{SetSupportActive}!O8C.O8CVoiceProMicrophoneSupport@{O8C.O8CVoiceProMicrophoneSupport}}
+\doxysubsubsection{\texorpdfstring{SetSupportActive()}{SetSupportActive()}}
+{\footnotesize\ttfamily override void O8\+C.\+O8\+CVoice\+Pro\+Microphone\+Support.\+Set\+Support\+Active (\begin{DoxyParamCaption}\item[{bool}]{support\+Active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\{\{Sets the active state for support.
+
+This is only used by \mbox{\hyperlink{class_o8_c_1_1_o8_c_system}{O8\+CSystem}} on deployed \mbox{\hyperlink{namespace_o8_c_1_1_web_g_l}{Web\+GL}} versions. \} \} 
+
+Implements \mbox{\hyperlink{class_o8_c_1_1_o8_c_microphone_support_a127e672a39782987d363caf867b1ad79}{O8\+C.\+O8\+CMicrophone\+Support}}.
+
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_voice_pro_microphone_support_a2f9c34c45525bcd6e2fc1baaaa935944}\label{class_o8_c_1_1_o8_c_voice_pro_microphone_support_a2f9c34c45525bcd6e2fc1baaaa935944}} 
+\index{O8C.O8CVoiceProMicrophoneSupport@{O8C.O8CVoiceProMicrophoneSupport}!StartRecord@{StartRecord}}
+\index{StartRecord@{StartRecord}!O8C.O8CVoiceProMicrophoneSupport@{O8C.O8CVoiceProMicrophoneSupport}}
+\doxysubsubsection{\texorpdfstring{StartRecord()}{StartRecord()}}
+{\footnotesize\ttfamily override void O8\+C.\+O8\+CVoice\+Pro\+Microphone\+Support.\+Start\+Record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Starts microphone record. 
+
+
+
+Implements \mbox{\hyperlink{class_o8_c_1_1_o8_c_microphone_support_a1af3097c5c7c0ed49c3915e1374b6b20}{O8\+C.\+O8\+CMicrophone\+Support}}.
+
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_voice_pro_microphone_support_a0cd919b46c42e08b14f3ec17bfec3aca}\label{class_o8_c_1_1_o8_c_voice_pro_microphone_support_a0cd919b46c42e08b14f3ec17bfec3aca}} 
+\index{O8C.O8CVoiceProMicrophoneSupport@{O8C.O8CVoiceProMicrophoneSupport}!StopRecord@{StopRecord}}
+\index{StopRecord@{StopRecord}!O8C.O8CVoiceProMicrophoneSupport@{O8C.O8CVoiceProMicrophoneSupport}}
+\doxysubsubsection{\texorpdfstring{StopRecord()}{StopRecord()}}
+{\footnotesize\ttfamily override void O8\+C.\+O8\+CVoice\+Pro\+Microphone\+Support.\+Stop\+Record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Stops microphone record. 
+
+
+
+Implements \mbox{\hyperlink{class_o8_c_1_1_o8_c_microphone_support_aac222436909b2f5a13a1ff5ee0c8985f}{O8\+C.\+O8\+CMicrophone\+Support}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Business/\+Projects/\+O8\+C/\+Verse/\+Verse -\/ Web\+GL/\+Assets/\mbox{[}\+O8\+CSystem\mbox{]}/\+Scripts/\+System/O8\+CVoice\+Pro\+Microphone\+Support.\+cs\end{DoxyCompactItemize}

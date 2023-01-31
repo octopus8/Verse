@@ -7,6 +7,8 @@ namespace O8C {
     /// </summary>
     public class O8CPlatformRigPlatformSelector : MonoBehaviour {
 
+        #region Inspector Variables
+
         /// <summary>The WebXR platform object.</summary>
         [Tooltip("The WebXR platform object.")]
         [SerializeField] protected GameObject webXRPlatform;
@@ -14,6 +16,9 @@ namespace O8C {
         /// <summary>The Oculus platform object.</summary>
         [Tooltip("The Oculus platform object.")]
         [SerializeField] protected GameObject oculusPlatform;
+
+        #endregion
+
 
 
         /// <summary>
@@ -28,5 +33,7 @@ namespace O8C {
         oculusPlatform.SetActive(true);
 #endif
         }
+
     }
+
 }

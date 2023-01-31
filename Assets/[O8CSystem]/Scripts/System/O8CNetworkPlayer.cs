@@ -11,7 +11,7 @@ namespace O8C {
     /// </summary>
     public class O8CNetworkPlayer : NetworkBehaviour {
 
-        #region Editor Variables
+        #region Inspector Variables
 
         /// <summary>The head GameObject.</summary>
         [Tooltip("The head GameObject.")]

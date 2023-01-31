@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace O8C {
 
-
     /// <summary>
     /// Destroys the debug display if running as a production build.
     /// </summary>
@@ -19,7 +18,6 @@ namespace O8C {
         }
 
     }
-
 
 }
 

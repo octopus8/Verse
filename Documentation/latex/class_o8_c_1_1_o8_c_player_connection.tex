@@ -2,77 +2,120 @@
 \label{class_o8_c_1_1_o8_c_player_connection}\index{O8C.O8CPlayerConnection@{O8C.O8CPlayerConnection}}
 
 
-Provides actions for Observers of player connection events.  
+Parent class for IO8\+CPlayer\+Connection Mono\+Behaviour implementations.  
 
 
 Inheritance diagram for O8\+C.\+O8\+CPlayer\+Connection\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_o8_c_1_1_o8_c_player_connection}
+\includegraphics[height=3.000000cm]{class_o8_c_1_1_o8_c_player_connection}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_a91daeccf2be78516cf1a85653a63f714}{Player\+Connected}} (Game\+Object player, bool is\+Local\+Player)
-\begin{DoxyCompactList}\small\item\em Called by \mbox{\hyperlink{class_o8_c_network_player}{O8\+CNetwork\+Player}} on Start to notify the system of a player connecting, this method calls the On\+Player\+Connected observers. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_a83ac67009725bb5b16e85d2e03f845d9}{Player\+Disconnected}} (Game\+Object player, bool is\+Local\+Player)
-\begin{DoxyCompactList}\small\item\em Called by \mbox{\hyperlink{class_o8_c_network_player}{O8\+CNetwork\+Player}} on Start to notify the system of a player disconnecting, this method calls the On\+Player\+Disconnected observers. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Events}
+abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_a211bf77a37394ae19886261ba52570c7}{Add\+Player\+Connected\+Observer}} (Action$<$ Game\+Object, bool $>$ observer)
+\item 
+abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_ac7c5ce094624749aa0131477bca39f43}{Player\+Connected}} (Game\+Object player, bool is\+Local\+Player)
+\item 
+abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_ac1ad1065212e9b1545da1ccafd0e9fbd}{Player\+Disconnected}} (Game\+Object player, bool is\+Local\+Player)
+\item 
+abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_a1df47a63c7638e9063a477055d86ab28}{Remove\+Player\+Connected\+Observer}} (Action$<$ Game\+Object, bool $>$ observer)
+\end{DoxyCompactItemize}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_o8_c_1_1_o8_c_player_connection_acb51ec794f935edc72d110aab04c0156}\label{class_o8_c_1_1_o8_c_player_connection_acb51ec794f935edc72d110aab04c0156}} 
-Action$<$ Game\+Object, bool $>$ {\bfseries On\+Player\+Connected}
-\begin{DoxyCompactList}\small\item\em \char`\"{}on player connected\char`\"{} event. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_o8_c_1_1_o8_c_player_connection_a0393c736123a57d7c54441230bf97d44}\label{class_o8_c_1_1_o8_c_player_connection_a0393c736123a57d7c54441230bf97d44}} 
-Action$<$ Game\+Object, bool $>$ {\bfseries On\+Player\+Disconnected}
-\begin{DoxyCompactList}\small\item\em \char`\"{}on player disconnected\char`\"{} event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_player_connection_a1c24ddc4a98680a13c54f989a31305f2}{Add\+Player\+Connected\+Observer}} (Action$<$ Game\+Object, bool $>$ observer)
+\begin{DoxyCompactList}\small\item\em Add a \char`\"{}player connected\char`\"{} event observer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_player_connection_ae29dc8582edd823a2c9e89786ff3a07e}{Remove\+Player\+Connected\+Observer}} (Action$<$ Game\+Object, bool $>$ observer)
+\begin{DoxyCompactList}\small\item\em Remove a \char`\"{}player connected\char`\"{} event observer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_player_connection_aaac24962f1bc3f0e2c62b6f83d60f805}{Player\+Connected}} (Game\+Object player, bool is\+Local\+Player)
+\begin{DoxyCompactList}\small\item\em Notifies the system a player has connected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_player_connection_a1bfa9126b459606961d86439e8ce22be}{Player\+Disconnected}} (Game\+Object player, bool is\+Local\+Player)
+\begin{DoxyCompactList}\small\item\em Notifies the system a player has disconnected. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Provides actions for Observers of player connection events. 
+Parent class for IO8\+CPlayer\+Connection Mono\+Behaviour implementations. 
+
+This class only contains abstract implementations of the interface and is intended to allow implementors of the interface to be used in the inspector. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_o8_c_1_1_o8_c_player_connection_a91daeccf2be78516cf1a85653a63f714}\label{class_o8_c_1_1_o8_c_player_connection_a91daeccf2be78516cf1a85653a63f714}} 
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_player_connection_a211bf77a37394ae19886261ba52570c7}\label{class_o8_c_1_1_o8_c_player_connection_a211bf77a37394ae19886261ba52570c7}} 
+\index{O8C.O8CPlayerConnection@{O8C.O8CPlayerConnection}!AddPlayerConnectedObserver@{AddPlayerConnectedObserver}}
+\index{AddPlayerConnectedObserver@{AddPlayerConnectedObserver}!O8C.O8CPlayerConnection@{O8C.O8CPlayerConnection}}
+\doxysubsubsection{\texorpdfstring{AddPlayerConnectedObserver()}{AddPlayerConnectedObserver()}}
+{\footnotesize\ttfamily abstract void O8\+C.\+O8\+CPlayer\+Connection.\+Add\+Player\+Connected\+Observer (\begin{DoxyParamCaption}\item[{Action$<$ Game\+Object, bool $>$}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\{Add a \char`\"{}player connected\char`\"{} event observer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & The observer.\\
+\hline
+\end{DoxyParams}
+\} 
+
+Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_player_connection_a1c24ddc4a98680a13c54f989a31305f2}{O8\+C.\+IO8\+CPlayer\+Connection}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_default_ae6ca3b3116181b3fe3616a8e8674b9a6}{O8\+C.\+O8\+CPlayer\+Connection\+Default}}.
+
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_player_connection_ac7c5ce094624749aa0131477bca39f43}\label{class_o8_c_1_1_o8_c_player_connection_ac7c5ce094624749aa0131477bca39f43}} 
 \index{O8C.O8CPlayerConnection@{O8C.O8CPlayerConnection}!PlayerConnected@{PlayerConnected}}
 \index{PlayerConnected@{PlayerConnected}!O8C.O8CPlayerConnection@{O8C.O8CPlayerConnection}}
 \doxysubsubsection{\texorpdfstring{PlayerConnected()}{PlayerConnected()}}
-{\footnotesize\ttfamily void O8\+C.\+O8\+CPlayer\+Connection.\+Player\+Connected (\begin{DoxyParamCaption}\item[{Game\+Object}]{player,  }\item[{bool}]{is\+Local\+Player }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily abstract void O8\+C.\+O8\+CPlayer\+Connection.\+Player\+Connected (\begin{DoxyParamCaption}\item[{Game\+Object}]{player,  }\item[{bool}]{is\+Local\+Player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\{Notifies the system a player has connected.
+
+This is called by \mbox{\hyperlink{class_o8_c_1_1_o8_c_network_player}{O8\+CNetwork\+Player}} on Start. \} 
+
+Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_player_connection_aaac24962f1bc3f0e2c62b6f83d60f805}{O8\+C.\+IO8\+CPlayer\+Connection}}.
 
 
 
-Called by \mbox{\hyperlink{class_o8_c_network_player}{O8\+CNetwork\+Player}} on Start to notify the system of a player connecting, this method calls the On\+Player\+Connected observers. 
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_default_a08400affdf88c444826559c4a13b44e2}{O8\+C.\+O8\+CPlayer\+Connection\+Default}}.
 
-This method is called by \mbox{\hyperlink{class_o8_c_network_player}{O8\+CNetwork\+Player}} on Start, notifying the system of a player connecting. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em player} & The new player Game\+Object.\\
-\hline
-{\em is\+Local\+Player} & Flag indicating if the new player is a local player.\\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_o8_c_1_1_o8_c_player_connection_a83ac67009725bb5b16e85d2e03f845d9}\label{class_o8_c_1_1_o8_c_player_connection_a83ac67009725bb5b16e85d2e03f845d9}} 
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_player_connection_ac1ad1065212e9b1545da1ccafd0e9fbd}\label{class_o8_c_1_1_o8_c_player_connection_ac1ad1065212e9b1545da1ccafd0e9fbd}} 
 \index{O8C.O8CPlayerConnection@{O8C.O8CPlayerConnection}!PlayerDisconnected@{PlayerDisconnected}}
 \index{PlayerDisconnected@{PlayerDisconnected}!O8C.O8CPlayerConnection@{O8C.O8CPlayerConnection}}
 \doxysubsubsection{\texorpdfstring{PlayerDisconnected()}{PlayerDisconnected()}}
-{\footnotesize\ttfamily void O8\+C.\+O8\+CPlayer\+Connection.\+Player\+Disconnected (\begin{DoxyParamCaption}\item[{Game\+Object}]{player,  }\item[{bool}]{is\+Local\+Player }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily abstract void O8\+C.\+O8\+CPlayer\+Connection.\+Player\+Disconnected (\begin{DoxyParamCaption}\item[{Game\+Object}]{player,  }\item[{bool}]{is\+Local\+Player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\{Notifies the system a player has disconnected.
+
+This is called by \mbox{\hyperlink{class_o8_c_1_1_o8_c_network_player}{O8\+CNetwork\+Player}} On\+Destroy. \} 
+
+Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_player_connection_a1bfa9126b459606961d86439e8ce22be}{O8\+C.\+IO8\+CPlayer\+Connection}}.
 
 
 
-Called by \mbox{\hyperlink{class_o8_c_network_player}{O8\+CNetwork\+Player}} on Start to notify the system of a player disconnecting, this method calls the On\+Player\+Disconnected observers. 
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_default_a7685909586376fe40747adacf716ad82}{O8\+C.\+O8\+CPlayer\+Connection\+Default}}.
 
-This method is called by \mbox{\hyperlink{class_o8_c_network_player}{O8\+CNetwork\+Player}} On\+Destroy, notifying the system of a player disconnecting. 
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_player_connection_a1df47a63c7638e9063a477055d86ab28}\label{class_o8_c_1_1_o8_c_player_connection_a1df47a63c7638e9063a477055d86ab28}} 
+\index{O8C.O8CPlayerConnection@{O8C.O8CPlayerConnection}!RemovePlayerConnectedObserver@{RemovePlayerConnectedObserver}}
+\index{RemovePlayerConnectedObserver@{RemovePlayerConnectedObserver}!O8C.O8CPlayerConnection@{O8C.O8CPlayerConnection}}
+\doxysubsubsection{\texorpdfstring{RemovePlayerConnectedObserver()}{RemovePlayerConnectedObserver()}}
+{\footnotesize\ttfamily abstract void O8\+C.\+O8\+CPlayer\+Connection.\+Remove\+Player\+Connected\+Observer (\begin{DoxyParamCaption}\item[{Action$<$ Game\+Object, bool $>$}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\{Remove a \char`\"{}player connected\char`\"{} event observer.
 
 
 \begin{DoxyParams}{Parameters}
-{\em player} & The player Game\+Object for the player disconnecting.\\
-\hline
-{\em is\+Local\+Player} & Flag indicating if the player leaving is a local player.\\
+{\em observer} & The observer.\\
 \hline
 \end{DoxyParams}
+\} 
+
+Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_player_connection_ae29dc8582edd823a2c9e89786ff3a07e}{O8\+C.\+IO8\+CPlayer\+Connection}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_default_aeb931bab671670bd6fb88b3506dfcaa5}{O8\+C.\+O8\+CPlayer\+Connection\+Default}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-E\+:/\+Business/\+Projects/\+O8\+C/\+Verse/\+Verse -\/ Web\+GL/\+Assets/\mbox{[}\+O8\+CSystem\mbox{]}/\+Scripts/\+System/O8\+CPlayer\+Connection.\+cs\end{DoxyCompactItemize}
+E\+:/\+Business/\+Projects/\+O8\+C/\+Verse/\+Verse -\/ Web\+GL/\+Assets/\mbox{[}\+O8\+CSystem\mbox{]}/\+Scripts/\+System/\+Interfaces/O8\+CPlayer\+Connection.\+cs\end{DoxyCompactItemize}

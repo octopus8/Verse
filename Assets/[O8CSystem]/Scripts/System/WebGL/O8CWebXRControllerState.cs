@@ -4,8 +4,7 @@ using UnityEngine.InputSystem.Utilities;
 using UnityEngine.InputSystem.LowLevel;
 using System.Runtime.InteropServices;
 using UnityEngine;
-#if UNITY_EDITOR
-#endif
+
 
 namespace O8C.WebGL {
 

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['initialize_0',['Initialize',['../class_o8_c_1_1_system_1_1_web_g_l_1_1_web_x_r_controller_left.html#af7360d6814f0aab310a960dc2c6145d3',1,'O8C.System.WebGL.WebXRControllerLeft.Initialize()'],['../class_o8_c_1_1_system_1_1_web_g_l_1_1_web_x_r_controller_right.html#a5fd171cafc4d5e8e22f06aeab28de498',1,'O8C.System.WebGL.WebXRControllerRight.Initialize()']]],
-  ['isdeployedwebgl_1',['IsDeployedWebGL',['../class_o8_c_1_1_system_1_1_o8_c_system.html#a57de43d18d0249e6bb741c32d1f71333',1,'O8C::System::O8CSystem']]],
-  ['isproduction_2',['IsProduction',['../class_o8_c_1_1_system_1_1_o8_c_system.html#a9f5460ef7be89cfbb5e974cd39cbdbd7',1,'O8C::System::O8CSystem']]]
+  ['getcurrentvisibilitystate_0',['GetCurrentVisibilityState',['../interface_o8_c_1_1_i_o8_c_app_focus_state.html#a908dc2d727cca734286b5ba4b1170c6f',1,'O8C.IO8CAppFocusState.GetCurrentVisibilityState()'],['../class_o8_c_1_1_o8_c_app_focus_state.html#aada98e38a3d9b708c0df62de9fdccd37',1,'O8C.O8CAppFocusState.GetCurrentVisibilityState()'],['../class_o8_c_1_1_o8_c_app_focus_state_default.html#a41576b44624d8bd3585aacfe8d48d21d',1,'O8C.O8CAppFocusStateDefault.GetCurrentVisibilityState()']]],
+  ['getcurrentxrstate_1',['GetCurrentXRState',['../interface_o8_c_1_1_i_o8_c_app_focus_state.html#a1ca52ab58b71b13b459af6785ffa7f0a',1,'O8C.IO8CAppFocusState.GetCurrentXRState()'],['../class_o8_c_1_1_o8_c_app_focus_state.html#a66737cdcff26404af36c7c8bee279d6e',1,'O8C.O8CAppFocusState.GetCurrentXRState()'],['../class_o8_c_1_1_o8_c_app_focus_state_default.html#a36a255ec7bae250011b407117e31bec1',1,'O8C.O8CAppFocusStateDefault.GetCurrentXRState()']]]
 ];

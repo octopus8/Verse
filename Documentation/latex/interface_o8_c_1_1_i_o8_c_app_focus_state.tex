@@ -1,0 +1,116 @@
+\hypertarget{interface_o8_c_1_1_i_o8_c_app_focus_state}{}\doxysection{O8\+C.\+IO8\+CApp\+Focus\+State Interface Reference}
+\label{interface_o8_c_1_1_i_o8_c_app_focus_state}\index{O8C.IO8CAppFocusState@{O8C.IO8CAppFocusState}}
+
+
+Provides access to the app focus state.  
+
+
+Inheritance diagram for O8\+C.\+IO8\+CApp\+Focus\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_o8_c_1_1_i_o8_c_app_focus_state}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_o8_c_1_1_i_o8_c_app_focus_state_a82c5b45e91bdbc3019fffc35733a3777}\label{interface_o8_c_1_1_i_o8_c_app_focus_state_a82c5b45e91bdbc3019fffc35733a3777}} 
+enum \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a82c5b45e91bdbc3019fffc35733a3777}{Visibility\+State}} \{ {\bfseries visible}
+, {\bfseries hidden}
+, {\bfseries visible\+Blurred}
+, {\bfseries unknown}
+ \}
+\begin{DoxyCompactList}\small\item\em App visibility states. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}\label{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}} 
+enum \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}{XRState}} \{ {\bfseries normal}
+, {\bfseries VR}
+, {\bfseries AR}
+, {\bfseries unknown}
+ \}
+\begin{DoxyCompactList}\small\item\em XR states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a02379c59207529a396f0699f1a431f60}{Add\+On\+XRChange\+Observer}} (Action$<$ \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}{XRState}} $>$ observer)
+\begin{DoxyCompactList}\small\item\em Add an observer to the \char`\"{}\+XR change\char`\"{} event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a5eb18dcf50642a1fe975cc45c420b996}{Remove\+On\+XRChange\+Observer}} (Action$<$ \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}{XRState}} $>$ observer)
+\begin{DoxyCompactList}\small\item\em Remmoves an observer to the \char`\"{}\+XR change\char`\"{} event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}{XRState}} \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a1ca52ab58b71b13b459af6785ffa7f0a}{Get\+Current\+XRState}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current XR state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a82c5b45e91bdbc3019fffc35733a3777}{Visibility\+State}} \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a908dc2d727cca734286b5ba4b1170c6f}{Get\+Current\+Visibility\+State}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current visibility state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides access to the app focus state. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_o8_c_1_1_i_o8_c_app_focus_state_a02379c59207529a396f0699f1a431f60}\label{interface_o8_c_1_1_i_o8_c_app_focus_state_a02379c59207529a396f0699f1a431f60}} 
+\index{O8C.IO8CAppFocusState@{O8C.IO8CAppFocusState}!AddOnXRChangeObserver@{AddOnXRChangeObserver}}
+\index{AddOnXRChangeObserver@{AddOnXRChangeObserver}!O8C.IO8CAppFocusState@{O8C.IO8CAppFocusState}}
+\doxysubsubsection{\texorpdfstring{AddOnXRChangeObserver()}{AddOnXRChangeObserver()}}
+{\footnotesize\ttfamily void O8\+C.\+IO8\+CApp\+Focus\+State.\+Add\+On\+XRChange\+Observer (\begin{DoxyParamCaption}\item[{Action$<$ \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}{XRState}} $>$}]{observer }\end{DoxyParamCaption})}
+
+
+
+Add an observer to the \char`\"{}\+XR change\char`\"{} event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & The observer.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_o8_c_1_1_i_o8_c_app_focus_state_a908dc2d727cca734286b5ba4b1170c6f}\label{interface_o8_c_1_1_i_o8_c_app_focus_state_a908dc2d727cca734286b5ba4b1170c6f}} 
+\index{O8C.IO8CAppFocusState@{O8C.IO8CAppFocusState}!GetCurrentVisibilityState@{GetCurrentVisibilityState}}
+\index{GetCurrentVisibilityState@{GetCurrentVisibilityState}!O8C.IO8CAppFocusState@{O8C.IO8CAppFocusState}}
+\doxysubsubsection{\texorpdfstring{GetCurrentVisibilityState()}{GetCurrentVisibilityState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a82c5b45e91bdbc3019fffc35733a3777}{Visibility\+State}} O8\+C.\+IO8\+CApp\+Focus\+State.\+Get\+Current\+Visibility\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the current visibility state. 
+
+\begin{DoxyReturn}{Returns}
+The current visibility state.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_aada98e38a3d9b708c0df62de9fdccd37}{O8\+C.\+O8\+CApp\+Focus\+State}}, and \mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_default_a41576b44624d8bd3585aacfe8d48d21d}{O8\+C.\+O8\+CApp\+Focus\+State\+Default}}.
+
+\mbox{\Hypertarget{interface_o8_c_1_1_i_o8_c_app_focus_state_a1ca52ab58b71b13b459af6785ffa7f0a}\label{interface_o8_c_1_1_i_o8_c_app_focus_state_a1ca52ab58b71b13b459af6785ffa7f0a}} 
+\index{O8C.IO8CAppFocusState@{O8C.IO8CAppFocusState}!GetCurrentXRState@{GetCurrentXRState}}
+\index{GetCurrentXRState@{GetCurrentXRState}!O8C.IO8CAppFocusState@{O8C.IO8CAppFocusState}}
+\doxysubsubsection{\texorpdfstring{GetCurrentXRState()}{GetCurrentXRState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}{XRState}} O8\+C.\+IO8\+CApp\+Focus\+State.\+Get\+Current\+XRState (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the current XR state. 
+
+\begin{DoxyReturn}{Returns}
+The current XR state.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_a66737cdcff26404af36c7c8bee279d6e}{O8\+C.\+O8\+CApp\+Focus\+State}}, and \mbox{\hyperlink{class_o8_c_1_1_o8_c_app_focus_state_default_a36a255ec7bae250011b407117e31bec1}{O8\+C.\+O8\+CApp\+Focus\+State\+Default}}.
+
+\mbox{\Hypertarget{interface_o8_c_1_1_i_o8_c_app_focus_state_a5eb18dcf50642a1fe975cc45c420b996}\label{interface_o8_c_1_1_i_o8_c_app_focus_state_a5eb18dcf50642a1fe975cc45c420b996}} 
+\index{O8C.IO8CAppFocusState@{O8C.IO8CAppFocusState}!RemoveOnXRChangeObserver@{RemoveOnXRChangeObserver}}
+\index{RemoveOnXRChangeObserver@{RemoveOnXRChangeObserver}!O8C.IO8CAppFocusState@{O8C.IO8CAppFocusState}}
+\doxysubsubsection{\texorpdfstring{RemoveOnXRChangeObserver()}{RemoveOnXRChangeObserver()}}
+{\footnotesize\ttfamily void O8\+C.\+IO8\+CApp\+Focus\+State.\+Remove\+On\+XRChange\+Observer (\begin{DoxyParamCaption}\item[{Action$<$ \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_app_focus_state_a27b9303b0e16e77204b4c44c63f5681c}{XRState}} $>$}]{observer }\end{DoxyParamCaption})}
+
+
+
+Remmoves an observer to the \char`\"{}\+XR change\char`\"{} event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & The observer.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Business/\+Projects/\+O8\+C/\+Verse/\+Verse -\/ Web\+GL/\+Assets/\mbox{[}\+O8\+CSystem\mbox{]}/\+Scripts/\+System/\+Interfaces/IO8\+CApp\+Focus\+State.\+cs\end{DoxyCompactItemize}

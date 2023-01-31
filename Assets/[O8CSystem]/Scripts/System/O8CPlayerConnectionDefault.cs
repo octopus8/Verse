@@ -8,7 +8,7 @@ namespace O8C {
     /// </summary>
     public class O8CPlayerConnectionDefault : O8CPlayerConnection {
 
-        #region Public Events
+        #region Public Connection Actions
 
         /// <summary>"on player connected" event.</summary>
         public event Action<GameObject, bool> OnPlayerConnected;
@@ -16,8 +16,8 @@ namespace O8C {
         /// <summary>"on player disconnected" event.</summary>
         public event Action<GameObject, bool> OnPlayerDisconnected;
 
-
         #endregion
+
 
 
         /// <summary>
@@ -48,10 +48,13 @@ namespace O8C {
         }
 
 
+        /** {@inheritdoc} */
         public override void AddPlayerConnectedObserver(Action<GameObject, bool> observer) {
             OnPlayerConnected += observer;
         }
 
+
+        /** {@inheritdoc} */
         public override void RemovePlayerConnectedObserver(Action<GameObject, bool> observer) {
             OnPlayerConnected -= observer;
         }

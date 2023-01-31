@@ -2,35 +2,130 @@
 \label{class_o8_c_1_1_o8_c_network}\index{O8C.O8CNetwork@{O8C.O8CNetwork}}
 
 
-This class provides a \char`\"{}\+Bridge\char`\"{} to imported network functionality.  
+Parent class for IO8\+CNetwork Mono\+Behaviour implementations.  
 
 
 Inheritance diagram for O8\+C.\+O8\+CNetwork\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_o8_c_1_1_o8_c_network}
+\includegraphics[height=3.000000cm]{class_o8_c_1_1_o8_c_network}
 \end{center}
 \end{figure}
-\doxysubsection*{Protected Attributes}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_o8_c_1_1_o8_c_network_a6a4f6fae2ee6a32c3aa10ed7e5553712}\label{class_o8_c_1_1_o8_c_network_a6a4f6fae2ee6a32c3aa10ed7e5553712}} 
-\mbox{\hyperlink{class_o8_c_mirror_network_manager}{O8\+CMirror\+Network\+Manager}} {\bfseries o8\+CMirror\+Network\+Manager}
-\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_o8_c_mirror_network_manager}{O8\+CMirror\+Network\+Manager}} this class is a facade for. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Events}
+abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_network_aa37f70b18fa1d57f380b6e9dd4ab4359}{Add\+On\+Connect\+Observer}} (Action observer)
+\item 
+abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_network_a98a81593b6edb6448e86fac064ad4660}{Add\+On\+Disconnect\+Observer}} (Action observer)
+\item 
+abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_network_a3945fc8520e45cf48598cad623199694}{Remove\+On\+Connect\+Observer}} (Action observer)
+\item 
+abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_network_a22bdcf646cfa88f770ee5b2bc97e501d}{Remove\+On\+Disconnect\+Observer}} (Action observer)
+\end{DoxyCompactItemize}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_o8_c_1_1_o8_c_network_af7c9095a89590dbf76f1f808f9d344f6}\label{class_o8_c_1_1_o8_c_network_af7c9095a89590dbf76f1f808f9d344f6}} 
-Action {\bfseries On\+Connect}
-\begin{DoxyCompactList}\small\item\em Event handler upon connecting. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_o8_c_1_1_o8_c_network_ab766af7fc2b28094ffb484af03a49a2d}\label{class_o8_c_1_1_o8_c_network_ab766af7fc2b28094ffb484af03a49a2d}} 
-Action {\bfseries On\+Disconnect}
-\begin{DoxyCompactList}\small\item\em Event handler upon disconnecting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_network_ae863a3de666cdefb33769cc5ed4a6e26}{Add\+On\+Connect\+Observer}} (Action observer)
+\begin{DoxyCompactList}\small\item\em Add an observer to the \char`\"{}on connect\char`\"{} event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_network_a5e0d26c781ffd9ed56a3ee5c16cc001a}{Remove\+On\+Connect\+Observer}} (Action observer)
+\begin{DoxyCompactList}\small\item\em Remove an observer to the \char`\"{}on connect\char`\"{} event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_network_a1e48b8ed83b8a21e6e3a313f0b6f4b80}{Add\+On\+Disconnect\+Observer}} (Action observer)
+\begin{DoxyCompactList}\small\item\em Add an observer to the \char`\"{}on disconnect\char`\"{} event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_network_a4c3e55c259594912141dd082803c0029}{Remove\+On\+Disconnect\+Observer}} (Action observer)
+\begin{DoxyCompactList}\small\item\em Remove an observer to the \char`\"{}on disconnect\char`\"{} event. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-This class provides a \char`\"{}\+Bridge\char`\"{} to imported network functionality. 
+Parent class for IO8\+CNetwork Mono\+Behaviour implementations. 
+
+This class only contains abstract implementations of the interface and is intended to allow implementors of the interface to be used in the inspector. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_network_aa37f70b18fa1d57f380b6e9dd4ab4359}\label{class_o8_c_1_1_o8_c_network_aa37f70b18fa1d57f380b6e9dd4ab4359}} 
+\index{O8C.O8CNetwork@{O8C.O8CNetwork}!AddOnConnectObserver@{AddOnConnectObserver}}
+\index{AddOnConnectObserver@{AddOnConnectObserver}!O8C.O8CNetwork@{O8C.O8CNetwork}}
+\doxysubsubsection{\texorpdfstring{AddOnConnectObserver()}{AddOnConnectObserver()}}
+{\footnotesize\ttfamily abstract void O8\+C.\+O8\+CNetwork.\+Add\+On\+Connect\+Observer (\begin{DoxyParamCaption}\item[{Action}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\{Add an observer to the \char`\"{}on connect\char`\"{} event.
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & The observer.\\
+\hline
+\end{DoxyParams}
+\} 
+
+Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_network_ae863a3de666cdefb33769cc5ed4a6e26}{O8\+C.\+IO8\+CNetwork}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_mirror_network_a23bb5a60321805f9c1c00c859993a83c}{O8\+C.\+O8\+CMirror\+Network}}.
+
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_network_a98a81593b6edb6448e86fac064ad4660}\label{class_o8_c_1_1_o8_c_network_a98a81593b6edb6448e86fac064ad4660}} 
+\index{O8C.O8CNetwork@{O8C.O8CNetwork}!AddOnDisconnectObserver@{AddOnDisconnectObserver}}
+\index{AddOnDisconnectObserver@{AddOnDisconnectObserver}!O8C.O8CNetwork@{O8C.O8CNetwork}}
+\doxysubsubsection{\texorpdfstring{AddOnDisconnectObserver()}{AddOnDisconnectObserver()}}
+{\footnotesize\ttfamily abstract void O8\+C.\+O8\+CNetwork.\+Add\+On\+Disconnect\+Observer (\begin{DoxyParamCaption}\item[{Action}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\{Add an observer to the \char`\"{}on disconnect\char`\"{} event.
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & The observer.\\
+\hline
+\end{DoxyParams}
+\} 
+
+Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_network_a1e48b8ed83b8a21e6e3a313f0b6f4b80}{O8\+C.\+IO8\+CNetwork}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_mirror_network_aa0751e5d6554ec31688a050692b969a7}{O8\+C.\+O8\+CMirror\+Network}}.
+
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_network_a3945fc8520e45cf48598cad623199694}\label{class_o8_c_1_1_o8_c_network_a3945fc8520e45cf48598cad623199694}} 
+\index{O8C.O8CNetwork@{O8C.O8CNetwork}!RemoveOnConnectObserver@{RemoveOnConnectObserver}}
+\index{RemoveOnConnectObserver@{RemoveOnConnectObserver}!O8C.O8CNetwork@{O8C.O8CNetwork}}
+\doxysubsubsection{\texorpdfstring{RemoveOnConnectObserver()}{RemoveOnConnectObserver()}}
+{\footnotesize\ttfamily abstract void O8\+C.\+O8\+CNetwork.\+Remove\+On\+Connect\+Observer (\begin{DoxyParamCaption}\item[{Action}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\{Remove an observer to the \char`\"{}on connect\char`\"{} event.
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & The observer.\\
+\hline
+\end{DoxyParams}
+\} 
+
+Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_network_a5e0d26c781ffd9ed56a3ee5c16cc001a}{O8\+C.\+IO8\+CNetwork}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_mirror_network_a5af69eeea67e8ae265a790bd1a9e73a7}{O8\+C.\+O8\+CMirror\+Network}}.
+
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_network_a22bdcf646cfa88f770ee5b2bc97e501d}\label{class_o8_c_1_1_o8_c_network_a22bdcf646cfa88f770ee5b2bc97e501d}} 
+\index{O8C.O8CNetwork@{O8C.O8CNetwork}!RemoveOnDisconnectObserver@{RemoveOnDisconnectObserver}}
+\index{RemoveOnDisconnectObserver@{RemoveOnDisconnectObserver}!O8C.O8CNetwork@{O8C.O8CNetwork}}
+\doxysubsubsection{\texorpdfstring{RemoveOnDisconnectObserver()}{RemoveOnDisconnectObserver()}}
+{\footnotesize\ttfamily abstract void O8\+C.\+O8\+CNetwork.\+Remove\+On\+Disconnect\+Observer (\begin{DoxyParamCaption}\item[{Action}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\{Remove an observer to the \char`\"{}on disconnect\char`\"{} event.
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & The observer.\\
+\hline
+\end{DoxyParams}
+\} 
+
+Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_network_a4c3e55c259594912141dd082803c0029}{O8\+C.\+IO8\+CNetwork}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_mirror_network_a0ae26e12aa91fb6d34212f77ef5ffa42}{O8\+C.\+O8\+CMirror\+Network}}.
+
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-E\+:/\+Business/\+Projects/\+O8\+C/\+Verse/\+Verse -\/ Web\+GL/\+Assets/\mbox{[}\+O8\+CSystem\mbox{]}/\+Scripts/\+System/O8\+CNetwork.\+cs\end{DoxyCompactItemize}
+E\+:/\+Business/\+Projects/\+O8\+C/\+Verse/\+Verse -\/ Web\+GL/\+Assets/\mbox{[}\+O8\+CSystem\mbox{]}/\+Scripts/\+System/\+Interfaces/O8\+CNetwork.\+cs\end{DoxyCompactItemize}

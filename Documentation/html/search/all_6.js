@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['handleft_0',['handLeft',['../class_o8_c_1_1_system_1_1_o8_c_network_player.html#aebfd3528ea1633ac8730f787b294b34e',1,'O8C::System::O8CNetworkPlayer']]],
-  ['handright_1',['handRight',['../class_o8_c_1_1_system_1_1_o8_c_network_player.html#ac79450c70bedfda7520f634a544d542a',1,'O8C::System::O8CNetworkPlayer']]],
-  ['hasconnected_2',['hasConnected',['../class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager.html#a729eeffdc57510fa5394414c4c71df4a',1,'O8C::System::O8CMirrorNetworkManager']]],
-  ['head_3',['head',['../class_o8_c_1_1_system_1_1_o8_c_device_tracking.html#ae470719f9e02e12bc33109011a4f2ea1',1,'O8C.System.O8CDeviceTracking.head()'],['../class_o8_c_1_1_system_1_1_o8_c_network_player.html#ac0d33635a750763c1842691b9788f5b3',1,'O8C.System.O8CNetworkPlayer.head()']]],
-  ['head_4',['Head',['../class_o8_c_1_1_system_1_1_o8_c_device_tracking.html#a76a1f87c387ec95cfe3ac418a261178a',1,'O8C::System::O8CDeviceTracking']]]
+  ['handleft_0',['handLeft',['../class_o8_c_1_1_o8_c_network_player.html#a88f8c1ed66b259454673a1087df5b38e',1,'O8C::O8CNetworkPlayer']]],
+  ['handright_1',['handRight',['../class_o8_c_1_1_o8_c_network_player.html#a9cda91b2fa78a280fd142101b1b901b2',1,'O8C::O8CNetworkPlayer']]],
+  ['hasconnected_2',['hasConnected',['../class_o8_c_1_1_o8_c_mirror_network_manager.html#a912ed65f35d066372a26eabd5664ebb6',1,'O8C::O8CMirrorNetworkManager']]],
+  ['head_3',['head',['../class_o8_c_1_1_o8_c_network_player.html#a89d797ce17f5073f9d9aff6b4c700f63',1,'O8C.O8CNetworkPlayer.head()'],['../class_o8_c_1_1_o8_c_zinnia_device_tracking.html#a6a91f5328b32fcb656fb0fb8fc61e22b',1,'O8C.O8CZinniaDeviceTracking.head()']]]
 ];

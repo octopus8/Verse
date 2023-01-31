@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['simplewebtransport_0',['simpleWebTransport',['../class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager.html#a7d7f5e1f6fe7125006ae3e1fb292ecf8',1,'O8C::System::O8CMirrorNetworkManager']]],
-  ['simplewebtransportdevport_1',['simpleWebTransportDevPort',['../class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager.html#ae7224779415bae1a90c3ef61fce65eaf',1,'O8C::System::O8CMirrorNetworkManager']]],
-  ['simplewebtransportprodport_2',['simpleWebTransportProdPort',['../class_o8_c_1_1_system_1_1_o8_c_mirror_network_manager.html#aa0c0a93069076052678409ee3606c906',1,'O8C::System::O8CMirrorNetworkManager']]]
+  ['recorder_0',['recorder',['../class_o8_c_1_1_o8_c_voice_pro_microphone_support.html#adc6ae8ad67f0d6f9119a8f5a357b856f',1,'O8C::O8CVoiceProMicrophoneSupport']]],
+  ['rightcontroller_1',['rightController',['../class_o8_c_1_1_web_g_l_1_1_o8_c_web_x_r_controller_input_to_state_event.html#a6f686d11bc1171a001650fad62ebc043',1,'O8C::WebGL::O8CWebXRControllerInputToStateEvent']]],
+  ['righthand_2',['rightHand',['../class_o8_c_1_1_o8_c_zinnia_device_tracking.html#ab96da6d741248fd4ade702be40381c25',1,'O8C::O8CZinniaDeviceTracking']]]
 ];

@@ -9,7 +9,6 @@ namespace O8C.WebGL {
     /// </summary>
     public class O8CSystemWebGLEnableMicrophoneSupport : MonoBehaviour {
 
-
         #region Base Methods
 
         /// <summary>
@@ -48,7 +47,6 @@ namespace O8C.WebGL {
         #endregion
 
     }
-
 
 }
 

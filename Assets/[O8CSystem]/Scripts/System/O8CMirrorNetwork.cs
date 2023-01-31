@@ -13,15 +13,16 @@ namespace O8C {
         #region Class Variables
 
         /// <summary>Event handler upon connecting.</summary>
-        public event Action OnConnect;
+        protected event Action OnConnect;
 
         /// <summary>Event handler upon disconnecting.</summary>
-        public event Action OnDisconnect;
+        protected event Action OnDisconnect;
 
         /// <summary>The O8CMirrorNetworkManager this class is a facade for.</summary>
         protected O8CMirrorNetworkManager o8CMirrorNetworkManager;
 
         #endregion
+
 
 
         #region Base Methods
@@ -56,23 +57,22 @@ namespace O8C {
             OnConnect += observer;
         }
 
+
         override public void RemoveOnConnectObserver(Action observer) {
             OnConnect -= observer;
         }
+
 
         override public void AddOnDisconnectObserver(Action observer) {
             OnDisconnect += observer;
         }
 
+
         override public void RemoveOnDisconnectObserver(Action observer) {
             OnDisconnect -= observer;
         }
 
-
-
         #endregion
-
-
 
 
 
@@ -93,9 +93,8 @@ namespace O8C {
             OnDisconnect?.Invoke();
         }
 
-
-
         #endregion
+
     }
 
 }

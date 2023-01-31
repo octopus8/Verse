@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['setsupportactive_0',['SetSupportActive',['../interface_o8_c_1_1_i_o8_c_microphone_support.html#af29f4d2327c3cc5b49da586b5fc73df3',1,'O8C.IO8CMicrophoneSupport.SetSupportActive()'],['../class_o8_c_1_1_o8_c_microphone_support.html#a127e672a39782987d363caf867b1ad79',1,'O8C.O8CMicrophoneSupport.SetSupportActive()'],['../class_o8_c_1_1_o8_c_voice_pro_microphone_support.html#aba70e36003957ba54172946d7cea9931',1,'O8C.O8CVoiceProMicrophoneSupport.SetSupportActive()']]],
+  ['startrecord_1',['StartRecord',['../interface_o8_c_1_1_i_o8_c_microphone_support.html#abc73a6f9dc877b69e1aa91634b3ab355',1,'O8C.IO8CMicrophoneSupport.StartRecord()'],['../class_o8_c_1_1_o8_c_microphone_support.html#a1af3097c5c7c0ed49c3915e1374b6b20',1,'O8C.O8CMicrophoneSupport.StartRecord()'],['../class_o8_c_1_1_o8_c_voice_pro_microphone_support.html#a2f9c34c45525bcd6e2fc1baaaa935944',1,'O8C.O8CVoiceProMicrophoneSupport.StartRecord()']]],
+  ['stoprecord_2',['StopRecord',['../interface_o8_c_1_1_i_o8_c_microphone_support.html#ab449df5abcf3e594b3ef48cbf450bf06',1,'O8C.IO8CMicrophoneSupport.StopRecord()'],['../class_o8_c_1_1_o8_c_microphone_support.html#aac222436909b2f5a13a1ff5ee0c8985f',1,'O8C.O8CMicrophoneSupport.StopRecord()'],['../class_o8_c_1_1_o8_c_voice_pro_microphone_support.html#a0cd919b46c42e08b14f3ec17bfec3aca',1,'O8C.O8CVoiceProMicrophoneSupport.StopRecord()']]]
+];

@@ -78,52 +78,99 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#events">Events</a> &#124;
 <a href="class_o8_c_1_1_o8_c_player_connection-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">O8C.O8CPlayerConnection Class Reference</div></div>
+  <div class="headertitle"><div class="title">O8C.O8CPlayerConnection Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Provides actions for Observers of player connection events.  
+<p>Parent class for IO8CPlayerConnection MonoBehaviour implementations.  
  <a href="class_o8_c_1_1_o8_c_player_connection.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for O8C.O8CPlayerConnection:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_o8_c_1_1_o8_c_player_connection.png" alt=""/>
- </div></div>
+  <img src="class_o8_c_1_1_o8_c_player_connection.png" usemap="#O8C.O8CPlayerConnection_map" alt=""/>
+  <map id="O8C.O8CPlayerConnection_map" name="O8C.O8CPlayerConnection_map">
+<area href="interface_o8_c_1_1_i_o8_c_player_connection.html" title="Provides access to player connection events." alt="O8C.IO8CPlayerConnection" shape="rect" coords="219,0,428,24"/>
+<area href="class_o8_c_1_1_o8_c_player_connection_default.html" title="Provides actions for Observers of player connection events." alt="O8C.O8CPlayerConnectionDefault" shape="rect" coords="109,112,318,136"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a91daeccf2be78516cf1a85653a63f714"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o8_c_1_1_o8_c_player_connection.html#a91daeccf2be78516cf1a85653a63f714">PlayerConnected</a> (GameObject player, bool isLocalPlayer)</td></tr>
-<tr class="memdesc:a91daeccf2be78516cf1a85653a63f714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by <a class="el" href="class_o8_c_network_player.html" title="On Start, this component notifies the system of a new player and connects tracked objects to tracked ...">O8CNetworkPlayer</a> on Start to notify the system of a player connecting, this method calls the OnPlayerConnected observers.  <br /></td></tr>
-<tr class="separator:a91daeccf2be78516cf1a85653a63f714"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83ac67009725bb5b16e85d2e03f845d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o8_c_1_1_o8_c_player_connection.html#a83ac67009725bb5b16e85d2e03f845d9">PlayerDisconnected</a> (GameObject player, bool isLocalPlayer)</td></tr>
-<tr class="memdesc:a83ac67009725bb5b16e85d2e03f845d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by <a class="el" href="class_o8_c_network_player.html" title="On Start, this component notifies the system of a new player and connects tracked objects to tracked ...">O8CNetworkPlayer</a> on Start to notify the system of a player disconnecting, this method calls the OnPlayerDisconnected observers.  <br /></td></tr>
-<tr class="separator:a83ac67009725bb5b16e85d2e03f845d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
-Events</h2></td></tr>
-<tr class="memitem:acb51ec794f935edc72d110aab04c0156"><td class="memItemLeft" align="right" valign="top"><a id="acb51ec794f935edc72d110aab04c0156" name="acb51ec794f935edc72d110aab04c0156"></a>
-Action&lt; GameObject, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnPlayerConnected</b></td></tr>
-<tr class="memdesc:acb51ec794f935edc72d110aab04c0156"><td class="mdescLeft">&#160;</td><td class="mdescRight">"on player connected" event. <br /></td></tr>
-<tr class="separator:acb51ec794f935edc72d110aab04c0156"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0393c736123a57d7c54441230bf97d44"><td class="memItemLeft" align="right" valign="top"><a id="a0393c736123a57d7c54441230bf97d44" name="a0393c736123a57d7c54441230bf97d44"></a>
-Action&lt; GameObject, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnPlayerDisconnected</b></td></tr>
-<tr class="memdesc:a0393c736123a57d7c54441230bf97d44"><td class="mdescLeft">&#160;</td><td class="mdescRight">"on player disconnected" event. <br /></td></tr>
-<tr class="separator:a0393c736123a57d7c54441230bf97d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a211bf77a37394ae19886261ba52570c7"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o8_c_1_1_o8_c_player_connection.html#a211bf77a37394ae19886261ba52570c7">AddPlayerConnectedObserver</a> (Action&lt; GameObject, bool &gt; observer)</td></tr>
+<tr class="separator:a211bf77a37394ae19886261ba52570c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7c5ce094624749aa0131477bca39f43"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o8_c_1_1_o8_c_player_connection.html#ac7c5ce094624749aa0131477bca39f43">PlayerConnected</a> (GameObject player, bool isLocalPlayer)</td></tr>
+<tr class="separator:ac7c5ce094624749aa0131477bca39f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1ad1065212e9b1545da1ccafd0e9fbd"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o8_c_1_1_o8_c_player_connection.html#ac1ad1065212e9b1545da1ccafd0e9fbd">PlayerDisconnected</a> (GameObject player, bool isLocalPlayer)</td></tr>
+<tr class="separator:ac1ad1065212e9b1545da1ccafd0e9fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1df47a63c7638e9063a477055d86ab28"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o8_c_1_1_o8_c_player_connection.html#a1df47a63c7638e9063a477055d86ab28">RemovePlayerConnectedObserver</a> (Action&lt; GameObject, bool &gt; observer)</td></tr>
+<tr class="separator:a1df47a63c7638e9063a477055d86ab28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c24ddc4a98680a13c54f989a31305f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o8_c_1_1_i_o8_c_player_connection.html#a1c24ddc4a98680a13c54f989a31305f2">AddPlayerConnectedObserver</a> (Action&lt; GameObject, bool &gt; observer)</td></tr>
+<tr class="memdesc:a1c24ddc4a98680a13c54f989a31305f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a "player connected" event observer.  <br /></td></tr>
+<tr class="separator:a1c24ddc4a98680a13c54f989a31305f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae29dc8582edd823a2c9e89786ff3a07e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o8_c_1_1_i_o8_c_player_connection.html#ae29dc8582edd823a2c9e89786ff3a07e">RemovePlayerConnectedObserver</a> (Action&lt; GameObject, bool &gt; observer)</td></tr>
+<tr class="memdesc:ae29dc8582edd823a2c9e89786ff3a07e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a "player connected" event observer.  <br /></td></tr>
+<tr class="separator:ae29dc8582edd823a2c9e89786ff3a07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaac24962f1bc3f0e2c62b6f83d60f805"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o8_c_1_1_i_o8_c_player_connection.html#aaac24962f1bc3f0e2c62b6f83d60f805">PlayerConnected</a> (GameObject player, bool isLocalPlayer)</td></tr>
+<tr class="memdesc:aaac24962f1bc3f0e2c62b6f83d60f805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the system a player has connected.  <br /></td></tr>
+<tr class="separator:aaac24962f1bc3f0e2c62b6f83d60f805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bfa9126b459606961d86439e8ce22be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o8_c_1_1_i_o8_c_player_connection.html#a1bfa9126b459606961d86439e8ce22be">PlayerDisconnected</a> (GameObject player, bool isLocalPlayer)</td></tr>
+<tr class="memdesc:a1bfa9126b459606961d86439e8ce22be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the system a player has disconnected.  <br /></td></tr>
+<tr class="separator:a1bfa9126b459606961d86439e8ce22be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Provides actions for Observers of player connection events. </p>
+<div class="textblock"><p>Parent class for IO8CPlayerConnection MonoBehaviour implementations. </p>
+<p>This class only contains abstract implementations of the interface and is intended to allow implementors of the interface to be used in the inspector. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a91daeccf2be78516cf1a85653a63f714" name="a91daeccf2be78516cf1a85653a63f714"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91daeccf2be78516cf1a85653a63f714">&#9670;&#160;</a></span>PlayerConnected()</h2>
+<a id="a211bf77a37394ae19886261ba52570c7" name="a211bf77a37394ae19886261ba52570c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a211bf77a37394ae19886261ba52570c7">&#9670;&#160;</a></span>AddPlayerConnectedObserver()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void O8C.O8CPlayerConnection.PlayerConnected </td>
+          <td class="memname">abstract void O8C.O8CPlayerConnection.AddPlayerConnectedObserver </td>
+          <td>(</td>
+          <td class="paramtype">Action&lt; GameObject, bool &gt;&#160;</td>
+          <td class="paramname"><em>observer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>{Add a "player connected" event observer.<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">observer</td><td>The observer.</td></tr>
+  </table>
+  </dd>
+</dl>
+} </p>
+
+<p>Implements <a class="el" href="interface_o8_c_1_1_i_o8_c_player_connection.html#a1c24ddc4a98680a13c54f989a31305f2">O8C.IO8CPlayerConnection</a>.</p>
+
+<p>Implemented in <a class="el" href="class_o8_c_1_1_o8_c_player_connection_default.html#ae6ca3b3116181b3fe3616a8e8674b9a6">O8C.O8CPlayerConnectionDefault</a>.</p>
+
+</div>
+</div>
+<a id="ac7c5ce094624749aa0131477bca39f43" name="ac7c5ce094624749aa0131477bca39f43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7c5ce094624749aa0131477bca39f43">&#9670;&#160;</a></span>PlayerConnected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void O8C.O8CPlayerConnection.PlayerConnected </td>
           <td>(</td>
           <td class="paramtype">GameObject&#160;</td>
           <td class="paramname"><em>player</em>, </td>
@@ -140,28 +187,31 @@ Action&lt; GameObject, bool &gt;&#160;</td><td class="memItemRight" valign="bott
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<p>{Notifies the system a player has connected.This is called by <a class="el" href="class_o8_c_1_1_o8_c_network_player.html" title="On Start, this component notifies the system of a new player and connects tracked objects to tracked ...">O8CNetworkPlayer</a> on Start. } </p>
 
-<p>Called by <a class="el" href="class_o8_c_network_player.html" title="On Start, this component notifies the system of a new player and connects tracked objects to tracked ...">O8CNetworkPlayer</a> on Start to notify the system of a player connecting, this method calls the OnPlayerConnected observers. </p>
-<p>This method is called by <a class="el" href="class_o8_c_network_player.html" title="On Start, this component notifies the system of a new player and connects tracked objects to tracked ...">O8CNetworkPlayer</a> on Start, notifying the system of a player connecting. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">player</td><td>The new player GameObject.</td></tr>
-    <tr><td class="paramname">isLocalPlayer</td><td>Flag indicating if the new player is a local player.</td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Implements <a class="el" href="interface_o8_c_1_1_i_o8_c_player_connection.html#aaac24962f1bc3f0e2c62b6f83d60f805">O8C.IO8CPlayerConnection</a>.</p>
+
+<p>Implemented in <a class="el" href="class_o8_c_1_1_o8_c_player_connection_default.html#a08400affdf88c444826559c4a13b44e2">O8C.O8CPlayerConnectionDefault</a>.</p>
 
 </div>
 </div>
-<a id="a83ac67009725bb5b16e85d2e03f845d9" name="a83ac67009725bb5b16e85d2e03f845d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83ac67009725bb5b16e85d2e03f845d9">&#9670;&#160;</a></span>PlayerDisconnected()</h2>
+<a id="ac1ad1065212e9b1545da1ccafd0e9fbd" name="ac1ad1065212e9b1545da1ccafd0e9fbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1ad1065212e9b1545da1ccafd0e9fbd">&#9670;&#160;</a></span>PlayerDisconnected()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void O8C.O8CPlayerConnection.PlayerDisconnected </td>
+          <td class="memname">abstract void O8C.O8CPlayerConnection.PlayerDisconnected </td>
           <td>(</td>
           <td class="paramtype">GameObject&#160;</td>
           <td class="paramname"><em>player</em>, </td>
@@ -178,22 +228,59 @@ Action&lt; GameObject, bool &gt;&#160;</td><td class="memItemRight" valign="bott
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<p>{Notifies the system a player has disconnected.This is called by <a class="el" href="class_o8_c_1_1_o8_c_network_player.html" title="On Start, this component notifies the system of a new player and connects tracked objects to tracked ...">O8CNetworkPlayer</a> OnDestroy. } </p>
 
-<p>Called by <a class="el" href="class_o8_c_network_player.html" title="On Start, this component notifies the system of a new player and connects tracked objects to tracked ...">O8CNetworkPlayer</a> on Start to notify the system of a player disconnecting, this method calls the OnPlayerDisconnected observers. </p>
-<p>This method is called by <a class="el" href="class_o8_c_network_player.html" title="On Start, this component notifies the system of a new player and connects tracked objects to tracked ...">O8CNetworkPlayer</a> OnDestroy, notifying the system of a player disconnecting. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Implements <a class="el" href="interface_o8_c_1_1_i_o8_c_player_connection.html#a1bfa9126b459606961d86439e8ce22be">O8C.IO8CPlayerConnection</a>.</p>
+
+<p>Implemented in <a class="el" href="class_o8_c_1_1_o8_c_player_connection_default.html#a7685909586376fe40747adacf716ad82">O8C.O8CPlayerConnectionDefault</a>.</p>
+
+</div>
+</div>
+<a id="a1df47a63c7638e9063a477055d86ab28" name="a1df47a63c7638e9063a477055d86ab28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1df47a63c7638e9063a477055d86ab28">&#9670;&#160;</a></span>RemovePlayerConnectedObserver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void O8C.O8CPlayerConnection.RemovePlayerConnectedObserver </td>
+          <td>(</td>
+          <td class="paramtype">Action&lt; GameObject, bool &gt;&#160;</td>
+          <td class="paramname"><em>observer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>{Remove a "player connected" event observer.<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">player</td><td>The player GameObject for the player disconnecting.</td></tr>
-    <tr><td class="paramname">isLocalPlayer</td><td>Flag indicating if the player leaving is a local player.</td></tr>
+    <tr><td class="paramname">observer</td><td>The observer.</td></tr>
   </table>
   </dd>
 </dl>
+} </p>
+
+<p>Implements <a class="el" href="interface_o8_c_1_1_i_o8_c_player_connection.html#ae29dc8582edd823a2c9e89786ff3a07e">O8C.IO8CPlayerConnection</a>.</p>
+
+<p>Implemented in <a class="el" href="class_o8_c_1_1_o8_c_player_connection_default.html#aeb931bab671670bd6fb88b3506dfcaa5">O8C.O8CPlayerConnectionDefault</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>E:/Business/Projects/O8C/Verse/Verse - WebGL/Assets/[O8CSystem]/Scripts/System/O8CPlayerConnection.cs</li>
+<li>E:/Business/Projects/O8C/Verse/Verse - WebGL/Assets/[O8CSystem]/Scripts/System/Interfaces/O8CPlayerConnection.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

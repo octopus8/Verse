@@ -13,7 +13,7 @@ namespace O8C {
     /// </remarks>
     public sealed class O8CSystem : MonoBehaviour {
 
-        #region Editor Variables
+        #region Inspector Variables
 
         /// <summary>The O8CDeviceTracking component in the O8CSystem.</summary>
         [Tooltip("The O8CDeviceTracking component in the O8CSystem.")]

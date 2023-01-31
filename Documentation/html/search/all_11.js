@@ -1,5 +1,5 @@
 var searchData=
 [
   ['verseinputactions_0',['VerseInputActions',['../class_verse_input_actions.html',1,'']]],
-  ['visibilitystate_1',['VisibilityState',['../class_o8_c_1_1_system_1_1_o8_c_app_focus_state.html#a2314d51243e30c0f414d0b89cbf6668c',1,'O8C::System::O8CAppFocusState']]]
+  ['visibilitystate_1',['VisibilityState',['../interface_o8_c_1_1_i_o8_c_app_focus_state.html#a82c5b45e91bdbc3019fffc35733a3777',1,'O8C::IO8CAppFocusState']]]
 ];

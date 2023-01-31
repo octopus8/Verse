@@ -8,15 +8,15 @@ namespace O8C {
     /// </summary>
     public class O8CNetworkConnectionInterruptedHudMessage : MonoBehaviour {
 
-        #region Editor Variables
+        #region Inspector Variables
 
         /// <summary>The message display GameObject.</summary>
         [Tooltip("The message display GameObject.")]
-        [SerializeField] GameObject display;
+        [SerializeField] protected GameObject display;
 
         /// <summary>The message text.</summary>
         [Tooltip("The message text.")]
-        [SerializeField] TextMeshProUGUI messageText;
+        [SerializeField] protected TextMeshProUGUI messageText;
 
         #endregion
 

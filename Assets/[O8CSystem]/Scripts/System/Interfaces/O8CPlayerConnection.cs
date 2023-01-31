@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace O8C {
 
-
     /// <summary>
     /// Parent class for IO8CPlayerConnection MonoBehaviour implementations.
     /// </summary>
