@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using WebXR;
 
-namespace O8C.System {
+namespace O8C {
 
     /// <summary>
     /// This class provides a "Bridge" to platform specific application focus state functionality.

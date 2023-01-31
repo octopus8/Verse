@@ -3,7 +3,7 @@ using FrostweepGames.Plugins.Native;
 using FrostweepGames.VoicePro;
 using UnityEngine;
 
-namespace O8C.System {
+namespace O8C {
 
     /// <summary>
     /// Waits a period of time after start, then sets the microphone for the attached recorder component.

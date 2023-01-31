@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace O8C.System {
+namespace O8C {
 
 
     public abstract class O8CAppFocusState : MonoBehaviour, IO8CAppFocusState {

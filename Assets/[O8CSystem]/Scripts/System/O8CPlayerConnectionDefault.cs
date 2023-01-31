@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace O8C.System {
+namespace O8C {
 
     /// <summary>
     /// Provides actions for Observers of player connection events.

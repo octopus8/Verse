@@ -7,7 +7,7 @@ using System.Linq;
 using UnityEditor;
 #endif
 
-namespace O8C.System.WebGL {
+namespace O8C.WebGL {
 
     /// <summary>
     /// The WebXR right controller InputDevice.

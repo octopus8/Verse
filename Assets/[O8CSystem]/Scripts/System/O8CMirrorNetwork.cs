@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 
-namespace O8C.System {
+namespace O8C {
 
     /// <summary>
     /// The Mirror implementation of O8CNetwork.

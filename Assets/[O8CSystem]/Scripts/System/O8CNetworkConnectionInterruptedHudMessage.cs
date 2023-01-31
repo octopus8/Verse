@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace O8C.System {
+namespace O8C {
 
     /// <summary>
     /// Displays a message upon network disconnect, and removes it upon reconnecting.

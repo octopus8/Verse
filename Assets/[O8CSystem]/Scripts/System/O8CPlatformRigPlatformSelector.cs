@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace O8C.System {
+namespace O8C {
 
     /// <summary>
     /// Sets the WebXR and Oculus platform active depending on the current platform.

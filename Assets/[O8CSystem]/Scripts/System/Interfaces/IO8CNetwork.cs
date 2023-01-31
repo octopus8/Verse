@@ -1,7 +1,7 @@
 using System;
 
 
-namespace O8C.System {
+namespace O8C {
 
     /// <summary>
     /// Provides access to network functionality.

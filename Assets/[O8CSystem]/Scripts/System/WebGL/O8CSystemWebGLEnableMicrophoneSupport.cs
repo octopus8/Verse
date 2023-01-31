@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace O8C.System.WebGL {
+namespace O8C.WebGL {
 
 
     /// <summary>

@@ -8,7 +8,7 @@ using System;
 using UnityEngine;
 #endif
 
-namespace O8C.System {
+namespace O8C {
 
 
     /// <summary>

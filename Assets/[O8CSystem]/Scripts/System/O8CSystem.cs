@@ -1,9 +1,8 @@
-using O8C.System.WebGL;
 using UnityEngine;
 using UnityEngine.Assertions;
 
 
-namespace O8C.System {
+namespace O8C {
 
     /// <summary>
     /// The "Singleton" that acts as access to functionality provided by the O8CSystem.

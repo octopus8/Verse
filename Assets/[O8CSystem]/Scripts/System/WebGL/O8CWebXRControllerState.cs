@@ -7,7 +7,7 @@ using UnityEngine;
 #if UNITY_EDITOR
 #endif
 
-namespace O8C.System.WebGL {
+namespace O8C.WebGL {
 
 
     /// <summary>

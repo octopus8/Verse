@@ -1,7 +1,7 @@
 using UnityEngine;
 using Zinnia.Tracking.Follow;
 
-namespace O8C.System {
+namespace O8C {
 
     /// <summary>
     /// Provides functionality related to tracked devices.

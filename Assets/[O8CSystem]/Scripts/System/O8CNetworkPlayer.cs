@@ -1,7 +1,7 @@
 using Mirror;
 using UnityEngine;
 
-namespace O8C.System {
+namespace O8C {
 
 
 

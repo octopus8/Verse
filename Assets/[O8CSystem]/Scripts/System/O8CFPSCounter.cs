@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace O8C.System {
+namespace O8C {
 
     /// <summary>
     /// Updates a FPS display text.

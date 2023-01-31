@@ -1,4 +1,4 @@
-using O8C.System;
+using O8C;
 using Tilia.CameraRigs.TrackedAlias;
 using UnityEngine;
 

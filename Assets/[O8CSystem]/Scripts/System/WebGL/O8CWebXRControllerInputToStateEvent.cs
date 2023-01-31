@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using WebXR;
 
 
-namespace O8C.System.WebGL {
+namespace O8C.WebGL {
 
     /// <summary>
     /// Reads controller input and passes the data to the InputSystem.

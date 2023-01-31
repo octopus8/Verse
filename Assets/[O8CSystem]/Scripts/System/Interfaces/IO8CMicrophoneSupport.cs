@@ -1,5 +1,5 @@
 
-namespace O8C.System {
+namespace O8C {
 
 
     public interface IO8CMicrophoneSupport {

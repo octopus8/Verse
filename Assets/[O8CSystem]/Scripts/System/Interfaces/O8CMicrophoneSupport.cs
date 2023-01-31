@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-namespace O8C.System {
+namespace O8C {
 
 
     public abstract class O8CMicrophoneSupport : MonoBehaviour, IO8CMicrophoneSupport {

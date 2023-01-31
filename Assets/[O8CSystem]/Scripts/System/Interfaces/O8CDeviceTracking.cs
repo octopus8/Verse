@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-namespace O8C.System {
+namespace O8C {
 
     /// <summary>
     /// Parent class for IO8CDeviceTracking MonoBehaviour implementations.
