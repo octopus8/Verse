@@ -329,6 +329,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c86122da5c243a45841c05b8f63b8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  avatarPrefab: {fileID: 5609869831568237768, guid: 73e9b5bd2f48ce840b1ceb4c8a213924,
+    type: 3}
 --- !u!4 &601508183
 Transform:
   m_ObjectHideFlags: 0

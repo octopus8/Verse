@@ -1,4 +1,5 @@
 using O8C.System;
+using Tilia.CameraRigs.TrackedAlias;
 using UnityEngine;
 
 
@@ -7,6 +8,8 @@ using UnityEngine;
 /// </summary>
 public class StartScenePlayerConnection : MonoBehaviour
 {
+    [SerializeField] protected GameObject avatarPrefab;
+
 
     /// <summary>
     /// Registers callbacks.
@@ -32,10 +35,8 @@ public class StartScenePlayerConnection : MonoBehaviour
     /// <param name="player">The new player GameObject.</param>
     /// <param name="isLocalPlayer">Flag indicating the player is a local player.</param>
     private void OnPlayerConnected(GameObject player, bool isLocalPlayer) {
-/*
-        if (isLocalPlayer) {
-            player.AddComponent<Test>();
-        }
-*/
+
+        var avatar = Instantiate(avatarPrefab, player.transform);
+
     }
 }
