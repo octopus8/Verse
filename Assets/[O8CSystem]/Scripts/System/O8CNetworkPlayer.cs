@@ -1,5 +1,6 @@
 using Mirror;
 using UnityEngine;
+using Zinnia.Tracking.Follow;
 
 namespace O8C {
 
@@ -25,10 +26,9 @@ namespace O8C {
         [Tooltip("The right hand GameObject.")]
         [SerializeField] protected GameObject handRight;
 
-        bool isApplicationQuitting = false;
-
         #endregion
 
+        protected bool isApplicationQuitting = false;
 
 
         #region Base Methods

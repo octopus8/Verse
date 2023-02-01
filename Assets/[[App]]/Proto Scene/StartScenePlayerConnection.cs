@@ -37,6 +37,10 @@ public class StartScenePlayerConnection : MonoBehaviour
     private void OnPlayerConnected(GameObject player, bool isLocalPlayer) {
 
         var avatar = Instantiate(avatarPrefab, player.transform);
-
+        var actorMotor = player.AddComponent<ActorMotorDefault>();
+        IMotorInput inputHandler;
+        inputHandler = player.AddComponent<MotorInputDefault>();
+        inputHandler.SetMotor(actorMotor);
     }
+
 }
