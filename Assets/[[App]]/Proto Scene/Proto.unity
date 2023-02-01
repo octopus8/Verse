@@ -6051,9 +6051,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   currentIndex: 0
-  elements:
-  - {fileID: 4949251953596585421}
-  - {fileID: 4349876010700835133}
+  elements: []
 --- !u!1 &3661533917128338590
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,6 @@
 using UnityEngine;
+using Zinnia.Tracking.CameraRig;
+using Zinnia.Tracking.CameraRig.Collection;
 
 namespace O8C {
 
@@ -25,12 +27,15 @@ namespace O8C {
         /// Sets the platform objects active depending on the platform.
         /// </summary>
         private void Awake() {
+            LinkedAliasAssociationCollectionObservableList list = FindObjectOfType<LinkedAliasAssociationCollectionObservableList>();
 #if UNITY_WEBGL
             webXRPlatform.SetActive(true);
-            oculusPlatform.SetActive(false);
+            list.Add(webXRPlatform.GetComponent<LinkedAliasAssociationCollection>());
+            Destroy(oculusPlatform);
 #else
-        webXRPlatform.SetActive(false);
-        oculusPlatform.SetActive(true);
+            oculusPlatform.SetActive(true);
+            list.Add(oculusPlatform.GetComponent<LinkedAliasAssociationCollection>());
+            Destroy(webXRPlatform);
 #endif
         }
 
