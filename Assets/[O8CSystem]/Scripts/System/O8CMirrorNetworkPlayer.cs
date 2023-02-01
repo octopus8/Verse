@@ -1,6 +1,5 @@
 using Mirror;
 using UnityEngine;
-using Zinnia.Tracking.Follow;
 
 namespace O8C {
 
@@ -10,7 +9,7 @@ namespace O8C {
     /// On Start, this component notifies the system of a new player and connects tracked objects to tracked targets.
     /// OnDestroy, the system is notified of the player removal and tracked objects are removed from tracked targets.
     /// </summary>
-    public class O8CNetworkPlayer : NetworkBehaviour {
+    public class O8CMirrorNetworkPlayer : NetworkBehaviour {
 
         #region Inspector Variables
 

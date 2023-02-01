@@ -34,6 +34,9 @@ namespace O8C {
         /** {@inheritdoc} */
         abstract public void RemoveRightHandTarget(GameObject target);
 
+        /** {@inheritdoc} */
+        abstract public void SetPlayAreaFollower(GameObject source);
+
     }
 
 }

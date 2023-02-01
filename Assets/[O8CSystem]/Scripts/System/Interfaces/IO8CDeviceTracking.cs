@@ -49,6 +49,13 @@ namespace O8C {
         /// <param name="target">Target GameObject.</param>
         public void RemoveRightHandTarget(GameObject target);
 
+
+        /// <summary>
+        /// Sets the play area follower.
+        /// </summary>
+        /// <param name="source">The object to follow.</param>
+        public void SetPlayAreaFollower(GameObject source);
+
     }
 
 }

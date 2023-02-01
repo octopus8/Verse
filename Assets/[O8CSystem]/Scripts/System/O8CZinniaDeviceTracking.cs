@@ -10,6 +10,10 @@ namespace O8C {
 
         #region Inspector Variables
 
+        /// <summary>The play area.</summary>
+        [Tooltip("The play area.")]
+        [SerializeField] protected ObjectFollower playArea;
+
         /// <summary>The head tracked device.</summary>
         [Tooltip("The head tracked device.")]
         [SerializeField] protected ObjectFollower head;
@@ -56,6 +60,11 @@ namespace O8C {
         /** {@inheritdoc} */
         override public void RemoveRightHandTarget(GameObject target) {
             rightHand.Targets.Remove(target);
+        }
+
+        /** {@inheritdoc} */
+        override public void SetPlayAreaFollower(GameObject source) {
+            playArea.Sources.Add(source);
         }
 
         #endregion

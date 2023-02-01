@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 7422727979308297350}
   - component: {fileID: 4113340525534065422}
   m_Layer: 0
-  m_Name: O8CNetworkPlayer
+  m_Name: O8CMirrorNetworkPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
