@@ -58,6 +58,19 @@ namespace O8C {
         public override void RemovePlayerConnectedObserver(Action<GameObject, bool> observer) {
             OnPlayerConnected -= observer;
         }
+
+
+        /** {@inheritdoc} */
+        public override void AddPlayerDisconnectedObserver(Action<GameObject, bool> observer) {
+            OnPlayerDisconnected += observer;
+        }
+
+
+        /** {@inheritdoc} */
+        public override void RemovePlayerDisconnectedObserver(Action<GameObject, bool> observer) {
+            OnPlayerDisconnected -= observer;
+        }
+
     }
 
 }

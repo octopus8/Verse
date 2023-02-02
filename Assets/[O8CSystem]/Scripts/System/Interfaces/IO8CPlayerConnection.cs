@@ -22,6 +22,19 @@ namespace O8C {
         /// <param name="observer">The observer.</param>
         public void RemovePlayerConnectedObserver(Action<GameObject, bool> observer);
 
+        /// <summary>
+        /// Add a "player connected" event observer.
+        /// </summary>
+        /// <param name="observer">The observer.</param>
+        public void AddPlayerDisconnectedObserver(Action<GameObject, bool> observer);
+
+
+        /// <summary>
+        /// Remove a "player connected" event observer.
+        /// </summary>
+        /// <param name="observer">The observer.</param>
+        public void RemovePlayerDisconnectedObserver(Action<GameObject, bool> observer);
+
 
         /// <summary>
         /// Notifies the system a player has connected.

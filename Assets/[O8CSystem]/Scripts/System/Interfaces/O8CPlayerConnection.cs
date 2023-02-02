@@ -15,13 +15,20 @@ namespace O8C {
         abstract public void AddPlayerConnectedObserver(Action<GameObject, bool> observer);
 
         /** {@inheritdoc} */
+        abstract public void RemovePlayerConnectedObserver(Action<GameObject, bool> observer);
+
+        /** {@inheritdoc} */
+        abstract public void AddPlayerDisconnectedObserver(Action<GameObject, bool> observer);
+
+        /** {@inheritdoc} */
+        abstract public void RemovePlayerDisconnectedObserver(Action<GameObject, bool> observer);
+
+        /** {@inheritdoc} */
         abstract public void PlayerConnected(GameObject player, bool isLocalPlayer);
 
         /** {@inheritdoc} */
         abstract public void PlayerDisconnected(GameObject player, bool isLocalPlayer);
 
-        /** {@inheritdoc} */
-        abstract public void RemovePlayerConnectedObserver(Action<GameObject, bool> observer);
 
     }
 

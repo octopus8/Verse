@@ -1,5 +1,6 @@
 using Mirror;
 using UnityEngine;
+using Zinnia.Tracking.Follow;
 
 namespace O8C {
 
@@ -9,7 +10,7 @@ namespace O8C {
     /// On Start, this component notifies the system of a new player and connects tracked objects to tracked targets.
     /// OnDestroy, the system is notified of the player removal and tracked objects are removed from tracked targets.
     /// </summary>
-    public class O8CMirrorNetworkPlayer : NetworkBehaviour {
+    public class O8CMirrorNetworkPlayer : NetworkBehaviour, IO8CNetworkPlayer {
 
         #region Inspector Variables
 
@@ -24,6 +25,18 @@ namespace O8C {
         /// <summary>The right hand GameObject.</summary>
         [Tooltip("The right hand GameObject.")]
         [SerializeField] protected GameObject handRight;
+
+        /// <summary>The head follower</summary>
+        [Tooltip("The head follower")]
+        [SerializeField] protected ObjectFollower headFollower;
+
+        /// <summary>The left hand follower</summary>
+        [Tooltip("The left hand follower")]
+        [SerializeField] protected ObjectFollower leftHandFollower;
+
+        /// <summary>The right hand follower</summary>
+        [Tooltip("The right hand follower")]
+        [SerializeField] protected ObjectFollower rightHandFollower;
 
         #endregion
 
@@ -76,6 +89,32 @@ namespace O8C {
                 O8CSystem.Instance.DeviceTracking.RemoveLeftHandTarget(handLeft);
             }
         }
+
+        public void AddHeadFollower(GameObject head) {
+            headFollower.Targets.Add(head);
+        }
+
+        public void AddLeftHandFollower(GameObject leftHand) {
+            leftHandFollower.Targets.Add(leftHand);
+        }
+
+        public void AddRightHandFollower(GameObject rightHand) {
+            rightHandFollower.Targets.Add(rightHand);
+        }
+
+        public void RemoveHeadFollower(GameObject head) {
+            headFollower.Targets.Remove(head);
+        }
+
+        public void RemoveLeftHandFollower(GameObject leftHand) {
+            leftHandFollower.Targets.Remove(leftHand);
+        }
+
+        public void RemoveRightHandFollower(GameObject rightHand) {
+            rightHandFollower.Targets.Remove(rightHand);
+        }
+
+
 
         #endregion
 

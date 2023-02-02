@@ -16,6 +16,7 @@ public class StartScenePlayerConnection : MonoBehaviour
     void Start()
     {
         O8CSystem.Instance.PlayerConnection.AddPlayerConnectedObserver(OnPlayerConnected);
+        O8CSystem.Instance.PlayerConnection.AddPlayerDisconnectedObserver(OnPlayerDisconnected);
     }
 
 
@@ -24,6 +25,7 @@ public class StartScenePlayerConnection : MonoBehaviour
     /// </summary>
     private void OnDestroy() {
         O8CSystem.Instance.PlayerConnection.RemovePlayerConnectedObserver(OnPlayerConnected);
+        O8CSystem.Instance.PlayerConnection.RemovePlayerDisconnectedObserver(OnPlayerDisconnected);
     }
 
 
@@ -37,7 +39,16 @@ public class StartScenePlayerConnection : MonoBehaviour
     /// <param name="isLocalPlayer">Flag indicating the player is a local player.</param>
     private void OnPlayerConnected(GameObject player, bool isLocalPlayer) {
 
-        var avatar = Instantiate(avatarPrefab, player.transform);
+        var networkPlayer = player.GetComponent<IO8CNetworkPlayer>();
+
+
+        var avatar = Instantiate(avatarPrefab, player.transform).GetComponent<O8CAvatarParts>();
+
+        networkPlayer.AddHeadFollower(avatar.Head);
+        networkPlayer.AddLeftHandFollower(avatar.LeftHand);
+        networkPlayer.AddRightHandFollower(avatar.RightHand);
+
+
         if (isLocalPlayer) {
             var actorMotor = player.AddComponent<ActorMotorDefault>();
             IMotorInput inputHandler = player.AddComponent<MotorInputDefault>();
@@ -46,6 +57,13 @@ public class StartScenePlayerConnection : MonoBehaviour
         }
 
 
+    }
+
+
+    private void OnPlayerDisconnected(GameObject player, bool isLocalPlayer) {
+        if (isLocalPlayer) {
+            O8CSystem.Instance.DeviceTracking.SetPlayAreaFollower(null);
+        }
     }
 
 }
