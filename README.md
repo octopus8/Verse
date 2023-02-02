@@ -19,8 +19,35 @@
 
 ## Milestones
 * 1.0.01 - Basic Avatar & Locomotion
+  * Local and remote avatar, composed of a head, two hands, and a body
+  * Head and hand tracking; body stays upright
+  * Movement via stick movement
+  * Movement relative to body direction
+  * Rotation via stick input
+  * Define a player start position
 * 1.0.02 - Hot Mic Indicator
-* 1.0.03 -  Avatar with IK Arms and Legs
+  * Head locked 3D object
+  * Display object when mic is hot, and hide the object when the mic is not hot
+  * Object is not clipped by world geometry
+  * Bonus
+    * Make the object dynamic with some shader effect
+* 1.0.03 - Display Controls When Looking at Hands
+  * Hide hands and display controllers when looking down at both hands
+  * Hide controllers and display hands when looking away from both hands
+  * Display microphone control annotation    
+* 1.0.04 -  Avatar with IK Arms and Legs
+  * Full body local and remote avatar with IK arms
+  * Full body local and remote avatar with IK legs
+* 1.0.05 - Import VR Body Asset
+  * Head is prevented from going through a wall
+  * Body can climb stairs
+  * Bonus
+    * Easy hand interactions
+* 1.0.06 - Name Input and Nameplate  
+  * User can enter a name
+  * User's name is displayed over the user
+  * Nameplate has a limited scale as it moves away and closer
+  * Nameplate is not clipped by world geometry
 
 ## History
 (nothing yet)
