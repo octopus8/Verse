@@ -48,7 +48,6 @@ public class StartScenePlayerConnection : MonoBehaviour
         networkPlayer.AddLeftHandFollower(avatar.LeftHand);
         networkPlayer.AddRightHandFollower(avatar.RightHand);
 
-
         if (isLocalPlayer) {
             var actorMotor = player.AddComponent<ActorMotorDefault>();
             IMotorInput inputHandler = player.AddComponent<MotorInputDefault>();
