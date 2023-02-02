@@ -50,8 +50,10 @@ public class StartScenePlayerConnection : MonoBehaviour
 
         if (isLocalPlayer) {
             var actorMotor = player.AddComponent<ActorMotorDefault>();
-            IMotorInput inputHandler = player.AddComponent<MotorInputDefault>();
-            inputHandler.SetMotor(actorMotor);
+            IMotorInput motorInput = player.AddComponent<MotorInputDefault>();
+            motorInput.SetMotor(actorMotor);
+            motorInput.SetInputTransform(avatar.BodyJoint.transform);
+
             O8CSystem.Instance.DeviceTracking.SetPlayAreaFollower(player);
         }
 

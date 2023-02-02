@@ -1,10 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MotorInputKeyboard : MonoBehaviour, IMotorInput {
 
     protected IActorMotor actorMotor;
+
+    protected Transform inputTransform;
+
+
+    public void SetInputTransform(Transform transform) {
+        inputTransform = transform;
+    }
 
     public void SetMotor(IActorMotor motor) {
         actorMotor = motor;
@@ -32,7 +37,13 @@ public class MotorInputKeyboard : MonoBehaviour, IMotorInput {
             moveDir.x += 1;
         }
 
-        actorMotor.Move(moveDir);
+        moveDir.Normalize();
+
+        float yRotation = inputTransform.rotation.eulerAngles.y;
+        Vector3 dir = new Vector3(moveDir.x, 0, moveDir.y);
+        dir = Quaternion.Euler(0, yRotation, 0) * dir;
+
+        actorMotor.Move(dir);
 
     }
 

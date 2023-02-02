@@ -36,7 +36,6 @@ namespace O8C {
 
         /** {@inheritdoc} */
         abstract public void SetPlayAreaFollower(GameObject source);
-
     }
 
 }
