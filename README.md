@@ -17,7 +17,13 @@
   </p>
 </div>
 
+## Milestones
+* 1.0.01 - Basic Avatar & Locomotion
+* 1.0.02 - Hot Mic Indicator
+* 1.0.03 -  Avatar with IK Arms and Legs
 
+## History
+(nothing yet)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
