@@ -8,6 +8,8 @@ public class O8CAvatarParts : MonoBehaviour
     [SerializeField] protected GameObject leftHand;
     [SerializeField] protected GameObject rightHand;
 
+    [SerializeField] protected GameObject bodyJoint;
+
     public GameObject Head { get { return head; } }
     public GameObject LeftHand { get { return leftHand; } }
     public GameObject RightHand { get { return rightHand; } }
@@ -36,6 +38,10 @@ public class O8CAvatarParts : MonoBehaviour
         offset.localRotation = Quaternion.Euler(rotation);
     }
 
+
+    private void Update() {
+        bodyJoint.transform.rotation = Quaternion.Euler(0, head.transform.rotation.eulerAngles.y, 0);
+    }
 
 
 }

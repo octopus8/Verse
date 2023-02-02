@@ -575,6 +575,7 @@ MonoBehaviour:
   head: {fileID: 4691390930906101521}
   leftHand: {fileID: 4691390932505519208}
   rightHand: {fileID: 4691390931194891925}
+  bodyJoint: {fileID: 4691390931605389441}
 --- !u!1 &6682552690648284442
 GameObject:
   m_ObjectHideFlags: 0
