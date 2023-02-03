@@ -9,6 +9,8 @@ public class StartScenePlayerConnection : MonoBehaviour
 {
     [SerializeField] protected GameObject avatarPrefab;
 
+    [SerializeField] protected Transform startTransform;
+
 
     /// <summary>
     /// Registers callbacks.
@@ -49,12 +51,16 @@ public class StartScenePlayerConnection : MonoBehaviour
         networkPlayer.AddRightHandFollower(avatar.RightHand);
 
         if (isLocalPlayer) {
-            var actorMotor = player.AddComponent<ActorMotorDefault>();
-            IMotorInput motorInput = player.AddComponent<MotorInputDefault>();
+            player.AddComponent<StartSceneMicrophoneController>();
+            var actorMotor = player.AddComponent<ActorMotorSimple>();
+            IMotorInput motorInput = player.AddComponent<MotorInputSimple>();
             motorInput.SetMotor(actorMotor);
             motorInput.SetInputTransform(avatar.BodyJoint.transform);
 
             O8CSystem.Instance.DeviceTracking.SetPlayAreaFollower(player);
+
+            player.transform.rotation = startTransform.rotation;
+            player.transform.position = startTransform.position;
         }
 
 

@@ -1,7 +1,7 @@
 using O8C;
 using UnityEngine;
 
-public class MotorInputDefault : MonoBehaviour, IMotorInput {
+public class MotorInputSimple : MonoBehaviour, IMotorInput {
 
     protected IActorMotor actorMotor;
 
@@ -14,6 +14,7 @@ public class MotorInputDefault : MonoBehaviour, IMotorInput {
     void Start() {
         inputActions = new VerseInputActions();
         inputActions.Player.Move.Enable();
+        inputActions.Player.Turn.Enable();
     }
 
     protected void Update() {
@@ -26,6 +27,8 @@ public class MotorInputDefault : MonoBehaviour, IMotorInput {
         dir = Quaternion.Euler(0, yRotation, 0) * dir;
         actorMotor.Move(dir);
 
+        axis = inputActions.Player.Turn.ReadValue<Vector2>();
+        actorMotor.Turn(axis.x);
     }
 
     public void SetInputTransform(Transform transform) {
