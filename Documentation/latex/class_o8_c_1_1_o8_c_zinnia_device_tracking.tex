@@ -25,6 +25,8 @@ override void \mbox{\hyperlink{class_o8_c_1_1_o8_c_zinnia_device_tracking_a2720c
 override void \mbox{\hyperlink{class_o8_c_1_1_o8_c_zinnia_device_tracking_ac5b28bcbd679b33cda8329f474b3c1b8}{Remove\+Left\+Hand\+Target}} (Game\+Object target)
 \item 
 override void \mbox{\hyperlink{class_o8_c_1_1_o8_c_zinnia_device_tracking_a40800a1f4cad30d4373555119a439ea6}{Remove\+Right\+Hand\+Target}} (Game\+Object target)
+\item 
+override void \mbox{\hyperlink{class_o8_c_1_1_o8_c_zinnia_device_tracking_a947f89f5073efcb064183133c10dcc41}{Set\+Play\+Area\+Follower}} (Game\+Object source)
 \end{DoxyCompactItemize}
 \begin{DoxyCompactItemize}
 \item 
@@ -39,6 +41,8 @@ abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_device_tracking_a3c09c252d510
 abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_device_tracking_a40bb545f874ee9bfc347ca71d077c032}{Remove\+Left\+Hand\+Target}} (Game\+Object target)
 \item 
 abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_device_tracking_a1503e0c7fb44c14ed4043f00a21f42e9}{Remove\+Right\+Hand\+Target}} (Game\+Object target)
+\item 
+abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_device_tracking_a4b5d46a226633ed143c2baedbfebed85}{Set\+Play\+Area\+Follower}} (Game\+Object source)
 \end{DoxyCompactItemize}
 \begin{DoxyCompactItemize}
 \item 
@@ -53,10 +57,15 @@ void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_aaeec2695d3644a3
 void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_a8843c9151b244cf520fd4f48fec06757}{Add\+Right\+Hand\+Target}} (Game\+Object target)
 \begin{DoxyCompactList}\small\item\em Add a Game\+Object to be transformed by the head transform. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_ab1867ba0b8d9a9b88bc8fbb91d91ede2}{Remove\+Right\+Hand\+Target}} (Game\+Object target)
-\begin{DoxyCompactList}\small\item\em Add a Game\+Object to be transformed by the head transform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Add a Game\+Object to be transformed by the head transform. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_a2737c1905a1a2d1740d5f1f986fa2db8}{Set\+Play\+Area\+Follower}} (Game\+Object source)
+\begin{DoxyCompactList}\small\item\em Sets the play area follower. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_zinnia_device_tracking_ae11612dc0ef3c239bd306e96e740a561}\label{class_o8_c_1_1_o8_c_zinnia_device_tracking_ae11612dc0ef3c239bd306e96e740a561}} 
+Object\+Follower {\bfseries play\+Area}
+\begin{DoxyCompactList}\small\item\em The play area. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_o8_c_1_1_o8_c_zinnia_device_tracking_a6a91f5328b32fcb656fb0fb8fc61e22b}\label{class_o8_c_1_1_o8_c_zinnia_device_tracking_a6a91f5328b32fcb656fb0fb8fc61e22b}} 
 Object\+Follower {\bfseries head}
 \begin{DoxyCompactList}\small\item\em The head tracked device. \end{DoxyCompactList}\item 
@@ -173,6 +182,23 @@ Implements \mbox{\hyperlink{class_o8_c_1_1_o8_c_device_tracking_a40bb545f874ee9b
 \} \} 
 
 Implements \mbox{\hyperlink{class_o8_c_1_1_o8_c_device_tracking_a1503e0c7fb44c14ed4043f00a21f42e9}{O8\+C.\+O8\+CDevice\+Tracking}}.
+
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_zinnia_device_tracking_a947f89f5073efcb064183133c10dcc41}\label{class_o8_c_1_1_o8_c_zinnia_device_tracking_a947f89f5073efcb064183133c10dcc41}} 
+\index{O8C.O8CZinniaDeviceTracking@{O8C.O8CZinniaDeviceTracking}!SetPlayAreaFollower@{SetPlayAreaFollower}}
+\index{SetPlayAreaFollower@{SetPlayAreaFollower}!O8C.O8CZinniaDeviceTracking@{O8C.O8CZinniaDeviceTracking}}
+\doxysubsubsection{\texorpdfstring{SetPlayAreaFollower()}{SetPlayAreaFollower()}}
+{\footnotesize\ttfamily override void O8\+C.\+O8\+CZinnia\+Device\+Tracking.\+Set\+Play\+Area\+Follower (\begin{DoxyParamCaption}\item[{Game\+Object}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\{\{Sets the play area follower.
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The object to follow.\\
+\hline
+\end{DoxyParams}
+\} \} 
+
+Implements \mbox{\hyperlink{class_o8_c_1_1_o8_c_device_tracking_a4b5d46a226633ed143c2baedbfebed85}{O8\+C.\+O8\+CDevice\+Tracking}}.
 
 
 

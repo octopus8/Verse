@@ -1,12 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public interface IO8CNetworkPlayer {
-    void AddHeadFollower(GameObject head);
-    void AddLeftHandFollower(GameObject leftHand);
-    void AddRightHandFollower(GameObject rightHand);
-    void RemoveHeadFollower(GameObject head);
-    void RemoveLeftHandFollower(GameObject leftHand);
-    void RemoveRightHandFollower(GameObject rightHand);
+namespace O8C {
+
+    /// <summary>
+    /// Provides functionality related to a networked player.
+    /// </summary>
+    public interface IO8CNetworkPlayer {
+
+        /// <summary>
+        /// Add a head follower object.
+        /// </summary>
+        /// <param name="head">Object to add.</param>
+        void AddHeadFollower(GameObject head);
+
+
+        /// <summary>
+        /// Add left hand follower object.
+        /// </summary>
+        /// <param name="leftHand">Object to add.</param>
+        void AddLeftHandFollower(GameObject leftHand);
+
+
+        /// <summary>
+        /// Add right hand follower object.
+        /// </summary>
+        /// <param name="rightHand">Object to add.</param>
+        void AddRightHandFollower(GameObject rightHand);
+
+
+        /// <summary>
+        /// Remove a head follower object.
+        /// </summary>
+        /// <param name="head">Object to remove.</param>
+        void RemoveHeadFollower(GameObject head);
+
+
+        /// <summary>
+        /// Remove left hand follower object.
+        /// </summary>
+        /// <param name="leftHand">Object to remove.</param>
+        void RemoveLeftHandFollower(GameObject leftHand);
+
+
+        /// <summary>
+        /// Remove right hand follower object.
+        /// </summary>
+        /// <param name="rightHand">Object to remove.</param>
+        void RemoveRightHandFollower(GameObject rightHand);
+    }
+
+
 }

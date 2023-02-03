@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['verseinputactions_0',['VerseInputActions',['../class_verse_input_actions.html',1,'']]]
+  ['playeractions_0',['PlayerActions',['../struct_verse_input_actions_1_1_player_actions.html',1,'VerseInputActions']]]
 ];

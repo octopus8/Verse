@@ -40,7 +40,11 @@ namespace O8C {
 
         #endregion
 
+
+
+        /// <summary>Flag indicating the application is quitting.</summary>
         protected bool isApplicationQuitting = false;
+
 
 
         #region Base Methods

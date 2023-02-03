@@ -1,21 +1,29 @@
 using UnityEngine;
 
+
+/// <summary>
+/// Keyboard motor input, used for debugging.
+/// </summary>
 public class MotorInputKeyboard : MonoBehaviour, IMotorInput {
 
+    #region Class Variables
+
+    /// <summary>The motor to apply the input to.</summary>
     protected IActorMotor actorMotor;
 
+    /// <summary>The transform to transform input before applying.</summary>
     protected Transform inputTransform;
 
-
-    public void SetInputTransform(Transform transform) {
-        inputTransform = transform;
-    }
-
-    public void SetMotor(IActorMotor motor) {
-        actorMotor = motor;
-    }
+    #endregion
 
 
+
+    #region Base Methods
+
+
+    /// <summary>
+    /// Sends input to the motor.
+    /// </summary>
     protected void Update() {
 
         if (null == actorMotor) {
@@ -47,5 +55,16 @@ public class MotorInputKeyboard : MonoBehaviour, IMotorInput {
 
     }
 
+    /// <inheritdoc />
+    public void SetInputTransform(Transform transform) {
+        inputTransform = transform;
+    }
+
+    /// <inheritdoc />
+    public void SetMotor(IActorMotor motor) {
+        actorMotor = motor;
+    }
+
+    #endregion
 
 }

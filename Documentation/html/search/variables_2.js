@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['handleft_0',['handLeft',['../class_o8_c_1_1_o8_c_network_player.html#a88f8c1ed66b259454673a1087df5b38e',1,'O8C::O8CNetworkPlayer']]],
-  ['handright_1',['handRight',['../class_o8_c_1_1_o8_c_network_player.html#a9cda91b2fa78a280fd142101b1b901b2',1,'O8C::O8CNetworkPlayer']]],
-  ['hasconnected_2',['hasConnected',['../class_o8_c_1_1_o8_c_mirror_network_manager.html#a912ed65f35d066372a26eabd5664ebb6',1,'O8C::O8CMirrorNetworkManager']]],
-  ['head_3',['head',['../class_o8_c_1_1_o8_c_network_player.html#a89d797ce17f5073f9d9aff6b4c700f63',1,'O8C.O8CNetworkPlayer.head()'],['../class_o8_c_1_1_o8_c_zinnia_device_tracking.html#a6a91f5328b32fcb656fb0fb8fc61e22b',1,'O8C.O8CZinniaDeviceTracking.head()']]]
+  ['controller_0',['controller',['../class_o8_c_1_1_web_g_l_1_1_o8_c_web_x_r_controller_input_to_state_event.html#adfa8d739456f3ef983d420dbfb6f950a',1,'O8C::WebGL::O8CWebXRControllerInputToStateEvent']]],
+  ['controllerstate_1',['controllerState',['../class_o8_c_1_1_web_g_l_1_1_o8_c_web_x_r_controller_input_to_state_event.html#a6ba1918ff0d00ef7a5cd55b17f5eb7a4',1,'O8C::WebGL::O8CWebXRControllerInputToStateEvent']]],
+  ['currentsecond_2',['currentSecond',['../class_o8_c_1_1_o8_c_network_connection_interrupted_hud_message.html#a9c29a94a66f811a84ae16c921f1ac4ca',1,'O8C::O8CNetworkConnectionInterruptedHudMessage']]],
+  ['currentvisiblitystate_3',['currentVisiblityState',['../class_o8_c_1_1_o8_c_app_focus_state_default.html#a9a9a2738ca630a90471e4ee062f49bb7',1,'O8C::O8CAppFocusStateDefault']]],
+  ['currentxrstate_4',['currentXRState',['../class_o8_c_1_1_o8_c_app_focus_state_default.html#adcbbd68f5b619b6cd2582340dc2b34cc',1,'O8C::O8CAppFocusStateDefault']]]
 ];

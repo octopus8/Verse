@@ -7,10 +7,21 @@ using UnityEngine;
 /// </summary>
 public class StartScenePlayerConnection : MonoBehaviour
 {
+    #region Inspector Variables
+
+    /// <summary>The avatar prefab.</summary>
+    [Tooltip("The avatar prefab.")]
     [SerializeField] protected GameObject avatarPrefab;
 
+    /// <summary>The player start transform.</summary>
+    [Tooltip("The player start transform.")]
     [SerializeField] protected Transform startTransform;
 
+    #endregion
+
+
+
+    #region Base Methods
 
     /// <summary>
     /// Registers callbacks.
@@ -30,7 +41,11 @@ public class StartScenePlayerConnection : MonoBehaviour
         O8CSystem.Instance.PlayerConnection.RemovePlayerDisconnectedObserver(OnPlayerDisconnected);
     }
 
+    #endregion
 
+
+
+    #region Private Methods
 
     /// <summary>
     /// Callback called upon a player connecting, the avatar for the player is added and configured.
@@ -67,10 +82,17 @@ public class StartScenePlayerConnection : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// Callback called upon a player disconnecting.
+    /// </summary>
+    /// <param name="player">The player that has disconnected.</param>
+    /// <param name="isLocalPlayer">Flag indicating the player is a local player.</param>
     private void OnPlayerDisconnected(GameObject player, bool isLocalPlayer) {
         if (isLocalPlayer) {
             O8CSystem.Instance.DeviceTracking.SetPlayAreaFollower(null);
         }
     }
+
+    #endregion
 
 }

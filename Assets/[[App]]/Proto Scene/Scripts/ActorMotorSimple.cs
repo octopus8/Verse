@@ -1,21 +1,31 @@
 using UnityEngine;
 
 
+/// <summary>
+/// A simple actor motor.
+/// </summary>
 public class ActorMotorSimple : MonoBehaviour, IActorMotor
 {
-    float motorSpeedUnitsPerSecond = 5.0f;
-    float turnSpeedDegreesPerSecond = 100.0f;
+    /// <summary>Move speed, in units per second.</summary>
+    protected float moveSpeedUnitsPerSecond = 5.0f;
 
-    public void Move(Vector3 direction) {
-        direction *= Time.deltaTime * motorSpeedUnitsPerSecond;
+    /// <summary>Turn speed, in degrees per second.</summary>
+    protected float turnSpeedDegreesPerSecond = 100.0f;
+
+
+
+    /// <inheritdoc />
+    public void Move(Vector3 directionUnitsPerSecond) {
+        directionUnitsPerSecond *= Time.deltaTime * moveSpeedUnitsPerSecond;
         Vector3 pos = transform.position;
-        pos += direction;
+        pos += directionUnitsPerSecond;
         transform.position = pos;
     }
 
 
-    public void Turn(float value) {
-        transform.rotation *= Quaternion.Euler(0, value * Time.deltaTime * turnSpeedDegreesPerSecond, 0);
+    /// <inheritdoc />
+    public void Turn(float degreesPerSecond) {
+        transform.rotation *= Quaternion.Euler(0, degreesPerSecond * Time.deltaTime * turnSpeedDegreesPerSecond, 0);
     }
 
 }

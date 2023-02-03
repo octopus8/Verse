@@ -110,6 +110,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a40bb545f874ee9bfc347ca71d077c032"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1503e0c7fb44c14ed4043f00a21f42e9"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o8_c_1_1_o8_c_device_tracking.html#a1503e0c7fb44c14ed4043f00a21f42e9">RemoveRightHandTarget</a> (GameObject target)</td></tr>
 <tr class="separator:a1503e0c7fb44c14ed4043f00a21f42e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b5d46a226633ed143c2baedbfebed85"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o8_c_1_1_o8_c_device_tracking.html#a4b5d46a226633ed143c2baedbfebed85">SetPlayAreaFollower</a> (GameObject source)</td></tr>
+<tr class="separator:a4b5d46a226633ed143c2baedbfebed85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76c6668320091bc5309b50390a9a9528"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o8_c_1_1_i_o8_c_device_tracking.html#a76c6668320091bc5309b50390a9a9528">AddHeadTarget</a> (GameObject target)</td></tr>
 <tr class="memdesc:a76c6668320091bc5309b50390a9a9528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a GameObject to be transformed by the head transform.  <br /></td></tr>
 <tr class="separator:a76c6668320091bc5309b50390a9a9528"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,6 +130,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab1867ba0b8d9a9b88bc8fbb91d91ede2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o8_c_1_1_i_o8_c_device_tracking.html#ab1867ba0b8d9a9b88bc8fbb91d91ede2">RemoveRightHandTarget</a> (GameObject target)</td></tr>
 <tr class="memdesc:ab1867ba0b8d9a9b88bc8fbb91d91ede2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a GameObject to be transformed by the head transform.  <br /></td></tr>
 <tr class="separator:ab1867ba0b8d9a9b88bc8fbb91d91ede2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2737c1905a1a2d1740d5f1f986fa2db8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o8_c_1_1_i_o8_c_device_tracking.html#a2737c1905a1a2d1740d5f1f986fa2db8">SetPlayAreaFollower</a> (GameObject source)</td></tr>
+<tr class="memdesc:a2737c1905a1a2d1740d5f1f986fa2db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the play area follower.  <br /></td></tr>
+<tr class="separator:a2737c1905a1a2d1740d5f1f986fa2db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Parent class for IO8CDeviceTracking MonoBehaviour implementations. </p>
@@ -352,6 +357,43 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="interface_o8_c_1_1_i_o8_c_device_tracking.html#ab1867ba0b8d9a9b88bc8fbb91d91ede2">O8C.IO8CDeviceTracking</a>.</p>
 
 <p>Implemented in <a class="el" href="class_o8_c_1_1_o8_c_zinnia_device_tracking.html#a40800a1f4cad30d4373555119a439ea6">O8C.O8CZinniaDeviceTracking</a>.</p>
+
+</div>
+</div>
+<a id="a4b5d46a226633ed143c2baedbfebed85" name="a4b5d46a226633ed143c2baedbfebed85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b5d46a226633ed143c2baedbfebed85">&#9670;&#160;</a></span>SetPlayAreaFollower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void O8C.O8CDeviceTracking.SetPlayAreaFollower </td>
+          <td>(</td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>{Sets the play area follower.<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>The object to follow.</td></tr>
+  </table>
+  </dd>
+</dl>
+} </p>
+
+<p>Implements <a class="el" href="interface_o8_c_1_1_i_o8_c_device_tracking.html#a2737c1905a1a2d1740d5f1f986fa2db8">O8C.IO8CDeviceTracking</a>.</p>
+
+<p>Implemented in <a class="el" href="class_o8_c_1_1_o8_c_zinnia_device_tracking.html#a947f89f5073efcb064183133c10dcc41">O8C.O8CZinniaDeviceTracking</a>.</p>
 
 </div>
 </div>

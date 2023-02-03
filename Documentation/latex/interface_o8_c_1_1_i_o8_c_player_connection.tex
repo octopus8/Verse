@@ -18,6 +18,10 @@ void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_player_connection_a1c24ddc4a9868
 \begin{DoxyCompactList}\small\item\em Add a \char`\"{}player connected\char`\"{} event observer. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_player_connection_ae29dc8582edd823a2c9e89786ff3a07e}{Remove\+Player\+Connected\+Observer}} (Action$<$ Game\+Object, bool $>$ observer)
 \begin{DoxyCompactList}\small\item\em Remove a \char`\"{}player connected\char`\"{} event observer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_player_connection_a97b61c193b51da21d4dee57715bc70aa}{Add\+Player\+Disconnected\+Observer}} (Action$<$ Game\+Object, bool $>$ observer)
+\begin{DoxyCompactList}\small\item\em Add a \char`\"{}player connected\char`\"{} event observer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_player_connection_a524e64590dde3e8371339a481a04a882}{Remove\+Player\+Disconnected\+Observer}} (Action$<$ Game\+Object, bool $>$ observer)
+\begin{DoxyCompactList}\small\item\em Remove a \char`\"{}player connected\char`\"{} event observer. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_player_connection_aaac24962f1bc3f0e2c62b6f83d60f805}{Player\+Connected}} (Game\+Object player, bool is\+Local\+Player)
 \begin{DoxyCompactList}\small\item\em Notifies the system a player has connected. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_player_connection_a1bfa9126b459606961d86439e8ce22be}{Player\+Disconnected}} (Game\+Object player, bool is\+Local\+Player)
@@ -46,6 +50,25 @@ Add a \char`\"{}player connected\char`\"{} event observer.
 
 
 Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_a211bf77a37394ae19886261ba52570c7}{O8\+C.\+O8\+CPlayer\+Connection}}, and \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_default_ae6ca3b3116181b3fe3616a8e8674b9a6}{O8\+C.\+O8\+CPlayer\+Connection\+Default}}.
+
+\mbox{\Hypertarget{interface_o8_c_1_1_i_o8_c_player_connection_a97b61c193b51da21d4dee57715bc70aa}\label{interface_o8_c_1_1_i_o8_c_player_connection_a97b61c193b51da21d4dee57715bc70aa}} 
+\index{O8C.IO8CPlayerConnection@{O8C.IO8CPlayerConnection}!AddPlayerDisconnectedObserver@{AddPlayerDisconnectedObserver}}
+\index{AddPlayerDisconnectedObserver@{AddPlayerDisconnectedObserver}!O8C.IO8CPlayerConnection@{O8C.IO8CPlayerConnection}}
+\doxysubsubsection{\texorpdfstring{AddPlayerDisconnectedObserver()}{AddPlayerDisconnectedObserver()}}
+{\footnotesize\ttfamily void O8\+C.\+IO8\+CPlayer\+Connection.\+Add\+Player\+Disconnected\+Observer (\begin{DoxyParamCaption}\item[{Action$<$ Game\+Object, bool $>$}]{observer }\end{DoxyParamCaption})}
+
+
+
+Add a \char`\"{}player connected\char`\"{} event observer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & The observer.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_a6476db6b3b77233f4ac3bcb691a87080}{O8\+C.\+O8\+CPlayer\+Connection}}, and \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_default_aaedd9c0c1652c93f57d448982780d844}{O8\+C.\+O8\+CPlayer\+Connection\+Default}}.
 
 \mbox{\Hypertarget{interface_o8_c_1_1_i_o8_c_player_connection_aaac24962f1bc3f0e2c62b6f83d60f805}\label{interface_o8_c_1_1_i_o8_c_player_connection_aaac24962f1bc3f0e2c62b6f83d60f805}} 
 \index{O8C.IO8CPlayerConnection@{O8C.IO8CPlayerConnection}!PlayerConnected@{PlayerConnected}}
@@ -111,6 +134,25 @@ Remove a \char`\"{}player connected\char`\"{} event observer.
 
 
 Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_a1df47a63c7638e9063a477055d86ab28}{O8\+C.\+O8\+CPlayer\+Connection}}, and \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_default_aeb931bab671670bd6fb88b3506dfcaa5}{O8\+C.\+O8\+CPlayer\+Connection\+Default}}.
+
+\mbox{\Hypertarget{interface_o8_c_1_1_i_o8_c_player_connection_a524e64590dde3e8371339a481a04a882}\label{interface_o8_c_1_1_i_o8_c_player_connection_a524e64590dde3e8371339a481a04a882}} 
+\index{O8C.IO8CPlayerConnection@{O8C.IO8CPlayerConnection}!RemovePlayerDisconnectedObserver@{RemovePlayerDisconnectedObserver}}
+\index{RemovePlayerDisconnectedObserver@{RemovePlayerDisconnectedObserver}!O8C.IO8CPlayerConnection@{O8C.IO8CPlayerConnection}}
+\doxysubsubsection{\texorpdfstring{RemovePlayerDisconnectedObserver()}{RemovePlayerDisconnectedObserver()}}
+{\footnotesize\ttfamily void O8\+C.\+IO8\+CPlayer\+Connection.\+Remove\+Player\+Disconnected\+Observer (\begin{DoxyParamCaption}\item[{Action$<$ Game\+Object, bool $>$}]{observer }\end{DoxyParamCaption})}
+
+
+
+Remove a \char`\"{}player connected\char`\"{} event observer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & The observer.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_a8601a7d2b5641c24668b7ea53a04c201}{O8\+C.\+O8\+CPlayer\+Connection}}, and \mbox{\hyperlink{class_o8_c_1_1_o8_c_player_connection_default_a9c62f56958ca2843d226f758a74ee95e}{O8\+C.\+O8\+CPlayer\+Connection\+Default}}.
 
 
 
