@@ -18,13 +18,6 @@
 </div>
 
 ## Milestones
-* 1.0.01 - Basic Avatar & Locomotion
-  * Local and remote avatar, composed of a head, two hands, and a body
-  * Head and hand tracking; body stays upright
-  * Movement via stick movement
-  * Movement relative to body direction
-  * Rotation via stick input
-  * Define a player start position
 * 1.0.02 - Hot Mic Indicator
   * Head locked 3D object
   * Display object when mic is hot, and hide the object when the mic is not hot
@@ -50,7 +43,13 @@
   * Nameplate is not clipped by world geometry
 
 ## History
-(nothing yet)
+* 1.0.01 - Basic Avatar & Locomotion
+  * Local and remote avatar, composed of a head, two hands, and a body
+  * Head and hand tracking; body stays upright
+  * Movement via stick movement
+  * Movement relative to body direction
+  * Rotation via stick input
+  * Define a player start position
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
