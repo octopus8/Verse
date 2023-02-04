@@ -32,39 +32,44 @@ namespace O8C {
 
         #region Base Methods
 
-        /** {@inheritdoc} */
+        /// <inheritdoc />
         override public void AddHeadTarget(GameObject target) {
             head.Targets.Add(target);
         }
 
-        /** {@inheritdoc} */
+        /// <inheritdoc />
         override public void AddLeftHandTarget(GameObject target) {
             leftHand.Targets.Add(target);
         }
 
-        /** {@inheritdoc} */
+        /// <inheritdoc />
         override public void AddRightHandTarget(GameObject target) {
             rightHand.Targets.Add(target);
         }
 
-        /** {@inheritdoc} */
+        /// <inheritdoc />
         override public void RemoveHeadTarget(GameObject target) {
             head.Targets.Remove(target);
         }
 
-        /** {@inheritdoc} */
+        /// <inheritdoc />
         override public void RemoveLeftHandTarget(GameObject target) {
             leftHand.Targets.Remove(target);
         }
 
-        /** {@inheritdoc} */
+        /// <inheritdoc />
         override public void RemoveRightHandTarget(GameObject target) {
             rightHand.Targets.Remove(target);
         }
 
-        /** {@inheritdoc} */
+        /// <inheritdoc />
         override public void SetPlayAreaFollower(GameObject source) {
             playArea.Sources.Add(source);
+        }
+
+        /// <inheritdoc />
+        public override Transform GetHeadTransform() {
+            return head.transform;
         }
 
         #endregion

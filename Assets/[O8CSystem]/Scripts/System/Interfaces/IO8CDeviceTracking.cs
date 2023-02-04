@@ -56,6 +56,12 @@ namespace O8C {
         /// <param name="source">The object to follow.</param>
         public void SetPlayAreaFollower(GameObject source);
 
+        /// <summary>
+        /// Provides access to the head transform.
+        /// </summary>
+        /// <returns>The head transform.</returns>
+        public Transform GetHeadTransform();
+
     }
 
 }

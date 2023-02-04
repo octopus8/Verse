@@ -11,31 +11,37 @@ namespace O8C {
     /// </remarks>
     public abstract class O8CDeviceTracking : MonoBehaviour, IO8CDeviceTracking {
 
-        /** {@inheritdoc} */
+        /// <inheritdoc />
         abstract public void AddHeadTarget(GameObject target);
 
 
-        /** {@inheritdoc} */
+        /// <inheritdoc />
         abstract public void AddLeftHandTarget(GameObject target);
 
 
-        /** {@inheritdoc} */
+        /// <inheritdoc />
         abstract public void AddRightHandTarget(GameObject target);
 
 
-        /** {@inheritdoc} */
+        /// <inheritdoc />
         abstract public void RemoveHeadTarget(GameObject target);
 
 
-        /** {@inheritdoc} */
+        /// <inheritdoc />
         abstract public void RemoveLeftHandTarget(GameObject target);
 
 
-        /** {@inheritdoc} */
+        /// <inheritdoc />
         abstract public void RemoveRightHandTarget(GameObject target);
 
-        /** {@inheritdoc} */
+
+        /// <inheritdoc />
         abstract public void SetPlayAreaFollower(GameObject source);
+
+        /// <inheritdoc />
+        abstract public Transform GetHeadTransform();
+
+
     }
 
 }

@@ -17,6 +17,10 @@ public class StartScenePlayerConnection : MonoBehaviour
     [Tooltip("The hot mic indicator prefab.")]
     [SerializeField] protected GameObject hotMicIndicatorPrefab;
 
+    /// <summary>The controllers prefab.</summary>
+    [Tooltip("The controllsers prefab.")]
+    [SerializeField] protected GameObject controllersPrefab;
+
     /// <summary>The player start transform.</summary>
     [Tooltip("The player start transform.")]
     [SerializeField] protected Transform startTransform;
@@ -63,11 +67,11 @@ public class StartScenePlayerConnection : MonoBehaviour
         var networkPlayer = player.GetComponent<IO8CNetworkPlayer>();
 
 
-        var avatar = Instantiate(avatarPrefab, player.transform).GetComponent<O8CAvatarParts>();
+        var avatar = Instantiate(avatarPrefab, player.transform).GetComponent<O8CActorParts>();
 
-        networkPlayer.AddHeadFollower(avatar.Head);
-        networkPlayer.AddLeftHandFollower(avatar.LeftHand);
-        networkPlayer.AddRightHandFollower(avatar.RightHand);
+        networkPlayer.AddHeadFollower(avatar.HeadRoot);
+        networkPlayer.AddLeftHandFollower(avatar.LeftHandRoot);
+        networkPlayer.AddRightHandFollower(avatar.RightHandRoot);
 
         if (isLocalPlayer) {
             player.AddComponent<StartSceneMicrophoneController>();
@@ -77,7 +81,13 @@ public class StartScenePlayerConnection : MonoBehaviour
             motorInput.SetInputTransform(avatar.BodyJoint.transform);
             O8CSystem.Instance.DeviceTracking.SetPlayAreaFollower(player);
 
-            Instantiate(hotMicIndicatorPrefab, avatar.Head.transform);
+            Instantiate(hotMicIndicatorPrefab, avatar.HeadRoot.transform);
+
+            var controllers = Instantiate(controllersPrefab, player.transform).GetComponent<O8CActorParts>();
+            networkPlayer.AddLeftHandFollower(controllers.LeftHandRoot);
+            networkPlayer.AddRightHandFollower(controllers.RightHandRoot);
+            ControllerDisplay controllerDisplay = controllers.gameObject.GetComponent<ControllerDisplay>();
+            controllerDisplay.AvatarActorParts = avatar;
 
             player.transform.rotation = startTransform.rotation;
             player.transform.position = startTransform.position;
