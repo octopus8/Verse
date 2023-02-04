@@ -53,9 +53,6 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-/Assets/[Dev]
-/Assets/[Dev].meta
-
 /[Bb]uild/WebXR
 /[Bb]uilds/WebXR
 
@@ -113,3 +110,5 @@ Thumbs.db
 /Assets/PolygonSciFiCity.meta
 /Assets/\[Examples\]
 /Assets/\[Examples\].meta
+/Assets/\[Dev\]
+/Assets/\[Dev\].meta
