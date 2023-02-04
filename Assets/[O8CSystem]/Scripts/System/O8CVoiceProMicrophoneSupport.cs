@@ -14,10 +14,6 @@ namespace O8C {
         /// <summary>The Recorder component.</summary>
         protected Recorder recorder;
 
-        /// <summary>Flag indicating the recorder is recording.</summary>
-        public bool IsRecording { get { return recorder.recording; } }
-
-
 
         /// <summary>Stores references and schedules microphone refreshing.</summary>
         void Start() {
@@ -59,6 +55,10 @@ namespace O8C {
             gameObject.SetActive(supportActive);
         }
 
+
+        public override bool IsRecording() {
+            return recorder.recording;
+        }
     }
 
 }

@@ -13,6 +13,10 @@ public class StartScenePlayerConnection : MonoBehaviour
     [Tooltip("The avatar prefab.")]
     [SerializeField] protected GameObject avatarPrefab;
 
+    /// <summary>The hot mic indicator prefab.</summary>
+    [Tooltip("The hot mic indicator prefab.")]
+    [SerializeField] protected GameObject hotMicIndicatorPrefab;
+
     /// <summary>The player start transform.</summary>
     [Tooltip("The player start transform.")]
     [SerializeField] protected Transform startTransform;
@@ -71,8 +75,9 @@ public class StartScenePlayerConnection : MonoBehaviour
             IMotorInput motorInput = player.AddComponent<MotorInputSimple>();
             motorInput.SetMotor(actorMotor);
             motorInput.SetInputTransform(avatar.BodyJoint.transform);
-
             O8CSystem.Instance.DeviceTracking.SetPlayAreaFollower(player);
+
+            Instantiate(hotMicIndicatorPrefab, avatar.Head.transform);
 
             player.transform.rotation = startTransform.rotation;
             player.transform.position = startTransform.position;

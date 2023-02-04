@@ -28,6 +28,8 @@ namespace O8C {
         public void StopRecord();
 
 
+        public bool IsRecording();
+
     }
 
 

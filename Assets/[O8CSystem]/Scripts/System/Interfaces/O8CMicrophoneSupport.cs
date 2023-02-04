@@ -12,16 +12,20 @@ namespace O8C {
     /// </remarks>
     public abstract class O8CMicrophoneSupport : MonoBehaviour, IO8CMicrophoneSupport {
 
-        /** {@inheritdoc} */
+        /// <inheritdoc />
         abstract public void SetSupportActive(bool supportActive);
 
 
-        /** {@inheritdoc} */
+        /// <inheritdoc />
         abstract public void StartRecord();
 
 
-        /** {@inheritdoc} */
+        /// <inheritdoc />
         abstract public void StopRecord();
+
+
+        /// <inheritdoc />
+        abstract public bool IsRecording();
 
     }
 
