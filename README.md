@@ -18,16 +18,6 @@
 </div>
 
 ## Milestones
-* 1.0.02 - Hot Mic Indicator
-  * Head locked indicator
-  * Display indicator when mic is hot, and hide the indicator when the mic is not hot
-  * indicator is not clipped by world geometry
-  * Bonus
-    * Make the indicator dynamic with some effect
-* 1.0.03 - Display Controls When Looking at Hands
-  * Hide hands and display controllers when looking down at both hands
-  * Hide controllers and display hands when looking away from both hands
-  * Display microphone control annotation    
 * 1.0.04 -  Avatar with IK Arms and Legs
   * Full body local and remote avatar with IK arms
   * Full body local and remote avatar with IK legs
@@ -50,6 +40,16 @@
   * Movement relative to body direction
   * Rotation via stick input
   * Define a player start position
+* 1.0.02 - Hot Mic Indicator
+  * Head locked indicator
+  * Display indicator when mic is hot, and hide the indicator when the mic is not hot
+  * indicator is not clipped by world geometry
+  * Bonus
+    * Make the indicator dynamic with some effect
+* 1.0.03 - Display Controls When Looking at Hands
+  * Hide hands and display controllers when looking down at both hands
+  * Hide controllers and display hands when looking away from both hands
+  * Display microphone, turn, and move control annotations    
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
