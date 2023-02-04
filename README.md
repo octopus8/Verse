@@ -19,11 +19,11 @@
 
 ## Milestones
 * 1.0.02 - Hot Mic Indicator
-  * Head locked 3D object
-  * Display object when mic is hot, and hide the object when the mic is not hot
-  * Object is not clipped by world geometry
+  * Head locked indicator
+  * Display indicator when mic is hot, and hide the indicator when the mic is not hot
+  * indicator is not clipped by world geometry
   * Bonus
-    * Make the object dynamic with some shader effect
+    * Make the indicator dynamic with some effect
 * 1.0.03 - Display Controls When Looking at Hands
   * Hide hands and display controllers when looking down at both hands
   * Hide controllers and display hands when looking away from both hands
