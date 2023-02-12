@@ -11,7 +11,7 @@ public class StartScenePlayerConnection : MonoBehaviour
 
     /// <summary>The avatar prefab.</summary>
     [Tooltip("The avatar prefab.")]
-    [SerializeField] protected GameObject avatarPrefab;
+    [SerializeField] protected O8CActorParts avatarPrefab;
 
     /// <summary>The hot mic indicator prefab.</summary>
     [Tooltip("The hot mic indicator prefab.")]
@@ -67,7 +67,7 @@ public class StartScenePlayerConnection : MonoBehaviour
         var networkPlayer = player.GetComponent<IO8CNetworkPlayer>();
 
 
-        var avatar = Instantiate(avatarPrefab, player.transform).GetComponent<O8CActorParts>();
+        O8CActorParts avatar = Instantiate(avatarPrefab, player.transform);
 
         networkPlayer.AddHeadFollower(avatar.HeadRoot);
         networkPlayer.AddLeftHandFollower(avatar.LeftHandRoot);
