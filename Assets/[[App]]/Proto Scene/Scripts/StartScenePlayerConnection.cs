@@ -9,17 +9,7 @@ public class StartScenePlayerConnection : MonoBehaviour
 {
     #region Inspector Variables
 
-    /// <summary>The avatar prefab.</summary>
-    [Tooltip("The avatar prefab.")]
-    [SerializeField] protected O8CActorParts avatarPrefab;
-
-    /// <summary>The hot mic indicator prefab.</summary>
-    [Tooltip("The hot mic indicator prefab.")]
-    [SerializeField] protected GameObject hotMicIndicatorPrefab;
-
-    /// <summary>The controllers prefab.</summary>
-    [Tooltip("The controllsers prefab.")]
-    [SerializeField] protected GameObject controllersPrefab;
+    [SerializeField] protected AvatarCreator avatarCreator;
 
     /// <summary>The player start transform.</summary>
     [Tooltip("The player start transform.")]
@@ -64,35 +54,10 @@ public class StartScenePlayerConnection : MonoBehaviour
     /// <param name="isLocalPlayer">Flag indicating the player is a local player.</param>
     private void OnPlayerConnected(GameObject player, bool isLocalPlayer) {
 
-        var networkPlayer = player.GetComponent<IO8CNetworkPlayer>();
+        avatarCreator.CreateAvatar(player, isLocalPlayer);
 
-
-        O8CActorParts avatar = Instantiate(avatarPrefab, player.transform);
-
-        networkPlayer.AddHeadFollower(avatar.HeadRoot);
-        networkPlayer.AddLeftHandFollower(avatar.LeftHandRoot);
-        networkPlayer.AddRightHandFollower(avatar.RightHandRoot);
-
-        if (isLocalPlayer) {
-            player.AddComponent<StartSceneMicrophoneController>();
-            var actorMotor = player.AddComponent<ActorMotorSimple>();
-            IMotorInput motorInput = player.AddComponent<MotorInputSimple>();
-            motorInput.SetMotor(actorMotor);
-            motorInput.SetInputTransform(avatar.BodyJoint.transform);
-            O8CSystem.Instance.DeviceTracking.SetPlayAreaFollower(player);
-
-            Instantiate(hotMicIndicatorPrefab, avatar.HeadRoot.transform);
-
-            var controllers = Instantiate(controllersPrefab, player.transform).GetComponent<O8CActorParts>();
-            networkPlayer.AddLeftHandFollower(controllers.LeftHandRoot);
-            networkPlayer.AddRightHandFollower(controllers.RightHandRoot);
-            ControllerDisplay controllerDisplay = controllers.gameObject.GetComponent<ControllerDisplay>();
-            controllerDisplay.AvatarActorParts = avatar;
-
-            player.transform.rotation = startTransform.rotation;
-            player.transform.position = startTransform.position;
-        }
-
+        player.transform.rotation = startTransform.rotation;
+        player.transform.position = startTransform.position;
 
     }
 

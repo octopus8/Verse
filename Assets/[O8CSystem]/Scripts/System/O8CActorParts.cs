@@ -89,7 +89,7 @@ namespace O8C {
         /// Updates the body joint.
         /// </summary>
         private void Update() {
-            bodyJoint.transform.rotation = Quaternion.Euler(0, headRoot.transform.rotation.eulerAngles.y, 0);
+//            bodyJoint.transform.rotation = Quaternion.Euler(0, headRoot.transform.rotation.eulerAngles.y, 0);
         }
 
 #endregion
@@ -104,9 +104,11 @@ namespace O8C {
         /// <param name="pos">Positional offset.</param>
         /// <param name="rotation">Rotational offset.</param>
         private void SetLeftHandOffset(Vector3 pos, Vector3 rotation) {
+/*
             Transform offset = leftHandRoot.transform.GetChild(0);
             offset.localPosition = pos;
             offset.localRotation = Quaternion.Euler(rotation);
+*/
         }
 
 
@@ -116,9 +118,11 @@ namespace O8C {
         /// <param name="pos">Positional offset.</param>
         /// <param name="rotation">Rotational offset.</param>
         private void SetRightHandOffset(Vector3 pos, Vector3 rotation) {
+/*
             Transform offset = rightHandRoot.transform.GetChild(0);
             offset.localPosition = pos;
             offset.localRotation = Quaternion.Euler(rotation);
+*/
         }
 
 #endregion

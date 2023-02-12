@@ -260,6 +260,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47258918}
   m_CullTransparentMesh: 1
+--- !u!1 &121486628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 121486629}
+  - component: {fileID: 121486630}
+  m_Layer: 0
+  m_Name: Simple Avatar Creator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &121486629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121486628}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1653722185}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &121486630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121486628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f75fc6fcfcda18d4088ff8c8ebc5c345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avatarPrefab: {fileID: 4455922357455540557, guid: 73e9b5bd2f48ce840b1ceb4c8a213924,
+    type: 3}
+  hotMicIndicatorPrefab: {fileID: 8371445388769894716, guid: 77385843d6f43244b820163f7691975f,
+    type: 3}
+  controllersPrefab: {fileID: 5609869831568237768, guid: fa3ab848ddd3a114787c0eac6a560a29,
+    type: 3}
 --- !u!1 &551569183
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,12 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c86122da5c243a45841c05b8f63b8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarPrefab: {fileID: 4455922357455540557, guid: 73e9b5bd2f48ce840b1ceb4c8a213924,
-    type: 3}
-  hotMicIndicatorPrefab: {fileID: 8371445388769894716, guid: 77385843d6f43244b820163f7691975f,
-    type: 3}
-  controllersPrefab: {fileID: 5609869831568237768, guid: fa3ab848ddd3a114787c0eac6a560a29,
-    type: 3}
+  avatarCreator: {fileID: 121486630}
   startTransform: {fileID: 2133467096}
 --- !u!4 &601508183
 Transform:
@@ -348,6 +393,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 818299759}
+  - {fileID: 1653722185}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1768,6 +1814,38 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1653722184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1653722185}
+  m_Layer: 0
+  m_Name: Avatar Creators
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1653722185
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653722184}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 121486629}
+  m_Father: {fileID: 601508183}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1771783109
 GameObject:
   m_ObjectHideFlags: 0
