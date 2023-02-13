@@ -15,8 +15,8 @@ public class IKRiggedAvatar : MonoBehaviour
     Quaternion leftHandOffsetRotation;
     Quaternion rightHandOffsetRotation;
 
-    [SerializeField] Vector3 leftHandOffsetPosition = Vector3.zero;
-    [SerializeField] Vector3 rightHandOffsetPosition = Vector3.zero;
+    Vector3 leftHandOffsetPosition;
+    Vector3 rightHandOffsetPosition;
 
 
 
@@ -52,15 +52,24 @@ public class IKRiggedAvatar : MonoBehaviour
         leftHandOffsetRotation = Quaternion.Euler(-90f, 90f, 0f);
         rightHandOffsetRotation = Quaternion.Euler(90f, 0f, 90f);
 
+        leftHandOffsetPosition = new Vector3(0.11f, 0.03f, -0.03f);
+        rightHandOffsetPosition = new Vector3(-0.11f, -0.03f, 0.03f);
+
 
         if (null != SourceLeftHandTransform) {
             Quaternion rot = SourceLeftHandTransform.rotation * leftHandOffsetRotation;
             riggedParts.LeftHand.transform.rotation = rot;
+
+            Vector3 offset = rot * leftHandOffsetPosition;
+            riggedParts.LeftHand.transform.position = SourceLeftHandTransform.position + offset;
         }
 
         if (null != SourceRightHandTransform) {
             Quaternion rot = SourceRightHandTransform.rotation * rightHandOffsetRotation;
             riggedParts.RightHand.transform.rotation = rot;
+
+            Vector3 offset = rot * rightHandOffsetPosition;
+            riggedParts.RightHand.transform.position = SourceRightHandTransform.position + offset;
         }
 
     }
