@@ -13,9 +13,6 @@ public class IKRiggedAvatar : MonoBehaviour
 
 
 
-    public GameObject TestObj { get; private set; }
-
-
 
 
     public void SetRiggedParts(RiggedParts parts) {
@@ -32,6 +29,7 @@ public class IKRiggedAvatar : MonoBehaviour
     }
 
 
+
     /// <summary>
     /// Sets the rigged head transform to the source head transform.
     /// </summary>
@@ -44,13 +42,14 @@ public class IKRiggedAvatar : MonoBehaviour
                 riggedParts.Head.transform.rotation = SourceHeadTransform.rotation;
             }
 
-            if (null != SourceLeftHandTransform) {
-                riggedParts.LeftHand.transform.rotation = SourceLeftHandTransform.rotation;
-            }
+        }
 
-            if (null != SourceRightHandTransform) {
-                riggedParts.RightHand.transform.rotation = SourceRightHandTransform.rotation;
-            }
+        if (null != SourceLeftHandTransform) {
+            riggedParts.LeftHand.transform.SetPositionAndRotation(SourceLeftHandTransform.position, SourceLeftHandTransform.rotation);
+        }
+
+        if (null != SourceRightHandTransform) {
+            riggedParts.RightHand.transform.SetPositionAndRotation(SourceRightHandTransform.position, SourceRightHandTransform.rotation);
         }
 
     }

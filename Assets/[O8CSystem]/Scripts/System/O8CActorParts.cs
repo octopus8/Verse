@@ -15,7 +15,7 @@ namespace O8C {
         [SerializeField] protected GameObject headRoot;
 
         /// <summary>The head offsets.</summary>
-        [SerializeField] protected Offsets headOffsets;
+        [SerializeField] protected PlatformOffset headOffsets;
 
         /// <summary>The left hand GameObject.</summary>
         [SerializeField] protected GameObject leftHandRoot;
@@ -24,7 +24,7 @@ namespace O8C {
         [SerializeField] protected Renderer leftHandRenderer;
 
         /// <summary>The left hand offsets.</summary>
-        [SerializeField] protected Offsets leftHandOffsets;
+        [SerializeField] protected PlatformOffset leftHandOffsets;
 
         /// <summary>The right hand GameObject.</summary>
         [SerializeField] protected GameObject rightHandRoot;
@@ -33,7 +33,7 @@ namespace O8C {
         [SerializeField] protected Renderer rightHandRenderer;
 
         /// <summary>The right hand offsets.</summary>
-        [SerializeField] protected Offsets rightHandOffsets;
+        [SerializeField] protected PlatformOffset rightHandOffsets;
 
         /// <summary>The body joint GameObject.</summary>
         [SerializeField] protected GameObject bodyJoint;
@@ -123,8 +123,9 @@ namespace O8C {
 
 #endregion
 
+
         [Serializable]
-        public struct Offsets {
+        public struct PlatformOffset {
             public Offset webXR;
             public Offset oculus;
         }
