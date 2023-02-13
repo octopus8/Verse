@@ -669,6 +669,11 @@ PrefabInstance:
       propertyPath: processMoment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114374749712010186, guid: 9aa99d00578590e45a52faa205a1014a,
+        type: 3}
+      propertyPath: scaleModifier
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3333722189628283044, guid: 9aa99d00578590e45a52faa205a1014a,
         type: 3}
       propertyPath: elements.Array.size
@@ -759,6 +764,11 @@ PrefabInstance:
       propertyPath: processMoment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114374749712010186, guid: 9aa99d00578590e45a52faa205a1014a,
+        type: 3}
+      propertyPath: scaleModifier
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3333722189628283044, guid: 9aa99d00578590e45a52faa205a1014a,
         type: 3}
       propertyPath: elements.Array.size
@@ -848,6 +858,11 @@ PrefabInstance:
         type: 3}
       propertyPath: processMoment
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114374749712010186, guid: 9aa99d00578590e45a52faa205a1014a,
+        type: 3}
+      propertyPath: scaleModifier
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3333722189628283044, guid: 9aa99d00578590e45a52faa205a1014a,
         type: 3}
