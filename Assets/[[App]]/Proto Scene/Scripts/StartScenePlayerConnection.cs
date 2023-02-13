@@ -15,6 +15,10 @@ public class StartScenePlayerConnection : MonoBehaviour
     [Tooltip("The player start transform.")]
     [SerializeField] protected Transform startTransform;
 
+
+    [SerializeField] MotorInput[] motorInputs;
+
+
     #endregion
 
 
@@ -55,6 +59,20 @@ public class StartScenePlayerConnection : MonoBehaviour
     private void OnPlayerConnected(GameObject player, bool isLocalPlayer) {
 
         avatarCreator.CreateAvatar(player, isLocalPlayer);
+
+        if (isLocalPlayer) {
+            player.name = "Local Player";
+            var actorMotor = player.AddComponent<ActorMotorSimple>();
+            foreach (var motorInput in motorInputs) {
+                motorInput.SetMotor(actorMotor);
+                motorInput.SetInputTransform(player.transform);
+            }
+
+            O8CSystem.Instance.DeviceTracking.SetPlayAreaFollower(player);
+        } else {
+            player.name = "Remote Player";
+        }
+
 
         player.transform.rotation = startTransform.rotation;
         player.transform.position = startTransform.position;
