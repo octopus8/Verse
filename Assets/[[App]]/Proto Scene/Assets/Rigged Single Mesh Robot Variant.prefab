@@ -746,22 +746,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   head: {fileID: 542968751775838765}
+  headOffset: {x: 0, y: -1.7, z: -0.12}
   leftHand: {fileID: 1917793021}
   leftHandOffsets:
     webXR:
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0}
-    oculus:
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0}
-  rightHandOffsets:
-    webXR:
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0}
+      position: {x: 0.11, y: 0.03, z: -0.03}
+      rotation: {x: -90, y: 90, z: 0}
     oculus:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
   rightHand: {fileID: 2140719073}
+  rightHandOffsets:
+    webXR:
+      position: {x: -0.11, y: 0.03, z: 0.03}
+      rotation: {x: 90, y: 0, z: 90}
+    oculus:
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
 --- !u!4 &7517458442781236393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8961519258300076376, guid: 8485e1d62de8f0e41837c132b69efcad,

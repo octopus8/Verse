@@ -49,11 +49,11 @@ public class IKRiggedAvatar : MonoBehaviour
 
         }
 
-        leftHandOffsetRotation = Quaternion.Euler(-90f, 90f, 0f);
-        rightHandOffsetRotation = Quaternion.Euler(90f, 0f, 90f);
+        leftHandOffsetRotation = Quaternion.Euler(riggedParts.LeftHandOffset.rotation);
+        rightHandOffsetRotation = Quaternion.Euler(riggedParts.RightHandOffset.rotation);
 
-        leftHandOffsetPosition = new Vector3(0.11f, 0.03f, -0.03f);
-        rightHandOffsetPosition = new Vector3(-0.11f, -0.03f, 0.03f);
+        leftHandOffsetPosition = riggedParts.LeftHandOffset.position;
+        rightHandOffsetPosition = riggedParts.RightHandOffset.position;
 
 
         if (null != SourceLeftHandTransform) {
