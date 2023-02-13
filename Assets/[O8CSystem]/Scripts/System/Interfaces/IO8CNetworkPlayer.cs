@@ -7,6 +7,8 @@ namespace O8C {
     /// </summary>
     public interface IO8CNetworkPlayer {
 
+        Transform GetHeadTransform();
+
         /// <summary>
         /// Add a head follower object.
         /// </summary>

@@ -94,6 +94,11 @@ namespace O8C {
             }
         }
 
+
+        public Transform GetHeadTransform() {
+            return head.transform;
+        }
+
         public void AddHeadFollower(GameObject head) {
             headFollower.Targets.Add(head);
         }
