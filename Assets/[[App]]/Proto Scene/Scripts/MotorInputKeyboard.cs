@@ -24,7 +24,7 @@ public class MotorInputKeyboard : MotorInput {
     /// <summary>
     /// Sends input to the motor.
     /// </summary>
-    protected void Update() {
+    protected void FixedUpdate() {
 
         if (null == actorMotor) {
             return;

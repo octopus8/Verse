@@ -36,7 +36,7 @@ public class MotorInputActions : MotorInput {
     /// <summary>
     /// Sends input to the motor.
     /// </summary>
-    protected void LateUpdate() {
+    protected void FixedUpdate() {
         if (null == actorMotor) {
             return;
         }
