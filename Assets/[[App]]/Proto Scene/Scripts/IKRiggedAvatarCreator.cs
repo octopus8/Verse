@@ -24,8 +24,11 @@ public class IKRiggedAvatarCreator : AvatarCreator {
 
         IKRiggedAvatar iKRiggedAvatar = avatarBaseObject.GetComponent<IKRiggedAvatar>();
         iKRiggedAvatar.SetRiggedParts(avatar.GetComponent<RiggedParts>());
-        iKRiggedAvatar.SetSourceHeadTransform(networkPlayer.GetHeadTransform());
-
+        iKRiggedAvatar.SourceHeadTransform = networkPlayer.GetHeadTransform();
+/*
+        iKRiggedAvatar.SourceLeftHandTransform = networkPlayer.GetLeftHandTransform();
+        iKRiggedAvatar.SourceRightHandTransform = networkPlayer.GetRightHandTransform();
+*/
         networkPlayer.AddHeadFollower(avatarBaseObject);
 
 

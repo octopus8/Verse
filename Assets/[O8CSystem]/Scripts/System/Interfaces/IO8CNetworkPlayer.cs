@@ -9,6 +9,12 @@ namespace O8C {
 
         Transform GetHeadTransform();
 
+        Transform GetLeftHandTransform();
+
+        Transform GetRightHandTransform();
+
+
+
         /// <summary>
         /// Add a head follower object.
         /// </summary>

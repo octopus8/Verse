@@ -330,7 +330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7183778779587587432}
   m_Layer: 0
-  m_Name: Tracker
+  m_Name: Left Hand Tracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -426,7 +426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6116388624195534110}
   m_Layer: 0
-  m_Name: Tracker
+  m_Name: Right Hand Tracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -874,6 +874,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   head: {fileID: 542968751775838765}
+  leftHand: {fileID: 2169349825338408325}
+  rightHand: {fileID: 9170509519919443062}
 --- !u!4 &7517458442781236393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8961519258300076376, guid: 8485e1d62de8f0e41837c132b69efcad,

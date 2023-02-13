@@ -99,6 +99,14 @@ namespace O8C {
             return head.transform;
         }
 
+        public Transform GetLeftHandTransform() {
+            return handLeft.transform;
+        }
+
+        public Transform GetRightHandTransform() {
+            return handRight.transform;
+        }
+
         public void AddHeadFollower(GameObject head) {
             headFollower.Targets.Add(head);
         }

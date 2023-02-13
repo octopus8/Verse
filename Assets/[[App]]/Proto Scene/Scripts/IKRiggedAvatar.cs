@@ -2,19 +2,28 @@ using UnityEngine;
 
 
 
+
 public class IKRiggedAvatar : MonoBehaviour
 {
     RiggedParts riggedParts;
-    Transform sourceHeadTransform;
+
+    public Transform SourceHeadTransform { private get; set; }
+    public Transform SourceLeftHandTransform { private get; set; }
+    public Transform SourceRightHandTransform { private get; set; }
+
+
+
+    public GameObject TestObj { get; private set; }
+
+
 
 
     public void SetRiggedParts(RiggedParts parts) {
         riggedParts = parts;
     }
 
-    public void SetSourceHeadTransform(Transform headTransform) {
-        sourceHeadTransform = headTransform;
-    }
+
+
 
 
     private void FixedUpdate() {
@@ -30,8 +39,18 @@ public class IKRiggedAvatar : MonoBehaviour
     /// This is done in LateUpdate to override any animation effects.
     /// </remarks>
     private void LateUpdate() {
-        if ((null != riggedParts) && (null != sourceHeadTransform)) {
-            riggedParts.Head.transform.rotation = sourceHeadTransform.rotation;
+        if (null != riggedParts) {
+            if (null != SourceHeadTransform) {
+                riggedParts.Head.transform.rotation = SourceHeadTransform.rotation;
+            }
+
+            if (null != SourceLeftHandTransform) {
+                riggedParts.LeftHand.transform.rotation = SourceLeftHandTransform.rotation;
+            }
+
+            if (null != SourceRightHandTransform) {
+                riggedParts.RightHand.transform.rotation = SourceRightHandTransform.rotation;
+            }
         }
 
     }
