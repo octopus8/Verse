@@ -19,6 +19,7 @@ public class SimpleAvatarCreator : AvatarCreator {
     [Tooltip("The controllsers prefab.")]
     [SerializeField] protected GameObject controllersPrefab;
 
+    [SerializeField] MotorInput[] motorInputs;
 
     #endregion
 
@@ -36,9 +37,10 @@ public class SimpleAvatarCreator : AvatarCreator {
         if (isLocalPlayer) {
             player.AddComponent<StartSceneMicrophoneController>();
             var actorMotor = player.AddComponent<ActorMotorSimple>();
-            IMotorInput motorInput = player.AddComponent<MotorInputSimple>();
-            motorInput.SetMotor(actorMotor);
-            motorInput.SetInputTransform(avatar.BodyJoint.transform);
+            foreach (var motorInput in motorInputs) {
+                motorInput.SetMotor(actorMotor);
+                motorInput.SetInputTransform(avatar.BodyJoint.transform);
+            }
             O8CSystem.Instance.DeviceTracking.SetPlayAreaFollower(player);
 
             Instantiate(hotMicIndicatorPrefab, avatar.HeadRoot.transform);
