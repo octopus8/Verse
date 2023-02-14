@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['finishsetup_0',['FinishSetup',['../class_o8_c_1_1_web_g_l_1_1_web_x_r_controller_left.html#ac53bd0a5111de5eda4f63703eb026034',1,'O8C.WebGL.WebXRControllerLeft.FinishSetup()'],['../class_o8_c_1_1_web_g_l_1_1_web_x_r_controller_right.html#af44c7e1290ee9973d4999f3daf539db2',1,'O8C.WebGL.WebXRControllerRight.FinishSetup()']]]
+  ['createavatar_0',['CreateAvatar',['../class_i_k_rigged_avatar_creator.html#a97d6152a96c47678798fd3d2c79776ba',1,'IKRiggedAvatarCreator.CreateAvatar()'],['../class_avatar_creator.html#a42a542b6854019f8f5a989277a05b49b',1,'AvatarCreator.CreateAvatar()'],['../interface_i_avatar_creator.html#a9a624b97b725d4272546307a663b7566',1,'IAvatarCreator.CreateAvatar()'],['../class_simple_avatar_creator.html#a57d25a3aea7f63067847ed8c20995089',1,'SimpleAvatarCreator.CreateAvatar()']]]
 ];

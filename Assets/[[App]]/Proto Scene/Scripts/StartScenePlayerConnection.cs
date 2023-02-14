@@ -9,6 +9,7 @@ public class StartScenePlayerConnection : MonoBehaviour
 {
     #region Inspector Variables
 
+    /// <summary>The avatar creator.</summary>
     [SerializeField] protected AvatarCreator avatarCreator;
 
     /// <summary>The player start transform.</summary>
@@ -23,10 +24,8 @@ public class StartScenePlayerConnection : MonoBehaviour
     [Tooltip("The controllsers prefab.")]
     [SerializeField] protected GameObject controllersPrefab;
 
-
-
+    /// <summary>The set of motor inputs.</summary>
     [SerializeField] MotorInput[] motorInputs;
-
 
     #endregion
 

@@ -99,11 +99,18 @@ Inheritance diagram for O8C.O8CMicrophoneSupport:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a127e672a39782987d363caf867b1ad79"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o8_c_1_1_o8_c_microphone_support.html#a127e672a39782987d363caf867b1ad79">SetSupportActive</a> (bool supportActive)</td></tr>
+<tr class="memdesc:a127e672a39782987d363caf867b1ad79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the active state for support.This is only used by <a class="el" href="class_o8_c_1_1_o8_c_system.html" title="The &quot;Singleton&quot; that acts as access to functionality provided by the O8CSystem.">O8CSystem</a> on deployed <a class="el" href="namespace_o8_c_1_1_web_g_l.html">WebGL</a> versions.   <br /></td></tr>
 <tr class="separator:a127e672a39782987d363caf867b1ad79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1af3097c5c7c0ed49c3915e1374b6b20"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o8_c_1_1_o8_c_microphone_support.html#a1af3097c5c7c0ed49c3915e1374b6b20">StartRecord</a> ()</td></tr>
+<tr class="memdesc:a1af3097c5c7c0ed49c3915e1374b6b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start record.  <br /></td></tr>
 <tr class="separator:a1af3097c5c7c0ed49c3915e1374b6b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac222436909b2f5a13a1ff5ee0c8985f"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o8_c_1_1_o8_c_microphone_support.html#aac222436909b2f5a13a1ff5ee0c8985f">StopRecord</a> ()</td></tr>
+<tr class="memdesc:aac222436909b2f5a13a1ff5ee0c8985f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop record.  <br /></td></tr>
 <tr class="separator:aac222436909b2f5a13a1ff5ee0c8985f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4896bf74fdea4d09f0dcd5cde8e87ac"><td class="memItemLeft" align="right" valign="top">abstract bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o8_c_1_1_o8_c_microphone_support.html#ac4896bf74fdea4d09f0dcd5cde8e87ac">IsRecording</a> ()</td></tr>
+<tr class="memdesc:ac4896bf74fdea4d09f0dcd5cde8e87ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the recording status.<dl class="section return"><dt>Returns</dt><dd>The recording status.</dd></dl>
+  <br /></td></tr>
+<tr class="separator:ac4896bf74fdea4d09f0dcd5cde8e87ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af29f4d2327c3cc5b49da586b5fc73df3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o8_c_1_1_i_o8_c_microphone_support.html#af29f4d2327c3cc5b49da586b5fc73df3">SetSupportActive</a> (bool supportActive)</td></tr>
 <tr class="memdesc:af29f4d2327c3cc5b49da586b5fc73df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the active state for support.  <br /></td></tr>
 <tr class="separator:af29f4d2327c3cc5b49da586b5fc73df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,11 +120,46 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab449df5abcf3e594b3ef48cbf450bf06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o8_c_1_1_i_o8_c_microphone_support.html#ab449df5abcf3e594b3ef48cbf450bf06">StopRecord</a> ()</td></tr>
 <tr class="memdesc:ab449df5abcf3e594b3ef48cbf450bf06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop record.  <br /></td></tr>
 <tr class="separator:ab449df5abcf3e594b3ef48cbf450bf06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a653d5f43c09e1cf51accb35be1104443"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_o8_c_1_1_i_o8_c_microphone_support.html#a653d5f43c09e1cf51accb35be1104443">IsRecording</a> ()</td></tr>
+<tr class="memdesc:a653d5f43c09e1cf51accb35be1104443"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the recording status.  <br /></td></tr>
+<tr class="separator:a653d5f43c09e1cf51accb35be1104443"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Parent class for IO8CMicrophoneSupport MonoBehaviour implementations. </p>
 <p>This class only contains abstract implementations of the interface and is intended to allow implementors of the interface to be used in the inspector. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac4896bf74fdea4d09f0dcd5cde8e87ac" name="ac4896bf74fdea4d09f0dcd5cde8e87ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4896bf74fdea4d09f0dcd5cde8e87ac">&#9670;&#160;</a></span>IsRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract bool O8C.O8CMicrophoneSupport.IsRecording </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provides access to the recording status.<dl class="section return"><dt>Returns</dt><dd>The recording status.</dd></dl>
+ </p>
+
+<p>Implements <a class="el" href="interface_o8_c_1_1_i_o8_c_microphone_support.html#a653d5f43c09e1cf51accb35be1104443">O8C.IO8CMicrophoneSupport</a>.</p>
+
+<p>Implemented in <a class="el" href="class_o8_c_1_1_o8_c_voice_pro_microphone_support.html#ae7d9e971d040aeb1076acb158b9f761b">O8C.O8CVoiceProMicrophoneSupport</a>.</p>
+
+</div>
+</div>
 <a id="a127e672a39782987d363caf867b1ad79" name="a127e672a39782987d363caf867b1ad79"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a127e672a39782987d363caf867b1ad79">&#9670;&#160;</a></span>SetSupportActive()</h2>
 
@@ -141,7 +183,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>{Sets the active state for support.This is only used by <a class="el" href="class_o8_c_1_1_o8_c_system.html" title="The &quot;Singleton&quot; that acts as access to functionality provided by the O8CSystem.">O8CSystem</a> on deployed <a class="el" href="namespace_o8_c_1_1_web_g_l.html">WebGL</a> versions. } </p>
+
+<p>Sets the active state for support.This is only used by <a class="el" href="class_o8_c_1_1_o8_c_system.html" title="The &quot;Singleton&quot; that acts as access to functionality provided by the O8CSystem.">O8CSystem</a> on deployed <a class="el" href="namespace_o8_c_1_1_web_g_l.html">WebGL</a> versions.  </p>
 
 <p>Implements <a class="el" href="interface_o8_c_1_1_i_o8_c_microphone_support.html#af29f4d2327c3cc5b49da586b5fc73df3">O8C.IO8CMicrophoneSupport</a>.</p>
 
@@ -171,7 +214,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>{Start record.} </p>
+
+<p>Start record. </p>
 
 <p>Implements <a class="el" href="interface_o8_c_1_1_i_o8_c_microphone_support.html#abc73a6f9dc877b69e1aa91634b3ab355">O8C.IO8CMicrophoneSupport</a>.</p>
 
@@ -201,7 +245,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>{Stop record.} </p>
+
+<p>Stop record. </p>
 
 <p>Implements <a class="el" href="interface_o8_c_1_1_i_o8_c_microphone_support.html#ab449df5abcf3e594b3ef48cbf450bf06">O8C.IO8CMicrophoneSupport</a>.</p>
 

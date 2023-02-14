@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833bba85ed896d4449350dfbbc3edfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarPrefab: {fileID: 4131719208070581277, guid: 4f0b16fb4338dab42bca5629075ad29e,
+  avatarPrefab: {fileID: 7435514421948059472, guid: 92d0c622adb79d347b0714b87b3a5bf7,
     type: 3}
 --- !u!4 &673494669
 Transform:
@@ -2137,6 +2137,7 @@ GameObject:
   - component: {fileID: 1958997392}
   - component: {fileID: 1958997393}
   - component: {fileID: 1958997394}
+  - component: {fileID: 1958997395}
   m_Layer: 0
   m_Name: '[O8CSystem]'
   m_TagString: Untagged
@@ -2203,6 +2204,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 412d3192e5987734cac3448f0d7724ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1958997395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958997390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3bdee046f272824ebe5a2fd245bc86f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1959443008

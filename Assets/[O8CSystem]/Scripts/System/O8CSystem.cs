@@ -37,7 +37,15 @@ namespace O8C {
 
         #endregion
 
-        protected O8CEventManager eventManager;
+
+
+        #region Class Variables
+
+        /// <summary>The system event manager.</summary>
+        private O8CEventManager eventManager;
+
+        #endregion
+
 
 
         #region Accessors
@@ -60,6 +68,7 @@ namespace O8C {
         /// <summary>Accessor for the MicrophoneSupport functionality.</summary>
         public IO8CMicrophoneSupport MicrophoneSupport { get { return microphoneSupport; } }
 
+        /// <summary>Accessor for the EventManager functionality.</summary>
         public O8CEventManager EventManager { get { return eventManager; } }
 
         #endregion
@@ -107,21 +116,21 @@ namespace O8C {
         /// a O8CSystemWebGLEnableMicrophoneSupport component is added to enable microphone support later.
         /// </summary>
         private void Awake() {
+
+            // Cache a reference to the instance.
             Assert.IsNull(Instance, "Multiple instances of O8CSystem singleton.");
             Instance = this;
 
-            eventManager = gameObject.AddComponent<O8CEventManager>();
+            // Cache component references.
+            eventManager = GetComponent<O8CEventManager>();
 
-
-
+            // Initialize microphone support.
             if (IsDeployedWebGL()) {
                 gameObject.AddComponent<O8CSystemWebGLEnableMicrophoneSupport>();
                 microphoneSupport.SetSupportActive(false);
-            }
-            else {
+            } else {
                 microphoneSupport.SetSupportActive(true);
             }
-
         }
 
         #endregion

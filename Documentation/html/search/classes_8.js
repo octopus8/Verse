@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['webxrcontrollerleft_0',['WebXRControllerLeft',['../class_o8_c_1_1_web_g_l_1_1_web_x_r_controller_left.html',1,'O8C::WebGL']]],
-  ['webxrcontrollerright_1',['WebXRControllerRight',['../class_o8_c_1_1_web_g_l_1_1_web_x_r_controller_right.html',1,'O8C::WebGL']]]
+  ['simpleavatarcreator_0',['SimpleAvatarCreator',['../class_simple_avatar_creator.html',1,'']]],
+  ['startscenemicrophonecontroller_1',['StartSceneMicrophoneController',['../class_start_scene_microphone_controller.html',1,'']]],
+  ['startsceneplayerconnection_2',['StartScenePlayerConnection',['../class_start_scene_player_connection.html',1,'']]]
 ];

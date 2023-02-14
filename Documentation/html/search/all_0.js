@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['actormotor_0',['actorMotor',['../class_motor_input_keyboard.html#ac60b1640745601a1ff449815130fd416',1,'MotorInputKeyboard.actorMotor()'],['../class_motor_input_simple.html#ad347a092132c7c499fca7cd608af0ee0',1,'MotorInputSimple.actorMotor()']]],
+  ['actormotor_0',['actorMotor',['../class_motor_input_keyboard.html#ac60b1640745601a1ff449815130fd416',1,'MotorInputKeyboard.actorMotor()'],['../class_motor_input_actions.html#afe4e01ecc4f5a5b450085eed5ffe0435',1,'MotorInputActions.actorMotor()']]],
   ['actormotorsimple_1',['ActorMotorSimple',['../class_actor_motor_simple.html',1,'']]],
   ['addheadfollower_2',['AddHeadFollower',['../interface_o8_c_1_1_i_o8_c_network_player.html#a1b44d4c74e15047e5d453d2f1bfc6d0f',1,'O8C.IO8CNetworkPlayer.AddHeadFollower()'],['../class_o8_c_1_1_o8_c_mirror_network_player.html#a23ca688d50517700fa2a0248114ca9e7',1,'O8C.O8CMirrorNetworkPlayer.AddHeadFollower()']]],
   ['addheadtarget_3',['AddHeadTarget',['../interface_o8_c_1_1_i_o8_c_device_tracking.html#a76c6668320091bc5309b50390a9a9528',1,'O8C.IO8CDeviceTracking.AddHeadTarget()'],['../class_o8_c_1_1_o8_c_device_tracking.html#ad7138a58224e67e9e77e31a1e17768ea',1,'O8C.O8CDeviceTracking.AddHeadTarget()'],['../class_o8_c_1_1_o8_c_zinnia_device_tracking.html#a6019be4200db4d0eba583be4536d8972',1,'O8C.O8CZinniaDeviceTracking.AddHeadTarget()']]],
@@ -14,8 +14,12 @@ var searchData=
   ['addrighthandfollower_11',['AddRightHandFollower',['../interface_o8_c_1_1_i_o8_c_network_player.html#a0dc0c8aff90b554effc598c95ac40269',1,'O8C.IO8CNetworkPlayer.AddRightHandFollower()'],['../class_o8_c_1_1_o8_c_mirror_network_player.html#a1aa10c80c3f919e70214d4a3529fbe84',1,'O8C.O8CMirrorNetworkPlayer.AddRightHandFollower()']]],
   ['addrighthandtarget_12',['AddRightHandTarget',['../interface_o8_c_1_1_i_o8_c_device_tracking.html#a8843c9151b244cf520fd4f48fec06757',1,'O8C.IO8CDeviceTracking.AddRightHandTarget()'],['../class_o8_c_1_1_o8_c_device_tracking.html#a3c3c6d3be18decbda65d8171c9e95db9',1,'O8C.O8CDeviceTracking.AddRightHandTarget()'],['../class_o8_c_1_1_o8_c_zinnia_device_tracking.html#a1586d2ff8cee9799a7220fa2513c6890',1,'O8C.O8CZinniaDeviceTracking.AddRightHandTarget()']]],
   ['addtarget_13',['AddTarget',['../class_o8_c_1_1_o8_c_tracked_device.html#a52661fb588ef9c3e1607febf1b218746',1,'O8C::O8CTrackedDevice']]],
-  ['appendix_14',['Appendix',['../_page_appendix.html',1,'']]],
-  ['appfocusstate_15',['AppFocusState',['../class_o8_c_1_1_o8_c_system.html#ab51b7ed13f6ceb36f0fce5842a7b2c11',1,'O8C::O8CSystem']]],
-  ['avatarprefab_16',['avatarPrefab',['../class_start_scene_player_connection.html#a48d0994118ddbd6ded6c70284c83aced',1,'StartScenePlayerConnection']]],
-  ['awake_17',['Awake',['../class_o8_c_1_1_o8_c_debug_display.html#aa92f4e693251303027ad45cae2f773b8',1,'O8C::O8CDebugDisplay']]]
+  ['app_14',['App',['../class_app.html',1,'']]],
+  ['appendix_15',['Appendix',['../_page_appendix.html',1,'']]],
+  ['appfocusstate_16',['AppFocusState',['../class_o8_c_1_1_o8_c_system.html#ab51b7ed13f6ceb36f0fce5842a7b2c11',1,'O8C::O8CSystem']]],
+  ['avatarcreator_17',['AvatarCreator',['../class_avatar_creator.html',1,'']]],
+  ['avatarcreator_18',['avatarCreator',['../class_start_scene_player_connection.html#a5344f9d0440fca55d0d527ae03c1ffcc',1,'StartScenePlayerConnection']]],
+  ['avatarhider_19',['AvatarHider',['../class_avatar_hider.html',1,'']]],
+  ['avatarprefab_20',['avatarPrefab',['../class_i_k_rigged_avatar_creator.html#a519bca784d42759a50ea9b14bab98061',1,'IKRiggedAvatarCreator.avatarPrefab()'],['../class_simple_avatar_creator.html#ade48a5f3ee022ca356cce4e204c7f586',1,'SimpleAvatarCreator.avatarPrefab()']]],
+  ['awake_21',['Awake',['../class_o8_c_1_1_o8_c_debug_display.html#aa92f4e693251303027ad45cae2f773b8',1,'O8C::O8CDebugDisplay']]]
 ];

@@ -1,20 +1,15 @@
 var searchData=
 [
-  ['iactormotor_0',['IActorMotor',['../interface_i_actor_motor.html',1,'']]],
-  ['imotorinput_1',['IMotorInput',['../interface_i_motor_input.html',1,'']]],
-  ['initialize_2',['Initialize',['../class_o8_c_1_1_web_g_l_1_1_web_x_r_controller_left.html#a881eb5ab3ae98ac71aabac9a3b001181',1,'O8C.WebGL.WebXRControllerLeft.Initialize()'],['../class_o8_c_1_1_web_g_l_1_1_web_x_r_controller_right.html#a396188ccd2a6b5cebbfdf30b84a20887',1,'O8C.WebGL.WebXRControllerRight.Initialize()']]],
-  ['inputactions_3',['inputActions',['../class_motor_input_simple.html#a256a862ae50a8e627b179c279dca629b',1,'MotorInputSimple']]],
-  ['inputtransform_4',['inputTransform',['../class_motor_input_keyboard.html#afdd5f25e3b27cdd73ae5941ad0c42546',1,'MotorInputKeyboard.inputTransform()'],['../class_motor_input_simple.html#ad71d9cfcb79a4a8db0befb8dd1572654',1,'MotorInputSimple.inputTransform()']]],
-  ['instance_5',['Instance',['../class_o8_c_1_1_o8_c_system.html#a0c3e283ad8afa2a3275fd9d99a9a0e86',1,'O8C::O8CSystem']]],
-  ['io8cappfocusstate_6',['IO8CAppFocusState',['../interface_o8_c_1_1_i_o8_c_app_focus_state.html',1,'O8C']]],
-  ['io8cdevicetracking_7',['IO8CDeviceTracking',['../interface_o8_c_1_1_i_o8_c_device_tracking.html',1,'O8C']]],
-  ['io8cmicrophonesupport_8',['IO8CMicrophoneSupport',['../interface_o8_c_1_1_i_o8_c_microphone_support.html',1,'O8C']]],
-  ['io8cnetwork_9',['IO8CNetwork',['../interface_o8_c_1_1_i_o8_c_network.html',1,'O8C']]],
-  ['io8cnetworkplayer_10',['IO8CNetworkPlayer',['../interface_o8_c_1_1_i_o8_c_network_player.html',1,'O8C']]],
-  ['io8cplayerconnection_11',['IO8CPlayerConnection',['../interface_o8_c_1_1_i_o8_c_player_connection.html',1,'O8C']]],
-  ['iplayeractions_12',['IPlayerActions',['../interface_verse_input_actions_1_1_i_player_actions.html',1,'VerseInputActions']]],
-  ['isapplicationquitting_13',['isApplicationQuitting',['../class_o8_c_1_1_o8_c_mirror_network_player.html#a881c120a21a09a13abe48376283a9942',1,'O8C::O8CMirrorNetworkPlayer']]],
-  ['isdeployedwebgl_14',['IsDeployedWebGL',['../class_o8_c_1_1_o8_c_system.html#a5bfc8241685b48fb9f43b97511cdc114',1,'O8C::O8CSystem']]],
-  ['isproduction_15',['IsProduction',['../class_o8_c_1_1_o8_c_system.html#a0b3c1b84f4cf861bd83fe611c1c0f7e7',1,'O8C::O8CSystem']]],
-  ['isrecording_16',['IsRecording',['../class_o8_c_1_1_o8_c_voice_pro_microphone_support.html#a2f56570b4fe9e2b53abfffe6193313d4',1,'O8C::O8CVoiceProMicrophoneSupport']]]
+  ['handleft_0',['handLeft',['../class_o8_c_1_1_o8_c_mirror_network_player.html#a584fb240be70d3ef65270f3824fe768b',1,'O8C::O8CMirrorNetworkPlayer']]],
+  ['handright_1',['handRight',['../class_o8_c_1_1_o8_c_mirror_network_player.html#a957eaee020bb77dc3f6d63cbdc80858f',1,'O8C::O8CMirrorNetworkPlayer']]],
+  ['hasconnected_2',['hasConnected',['../class_o8_c_1_1_o8_c_mirror_network_manager.html#a912ed65f35d066372a26eabd5664ebb6',1,'O8C::O8CMirrorNetworkManager']]],
+  ['head_3',['head',['../class_o8_c_1_1_o8_c_mirror_network_player.html#a30731634a190258cf8a20b67f15ccdc4',1,'O8C.O8CMirrorNetworkPlayer.head()'],['../class_o8_c_1_1_o8_c_zinnia_device_tracking.html#a6a91f5328b32fcb656fb0fb8fc61e22b',1,'O8C.O8CZinniaDeviceTracking.head()']]],
+  ['headfollower_4',['headFollower',['../class_o8_c_1_1_o8_c_mirror_network_player.html#a0abc0f6170e3ae069086d2abe880c91a',1,'O8C::O8CMirrorNetworkPlayer']]],
+  ['headoffset_5',['headOffset',['../class_rigged_parts.html#a8edc69f0bfffb4dbfe6f322d2404dc94',1,'RiggedParts']]],
+  ['headoffset_6',['HeadOffset',['../class_rigged_parts.html#a10ebfbfb8598f4b8d2a236d122810a7e',1,'RiggedParts']]],
+  ['headoffsets_7',['headOffsets',['../class_offset_tracked_objects.html#a69f2ff11a8567f7751427cd96b5b1a55',1,'OffsetTrackedObjects']]],
+  ['headroot_8',['HeadRoot',['../class_offset_tracked_objects.html#aa99d6a15f1e196f734a8b55cb205cb03',1,'OffsetTrackedObjects.HeadRoot()'],['../class_rigged_parts.html#a64e1e8a9740fc5e52c13392f8c567a9c',1,'RiggedParts.HeadRoot()']]],
+  ['headroot_9',['headRoot',['../class_offset_tracked_objects.html#abbfbd8f6919a99fe5dbe268618193713',1,'OffsetTrackedObjects.headRoot()'],['../class_rigged_parts.html#ae8cf3249895aa9606009d85c9bc3d093',1,'RiggedParts.headRoot()']]],
+  ['hotmicindicator_10',['HotMicIndicator',['../class_hot_mic_indicator.html',1,'']]],
+  ['hotmicindicatorprefab_11',['hotMicIndicatorPrefab',['../class_start_scene_player_connection.html#aa053efcd89c572170a2dcf4f349f9603',1,'StartScenePlayerConnection']]]
 ];

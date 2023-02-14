@@ -8,13 +8,13 @@ Keyboard motor input, used for debugging.
 Inheritance diagram for Motor\+Input\+Keyboard\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_motor_input_keyboard}
+\includegraphics[height=3.000000cm]{class_motor_input_keyboard}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_motor_input_keyboard_aec2e0daddb5c2b40a40afe91494eafa2}{Set\+Input\+Transform}} (Transform transform)
+override void \mbox{\hyperlink{class_motor_input_keyboard_a262320878ea7d61e9fcbe0c03774b0c6}{Set\+Input\+Transform}} (Transform transform)
 \begin{DoxyCompactList}\small\item\em Sets the transform to transform input before applying.
 
 
@@ -23,7 +23,7 @@ void \mbox{\hyperlink{class_motor_input_keyboard_aec2e0daddb5c2b40a40afe91494eaf
 \hline
 \end{DoxyParams}
  \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_motor_input_keyboard_a13e1f34761673d36c0527894b831aea0}{Set\+Motor}} (\mbox{\hyperlink{interface_i_actor_motor}{IActor\+Motor}} motor)
+override void \mbox{\hyperlink{class_motor_input_keyboard_af873cef2f7794ecfeeb1815fad581532}{Set\+Motor}} (\mbox{\hyperlink{interface_i_actor_motor}{IActor\+Motor}} motor)
 \begin{DoxyCompactList}\small\item\em Sets the motor to apply the input to.
 
 
@@ -34,6 +34,12 @@ void \mbox{\hyperlink{class_motor_input_keyboard_a13e1f34761673d36c0527894b831ae
  \end{DoxyCompactList}\end{DoxyCompactItemize}
 \begin{DoxyCompactItemize}
 \item 
+abstract void \mbox{\hyperlink{class_motor_input_a9c6a6a3c62ddb7d57f85427ffaea8cd6}{Set\+Input\+Transform}} (Transform transform)
+\begin{DoxyCompactList}\small\item\em Sets the transform to transform input before applying. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_motor_input_a35f53fd2ab6f9c14a061be1a60fb0cab}{Set\+Motor}} (\mbox{\hyperlink{interface_i_actor_motor}{IActor\+Motor}} motor)
+\begin{DoxyCompactList}\small\item\em Sets the motor to apply the input to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
 void \mbox{\hyperlink{interface_i_motor_input_a5a78c66e39ad878ce24d9e4e23ec5955}{Set\+Motor}} (\mbox{\hyperlink{interface_i_actor_motor}{IActor\+Motor}} motor)
 \begin{DoxyCompactList}\small\item\em Sets the motor to apply the input to. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interface_i_motor_input_a077564ba41e0c376d1ce0c4ba2dedd92}{Set\+Input\+Transform}} (Transform transform)
@@ -41,8 +47,8 @@ void \mbox{\hyperlink{interface_i_motor_input_a077564ba41e0c376d1ce0c4ba2dedd92}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_motor_input_keyboard_a29a18082f2308aeb8babef3da8d358ed}\label{class_motor_input_keyboard_a29a18082f2308aeb8babef3da8d358ed}} 
-void {\bfseries Update} ()
+\mbox{\Hypertarget{class_motor_input_keyboard_ae8cb07fa90af4a68f4cff23f1a578e25}\label{class_motor_input_keyboard_ae8cb07fa90af4a68f4cff23f1a578e25}} 
+void {\bfseries Fixed\+Update} ()
 \begin{DoxyCompactList}\small\item\em Sends input to the motor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -59,11 +65,11 @@ Transform {\bfseries input\+Transform}
 Keyboard motor input, used for debugging. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_motor_input_keyboard_aec2e0daddb5c2b40a40afe91494eafa2}\label{class_motor_input_keyboard_aec2e0daddb5c2b40a40afe91494eafa2}} 
+\mbox{\Hypertarget{class_motor_input_keyboard_a262320878ea7d61e9fcbe0c03774b0c6}\label{class_motor_input_keyboard_a262320878ea7d61e9fcbe0c03774b0c6}} 
 \index{MotorInputKeyboard@{MotorInputKeyboard}!SetInputTransform@{SetInputTransform}}
 \index{SetInputTransform@{SetInputTransform}!MotorInputKeyboard@{MotorInputKeyboard}}
 \doxysubsubsection{\texorpdfstring{SetInputTransform()}{SetInputTransform()}}
-{\footnotesize\ttfamily void Motor\+Input\+Keyboard.\+Set\+Input\+Transform (\begin{DoxyParamCaption}\item[{Transform}]{transform }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily override void Motor\+Input\+Keyboard.\+Set\+Input\+Transform (\begin{DoxyParamCaption}\item[{Transform}]{transform }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -78,13 +84,13 @@ Sets the transform to transform input before applying.
 
 
 
-Implements \mbox{\hyperlink{interface_i_motor_input_a077564ba41e0c376d1ce0c4ba2dedd92}{IMotor\+Input}}.
+Implements \mbox{\hyperlink{class_motor_input_a9c6a6a3c62ddb7d57f85427ffaea8cd6}{Motor\+Input}}.
 
-\mbox{\Hypertarget{class_motor_input_keyboard_a13e1f34761673d36c0527894b831aea0}\label{class_motor_input_keyboard_a13e1f34761673d36c0527894b831aea0}} 
+\mbox{\Hypertarget{class_motor_input_keyboard_af873cef2f7794ecfeeb1815fad581532}\label{class_motor_input_keyboard_af873cef2f7794ecfeeb1815fad581532}} 
 \index{MotorInputKeyboard@{MotorInputKeyboard}!SetMotor@{SetMotor}}
 \index{SetMotor@{SetMotor}!MotorInputKeyboard@{MotorInputKeyboard}}
 \doxysubsubsection{\texorpdfstring{SetMotor()}{SetMotor()}}
-{\footnotesize\ttfamily void Motor\+Input\+Keyboard.\+Set\+Motor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_i_actor_motor}{IActor\+Motor}}}]{motor }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily override void Motor\+Input\+Keyboard.\+Set\+Motor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_i_actor_motor}{IActor\+Motor}}}]{motor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -99,7 +105,7 @@ Sets the motor to apply the input to.
 
 
 
-Implements \mbox{\hyperlink{interface_i_motor_input_a5a78c66e39ad878ce24d9e4e23ec5955}{IMotor\+Input}}.
+Implements \mbox{\hyperlink{class_motor_input_a35f53fd2ab6f9c14a061be1a60fb0cab}{Motor\+Input}}.
 
 
 

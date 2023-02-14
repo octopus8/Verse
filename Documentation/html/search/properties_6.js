@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['instance_0',['Instance',['../class_o8_c_1_1_o8_c_system.html#a0c3e283ad8afa2a3275fd9d99a9a0e86',1,'O8C::O8CSystem']]],
-  ['isrecording_1',['IsRecording',['../class_o8_c_1_1_o8_c_voice_pro_microphone_support.html#a2f56570b4fe9e2b53abfffe6193313d4',1,'O8C::O8CVoiceProMicrophoneSupport']]]
+  ['headoffset_0',['HeadOffset',['../class_rigged_parts.html#a10ebfbfb8598f4b8d2a236d122810a7e',1,'RiggedParts']]],
+  ['headroot_1',['HeadRoot',['../class_offset_tracked_objects.html#aa99d6a15f1e196f734a8b55cb205cb03',1,'OffsetTrackedObjects.HeadRoot()'],['../class_rigged_parts.html#a64e1e8a9740fc5e52c13392f8c567a9c',1,'RiggedParts.HeadRoot()']]]
 ];

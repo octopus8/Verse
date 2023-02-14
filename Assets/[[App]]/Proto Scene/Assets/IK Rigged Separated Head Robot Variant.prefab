@@ -452,12 +452,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3861759076731564364}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1097763236928421419 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -4995705081205600409, guid: f016161ec990ad643bd236fdfb80773b,
-    type: 3}
-  m_PrefabInstance: {fileID: 3861759076731564364}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1454967617992407736 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6798557207217861644, guid: f016161ec990ad643bd236fdfb80773b,
@@ -649,9 +643,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc1f0480dc28634e890d578678a805e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 1097763236928421419}
+  headRoot: {fileID: 8271250428527765891}
   headOffset: {x: 0, y: -1.7, z: -0.12}
-  leftHand: {fileID: 855623060435678086}
+  leftHand: {fileID: 4573772215604300384}
   leftHandOffsets:
     webXR:
       position: {x: 0.11, y: 0.03, z: -0.03}
@@ -659,11 +653,11 @@ MonoBehaviour:
     oculus:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
-  rightHand: {fileID: 6646930615460130339}
+  rightHand: {fileID: 4104381150333038415}
   rightHandOffsets:
     webXR:
-      position: {x: -0.11, y: -0.03, z: 0.03}
-      rotation: {x: 90, y: 0, z: 90}
+      position: {x: 0.3, y: 0, z: 0}
+      rotation: {x: 90, y: 0, z: 0}
     oculus:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
