@@ -44,6 +44,7 @@ public class StartScenePlayerConnection : MonoBehaviour
     }
 
 
+
     /// <summary>
     /// Unregisters callbacks.
     /// </summary>
@@ -68,7 +69,10 @@ public class StartScenePlayerConnection : MonoBehaviour
     private void OnPlayerConnected(GameObject player, bool isLocalPlayer) {
 
         var networkPlayer = player.GetComponent<IO8CNetworkPlayer>();
-        avatarCreator.CreateAvatar(player, networkPlayer, isLocalPlayer);
+
+
+        GameObject avatar = avatarCreator.CreateAvatar(player, networkPlayer, isLocalPlayer);
+
 
         if (isLocalPlayer) {
             player.name = "Local Player";
@@ -85,6 +89,7 @@ public class StartScenePlayerConnection : MonoBehaviour
             networkPlayer.AddLeftHandFollower(controllers.LeftHandRoot);
             networkPlayer.AddRightHandFollower(controllers.RightHandRoot);
 
+            player.AddComponent<AvatarHider>().Avatar = avatar;
         }
         else {
             player.name = "Remote Player";

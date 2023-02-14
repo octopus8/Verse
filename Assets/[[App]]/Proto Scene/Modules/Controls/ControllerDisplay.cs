@@ -26,15 +26,13 @@ public class ControllerDisplay : MonoBehaviour
             if (headTransform.localEulerAngles.x < minimumHeadXRotation) {
                 controllerActorParts.LeftHandRoot.SetActive(false);
                 controllerActorParts.RightHandRoot.SetActive(false);
-//                avatarActorParts.LeftHandRoot.SetActive(true);
-//                avatarActorParts.RightHandRoot.SetActive(true);
+                O8CSystem.Instance.EventManager.TriggerEvent(App.ShowAvatarEventID);
             }
         } else {
             if ((headTransform.localEulerAngles.x > minimumHeadXRotation) && (headTransform.localEulerAngles.x < 90)) {
                 controllerActorParts.LeftHandRoot.SetActive(true);
                 controllerActorParts.RightHandRoot.SetActive(true);
-//                avatarActorParts.LeftHandRoot.SetActive(false);
-//                avatarActorParts.RightHandRoot.SetActive(false);
+                O8CSystem.Instance.EventManager.TriggerEvent(App.HideAvatarEventID);
             }
         }
 

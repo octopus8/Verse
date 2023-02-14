@@ -37,6 +37,7 @@ namespace O8C {
 
         #endregion
 
+        protected O8CEventManager eventManager;
 
 
         #region Accessors
@@ -58,6 +59,8 @@ namespace O8C {
 
         /// <summary>Accessor for the MicrophoneSupport functionality.</summary>
         public IO8CMicrophoneSupport MicrophoneSupport { get { return microphoneSupport; } }
+
+        public O8CEventManager EventManager { get { return eventManager; } }
 
         #endregion
 
@@ -106,6 +109,9 @@ namespace O8C {
         private void Awake() {
             Assert.IsNull(Instance, "Multiple instances of O8CSystem singleton.");
             Instance = this;
+
+            eventManager = gameObject.AddComponent<O8CEventManager>();
+
 
 
             if (IsDeployedWebGL()) {
