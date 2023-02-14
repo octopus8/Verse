@@ -8,9 +8,7 @@ public class IKRiggedAvatarCreator : AvatarCreator {
     [SerializeField] protected GameObject avatarPrefab;
 
 
-    public override GameObject CreateAvatar(GameObject player, bool isLocalPlayer) {
-
-        var networkPlayer = player.GetComponent<IO8CNetworkPlayer>();
+    public override GameObject CreateAvatar(GameObject player, IO8CNetworkPlayer networkPlayer, bool isLocalPlayer) {
 
         GameObject avatarBaseObject = new GameObject("Avatar", typeof(IKRiggedAvatar));
         avatarBaseObject.transform.parent = player.transform;

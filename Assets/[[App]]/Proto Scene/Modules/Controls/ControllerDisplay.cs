@@ -3,19 +3,15 @@ using UnityEngine;
 
 
 
-[RequireComponent(typeof(O8CActorParts))]
+[RequireComponent(typeof(OffsetTrackedObjects))]
 public class ControllerDisplay : MonoBehaviour
 {
 
-    protected O8CActorParts controllerActorParts;
-
-    protected O8CActorParts avatarActorParts;
-
-    public O8CActorParts AvatarActorParts { set {  avatarActorParts = value; } }
+    protected OffsetTrackedObjects controllerActorParts;
 
 
     private void Start() {        
-        controllerActorParts = GetComponent<O8CActorParts>();
+        controllerActorParts = GetComponent<OffsetTrackedObjects>();
         controllerActorParts.LeftHandRoot.SetActive(false);
         controllerActorParts.RightHandRoot.SetActive(false);
     }
@@ -30,15 +26,15 @@ public class ControllerDisplay : MonoBehaviour
             if (headTransform.localEulerAngles.x < minimumHeadXRotation) {
                 controllerActorParts.LeftHandRoot.SetActive(false);
                 controllerActorParts.RightHandRoot.SetActive(false);
-                avatarActorParts.LeftHandRoot.SetActive(true);
-                avatarActorParts.RightHandRoot.SetActive(true);
+//                avatarActorParts.LeftHandRoot.SetActive(true);
+//                avatarActorParts.RightHandRoot.SetActive(true);
             }
         } else {
             if ((headTransform.localEulerAngles.x > minimumHeadXRotation) && (headTransform.localEulerAngles.x < 90)) {
                 controllerActorParts.LeftHandRoot.SetActive(true);
                 controllerActorParts.RightHandRoot.SetActive(true);
-                avatarActorParts.LeftHandRoot.SetActive(false);
-                avatarActorParts.RightHandRoot.SetActive(false);
+//                avatarActorParts.LeftHandRoot.SetActive(false);
+//                avatarActorParts.RightHandRoot.SetActive(false);
             }
         }
 

@@ -15,6 +15,15 @@ public class StartScenePlayerConnection : MonoBehaviour
     [Tooltip("The player start transform.")]
     [SerializeField] protected Transform startTransform;
 
+    /// <summary>The hot mic indicator prefab.</summary>
+    [Tooltip("The hot mic indicator prefab.")]
+    [SerializeField] protected GameObject hotMicIndicatorPrefab;
+
+    /// <summary>The controllers prefab.</summary>
+    [Tooltip("The controllsers prefab.")]
+    [SerializeField] protected GameObject controllersPrefab;
+
+
 
     [SerializeField] MotorInput[] motorInputs;
 
@@ -58,7 +67,8 @@ public class StartScenePlayerConnection : MonoBehaviour
     /// <param name="isLocalPlayer">Flag indicating the player is a local player.</param>
     private void OnPlayerConnected(GameObject player, bool isLocalPlayer) {
 
-        avatarCreator.CreateAvatar(player, isLocalPlayer);
+        var networkPlayer = player.GetComponent<IO8CNetworkPlayer>();
+        avatarCreator.CreateAvatar(player, networkPlayer, isLocalPlayer);
 
         if (isLocalPlayer) {
             player.name = "Local Player";
@@ -67,9 +77,16 @@ public class StartScenePlayerConnection : MonoBehaviour
                 motorInput.SetMotor(actorMotor);
                 motorInput.SetInputTransform(player.transform);
             }
-
             O8CSystem.Instance.DeviceTracking.SetPlayAreaFollower(player);
-        } else {
+
+            player.AddComponent<StartSceneMicrophoneController>();
+            Instantiate(hotMicIndicatorPrefab, O8CSystem.Instance.DeviceTracking.GetHeadTransform());
+            var controllers = Instantiate(controllersPrefab, player.transform).GetComponent<OffsetTrackedObjects>();
+            networkPlayer.AddLeftHandFollower(controllers.LeftHandRoot);
+            networkPlayer.AddRightHandFollower(controllers.RightHandRoot);
+
+        }
+        else {
             player.name = "Remote Player";
         }
 

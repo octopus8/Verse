@@ -9,40 +9,18 @@ public class SimpleAvatarCreator : AvatarCreator {
 
     /// <summary>The avatar prefab.</summary>
     [Tooltip("The avatar prefab.")]
-    [SerializeField] protected O8CActorParts avatarPrefab;
-
-    /// <summary>The hot mic indicator prefab.</summary>
-    [Tooltip("The hot mic indicator prefab.")]
-    [SerializeField] protected GameObject hotMicIndicatorPrefab;
-
-    /// <summary>The controllers prefab.</summary>
-    [Tooltip("The controllsers prefab.")]
-    [SerializeField] protected GameObject controllersPrefab;
+    [SerializeField] protected OffsetTrackedObjects avatarPrefab;
 
     #endregion
 
 
-    public override GameObject CreateAvatar(GameObject player, bool isLocalPlayer) {
-        var networkPlayer = player.GetComponent<IO8CNetworkPlayer>();
+    public override GameObject CreateAvatar(GameObject player, IO8CNetworkPlayer networkPlayer, bool isLocalPlayer) {
 
-
-        O8CActorParts avatar = Instantiate(avatarPrefab, player.transform);
+        OffsetTrackedObjects avatar = Instantiate(avatarPrefab, player.transform);
 
         networkPlayer.AddHeadFollower(avatar.HeadRoot);
         networkPlayer.AddLeftHandFollower(avatar.LeftHandRoot);
         networkPlayer.AddRightHandFollower(avatar.RightHandRoot);
-
-        if (isLocalPlayer) {
-            player.AddComponent<StartSceneMicrophoneController>();
-
-            Instantiate(hotMicIndicatorPrefab, avatar.HeadRoot.transform);
-
-            var controllers = Instantiate(controllersPrefab, player.transform).GetComponent<O8CActorParts>();
-            networkPlayer.AddLeftHandFollower(controllers.LeftHandRoot);
-            networkPlayer.AddRightHandFollower(controllers.RightHandRoot);
-            ControllerDisplay controllerDisplay = controllers.gameObject.GetComponent<ControllerDisplay>();
-            controllerDisplay.AvatarActorParts = avatar;
-        }
 
         return avatar.gameObject;
     }

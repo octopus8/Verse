@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static O8C.O8CActorParts;
 
 public class RiggedParts : MonoBehaviour
 {
@@ -12,12 +11,12 @@ public class RiggedParts : MonoBehaviour
     [SerializeField] protected GameObject leftHand;
 
     /// <summary>The left hand offsets.</summary>
-    [SerializeField] protected PlatformOffset leftHandOffsets;
+    [SerializeField] protected OffsetTrackedObjects.PlatformPhysicalOffset leftHandOffsets;
 
     [SerializeField] protected GameObject rightHand;
 
     /// <summary>The left hand offsets.</summary>
-    [SerializeField] protected PlatformOffset rightHandOffsets;
+    [SerializeField] protected OffsetTrackedObjects.PlatformPhysicalOffset rightHandOffsets;
 
 
     public GameObject Head { get { return head; } }
@@ -26,7 +25,7 @@ public class RiggedParts : MonoBehaviour
 
     public GameObject RightHand { get { return rightHand; } }
 
-    public Offset LeftHandOffset { get {
+    public OffsetTrackedObjects.PhysicalOffset LeftHandOffset { get {
 #if UNITY_WEBGL
             return leftHandOffsets.webXR;
 #else
@@ -34,7 +33,7 @@ public class RiggedParts : MonoBehaviour
 #endif
         } }
 
-    public Offset RightHandOffset { get {
+    public OffsetTrackedObjects.PhysicalOffset RightHandOffset { get {
 #if UNITY_WEBGL
             return rightHandOffsets.webXR;
 #else

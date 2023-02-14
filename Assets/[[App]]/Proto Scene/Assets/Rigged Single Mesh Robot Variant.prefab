@@ -758,7 +758,7 @@ MonoBehaviour:
   rightHand: {fileID: 2140719073}
   rightHandOffsets:
     webXR:
-      position: {x: -0.11, y: 0.03, z: 0.03}
+      position: {x: -0.11, y: -0.03, z: 0.03}
       rotation: {x: 90, y: 0, z: 90}
     oculus:
       position: {x: 0, y: 0, z: 0}
