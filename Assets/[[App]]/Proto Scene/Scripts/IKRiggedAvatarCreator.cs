@@ -17,7 +17,9 @@ public class IKRiggedAvatarCreator : AvatarCreator {
 
         GameObject avatar = Instantiate(avatarPrefab, offsetObject.transform);
         RiggedParts riggedParts = avatar.GetComponent<RiggedParts>();
-        offsetObject.transform.localPosition = riggedParts.HeadOffset;
+        if (null != riggedParts) {
+            offsetObject.transform.localPosition = riggedParts.HeadOffset;
+        }
 
         IKRiggedAvatar iKRiggedAvatar = avatarBaseObject.GetComponent<IKRiggedAvatar>();
         iKRiggedAvatar.SetRiggedParts(avatar.GetComponent<RiggedParts>());

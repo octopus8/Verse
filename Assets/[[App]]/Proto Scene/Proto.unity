@@ -418,12 +418,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c86122da5c243a45841c05b8f63b8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  avatarCreator: {fileID: 673494668}
+  startTransform: {fileID: 2133467096}
   hotMicIndicatorPrefab: {fileID: 8371445388769894716, guid: 77385843d6f43244b820163f7691975f,
     type: 3}
   controllersPrefab: {fileID: 5609869831568237768, guid: fa3ab848ddd3a114787c0eac6a560a29,
     type: 3}
-  avatarCreator: {fileID: 673494668}
-  startTransform: {fileID: 2133467096}
   motorInputs:
   - {fileID: 2131338}
   - {fileID: 987828322}
@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833bba85ed896d4449350dfbbc3edfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarPrefab: {fileID: 7435514421948059472, guid: 92d0c622adb79d347b0714b87b3a5bf7,
+  avatarPrefab: {fileID: 4131719208070581277, guid: 4f0b16fb4338dab42bca5629075ad29e,
     type: 3}
 --- !u!4 &673494669
 Transform:

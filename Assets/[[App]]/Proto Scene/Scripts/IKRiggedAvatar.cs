@@ -18,10 +18,11 @@ public class IKRiggedAvatar : MonoBehaviour
     Vector3 leftHandOffsetPosition;
     Vector3 rightHandOffsetPosition;
 
-
+    Quaternion headOriginalRotation;
 
     public void SetRiggedParts(RiggedParts parts) {
         riggedParts = parts;
+        headOriginalRotation = riggedParts.Head.transform.rotation;
     }
 
 
@@ -42,12 +43,14 @@ public class IKRiggedAvatar : MonoBehaviour
     /// This is done in LateUpdate to override any animation effects.
     /// </remarks>
     private void LateUpdate() {
-        if (null != riggedParts) {
-            if (null != SourceHeadTransform) {
-                riggedParts.Head.transform.rotation = SourceHeadTransform.rotation;
-            }
-
+        if (null == riggedParts) {
+            return;
         }
+        if (null != SourceHeadTransform) {
+            // BLEE Note: This does not take into consideration the original rotation of the riggedParts.Head.transform.rotation.
+            riggedParts.Head.transform.rotation = SourceHeadTransform.rotation * headOriginalRotation;
+        }
+
 
         leftHandOffsetRotation = Quaternion.Euler(riggedParts.LeftHandOffset.rotation);
         rightHandOffsetRotation = Quaternion.Euler(riggedParts.RightHandOffset.rotation);
