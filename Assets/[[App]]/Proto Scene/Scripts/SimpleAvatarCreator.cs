@@ -9,14 +9,14 @@ public class SimpleAvatarCreator : AvatarCreator {
 
     /// <summary>The avatar prefab.</summary>
     [Tooltip("The avatar prefab.")]
-    [SerializeField] protected OffsetTrackedObjects avatarPrefab;
+    [SerializeField] protected MinimalAvatar avatarPrefab;
 
     #endregion
 
 
     public override GameObject CreateAvatar(GameObject player, IO8CNetworkPlayer networkPlayer, bool isLocalPlayer) {
 
-        OffsetTrackedObjects avatar = Instantiate(avatarPrefab, player.transform);
+        MinimalAvatar avatar = Instantiate(avatarPrefab, player.transform);
 
         avatar.SetTrackedObjects(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
 

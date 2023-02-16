@@ -3,15 +3,15 @@ using UnityEngine;
 
 
 
-[RequireComponent(typeof(OffsetTrackedObjects))]
+[RequireComponent(typeof(MinimalAvatar))]
 public class ControllerDisplay : MonoBehaviour
 {
 
-    protected OffsetTrackedObjects controllerActorParts;
+    protected MinimalAvatar controllerActorParts;
 
 
     private void Start() {        
-        controllerActorParts = GetComponent<OffsetTrackedObjects>();
+        controllerActorParts = GetComponent<MinimalAvatar>();
         controllerActorParts.RiggedParts.LeftHandTransform.gameObject.SetActive(false);
         controllerActorParts.RiggedParts.RightHandTransform.gameObject.SetActive(false);
     }

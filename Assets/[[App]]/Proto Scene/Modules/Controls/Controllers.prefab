@@ -1134,8 +1134,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5085006322957450866}
   - component: {fileID: 8248573391399091697}
-  - component: {fileID: 7923265037718885076}
   - component: {fileID: 1371430715978387306}
+  - component: {fileID: 524852395122303544}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -1191,19 +1191,6 @@ MonoBehaviour:
     oculus:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
---- !u!114 &7923265037718885076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5609869831568237768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d004473b4ce8c44408b34a16ff33ad0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bodyJoint: {fileID: 4691390931605389441}
 --- !u!114 &1371430715978387306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1216,6 +1203,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e0765ed230b2f4882d38a266e8680b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &524852395122303544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5609869831568237768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ea207f573db6648a72b1a2d2384c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodyJoint: {fileID: 4691390931605389441}
 --- !u!1 &6444300560991877623
 GameObject:
   m_ObjectHideFlags: 0

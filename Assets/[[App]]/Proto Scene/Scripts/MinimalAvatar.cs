@@ -10,7 +10,7 @@ using O8C;
 /// This component ASSUMES the GameObject this is attached to has a single child object which is used as the offset.
 /// </remarks>
 [RequireComponent(typeof(RiggedParts))]
-public class OffsetTrackedObjects : MonoBehaviour {
+public class MinimalAvatar : MonoBehaviour {
 
     #region Inspector Variables
 

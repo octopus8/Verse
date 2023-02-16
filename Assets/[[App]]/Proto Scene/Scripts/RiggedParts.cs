@@ -19,13 +19,13 @@ public class RiggedParts : MonoBehaviour
     [SerializeField] protected Transform leftHand;
 
     /// <summary>The left hand offsets.</summary>
-    [SerializeField] protected OffsetTrackedObjects.PlatformPhysicalOffset leftHandOffsets;
+    [SerializeField] protected MinimalAvatar.PlatformPhysicalOffset leftHandOffsets;
 
     /// <summary>The right hand root transform.</summary>
     [SerializeField] protected Transform rightHand;
 
     /// <summary>The left hand offsets.</summary>
-    [SerializeField] protected OffsetTrackedObjects.PlatformPhysicalOffset rightHandOffsets;
+    [SerializeField] protected MinimalAvatar.PlatformPhysicalOffset rightHandOffsets;
 
     #endregion
 
@@ -43,7 +43,7 @@ public class RiggedParts : MonoBehaviour
     public Transform RightHandTransform { get { return rightHand; } }
 
     /// <summary>Accessor for the LeftHandOffset values.</summary>
-    public OffsetTrackedObjects.PhysicalOffset LeftHandOffset { get {
+    public MinimalAvatar.PhysicalOffset LeftHandOffset { get {
 #if UNITY_WEBGL
             return leftHandOffsets.webXR;
 #else
@@ -53,7 +53,7 @@ public class RiggedParts : MonoBehaviour
     }
 
     /// <summary>Accessor for the RightHandOffset values.</summary>
-    public OffsetTrackedObjects.PhysicalOffset RightHandOffset { get {
+    public MinimalAvatar.PhysicalOffset RightHandOffset { get {
 #if UNITY_WEBGL
             return rightHandOffsets.webXR;
 #else

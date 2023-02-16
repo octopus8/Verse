@@ -502,10 +502,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5085006322957450866}
-  - component: {fileID: 4455922357455540557}
   - component: {fileID: 5533259638128559829}
+  - component: {fileID: 4710229079239814651}
   m_Layer: 0
-  m_Name: Minimal Robot Actor
+  m_Name: Minimal Robot Avatar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -529,19 +529,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4455922357455540557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5609869831568237768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d004473b4ce8c44408b34a16ff33ad0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bodyJoint: {fileID: 4691390931605389441}
 --- !u!114 &5533259638128559829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,6 +559,19 @@ MonoBehaviour:
     oculus:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
+--- !u!114 &4710229079239814651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5609869831568237768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ea207f573db6648a72b1a2d2384c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodyJoint: {fileID: 4691390931605389441}
 --- !u!1 &8496055607834206701
 GameObject:
   m_ObjectHideFlags: 0
