@@ -16,11 +16,11 @@ public class MinimalAvatarCreator : AvatarCreator {
 
     public override GameObject CreateAvatar(GameObject player, IO8CNetworkPlayer networkPlayer, bool isLocalPlayer) {
 
-        MinimalAvatar avatar = Instantiate(avatarPrefab, player.transform);
+        MinimalAvatar minimalAvatar = Instantiate(avatarPrefab, player.transform);
 
-        avatar.SetTrackedSources(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
+        minimalAvatar.SetTrackedSources(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
 
-        return avatar.gameObject;
+        return minimalAvatar.gameObject;
     }
 
 }

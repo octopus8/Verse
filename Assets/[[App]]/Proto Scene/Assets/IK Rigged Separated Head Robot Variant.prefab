@@ -661,6 +661,18 @@ MonoBehaviour:
     oculus:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
+--- !u!114 &5751819447289889727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4131719208070581277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe8fc7ac86a7824c921e0879bc32e50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4171918865698464424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8326562585737653276, guid: f016161ec990ad643bd236fdfb80773b,

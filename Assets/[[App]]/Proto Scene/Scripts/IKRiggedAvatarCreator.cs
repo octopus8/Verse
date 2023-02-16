@@ -9,31 +9,33 @@ public class IKRiggedAvatarCreator : AvatarCreator {
 
 
     public override GameObject CreateAvatar(GameObject player, IO8CNetworkPlayer networkPlayer, bool isLocalPlayer) {
+
+        // Create the avatar base objects.
+        GameObject avatarRootObject = new GameObject("Avatar");
+        avatarRootObject.transform.parent = player.transform;
+        GameObject offsetObject = new GameObject("Offset");
+        offsetObject.transform.parent = avatarRootObject.transform;
+
+        // Create the avatar.
+        GameObject avatar = Instantiate(avatarPrefab, offsetObject.transform);
+
+        // Offset the avatar by the head offset.
+        TrackedParts riggedParts = avatar.GetComponent<TrackedParts>();
+        offsetObject.transform.localPosition = riggedParts.HeadOffset;
+
+        IKRiggedAvatar iKRiggedAvatar = avatar.GetComponent<IKRiggedAvatar>();
+        iKRiggedAvatar.SetTrackedSources(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
+
+
         /*
-                // Create the avatar base objects.
-                GameObject avatarRootObject = new GameObject("Avatar", typeof(IKRiggedAvatar));
-                avatarRootObject.transform.parent = player.transform;
-                GameObject offsetObject = new GameObject("Offset");
-                offsetObject.transform.parent = avatarRootObject.transform;
+                        IKRiggedAvatar iKRiggedAvatar = avatarRootObject.GetComponent<IKRiggedAvatar>();
+                        iKRiggedAvatar.SourceHeadTransform = networkPlayer.GetHeadTransform();
+                        iKRiggedAvatar.SourceLeftHandTransform = networkPlayer.GetLeftHandTransform();
+                        iKRiggedAvatar.SourceRightHandTransform = networkPlayer.GetRightHandTransform();
 
-                // Create the avatar.
-                GameObject avatar = Instantiate(avatarPrefab, offsetObject.transform);
-
-                // Offset the avatar by the head offset.
-                TrackedParts riggedParts = avatar.GetComponent<TrackedParts>();
-                offsetObject.transform.localPosition = riggedParts.HeadOffset;
-
-                IKRiggedAvatar iKRiggedAvatar = avatarRootObject.GetComponent<IKRiggedAvatar>();
-                iKRiggedAvatar.SetRiggedParts(avatar.GetComponent<TrackedParts>());
-                iKRiggedAvatar.SourceHeadTransform = networkPlayer.GetHeadTransform();
-                iKRiggedAvatar.SourceLeftHandTransform = networkPlayer.GetLeftHandTransform();
-                iKRiggedAvatar.SourceRightHandTransform = networkPlayer.GetRightHandTransform();
-
-                networkPlayer.AddHeadFollower(avatarRootObject);
-
-                return avatar;
         */
-        return null;
+        networkPlayer.AddHeadFollower(avatarRootObject);
+        return avatar;
     }
 
 
