@@ -18,9 +18,7 @@ public class SimpleAvatarCreator : AvatarCreator {
 
         OffsetTrackedObjects avatar = Instantiate(avatarPrefab, player.transform);
 
-        networkPlayer.AddHeadFollower(avatar.HeadRoot);
-        networkPlayer.AddLeftHandFollower(avatar.LeftHandRoot);
-        networkPlayer.AddRightHandFollower(avatar.RightHandRoot);
+        avatar.SetTrackedObjects(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
 
         return avatar.gameObject;
     }

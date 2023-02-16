@@ -41,6 +41,12 @@ namespace O8C {
         /// <inheritdoc />
         abstract public Transform GetHeadTransform();
 
+        /// <inheritdoc />
+        abstract public Transform GetLeftHandTransform();
+
+        /// <inheritdoc />
+        abstract public Transform GetRightHandTransform();
+
 
     }
 

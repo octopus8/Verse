@@ -86,8 +86,7 @@ public class StartScenePlayerConnection : MonoBehaviour
             player.AddComponent<StartSceneMicrophoneController>();
             Instantiate(hotMicIndicatorPrefab, O8CSystem.Instance.DeviceTracking.GetHeadTransform());
             var controllers = Instantiate(controllersPrefab, player.transform).GetComponent<OffsetTrackedObjects>();
-            networkPlayer.AddLeftHandFollower(controllers.LeftHandRoot);
-            networkPlayer.AddRightHandFollower(controllers.RightHandRoot);
+            controllers.SetTrackedObjects(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
 
             player.AddComponent<AvatarHider>().Avatar = avatar;
         }

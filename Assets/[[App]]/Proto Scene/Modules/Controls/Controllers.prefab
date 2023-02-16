@@ -1133,6 +1133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5085006322957450866}
+  - component: {fileID: 8248573391399091697}
   - component: {fileID: 7923265037718885076}
   - component: {fileID: 1371430715978387306}
   m_Layer: 0
@@ -1160,6 +1161,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8248573391399091697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5609869831568237768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc1f0480dc28634e890d578678a805e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 4691390930906101521}
+  headOffset: {x: 0, y: 0, z: 0}
+  leftHand: {fileID: 4691390932505519208}
+  leftHandOffsets:
+    webXR:
+      position: {x: 0.09, y: -0.03, z: -0.03}
+      rotation: {x: 0, y: 90, z: 0}
+    oculus:
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+  rightHand: {fileID: 4691390931194891925}
+  rightHandOffsets:
+    webXR:
+      position: {x: -0.07, y: -0.03, z: -0.03}
+      rotation: {x: 0, y: -90, z: 0}
+    oculus:
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
 --- !u!114 &7923265037718885076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1172,32 +1203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d004473b4ce8c44408b34a16ff33ad0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headRoot: {fileID: 4691390930906101521}
-  headOffsets:
-    webXR:
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0}
-    oculus:
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0}
-  leftHandRoot: {fileID: 4691390932505519208}
-  leftHandRenderer: {fileID: 8330547168539402426}
-  leftHandOffsets:
-    webXR:
-      position: {x: -0.03, y: -0.03, z: -0.1}
-      rotation: {x: 0, y: 90, z: 0}
-    oculus:
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0}
-  rightHandRoot: {fileID: 4691390931194891925}
-  rightHandRenderer: {fileID: 1674437475508373993}
-  rightHandOffsets:
-    webXR:
-      position: {x: 0.03, y: -0.03, z: -0.07}
-      rotation: {x: 0, y: -90, z: 0}
-    oculus:
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0}
   bodyJoint: {fileID: 4691390931605389441}
 --- !u!114 &1371430715978387306
 MonoBehaviour:

@@ -1,67 +1,42 @@
 using System;
 using UnityEngine;
-
+using O8C;
 
 
 /// <summary>
 /// Provides access to avatar parts.
 /// </summary>
+/// <remarks>
+/// This component ASSUMES the GameObject this is attached to has a single child object which is used as the offset.
+/// </remarks>
+[RequireComponent(typeof(RiggedParts))]
 public class OffsetTrackedObjects : MonoBehaviour {
 
     #region Inspector Variables
-
-    /// <summary>The head GameObject.</summary>
-    [SerializeField] protected GameObject headRoot;
-
-    /// <summary>The head offsets.</summary>
-    [SerializeField] protected PlatformPhysicalOffset headOffsets;
-
-    /// <summary>The left hand GameObject.</summary>
-    [SerializeField] protected GameObject leftHandRoot;
-
-    /// <summary>The left hand renderer.</summary>
-    [SerializeField] protected Renderer leftHandRenderer;
-
-    /// <summary>The left hand offsets.</summary>
-    [SerializeField] protected PlatformPhysicalOffset leftHandOffsets;
-
-    /// <summary>The right hand GameObject.</summary>
-    [SerializeField] protected GameObject rightHandRoot;
-
-    /// <summary>The right hand renderer.</summary>
-    [SerializeField] protected Renderer rightHandRenderer;
-
-    /// <summary>The right hand offsets.</summary>
-    [SerializeField] protected PlatformPhysicalOffset rightHandOffsets;
 
     /// <summary>The body joint GameObject.</summary>
     [SerializeField] protected GameObject bodyJoint;
 
     #endregion
 
+    protected Transform trackedHead;
+    protected Transform trackedLeftHand;
+    protected Transform trackedRightHand;
 
 
-    #region Accessors
 
-    /// <summary>Accessor for the head root transform.</summary>
-    public GameObject HeadRoot { get { return headRoot; } }
 
-    /// <summary>Accessor for the left hand root transform.</summary>
-    public GameObject LeftHandRoot { get { return leftHandRoot; } }
+    protected RiggedParts riggedParts;
 
-    /// <summary>Accessor for the left hand renderer.</summary>
-    public Renderer LeftHandRenderer { get { return leftHandRenderer; } }
+    protected Transform leftHandOffset;
+    protected Transform rightHandOffset;
 
-    /// <summary>Accessor for the right hand root transform.</summary>
-    public GameObject RightHandRoot { get { return rightHandRoot; } }
 
-    /// <summary>Accessor for the right hand renderer.</summary>
-    public Renderer RightHandRenderer { get { return leftHandRenderer; } }
+    public RiggedParts RiggedParts { get { return riggedParts; } }
 
-    /// <summary>Accessor for the body joint GameObject.</summary>
-    public GameObject BodyJoint { get { return bodyJoint; } }
-
-    #endregion
+    private void Awake() {
+        riggedParts = GetComponent<RiggedParts>();
+    }
 
 
 
@@ -74,21 +49,34 @@ public class OffsetTrackedObjects : MonoBehaviour {
     /// Offsets are set. These may need to be set on a platform basis.
     /// </remarks>
     private void Start() {
-#if UNITY_WEBGL
-        SetLeftHandOffset(leftHandOffsets.webXR.position, leftHandOffsets.webXR.rotation);
-        SetRightHandOffset(rightHandOffsets.webXR.position, rightHandOffsets.webXR.rotation);
-#else
-            SetLeftHandOffset(leftHandOffsets.oculus.position, leftHandOffsets.oculus.rotation);
-            SetRightHandOffset(rightHandOffsets.oculus.position, rightHandOffsets.oculus.rotation);
-#endif
+
+        leftHandOffset = riggedParts.LeftHand.transform.GetChild(0);
+        rightHandOffset = riggedParts.RightHand.transform.GetChild(0);
+
+        SetLeftHandOffset(riggedParts.LeftHandOffset.position, riggedParts.LeftHandOffset.rotation);
+        SetRightHandOffset(riggedParts.RightHandOffset.position, riggedParts.RightHandOffset.rotation);
     }
 
 
     /// <summary>
     /// Updates the body joint.
     /// </summary>
-    private void Update() {
-        bodyJoint.transform.rotation = Quaternion.Euler(0, headRoot.transform.rotation.eulerAngles.y, 0);
+    private void FixedUpdate() {
+        if (null != trackedHead) {
+            bodyJoint.transform.rotation = Quaternion.Euler(0, trackedHead.rotation.eulerAngles.y, 0);
+            riggedParts.Head.transform.SetPositionAndRotation(trackedHead.position, trackedHead.rotation);
+        }
+
+        if (null != trackedRightHand) {
+            SetRightHandOffset(riggedParts.RightHandOffset.position, riggedParts.RightHandOffset.rotation); // TEST
+            riggedParts.RightHand.transform.SetPositionAndRotation(trackedRightHand.transform.position, trackedRightHand.transform.rotation * Quaternion.Euler(riggedParts.RightHandOffset.rotation));
+        }
+
+        if (null != trackedLeftHand) {
+            SetLeftHandOffset(riggedParts.LeftHandOffset.position, riggedParts.LeftHandOffset.rotation);    // TEST
+            riggedParts.LeftHand.transform.SetPositionAndRotation(trackedLeftHand.transform.position, trackedLeftHand.transform.rotation * Quaternion.Euler(riggedParts.LeftHandOffset.rotation));
+        }
+
     }
 
     #endregion
@@ -103,9 +91,8 @@ public class OffsetTrackedObjects : MonoBehaviour {
     /// <param name="pos">Positional offset.</param>
     /// <param name="rotation">Rotational offset.</param>
     private void SetLeftHandOffset(Vector3 pos, Vector3 rotation) {
-        Transform offset = leftHandRoot.transform.GetChild(0);
-        offset.localPosition = pos;
-        offset.localRotation = Quaternion.Euler(rotation);
+        leftHandOffset.localPosition = pos;
+//        leftHandOffset.localRotation = Quaternion.Euler(rotation);
     }
 
 
@@ -115,12 +102,22 @@ public class OffsetTrackedObjects : MonoBehaviour {
     /// <param name="pos">Positional offset.</param>
     /// <param name="rotation">Rotational offset.</param>
     private void SetRightHandOffset(Vector3 pos, Vector3 rotation) {
-        Transform offset = rightHandRoot.transform.GetChild(0);
-        offset.localPosition = pos;
-        offset.localRotation = Quaternion.Euler(rotation);
+        rightHandOffset.localPosition = pos;
+//        rightHandOffset.localRotation = Quaternion.Euler(rotation);
     }
 
+
+
+
     #endregion
+
+
+    public void SetTrackedObjects(Transform head, Transform leftHand, Transform rightHand) {
+        trackedHead = head;
+        trackedLeftHand = leftHand;
+        trackedRightHand = rightHand;
+    }
+
 
 
     [Serializable]

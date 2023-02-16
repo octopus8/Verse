@@ -62,6 +62,10 @@ namespace O8C {
         /// <returns>The head transform.</returns>
         public Transform GetHeadTransform();
 
+
+        public Transform GetLeftHandTransform();
+        public Transform GetRightHandTransform();
+
     }
 
 }

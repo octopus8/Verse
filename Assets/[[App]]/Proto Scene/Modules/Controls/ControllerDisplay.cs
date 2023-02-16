@@ -12,26 +12,26 @@ public class ControllerDisplay : MonoBehaviour
 
     private void Start() {        
         controllerActorParts = GetComponent<OffsetTrackedObjects>();
-        controllerActorParts.LeftHandRoot.SetActive(false);
-        controllerActorParts.RightHandRoot.SetActive(false);
+        controllerActorParts.RiggedParts.LeftHand.SetActive(false);
+        controllerActorParts.RiggedParts.RightHand.SetActive(false);
     }
 
 
     private void Update() {
-        float minimumHeadXRotation = 25;
+        float minimumHeadXRotation = -25;
 
         Transform headTransform = O8CSystem.Instance.DeviceTracking.GetHeadTransform();
 
-        if (controllerActorParts.LeftHandRoot.activeInHierarchy) {
+        if (controllerActorParts.RiggedParts.LeftHand.activeInHierarchy) {
             if (headTransform.localEulerAngles.x < minimumHeadXRotation) {
-                controllerActorParts.LeftHandRoot.SetActive(false);
-                controllerActorParts.RightHandRoot.SetActive(false);
+                controllerActorParts.RiggedParts.LeftHand.SetActive(false);
+                controllerActorParts.RiggedParts.RightHand.SetActive(false);
                 O8CSystem.Instance.EventManager.TriggerEvent(App.ShowAvatarEventID);
             }
         } else {
             if ((headTransform.localEulerAngles.x > minimumHeadXRotation) && (headTransform.localEulerAngles.x < 90)) {
-                controllerActorParts.LeftHandRoot.SetActive(true);
-                controllerActorParts.RightHandRoot.SetActive(true);
+                controllerActorParts.RiggedParts.LeftHand.SetActive(true);
+                controllerActorParts.RiggedParts.RightHand.SetActive(true);
                 O8CSystem.Instance.EventManager.TriggerEvent(App.HideAvatarEventID);
             }
         }
