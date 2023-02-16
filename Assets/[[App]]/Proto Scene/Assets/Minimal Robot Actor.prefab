@@ -554,9 +554,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc1f0480dc28634e890d578678a805e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 4691390930906101521}
+  headRoot: {fileID: 4691390930906101522}
   headOffset: {x: 0, y: 0, z: 0}
-  leftHand: {fileID: 8518014171248780512}
+  leftHand: {fileID: 198240739584458447}
   leftHandOffsets:
     webXR:
       position: {x: 0.07, y: 0.03, z: -0.03}
@@ -564,7 +564,7 @@ MonoBehaviour:
     oculus:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
-  rightHand: {fileID: 8496055607834206701}
+  rightHand: {fileID: 8249085357153839448}
   rightHandOffsets:
     webXR:
       position: {x: -0.07, y: 0.03, z: -0.03}

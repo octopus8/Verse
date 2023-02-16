@@ -50,8 +50,8 @@ public class OffsetTrackedObjects : MonoBehaviour {
     /// </remarks>
     private void Start() {
 
-        leftHandOffset = riggedParts.LeftHand.transform.GetChild(0);
-        rightHandOffset = riggedParts.RightHand.transform.GetChild(0);
+        leftHandOffset = riggedParts.LeftHandTransform.GetChild(0);
+        rightHandOffset = riggedParts.RightHandTransform.GetChild(0);
 
         SetLeftHandOffset(riggedParts.LeftHandOffset.position, riggedParts.LeftHandOffset.rotation);
         SetRightHandOffset(riggedParts.RightHandOffset.position, riggedParts.RightHandOffset.rotation);
@@ -64,17 +64,17 @@ public class OffsetTrackedObjects : MonoBehaviour {
     private void FixedUpdate() {
         if (null != trackedHead) {
             bodyJoint.transform.rotation = Quaternion.Euler(0, trackedHead.rotation.eulerAngles.y, 0);
-            riggedParts.Head.transform.SetPositionAndRotation(trackedHead.position, trackedHead.rotation);
+            riggedParts.HeadRoot.SetPositionAndRotation(trackedHead.position, trackedHead.rotation);
         }
 
         if (null != trackedRightHand) {
             SetRightHandOffset(riggedParts.RightHandOffset.position, riggedParts.RightHandOffset.rotation); // TEST
-            riggedParts.RightHand.transform.SetPositionAndRotation(trackedRightHand.transform.position, trackedRightHand.transform.rotation * Quaternion.Euler(riggedParts.RightHandOffset.rotation));
+            riggedParts.RightHandTransform.SetPositionAndRotation(trackedRightHand.transform.position, trackedRightHand.transform.rotation * Quaternion.Euler(riggedParts.RightHandOffset.rotation));
         }
 
         if (null != trackedLeftHand) {
             SetLeftHandOffset(riggedParts.LeftHandOffset.position, riggedParts.LeftHandOffset.rotation);    // TEST
-            riggedParts.LeftHand.transform.SetPositionAndRotation(trackedLeftHand.transform.position, trackedLeftHand.transform.rotation * Quaternion.Euler(riggedParts.LeftHandOffset.rotation));
+            riggedParts.LeftHandTransform.SetPositionAndRotation(trackedLeftHand.transform.position, trackedLeftHand.transform.rotation * Quaternion.Euler(riggedParts.LeftHandOffset.rotation));
         }
 
     }

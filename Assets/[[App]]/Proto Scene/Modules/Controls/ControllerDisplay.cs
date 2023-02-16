@@ -12,26 +12,26 @@ public class ControllerDisplay : MonoBehaviour
 
     private void Start() {        
         controllerActorParts = GetComponent<OffsetTrackedObjects>();
-        controllerActorParts.RiggedParts.LeftHand.SetActive(false);
-        controllerActorParts.RiggedParts.RightHand.SetActive(false);
+        controllerActorParts.RiggedParts.LeftHandTransform.gameObject.SetActive(false);
+        controllerActorParts.RiggedParts.RightHandTransform.gameObject.SetActive(false);
     }
 
 
     private void Update() {
-        float minimumHeadXRotation = -25;
+        float minimumHeadXRotation = 25;
 
         Transform headTransform = O8CSystem.Instance.DeviceTracking.GetHeadTransform();
 
-        if (controllerActorParts.RiggedParts.LeftHand.activeInHierarchy) {
+        if (controllerActorParts.RiggedParts.LeftHandTransform.gameObject.activeInHierarchy) {
             if (headTransform.localEulerAngles.x < minimumHeadXRotation) {
-                controllerActorParts.RiggedParts.LeftHand.SetActive(false);
-                controllerActorParts.RiggedParts.RightHand.SetActive(false);
+                controllerActorParts.RiggedParts.LeftHandTransform.gameObject.SetActive(false);
+                controllerActorParts.RiggedParts.RightHandTransform.gameObject.SetActive(false);
                 O8CSystem.Instance.EventManager.TriggerEvent(App.ShowAvatarEventID);
             }
         } else {
             if ((headTransform.localEulerAngles.x > minimumHeadXRotation) && (headTransform.localEulerAngles.x < 90)) {
-                controllerActorParts.RiggedParts.LeftHand.SetActive(true);
-                controllerActorParts.RiggedParts.RightHand.SetActive(true);
+                controllerActorParts.RiggedParts.LeftHandTransform.gameObject.SetActive(true);
+                controllerActorParts.RiggedParts.RightHandTransform.gameObject.SetActive(true);
                 O8CSystem.Instance.EventManager.TriggerEvent(App.HideAvatarEventID);
             }
         }
