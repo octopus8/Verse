@@ -2,7 +2,9 @@ using UnityEngine;
 
 
 
-
+/// <summary>
+/// This component synchronizes IK rigged avatar rigged part transforms with tracked part transforms.
+/// </summary>
 public class IKRiggedAvatar : MonoBehaviour
 {
     #region Public Variables

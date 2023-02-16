@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 121486629}
   - component: {fileID: 121486630}
   m_Layer: 0
-  m_Name: Simple Avatar Creator
+  m_Name: Minimal Avatar Creator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

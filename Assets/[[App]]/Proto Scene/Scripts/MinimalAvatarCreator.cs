@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SimpleAvatarCreator : AvatarCreator {
+public class MinimalAvatarCreator : AvatarCreator {
 
     #region Inspector Variables
 
@@ -18,7 +18,7 @@ public class SimpleAvatarCreator : AvatarCreator {
 
         MinimalAvatar avatar = Instantiate(avatarPrefab, player.transform);
 
-        avatar.SetTrackedObjects(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
+        avatar.SetTrackedSources(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
 
         return avatar.gameObject;
     }

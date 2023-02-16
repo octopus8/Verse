@@ -1,14 +1,10 @@
-using System;
 using UnityEngine;
-using O8C;
+
 
 
 /// <summary>
-/// Provides access to avatar parts.
+/// This component synchronizes minimal avatar rigged part transforms with tracked part transforms.
 /// </summary>
-/// <remarks>
-/// This component ASSUMES the GameObject this is attached to has a single child object which is used as the offset.
-/// </remarks>
 [RequireComponent(typeof(RiggedParts))]
 public class MinimalAvatar : MonoBehaviour {
 
@@ -19,31 +15,47 @@ public class MinimalAvatar : MonoBehaviour {
 
     #endregion
 
-    protected Transform trackedHead;
-    protected Transform trackedLeftHand;
-    protected Transform trackedRightHand;
 
 
+    #region Class Variables
 
-
+    /// <summary>The required RiggedParts component.</summary>
     protected RiggedParts riggedParts;
 
+    /// <summary>Cached reference to tracked head transform.</summary>
+    protected Transform trackedHeadSource;
+
+    /// <summary>Cached reference to tracked left hand transform.</summary>
+    protected Transform trackedLeftHandSource;
+
+    /// <summary>Cached reference to tracked right hand transform.</summary>
+    protected Transform trackedRightHandSource;
+
+    /// <summary>Cached reference to the left hand offset transform.</summary>
     protected Transform leftHandOffset;
+
+    /// <summary>Cached reference to the right hand offset transform.</summary>
     protected Transform rightHandOffset;
 
-
+    /// <summary>Accessor for RiggedParts.</summary>
     public RiggedParts RiggedParts { get { return riggedParts; } }
 
-    private void Awake() {
-        riggedParts = GetComponent<RiggedParts>();
-    }
+    #endregion
 
 
 
     #region Base Methods
 
     /// <summary>
-    /// Initializes avatar parts.
+    /// Caches references.
+    /// </summary>
+    private void Awake() {
+        riggedParts = GetComponent<RiggedParts>();
+    }
+
+
+    /// <summary>
+    /// Caches references and initializes offset transforms.
     /// </summary>
     /// <remarks>
     /// Offsets are set. These may need to be set on a platform basis.
@@ -53,69 +65,47 @@ public class MinimalAvatar : MonoBehaviour {
         leftHandOffset = riggedParts.LeftHandTransform.GetChild(0);
         rightHandOffset = riggedParts.RightHandTransform.GetChild(0);
 
-        SetLeftHandOffset(riggedParts.LeftHandOffset.position, riggedParts.LeftHandOffset.rotation);
-        SetRightHandOffset(riggedParts.RightHandOffset.position, riggedParts.RightHandOffset.rotation);
+        leftHandOffset.localPosition = riggedParts.LeftHandOffset.position;
+        rightHandOffset.localPosition = riggedParts.RightHandOffset.position;
     }
 
 
     /// <summary>
-    /// Updates the body joint.
+    /// Updates rigged part transforms, and the body joint rotation.
     /// </summary>
     private void FixedUpdate() {
-        if (null != trackedHead) {
-            bodyJoint.transform.rotation = Quaternion.Euler(0, trackedHead.rotation.eulerAngles.y, 0);
-            riggedParts.HeadRoot.SetPositionAndRotation(trackedHead.position, trackedHead.rotation);
+        if (null != trackedHeadSource) {
+            bodyJoint.transform.rotation = Quaternion.Euler(0, trackedHeadSource.rotation.eulerAngles.y, 0);
+            riggedParts.HeadRoot.SetPositionAndRotation(trackedHeadSource.position, trackedHeadSource.rotation);
         }
-
-        if (null != trackedRightHand) {
-            SetRightHandOffset(riggedParts.RightHandOffset.position, riggedParts.RightHandOffset.rotation); // TEST
-            riggedParts.RightHandTransform.SetPositionAndRotation(trackedRightHand.transform.position, trackedRightHand.transform.rotation * Quaternion.Euler(riggedParts.RightHandOffset.rotation));
+        if (null != trackedRightHandSource) {
+//            rightHandOffset.localPosition = riggedParts.RightHandOffset.position;     // TEST
+            riggedParts.RightHandTransform.SetPositionAndRotation(trackedRightHandSource.transform.position, trackedRightHandSource.transform.rotation * Quaternion.Euler(riggedParts.RightHandOffset.rotation));
         }
-
-        if (null != trackedLeftHand) {
-            SetLeftHandOffset(riggedParts.LeftHandOffset.position, riggedParts.LeftHandOffset.rotation);    // TEST
-            riggedParts.LeftHandTransform.SetPositionAndRotation(trackedLeftHand.transform.position, trackedLeftHand.transform.rotation * Quaternion.Euler(riggedParts.LeftHandOffset.rotation));
+        if (null != trackedLeftHandSource) {
+//            leftHandOffset.localPosition = riggedParts.LeftHandOffset.position;       // TEST
+            riggedParts.LeftHandTransform.SetPositionAndRotation(trackedLeftHandSource.transform.position, trackedLeftHandSource.transform.rotation * Quaternion.Euler(riggedParts.LeftHandOffset.rotation));
         }
-
     }
 
     #endregion
 
 
 
-    #region Private Methods
+    #region Public Methods
 
     /// <summary>
-    /// Sets the offset from tracking for the left hand.
+    /// Sets the tracked transforms used to animate the avatar.
     /// </summary>
-    /// <param name="pos">Positional offset.</param>
-    /// <param name="rotation">Rotational offset.</param>
-    private void SetLeftHandOffset(Vector3 pos, Vector3 rotation) {
-        leftHandOffset.localPosition = pos;
-//        leftHandOffset.localRotation = Quaternion.Euler(rotation);
+    /// <param name="head">The head tracked transform.</param>
+    /// <param name="leftHand">The left hand tracked transform.</param>
+    /// <param name="rightHand">The right hand tracked transform.</param>
+    public void SetTrackedSources(Transform head, Transform leftHand, Transform rightHand) {
+        trackedHeadSource = head;
+        trackedLeftHandSource = leftHand;
+        trackedRightHandSource = rightHand;
     }
-
-
-    /// <summary>
-    /// Sets the offset from tracking for the right hand.
-    /// </summary>
-    /// <param name="pos">Positional offset.</param>
-    /// <param name="rotation">Rotational offset.</param>
-    private void SetRightHandOffset(Vector3 pos, Vector3 rotation) {
-        rightHandOffset.localPosition = pos;
-//        rightHandOffset.localRotation = Quaternion.Euler(rotation);
-    }
-
-
-
 
     #endregion
-
-
-    public void SetTrackedObjects(Transform head, Transform leftHand, Transform rightHand) {
-        trackedHead = head;
-        trackedLeftHand = leftHand;
-        trackedRightHand = rightHand;
-    }
 
 }
