@@ -37,9 +37,6 @@ public class MinimalAvatar : MonoBehaviour {
     /// <summary>Cached reference to the right hand offset transform.</summary>
     protected Transform rightHandOffset;
 
-    /// <summary>Accessor for RiggedParts.</summary>
-    public TrackedParts RiggedParts { get { return riggedParts; } }
-
     #endregion
 
 

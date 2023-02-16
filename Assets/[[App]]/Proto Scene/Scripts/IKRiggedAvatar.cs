@@ -85,13 +85,5 @@ public class IKRiggedAvatar : MonoBehaviour
 
 
 
-    #region Public Methods
-
-    public void SetRiggedParts(TrackedParts parts) {
-        riggedParts = parts;
-        headOriginalRotation = riggedParts.HeadRoot.rotation;
-    }
-
-    #endregion
 
 }

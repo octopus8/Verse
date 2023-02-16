@@ -1173,6 +1173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e0765ed230b2f4882d38a266e8680b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftController: {fileID: 4691390932505519208}
+  rightController: {fileID: 4691390931194891925}
 --- !u!114 &524852395122303544
 MonoBehaviour:
   m_ObjectHideFlags: 0
