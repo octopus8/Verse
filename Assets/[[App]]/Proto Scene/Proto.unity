@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c86122da5c243a45841c05b8f63b8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarCreator: {fileID: 673494668}
+  avatarCreator: {fileID: 121486630}
   startTransform: {fileID: 2133467096}
   hotMicIndicatorPrefab: {fileID: 8371445388769894716, guid: 77385843d6f43244b820163f7691975f,
     type: 3}

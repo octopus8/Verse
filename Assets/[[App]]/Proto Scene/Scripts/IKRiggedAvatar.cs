@@ -18,7 +18,7 @@ public class IKRiggedAvatar : MonoBehaviour
 
     #region Class Variables
 
-    protected RiggedParts riggedParts;
+    protected TrackedParts riggedParts;
     protected Quaternion leftHandOffsetRotation;
     protected Quaternion rightHandOffsetRotation;
 
@@ -87,7 +87,7 @@ public class IKRiggedAvatar : MonoBehaviour
 
     #region Public Methods
 
-    public void SetRiggedParts(RiggedParts parts) {
+    public void SetRiggedParts(TrackedParts parts) {
         riggedParts = parts;
         headOriginalRotation = riggedParts.HeadRoot.rotation;
     }

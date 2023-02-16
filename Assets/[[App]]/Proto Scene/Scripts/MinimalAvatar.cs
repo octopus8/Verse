@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// This component synchronizes minimal avatar rigged part transforms with tracked part transforms.
 /// </summary>
-[RequireComponent(typeof(RiggedParts))]
+[RequireComponent(typeof(TrackedParts))]
 public class MinimalAvatar : MonoBehaviour {
 
     #region Inspector Variables
@@ -20,7 +20,7 @@ public class MinimalAvatar : MonoBehaviour {
     #region Class Variables
 
     /// <summary>The required RiggedParts component.</summary>
-    protected RiggedParts riggedParts;
+    protected TrackedParts riggedParts;
 
     /// <summary>Cached reference to tracked head transform.</summary>
     protected Transform trackedHeadSource;
@@ -38,7 +38,7 @@ public class MinimalAvatar : MonoBehaviour {
     protected Transform rightHandOffset;
 
     /// <summary>Accessor for RiggedParts.</summary>
-    public RiggedParts RiggedParts { get { return riggedParts; } }
+    public TrackedParts RiggedParts { get { return riggedParts; } }
 
     #endregion
 
@@ -50,7 +50,7 @@ public class MinimalAvatar : MonoBehaviour {
     /// Caches references.
     /// </summary>
     private void Awake() {
-        riggedParts = GetComponent<RiggedParts>();
+        riggedParts = GetComponent<TrackedParts>();
     }
 
 

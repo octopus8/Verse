@@ -6,7 +6,7 @@ using UnityEngine;
 /// <summary>
 /// Provides access to rigged part objects so they can be animated.
 /// </summary>
-public class RiggedParts : MonoBehaviour
+public class TrackedParts : MonoBehaviour
 {
     #region Interface Variables
 
