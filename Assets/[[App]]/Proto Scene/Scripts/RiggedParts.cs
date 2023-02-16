@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,13 +20,13 @@ public class RiggedParts : MonoBehaviour
     [SerializeField] protected Transform leftHand;
 
     /// <summary>The left hand offsets.</summary>
-    [SerializeField] protected MinimalAvatar.PlatformPhysicalOffset leftHandOffsets;
+    [SerializeField] protected PlatformPhysicalOffset leftHandOffsets;
 
     /// <summary>The right hand root transform.</summary>
     [SerializeField] protected Transform rightHand;
 
     /// <summary>The left hand offsets.</summary>
-    [SerializeField] protected MinimalAvatar.PlatformPhysicalOffset rightHandOffsets;
+    [SerializeField] protected PlatformPhysicalOffset rightHandOffsets;
 
     #endregion
 
@@ -43,7 +44,7 @@ public class RiggedParts : MonoBehaviour
     public Transform RightHandTransform { get { return rightHand; } }
 
     /// <summary>Accessor for the LeftHandOffset values.</summary>
-    public MinimalAvatar.PhysicalOffset LeftHandOffset { get {
+    public PhysicalOffset LeftHandOffset { get {
 #if UNITY_WEBGL
             return leftHandOffsets.webXR;
 #else
@@ -53,7 +54,7 @@ public class RiggedParts : MonoBehaviour
     }
 
     /// <summary>Accessor for the RightHandOffset values.</summary>
-    public MinimalAvatar.PhysicalOffset RightHandOffset { get {
+    public PhysicalOffset RightHandOffset { get {
 #if UNITY_WEBGL
             return rightHandOffsets.webXR;
 #else
@@ -66,5 +67,18 @@ public class RiggedParts : MonoBehaviour
     public Vector3 HeadOffset { get { return headOffset; } }
 
     #endregion
+
+
+    [Serializable]
+    public struct PlatformPhysicalOffset {
+        public PhysicalOffset webXR;
+        public PhysicalOffset oculus;
+    }
+
+    [Serializable]
+    public struct PhysicalOffset {
+        public Vector3 position;
+        public Vector3 rotation;
+    }
 
 }

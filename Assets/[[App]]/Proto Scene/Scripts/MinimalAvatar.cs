@@ -118,20 +118,4 @@ public class MinimalAvatar : MonoBehaviour {
         trackedRightHand = rightHand;
     }
 
-
-
-    [Serializable]
-    public struct PlatformPhysicalOffset {
-        public PhysicalOffset webXR;
-        public PhysicalOffset oculus;
-    }
-
-    [Serializable]
-    public struct PhysicalOffset {
-        public Vector3 position;
-        public Vector3 rotation;
-    }
-
-
-
 }
