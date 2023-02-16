@@ -5,29 +5,31 @@ using UnityEngine;
 
 public class IKRiggedAvatar : MonoBehaviour
 {
-    RiggedParts riggedParts;
-
+    #region Public Variables
     public Transform SourceHeadTransform { private get; set; }
     public Transform SourceLeftHandTransform { private get; set; }
     public Transform SourceRightHandTransform { private get; set; }
 
-
-    Quaternion leftHandOffsetRotation;
-    Quaternion rightHandOffsetRotation;
-
-    Vector3 leftHandOffsetPosition;
-    Vector3 rightHandOffsetPosition;
-
-    Quaternion headOriginalRotation;
-
-    public void SetRiggedParts(RiggedParts parts) {
-        riggedParts = parts;
-        headOriginalRotation = riggedParts.Head.transform.rotation;
-    }
+    #endregion
 
 
 
+    #region Class Variables
 
+    protected RiggedParts riggedParts;
+    protected Quaternion leftHandOffsetRotation;
+    protected Quaternion rightHandOffsetRotation;
+
+    protected Vector3 leftHandOffsetPosition;
+    protected Vector3 rightHandOffsetPosition;
+
+    protected Quaternion headOriginalRotation;
+
+    #endregion
+
+
+
+    #region Base Methods
 
     private void FixedUpdate() {
         float yRot = transform.rotation.eulerAngles.y;
@@ -48,7 +50,7 @@ public class IKRiggedAvatar : MonoBehaviour
         }
         if (null != SourceHeadTransform) {
             // BLEE Note: This does not take into consideration the original rotation of the riggedParts.Head.transform.rotation.
-            riggedParts.Head.transform.rotation = SourceHeadTransform.rotation * headOriginalRotation;
+            riggedParts.HeadRoot.rotation = SourceHeadTransform.rotation * headOriginalRotation;
         }
 
 
@@ -61,19 +63,33 @@ public class IKRiggedAvatar : MonoBehaviour
 
         if (null != SourceLeftHandTransform) {
             Quaternion rot = SourceLeftHandTransform.rotation * leftHandOffsetRotation;
-            riggedParts.LeftHand.transform.rotation = rot;
+            riggedParts.LeftHandTransform.rotation = rot;
 
             Vector3 offset = rot * leftHandOffsetPosition;
-            riggedParts.LeftHand.transform.position = SourceLeftHandTransform.position + offset;
+            riggedParts.LeftHandTransform.position = SourceLeftHandTransform.position + offset;
         }
 
         if (null != SourceRightHandTransform) {
             Quaternion rot = SourceRightHandTransform.rotation * rightHandOffsetRotation;
-            riggedParts.RightHand.transform.rotation = rot;
+            riggedParts.RightHandTransform.rotation = rot;
 
             Vector3 offset = rot * rightHandOffsetPosition;
-            riggedParts.RightHand.transform.position = SourceRightHandTransform.position + offset;
+            riggedParts.RightHandTransform.position = SourceRightHandTransform.position + offset;
         }
 
     }
+
+    #endregion
+
+
+
+    #region Public Methods
+
+    public void SetRiggedParts(RiggedParts parts) {
+        riggedParts = parts;
+        headOriginalRotation = riggedParts.HeadRoot.rotation;
+    }
+
+    #endregion
+
 }

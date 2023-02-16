@@ -15,19 +15,75 @@ Inheritance diagram for O8\+C.\+O8\+CDevice\+Tracking\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_device_tracking_ad7138a58224e67e9e77e31a1e17768ea}{Add\+Head\+Target}} (Game\+Object target)
-\item 
+\begin{DoxyCompactList}\small\item\em Add a Game\+Object to be transformed by the head transform.
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Target Game\+Object.\\
+\hline
+\end{DoxyParams}
+ \end{DoxyCompactList}\item 
 abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_device_tracking_accbe263783289a96273e0cc717d34a20}{Add\+Left\+Hand\+Target}} (Game\+Object target)
-\item 
+\begin{DoxyCompactList}\small\item\em Add a Game\+Object to be transformed by the head transform.
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Target Game\+Object.\\
+\hline
+\end{DoxyParams}
+ \end{DoxyCompactList}\item 
 abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_device_tracking_a3c3c6d3be18decbda65d8171c9e95db9}{Add\+Right\+Hand\+Target}} (Game\+Object target)
-\item 
+\begin{DoxyCompactList}\small\item\em Add a Game\+Object to be transformed by the head transform.
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Target Game\+Object.\\
+\hline
+\end{DoxyParams}
+ \end{DoxyCompactList}\item 
 abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_device_tracking_a3c09c252d510daa683b06f8554b31225}{Remove\+Head\+Target}} (Game\+Object target)
-\item 
+\begin{DoxyCompactList}\small\item\em Add a Game\+Object to be transformed by the head transform.
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Target Game\+Object.\\
+\hline
+\end{DoxyParams}
+ \end{DoxyCompactList}\item 
 abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_device_tracking_a40bb545f874ee9bfc347ca71d077c032}{Remove\+Left\+Hand\+Target}} (Game\+Object target)
-\item 
+\begin{DoxyCompactList}\small\item\em Add a Game\+Object to be transformed by the head transform.
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Target Game\+Object.\\
+\hline
+\end{DoxyParams}
+ \end{DoxyCompactList}\item 
 abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_device_tracking_a1503e0c7fb44c14ed4043f00a21f42e9}{Remove\+Right\+Hand\+Target}} (Game\+Object target)
-\item 
+\begin{DoxyCompactList}\small\item\em Add a Game\+Object to be transformed by the head transform.
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Target Game\+Object.\\
+\hline
+\end{DoxyParams}
+ \end{DoxyCompactList}\item 
 abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_device_tracking_a4b5d46a226633ed143c2baedbfebed85}{Set\+Play\+Area\+Follower}} (Game\+Object source)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sets the play area follower.
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The object to follow.\\
+\hline
+\end{DoxyParams}
+ \end{DoxyCompactList}\item 
+abstract Transform \mbox{\hyperlink{class_o8_c_1_1_o8_c_device_tracking_a6aa91c73e6732bafee657ae16a83c9da}{Get\+Head\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em Provides access to the head transform.
+
+\begin{DoxyReturn}{Returns}
+The head transform.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_a76c6668320091bc5309b50390a9a9528}{Add\+Head\+Target}} (Game\+Object target)
@@ -43,7 +99,9 @@ void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_a8843c9151b244cf
 void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_ab1867ba0b8d9a9b88bc8fbb91d91ede2}{Remove\+Right\+Hand\+Target}} (Game\+Object target)
 \begin{DoxyCompactList}\small\item\em Add a Game\+Object to be transformed by the head transform. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_a2737c1905a1a2d1740d5f1f986fa2db8}{Set\+Play\+Area\+Follower}} (Game\+Object source)
-\begin{DoxyCompactList}\small\item\em Sets the play area follower. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sets the play area follower. \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_a622203431714aeadb3e23ab392fb3319}{Get\+Head\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em Provides access to the head transform. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -58,14 +116,18 @@ This class only contains abstract implementations of the interface and is intend
 \doxysubsubsection{\texorpdfstring{AddHeadTarget()}{AddHeadTarget()}}
 {\footnotesize\ttfamily abstract void O8\+C.\+O8\+CDevice\+Tracking.\+Add\+Head\+Target (\begin{DoxyParamCaption}\item[{Game\+Object}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-\{Add a Game\+Object to be transformed by the head transform.
+
+
+Add a Game\+Object to be transformed by the head transform.
 
 
 \begin{DoxyParams}{Parameters}
 {\em target} & Target Game\+Object.\\
 \hline
 \end{DoxyParams}
-\} 
+ 
+
+
 
 Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_a76c6668320091bc5309b50390a9a9528}{O8\+C.\+IO8\+CDevice\+Tracking}}.
 
@@ -79,14 +141,18 @@ Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_zinnia_device_tracking_a6019
 \doxysubsubsection{\texorpdfstring{AddLeftHandTarget()}{AddLeftHandTarget()}}
 {\footnotesize\ttfamily abstract void O8\+C.\+O8\+CDevice\+Tracking.\+Add\+Left\+Hand\+Target (\begin{DoxyParamCaption}\item[{Game\+Object}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-\{Add a Game\+Object to be transformed by the head transform.
+
+
+Add a Game\+Object to be transformed by the head transform.
 
 
 \begin{DoxyParams}{Parameters}
 {\em target} & Target Game\+Object.\\
 \hline
 \end{DoxyParams}
-\} 
+ 
+
+
 
 Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_ac27f217d6d946e8490c47433195eabfa}{O8\+C.\+IO8\+CDevice\+Tracking}}.
 
@@ -100,14 +166,18 @@ Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_zinnia_device_tracking_a801d
 \doxysubsubsection{\texorpdfstring{AddRightHandTarget()}{AddRightHandTarget()}}
 {\footnotesize\ttfamily abstract void O8\+C.\+O8\+CDevice\+Tracking.\+Add\+Right\+Hand\+Target (\begin{DoxyParamCaption}\item[{Game\+Object}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-\{Add a Game\+Object to be transformed by the head transform.
+
+
+Add a Game\+Object to be transformed by the head transform.
 
 
 \begin{DoxyParams}{Parameters}
 {\em target} & Target Game\+Object.\\
 \hline
 \end{DoxyParams}
-\} 
+ 
+
+
 
 Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_a8843c9151b244cf520fd4f48fec06757}{O8\+C.\+IO8\+CDevice\+Tracking}}.
 
@@ -115,20 +185,47 @@ Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_a8843c9151
 
 Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_zinnia_device_tracking_a1586d2ff8cee9799a7220fa2513c6890}{O8\+C.\+O8\+CZinnia\+Device\+Tracking}}.
 
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_device_tracking_a6aa91c73e6732bafee657ae16a83c9da}\label{class_o8_c_1_1_o8_c_device_tracking_a6aa91c73e6732bafee657ae16a83c9da}} 
+\index{O8C.O8CDeviceTracking@{O8C.O8CDeviceTracking}!GetHeadTransform@{GetHeadTransform}}
+\index{GetHeadTransform@{GetHeadTransform}!O8C.O8CDeviceTracking@{O8C.O8CDeviceTracking}}
+\doxysubsubsection{\texorpdfstring{GetHeadTransform()}{GetHeadTransform()}}
+{\footnotesize\ttfamily abstract Transform O8\+C.\+O8\+CDevice\+Tracking.\+Get\+Head\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Provides access to the head transform.
+
+\begin{DoxyReturn}{Returns}
+The head transform.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_a622203431714aeadb3e23ab392fb3319}{O8\+C.\+IO8\+CDevice\+Tracking}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_zinnia_device_tracking_ad2a6a2f594c154db0ce2963a242fb02a}{O8\+C.\+O8\+CZinnia\+Device\+Tracking}}.
+
 \mbox{\Hypertarget{class_o8_c_1_1_o8_c_device_tracking_a3c09c252d510daa683b06f8554b31225}\label{class_o8_c_1_1_o8_c_device_tracking_a3c09c252d510daa683b06f8554b31225}} 
 \index{O8C.O8CDeviceTracking@{O8C.O8CDeviceTracking}!RemoveHeadTarget@{RemoveHeadTarget}}
 \index{RemoveHeadTarget@{RemoveHeadTarget}!O8C.O8CDeviceTracking@{O8C.O8CDeviceTracking}}
 \doxysubsubsection{\texorpdfstring{RemoveHeadTarget()}{RemoveHeadTarget()}}
 {\footnotesize\ttfamily abstract void O8\+C.\+O8\+CDevice\+Tracking.\+Remove\+Head\+Target (\begin{DoxyParamCaption}\item[{Game\+Object}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-\{Add a Game\+Object to be transformed by the head transform.
+
+
+Add a Game\+Object to be transformed by the head transform.
 
 
 \begin{DoxyParams}{Parameters}
 {\em target} & Target Game\+Object.\\
 \hline
 \end{DoxyParams}
-\} 
+ 
+
+
 
 Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_adc0c4cfe0cf1932dce1fd07424af3b62}{O8\+C.\+IO8\+CDevice\+Tracking}}.
 
@@ -142,14 +239,18 @@ Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_zinnia_device_tracking_a2720
 \doxysubsubsection{\texorpdfstring{RemoveLeftHandTarget()}{RemoveLeftHandTarget()}}
 {\footnotesize\ttfamily abstract void O8\+C.\+O8\+CDevice\+Tracking.\+Remove\+Left\+Hand\+Target (\begin{DoxyParamCaption}\item[{Game\+Object}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-\{Add a Game\+Object to be transformed by the head transform.
+
+
+Add a Game\+Object to be transformed by the head transform.
 
 
 \begin{DoxyParams}{Parameters}
 {\em target} & Target Game\+Object.\\
 \hline
 \end{DoxyParams}
-\} 
+ 
+
+
 
 Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_aaeec2695d3644a3ca74adc5ba0cbdc36}{O8\+C.\+IO8\+CDevice\+Tracking}}.
 
@@ -163,14 +264,18 @@ Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_zinnia_device_tracking_ac5b2
 \doxysubsubsection{\texorpdfstring{RemoveRightHandTarget()}{RemoveRightHandTarget()}}
 {\footnotesize\ttfamily abstract void O8\+C.\+O8\+CDevice\+Tracking.\+Remove\+Right\+Hand\+Target (\begin{DoxyParamCaption}\item[{Game\+Object}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-\{Add a Game\+Object to be transformed by the head transform.
+
+
+Add a Game\+Object to be transformed by the head transform.
 
 
 \begin{DoxyParams}{Parameters}
 {\em target} & Target Game\+Object.\\
 \hline
 \end{DoxyParams}
-\} 
+ 
+
+
 
 Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_ab1867ba0b8d9a9b88bc8fbb91d91ede2}{O8\+C.\+IO8\+CDevice\+Tracking}}.
 
@@ -184,14 +289,18 @@ Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_zinnia_device_tracking_a4080
 \doxysubsubsection{\texorpdfstring{SetPlayAreaFollower()}{SetPlayAreaFollower()}}
 {\footnotesize\ttfamily abstract void O8\+C.\+O8\+CDevice\+Tracking.\+Set\+Play\+Area\+Follower (\begin{DoxyParamCaption}\item[{Game\+Object}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-\{Sets the play area follower.
+
+
+Sets the play area follower.
 
 
 \begin{DoxyParams}{Parameters}
 {\em source} & The object to follow.\\
 \hline
 \end{DoxyParams}
-\} 
+ 
+
+
 
 Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_device_tracking_a2737c1905a1a2d1740d5f1f986fa2db8}{O8\+C.\+IO8\+CDevice\+Tracking}}.
 

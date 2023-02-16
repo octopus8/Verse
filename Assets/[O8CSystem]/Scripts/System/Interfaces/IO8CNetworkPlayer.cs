@@ -7,12 +7,25 @@ namespace O8C {
     /// </summary>
     public interface IO8CNetworkPlayer {
 
+        /// <summary>
+        /// Provides access to the head transform.
+        /// </summary>
+        /// <returns>The head transform.</returns>
         Transform GetHeadTransform();
 
+
+        /// <summary>
+        /// Provides access to the left hand transform.
+        /// </summary>
+        /// <returns>The left hand transform.</returns>
         Transform GetLeftHandTransform();
 
-        Transform GetRightHandTransform();
 
+        /// <summary>
+        /// Provides access to the right hand transform.
+        /// </summary>
+        /// <returns>The right hand transform.</returns>
+        Transform GetRightHandTransform();
 
 
         /// <summary>

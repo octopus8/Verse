@@ -28,9 +28,12 @@ namespace O8C {
         public void StopRecord();
 
 
+        /// <summary>
+        /// Provides access to the recording status.
+        /// </summary>
+        /// <returns>The recording status.</returns>
         public bool IsRecording();
 
     }
-
 
 }

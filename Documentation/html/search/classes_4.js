@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['playeractions_0',['PlayerActions',['../struct_verse_input_actions_1_1_player_actions.html',1,'VerseInputActions']]]
+  ['motorinput_0',['MotorInput',['../class_motor_input.html',1,'']]],
+  ['motorinputactions_1',['MotorInputActions',['../class_motor_input_actions.html',1,'']]],
+  ['motorinputkeyboard_2',['MotorInputKeyboard',['../class_motor_input_keyboard.html',1,'']]]
 ];
