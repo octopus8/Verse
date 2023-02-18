@@ -11,6 +11,8 @@ public class IKRiggedAvatar : MonoBehaviour
     [SerializeField] protected GameObject leftHandIKTarget;
     [SerializeField] protected GameObject rightHandIKTarget;
 
+    [SerializeField] protected GameObject headGeometryObject;
+
 
     #region Class Variables
 
@@ -105,6 +107,15 @@ public class IKRiggedAvatar : MonoBehaviour
         trackedLeftHandSource = leftHand;
         trackedRightHandSource = rightHand;
     }
+
+
+    /// <summary>
+    /// Configures the player depending on whether or not it is a local player or not.
+    /// </summary>
+    /// <param name="isLocalPlayer">Flag indicating the avatar is for a local player.</param>
+    public void SetIsLocalPlayer(bool isLocalPlayer) {
+        headGeometryObject?.SetActive(!isLocalPlayer);
+     }
 
     #endregion
 

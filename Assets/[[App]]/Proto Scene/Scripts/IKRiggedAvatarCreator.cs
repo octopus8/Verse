@@ -26,6 +26,7 @@ public class IKRiggedAvatarCreator : AvatarCreator {
         IKRiggedAvatar iKRiggedAvatar = avatar.GetComponent<IKRiggedAvatar>();
         iKRiggedAvatar.AvatarRoot = avatarRootObject.transform;
         iKRiggedAvatar.SetTrackedSources(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
+        iKRiggedAvatar.SetIsLocalPlayer(isLocalPlayer);
 
         return avatar;
     }
