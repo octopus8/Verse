@@ -1,6 +1,6 @@
+using O8C;
 using UnityEngine;
-
-
+using UnityEngine.Assertions;
 
 /// <summary>
 /// This component synchronizes IK rigged avatar rigged part transforms with tracked part transforms.
@@ -8,29 +8,11 @@ using UnityEngine;
 [RequireComponent(typeof(TrackedParts))]
 public class IKRiggedAvatar : MonoBehaviour
 {
-    #region Public Variables
-    public Transform SourceHeadTransform { private get; set; }
-    public Transform SourceLeftHandTransform { private get; set; }
-    public Transform SourceRightHandTransform { private get; set; }
-
-    #endregion
-
-
 
     #region Class Variables
 
+    /// <summary>The required TrackedParts component.</summary>
     protected TrackedParts trackedParts;
-    protected Quaternion leftHandOffsetRotation;
-    protected Quaternion rightHandOffsetRotation;
-
-    protected Vector3 leftHandOffsetPosition;
-    protected Vector3 rightHandOffsetPosition;
-
-    protected Quaternion headOriginalRotation;
-
-    #endregion
-
-
 
     /// <summary>Cached reference to tracked head transform.</summary>
     protected Transform trackedHeadSource;
@@ -41,12 +23,58 @@ public class IKRiggedAvatar : MonoBehaviour
     /// <summary>Cached reference to tracked right hand transform.</summary>
     protected Transform trackedRightHandSource;
 
-    /// <summary>Cached reference to the left hand offset transform.</summary>
-    protected Transform leftHandOffset;
+    protected Quaternion headOriginalRotation;
 
-    /// <summary>Cached reference to the right hand offset transform.</summary>
-    protected Transform rightHandOffset;
+    /// <summary>Allows the avatar root transform to be set.</summary>
+    public Transform AvatarRoot { private get; set; }
 
+    #endregion
+
+
+
+    #region Base Methods
+
+    /// <summary>
+    /// Caches component references.
+    /// </summary>
+    private void Awake() {
+        trackedParts = GetComponent<TrackedParts>();
+    }
+
+
+    private void Start() {
+        Assert.IsTrue(AvatarRoot != null);
+        O8CSystem.Instance.DeviceTracking.AddHeadTarget(AvatarRoot.gameObject);
+    }
+
+
+    private void FixedUpdate() {
+        // Clear the X & Z rotations for the AvatarRoot transform.
+        float yRot = AvatarRoot.rotation.eulerAngles.y;
+        AvatarRoot.rotation = Quaternion.Euler(0f, yRot, 0f);
+
+        // Set the head rotation. Note: It will be place correctly indirectly by the body tracking the head.
+        if (null != trackedHeadSource) {
+            trackedParts.HeadRoot.rotation = trackedHeadSource.rotation * headOriginalRotation;
+        }
+
+        if (null != trackedRightHandSource) {
+            trackedParts.RightHandTransform.SetPositionAndRotation(trackedRightHandSource.transform.position, trackedRightHandSource.transform.rotation * Quaternion.Euler(trackedParts.RightHandOffset.rotation));
+            trackedParts.RightHandTransform.localPosition += trackedParts.RightHandOffset.position;
+        }
+
+        if (null != trackedLeftHandSource) {
+            trackedParts.LeftHandTransform.SetPositionAndRotation(trackedLeftHandSource.transform.position, trackedLeftHandSource.transform.rotation * Quaternion.Euler(trackedParts.LeftHandOffset.rotation));
+            trackedParts.LeftHandTransform.localPosition += trackedParts.LeftHandOffset.position;
+        }
+
+    }
+
+    #endregion
+
+
+
+    #region Public Methods
 
     /// <summary>
     /// Sets the tracked transforms used to animate the avatar.
@@ -60,66 +88,6 @@ public class IKRiggedAvatar : MonoBehaviour
         trackedRightHandSource = rightHand;
     }
 
-
-
-    #region Base Methods
-
-    private void Awake() {
-        trackedParts = GetComponent<TrackedParts>();
-    }
-
-
-    private void FixedUpdate() {
-        float yRot = transform.rotation.eulerAngles.y;
-        transform.rotation = Quaternion.Euler(0f, yRot, 0f);
-    }
-
-
-
-    /// <summary>
-    /// Sets the rigged head transform to the source head transform.
-    /// </summary>
-    /// <remarks>
-    /// This is done in LateUpdate to override any animation effects.
-    /// </remarks>
-    private void LateUpdate() {
-        if (null == trackedParts) {
-            return;
-        }
-        if (null != SourceHeadTransform) {
-            // BLEE Note: This does not take into consideration the original rotation of the riggedParts.Head.transform.rotation.
-            trackedParts.HeadRoot.rotation = SourceHeadTransform.rotation * headOriginalRotation;
-        }
-
-
-        leftHandOffsetRotation = Quaternion.Euler(trackedParts.LeftHandOffset.rotation);
-        rightHandOffsetRotation = Quaternion.Euler(trackedParts.RightHandOffset.rotation);
-
-        leftHandOffsetPosition = trackedParts.LeftHandOffset.position;
-        rightHandOffsetPosition = trackedParts.RightHandOffset.position;
-
-
-        if (null != SourceLeftHandTransform) {
-            Quaternion rot = SourceLeftHandTransform.rotation * leftHandOffsetRotation;
-            trackedParts.LeftHandTransform.rotation = rot;
-
-            Vector3 offset = rot * leftHandOffsetPosition;
-            trackedParts.LeftHandTransform.position = SourceLeftHandTransform.position + offset;
-        }
-
-        if (null != SourceRightHandTransform) {
-            Quaternion rot = SourceRightHandTransform.rotation * rightHandOffsetRotation;
-            trackedParts.RightHandTransform.rotation = rot;
-
-            Vector3 offset = rot * rightHandOffsetPosition;
-            trackedParts.RightHandTransform.position = SourceRightHandTransform.position + offset;
-        }
-
-    }
-
     #endregion
-
-
-
 
 }

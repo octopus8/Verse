@@ -20,21 +20,13 @@ public class IKRiggedAvatarCreator : AvatarCreator {
         GameObject avatar = Instantiate(avatarPrefab, offsetObject.transform);
 
         // Offset the avatar by the head offset.
-        TrackedParts riggedParts = avatar.GetComponent<TrackedParts>();
-        offsetObject.transform.localPosition = riggedParts.HeadOffset;
+        offsetObject.transform.localPosition = avatar.GetComponent<TrackedParts>().HeadOffset;
 
+        // Initialize the IKRiggedAvatar component.
         IKRiggedAvatar iKRiggedAvatar = avatar.GetComponent<IKRiggedAvatar>();
+        iKRiggedAvatar.AvatarRoot = avatarRootObject.transform;
         iKRiggedAvatar.SetTrackedSources(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
 
-
-        /*
-                        IKRiggedAvatar iKRiggedAvatar = avatarRootObject.GetComponent<IKRiggedAvatar>();
-                        iKRiggedAvatar.SourceHeadTransform = networkPlayer.GetHeadTransform();
-                        iKRiggedAvatar.SourceLeftHandTransform = networkPlayer.GetLeftHandTransform();
-                        iKRiggedAvatar.SourceRightHandTransform = networkPlayer.GetRightHandTransform();
-
-        */
-        networkPlayer.AddHeadFollower(avatarRootObject);
         return avatar;
     }
 
