@@ -777,14 +777,14 @@ MonoBehaviour:
   leftHandOffsets:
     webXR:
       position: {x: 0, y: 0, z: 0}
-      rotation: {x: -90, y: 90, z: 0}
+      rotation: {x: -90, y: 180, z: 0}
     oculus:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
   rightHand: {fileID: 4104381150333038415}
   rightHandOffsets:
     webXR:
-      position: {x: 0.5, y: 0, z: 0}
+      position: {x: 0, y: 0, z: 0}
       rotation: {x: 90, y: 0, z: 0}
     oculus:
       position: {x: 0, y: 0, z: 0}

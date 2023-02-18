@@ -44,16 +44,17 @@ public class IKRiggedAvatar : MonoBehaviour
 
     private void Start() {
         Assert.IsTrue(AvatarRoot != null);
-        O8CSystem.Instance.DeviceTracking.AddHeadTarget(AvatarRoot.gameObject);
     }
 
 
     private void FixedUpdate() {
-        // Clear the X & Z rotations for the AvatarRoot transform.
-        float yRot = AvatarRoot.rotation.eulerAngles.y;
+
+        // Set the AvatarRoot transform.
+        AvatarRoot.transform.position = trackedHeadSource.transform.position;
+        float yRot = trackedHeadSource.transform.rotation.eulerAngles.y;
         AvatarRoot.rotation = Quaternion.Euler(0f, yRot, 0f);
 
-        // Set the head rotation. Note: It will be place correctly indirectly by the body tracking the head.
+        // Set the head rotation. Note: The position is set indirectly by setting the AvatarRoot position.
         if (null != trackedHeadSource) {
             trackedParts.HeadRoot.rotation = trackedHeadSource.rotation * headOriginalRotation;
         }
