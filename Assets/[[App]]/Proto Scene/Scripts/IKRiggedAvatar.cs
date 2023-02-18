@@ -8,6 +8,9 @@ using UnityEngine.Assertions;
 [RequireComponent(typeof(TrackedParts))]
 public class IKRiggedAvatar : MonoBehaviour
 {
+    [SerializeField] protected GameObject leftHandIKTarget;
+    [SerializeField] protected GameObject rightHandIKTarget;
+
 
     #region Class Variables
 
@@ -60,13 +63,15 @@ public class IKRiggedAvatar : MonoBehaviour
         }
 
         if (null != trackedRightHandSource) {
-            trackedParts.RightHandTransform.SetPositionAndRotation(trackedRightHandSource.transform.position, trackedRightHandSource.transform.rotation * Quaternion.Euler(trackedParts.RightHandOffset.rotation));
-            trackedParts.RightHandTransform.localPosition += trackedParts.RightHandOffset.position;
+            rightHandIKTarget.transform.SetPositionAndRotation(trackedRightHandSource.transform.position, trackedRightHandSource.transform.rotation * Quaternion.Euler(trackedParts.RightHandOffset.rotation));
+//            trackedParts.RightHandTransform.SetPositionAndRotation(trackedRightHandSource.transform.position, trackedRightHandSource.transform.rotation * Quaternion.Euler(trackedParts.RightHandOffset.rotation));
+//            trackedParts.RightHandTransform.localPosition += trackedParts.RightHandOffset.position;
         }
 
         if (null != trackedLeftHandSource) {
-            trackedParts.LeftHandTransform.SetPositionAndRotation(trackedLeftHandSource.transform.position, trackedLeftHandSource.transform.rotation * Quaternion.Euler(trackedParts.LeftHandOffset.rotation));
-            trackedParts.LeftHandTransform.localPosition += trackedParts.LeftHandOffset.position;
+            leftHandIKTarget.transform.SetPositionAndRotation(trackedLeftHandSource.transform.position, trackedLeftHandSource.transform.rotation * Quaternion.Euler(trackedParts.LeftHandOffset.rotation));
+//            trackedParts.LeftHandTransform.SetPositionAndRotation(trackedLeftHandSource.transform.position, trackedLeftHandSource.transform.rotation * Quaternion.Euler(trackedParts.LeftHandOffset.rotation));
+//            trackedParts.LeftHandTransform.localPosition += trackedParts.LeftHandOffset.position;
         }
 
     }
