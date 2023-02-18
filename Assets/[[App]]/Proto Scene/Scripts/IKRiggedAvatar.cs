@@ -57,7 +57,7 @@ public class IKRiggedAvatar : MonoBehaviour
         rightHandOffset.transform.localPosition = trackedParts.RightHandOffset.position;
         leftHandOffset.transform.localPosition = trackedParts.LeftHandOffset.position;
 
-        headOriginalRotation = trackedParts.HeadRoot.localRotation;
+        headOriginalRotation = Quaternion.Inverse(AvatarRoot.rotation) * trackedParts.HeadRoot.rotation;
 
     }
 
@@ -85,7 +85,7 @@ public class IKRiggedAvatar : MonoBehaviour
 
     private void LateUpdate() {
         // Set the head rotation. Note: The position is set indirectly by setting the AvatarRoot position.
-        trackedParts.HeadRoot.localRotation = headOriginalRotation;
+        trackedParts.HeadRoot.rotation = trackedHeadSource.rotation * headOriginalRotation;
     }
 
     #endregion
