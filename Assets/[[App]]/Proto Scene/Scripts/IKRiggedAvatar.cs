@@ -44,8 +44,8 @@ public class IKRiggedAvatar : MonoBehaviour
         trackedParts = GetComponent<TrackedParts>();
     }
 
-    GameObject leftHandOffset;
-    GameObject rightHandOffset;
+    protected GameObject leftHandOffset;
+    protected GameObject rightHandOffset;
 
 
     private void Start() {
@@ -53,6 +53,10 @@ public class IKRiggedAvatar : MonoBehaviour
 
         leftHandOffset = trackedParts.LeftHandTransform.GetChild(0).gameObject;
         rightHandOffset = trackedParts.RightHandTransform.GetChild(0).gameObject;
+
+        rightHandOffset.transform.localPosition = trackedParts.RightHandOffset.position;
+        leftHandOffset.transform.localPosition = trackedParts.LeftHandOffset.position;
+
     }
 
 
@@ -63,19 +67,22 @@ public class IKRiggedAvatar : MonoBehaviour
         float yRot = trackedHeadSource.transform.rotation.eulerAngles.y;
         AvatarRoot.rotation = Quaternion.Euler(0f, yRot, 0f);
 
-        // Set the head rotation. Note: The position is set indirectly by setting the AvatarRoot position.
-        trackedParts.HeadRoot.rotation = trackedHeadSource.rotation * headOriginalRotation;
-
         trackedParts.LeftHandTransform.position = trackedLeftHandSource.transform.position;
         trackedParts.LeftHandTransform.rotation = trackedLeftHandSource.transform.rotation;
         trackedParts.RightHandTransform.position = trackedRightHandSource.transform.position;
         trackedParts.RightHandTransform.rotation = trackedRightHandSource.transform.rotation;
 
-        rightHandOffset.transform.localPosition = trackedParts.RightHandOffset.position;
-        leftHandOffset.transform.localPosition = trackedParts.LeftHandOffset.position;
+        // XXX TEST
+//        rightHandOffset.transform.localPosition = trackedParts.RightHandOffset.position;
+//        leftHandOffset.transform.localPosition = trackedParts.LeftHandOffset.position;
 
         rightHandIKTarget.transform.SetPositionAndRotation(rightHandOffset.transform.position, trackedRightHandSource.transform.rotation * Quaternion.Euler(trackedParts.RightHandOffset.rotation));
         leftHandIKTarget.transform.SetPositionAndRotation(leftHandOffset.transform.position, trackedLeftHandSource.transform.rotation * Quaternion.Euler(trackedParts.LeftHandOffset.rotation));
+    }
+
+    private void LateUpdate() {
+        // Set the head rotation. Note: The position is set indirectly by setting the AvatarRoot position.
+//        trackedParts.HeadRoot.rotation = Quaternion.Euler(90, 0, 0) * headOriginalRotation;
     }
 
     #endregion
