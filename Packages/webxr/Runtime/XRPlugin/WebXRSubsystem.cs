@@ -289,9 +289,11 @@ namespace WebXR
     // Shared array for hit-test pose data
     float[] viewerHitTestPoseArray = new float[9];
 
-    bool viewerHitTestOn = false;
+#pragma warning disable CS0414
+        bool viewerHitTestOn = false;
+#pragma warning restore CS0414
 
-    private bool updatedControllersOnEnd = true;
+        private bool updatedControllersOnEnd = true;
 
     private WebXRHandData leftHand = new WebXRHandData();
     private WebXRHandData rightHand = new WebXRHandData();
