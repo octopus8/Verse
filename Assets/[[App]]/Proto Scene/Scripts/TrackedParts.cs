@@ -80,6 +80,16 @@ public class TrackedParts : MonoBehaviour
 
         /// <summary>Oculus values.</summary>
         public PhysicalOffset oculus;
+
+        public PhysicalOffset Offset {
+            get {
+#if UNITY_WEBGL
+                return webXR;
+#else
+                return oculus;
+#endif
+            }
+        }
     }
 
 
@@ -95,6 +105,6 @@ public class TrackedParts : MonoBehaviour
         public Vector3 rotation;
     }
 
-    #endregion
+#endregion
 
 }
