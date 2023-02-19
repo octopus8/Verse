@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 121486629}
   - component: {fileID: 121486630}
   m_Layer: 0
-  m_Name: Minimal Avatar Creator
+  m_Name: Minimal Avatar Factory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 673494669}
   - component: {fileID: 673494668}
   m_Layer: 0
-  m_Name: IK Rigged Avatar Creator
+  m_Name: IK Rigged Avatar Factory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1967,7 +1967,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1653722185}
   m_Layer: 0
-  m_Name: Avatar Creators
+  m_Name: Avatar Factories
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

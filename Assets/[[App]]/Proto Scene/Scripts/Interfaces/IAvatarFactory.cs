@@ -4,7 +4,7 @@ using UnityEngine;
 /// <summary>
 /// Factory interface for creating an avatar.
 /// </summary>
-public interface IAvatarCreator 
+public interface IAvatarFactory 
 {
     /// <summary>
     /// Creates an avatar.

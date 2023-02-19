@@ -10,7 +10,7 @@ public class StartScenePlayerConnection : MonoBehaviour
     #region Inspector Variables
 
     /// <summary>The avatar creator.</summary>
-    [SerializeField] protected AvatarCreator avatarCreator;
+    [SerializeField] protected AvatarFactory avatarCreator;
 
     /// <summary>The player start transform.</summary>
     [Tooltip("The player start transform.")]

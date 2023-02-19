@@ -18,10 +18,10 @@ var searchData=
   ['appendix_15',['Appendix',['../_page_appendix.html',1,'']]],
   ['appfocusstate_16',['AppFocusState',['../class_o8_c_1_1_o8_c_system.html#ab51b7ed13f6ceb36f0fce5842a7b2c11',1,'O8C::O8CSystem']]],
   ['avatar_17',['Avatar',['../class_avatar_hider.html#ae2f56b2476e71245fbc7fe374adec937',1,'AvatarHider']]],
-  ['avatarcreator_18',['AvatarCreator',['../class_avatar_creator.html',1,'']]],
-  ['avatarcreator_19',['avatarCreator',['../class_start_scene_player_connection.html#a5344f9d0440fca55d0d527ae03c1ffcc',1,'StartScenePlayerConnection']]],
+  ['avatarcreator_18',['avatarCreator',['../class_start_scene_player_connection.html#a717d8087dfa08b8b83d325521a3a5452',1,'StartScenePlayerConnection']]],
+  ['avatarfactory_19',['AvatarFactory',['../class_avatar_factory.html',1,'']]],
   ['avatarhider_20',['AvatarHider',['../class_avatar_hider.html',1,'']]],
-  ['avatarprefab_21',['avatarPrefab',['../class_i_k_rigged_avatar_creator.html#a519bca784d42759a50ea9b14bab98061',1,'IKRiggedAvatarCreator.avatarPrefab()'],['../class_minimal_avatar_creator.html#ae1a826575e98da47ac451408fb53875e',1,'MinimalAvatarCreator.avatarPrefab()']]],
+  ['avatarprefab_21',['avatarPrefab',['../class_i_k_rigged_avatar_factory.html#a017e8d07595d03d96913594d0cbe4581',1,'IKRiggedAvatarFactory.avatarPrefab()'],['../class_minimal_avatar_factory.html#a28f54d809a63eeede45cad8547af2016',1,'MinimalAvatarFactory.avatarPrefab()']]],
   ['avatarroot_22',['AvatarRoot',['../class_i_k_rigged_avatar.html#a0698d2a7a57c85032673260900458101',1,'IKRiggedAvatar']]],
   ['awake_23',['Awake',['../class_o8_c_1_1_o8_c_debug_display.html#aa92f4e693251303027ad45cae2f773b8',1,'O8C::O8CDebugDisplay']]]
 ];

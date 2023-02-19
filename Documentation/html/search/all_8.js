@@ -1,9 +1,9 @@
 var searchData=
 [
   ['iactormotor_0',['IActorMotor',['../interface_i_actor_motor.html',1,'']]],
-  ['iavatarcreator_1',['IAvatarCreator',['../interface_i_avatar_creator.html',1,'']]],
+  ['iavatarfactory_1',['IAvatarFactory',['../interface_i_avatar_factory.html',1,'']]],
   ['ikriggedavatar_2',['IKRiggedAvatar',['../class_i_k_rigged_avatar.html',1,'']]],
-  ['ikriggedavatarcreator_3',['IKRiggedAvatarCreator',['../class_i_k_rigged_avatar_creator.html',1,'']]],
+  ['ikriggedavatarfactory_3',['IKRiggedAvatarFactory',['../class_i_k_rigged_avatar_factory.html',1,'']]],
   ['imotorinput_4',['IMotorInput',['../interface_i_motor_input.html',1,'']]],
   ['indicator_5',['indicator',['../class_hot_mic_indicator.html#a4443d5fc03ec329af340ccea88ff801a',1,'HotMicIndicator']]],
   ['initialize_6',['Initialize',['../class_o8_c_1_1_web_g_l_1_1_web_x_r_controller_left.html#a881eb5ab3ae98ac71aabac9a3b001181',1,'O8C.WebGL.WebXRControllerLeft.Initialize()'],['../class_o8_c_1_1_web_g_l_1_1_web_x_r_controller_right.html#a396188ccd2a6b5cebbfdf30b84a20887',1,'O8C.WebGL.WebXRControllerRight.Initialize()']]],

@@ -1,13 +1,18 @@
 using O8C;
 using UnityEngine;
 
-public class IKRiggedAvatarCreator : AvatarCreator {
+/// <summary>
+/// Avatar factory for an IK rigged avatar.
+/// </summary>
+public class IKRiggedAvatarFactory : AvatarFactory {
 
     /// <summary>The avatar prefab.</summary>
     [Tooltip("The avatar prefab.")]
     [SerializeField] protected GameObject avatarPrefab;
 
 
+
+    /// <inheritdoc />
     public override GameObject CreateAvatar(GameObject player, IO8CNetworkPlayer networkPlayer, bool isLocalPlayer) {
 
         // Create the avatar base objects.
@@ -30,6 +35,5 @@ public class IKRiggedAvatarCreator : AvatarCreator {
 
         return avatar;
     }
-
 
 }
