@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['riggedparts_0',['RiggedParts',['../class_rigged_parts.html',1,'']]]
+  ['startscenemicrophonecontroller_0',['StartSceneMicrophoneController',['../class_start_scene_microphone_controller.html',1,'']]],
+  ['startsceneplayerconnection_1',['StartScenePlayerConnection',['../class_start_scene_player_connection.html',1,'']]]
 ];

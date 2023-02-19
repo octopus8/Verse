@@ -2,19 +2,32 @@ using O8C;
 using UnityEngine;
 
 
-
+/// <summary>
+/// Handles displaying the controls.
+/// </summary>
 public class ControllerDisplay : MonoBehaviour
 {
+    /// <summary>The left controller GameObject.</summary>
+    [Tooltip("The left controller GameObject.")]
     [SerializeField] protected GameObject leftController;
+
+    /// <summary>The right controller GameObject.</summary>
+    [Tooltip("The right controller GameObject.")]
     [SerializeField] protected GameObject rightController;
 
 
+    /// <summary>
+    /// Initializes display.
+    /// </summary>
     private void Start() {
         leftController.SetActive(false);
         rightController.SetActive(false);
     }
 
 
+    /// <summary>
+    /// Displays/hides the controls.
+    /// </summary>
     private void Update() {
 
         float minimumHeadXRotation = 25;

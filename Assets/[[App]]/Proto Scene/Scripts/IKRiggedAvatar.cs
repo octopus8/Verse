@@ -5,12 +5,23 @@ using UnityEngine.Assertions;
 /// <summary>
 /// This component synchronizes IK rigged avatar rigged part transforms with tracked part transforms.
 /// </summary>
+/// <remarks>
+/// This class ASSUMES the left and right hand tracked parts of the avatar have an offset object. This object is used to transform the IK rig.
+/// </remarks>
 [RequireComponent(typeof(TrackedParts))]
 public class IKRiggedAvatar : MonoBehaviour
 {
+    /// <summary>Left hand IK target.</summary>
+    [Tooltip("Left hand IK target.")]
     [SerializeField] protected GameObject leftHandIKTarget;
+
+    /// <summary>Right hand IK target.</summary>
+    [Tooltip("Right hand IK target.")]
     [SerializeField] protected GameObject rightHandIKTarget;
 
+    /// <summary>Head geometry object.</summary>
+    /// <remarks>This object is hidden for the local player.</remarks>
+    [Tooltip("Head geometry object.")]
     [SerializeField] protected GameObject headGeometryObject;
 
 
@@ -28,7 +39,14 @@ public class IKRiggedAvatar : MonoBehaviour
     /// <summary>Cached reference to tracked right hand transform.</summary>
     protected Transform trackedRightHandSource;
 
+    /// <summary>The original rotation of the head.</summary>
     protected Quaternion headOriginalRotation;
+
+    /// <summary>The left hand offset object.</summary>
+    protected GameObject leftHandOffset;
+
+    /// <summary>The right hand offset object.</summary>
+    protected GameObject rightHandOffset;
 
     /// <summary>Allows the avatar root transform to be set.</summary>
     public Transform AvatarRoot { private get; set; }
@@ -46,8 +64,6 @@ public class IKRiggedAvatar : MonoBehaviour
         trackedParts = GetComponent<TrackedParts>();
     }
 
-    protected GameObject leftHandOffset;
-    protected GameObject rightHandOffset;
 
 
     private void Start() {

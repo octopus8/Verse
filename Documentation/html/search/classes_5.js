@@ -22,6 +22,5 @@ var searchData=
   ['o8cvoicepromicrophonesupport_19',['O8CVoiceProMicrophoneSupport',['../class_o8_c_1_1_o8_c_voice_pro_microphone_support.html',1,'O8C']]],
   ['o8cwebxrcontrollerinputtostateevent_20',['O8CWebXRControllerInputToStateEvent',['../class_o8_c_1_1_web_g_l_1_1_o8_c_web_x_r_controller_input_to_state_event.html',1,'O8C::WebGL']]],
   ['o8cwebxrcontrollerstate_21',['O8CWebXRControllerState',['../struct_o8_c_1_1_web_g_l_1_1_o8_c_web_x_r_controller_state.html',1,'O8C::WebGL']]],
-  ['o8czinniadevicetracking_22',['O8CZinniaDeviceTracking',['../class_o8_c_1_1_o8_c_zinnia_device_tracking.html',1,'O8C']]],
-  ['offsettrackedobjects_23',['OffsetTrackedObjects',['../class_offset_tracked_objects.html',1,'']]]
+  ['o8czinniadevicetracking_22',['O8CZinniaDeviceTracking',['../class_o8_c_1_1_o8_c_zinnia_device_tracking.html',1,'O8C']]]
 ];

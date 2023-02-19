@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bodyjoint_0',['bodyJoint',['../class_offset_tracked_objects.html#afb01805c67948d39685928468ed584a6',1,'OffsetTrackedObjects']]]
+  ['bodyjoint_0',['bodyJoint',['../class_minimal_avatar.html#a0fd431ed0e41ccdfe334f5456457c19b',1,'MinimalAvatar']]]
 ];

@@ -73,18 +73,6 @@ namespace O8C {
             return head.transform;
         }
 
-
-        /// <inheritdoc />
-        public override Transform GetLeftHandTransform() {
-            return leftHand.transform;
-        }
-
-
-        /// <inheritdoc />
-        public override Transform GetRightHandTransform() {
-            return rightHand.transform;
-        }
-
         #endregion
 
     }

@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -69,16 +67,34 @@ public class TrackedParts : MonoBehaviour
     #endregion
 
 
+
+    #region Data Structures
+
+    /// <summary>
+    /// Platform specific physical offset values.
+    /// </summary>
     [Serializable]
     public struct PlatformPhysicalOffset {
+        /// <summary>WebXR values.</summary>
         public PhysicalOffset webXR;
+
+        /// <summary>Oculus values.</summary>
         public PhysicalOffset oculus;
     }
 
+
+    /// <summary>
+    /// Physical offset values.
+    /// </summary>
     [Serializable]
     public struct PhysicalOffset {
+        /// <summary>Position offset.</summary>
         public Vector3 position;
+
+        /// <summary>Rotation offset.</summary>
         public Vector3 rotation;
     }
+
+    #endregion
 
 }

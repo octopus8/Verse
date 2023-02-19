@@ -1,13 +1,16 @@
 using O8C;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// This component handles "show/hide avatar" events.
+/// </summary>
 public class AvatarHider : MonoBehaviour {
 
-    protected GameObject avatar;
+    /// <summary>The avatar GameObject.</summary>
+    public GameObject Avatar { private get; set; }
 
-    public GameObject Avatar { set { avatar = value; } }
+
 
     // Start is called before the first frame update
     void Start() {
@@ -16,26 +19,32 @@ public class AvatarHider : MonoBehaviour {
     }
 
 
-
-
-    private void OnShowAvatar() {
-        avatar.SetActive(true);
-    }
-
-
-    private void OnHideAvatar() {
-        avatar.SetActive(false);
-    }
-
+    /// <summary>
+    /// Unregisters event handlers.
+    /// </summary>
     private void OnDestroy() {
         O8CSystem.Instance.EventManager.StopListening(App.ShowAvatarEventID, OnShowAvatar);
         O8CSystem.Instance.EventManager.StopListening(App.HideAvatarEventID, OnHideAvatar);
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    /// <summary>
+    /// Callback called on "show avatar" event, this method sets the avatar visible.
+    /// </summary>
+    private void OnShowAvatar() {
+        if (null == Avatar) {
+            Avatar.SetActive(true);
+        }
     }
+
+
+    /// <summary>
+    /// Callback called on "hide avatar" event, this method sets the avatar invisible.
+    /// </summary>
+    private void OnHideAvatar() {
+        if (null == Avatar) {
+            Avatar.SetActive(false);
+        }
+    }
+
 }
