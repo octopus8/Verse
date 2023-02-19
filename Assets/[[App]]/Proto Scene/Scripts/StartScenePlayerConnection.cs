@@ -9,8 +9,8 @@ public class StartScenePlayerConnection : MonoBehaviour
 {
     #region Inspector Variables
 
-    /// <summary>The avatar creator.</summary>
-    [SerializeField] protected AvatarFactory avatarCreator;
+    /// <summary>The avatar factory.</summary>
+    [SerializeField] protected AvatarFactory avatarFactory;
 
     /// <summary>The player start transform.</summary>
     [Tooltip("The player start transform.")]
@@ -68,7 +68,7 @@ public class StartScenePlayerConnection : MonoBehaviour
     private void OnPlayerConnected(GameObject player, bool isLocalPlayer) {
 
         var networkPlayer = player.GetComponent<IO8CNetworkPlayer>();
-        GameObject avatar = avatarCreator.CreateAvatar(player, networkPlayer, isLocalPlayer);
+        GameObject avatar = avatarFactory.CreateAvatar(player, networkPlayer, isLocalPlayer);
 
         if (isLocalPlayer) {
             player.name = "Local Player";

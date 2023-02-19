@@ -467,7 +467,7 @@ MonoBehaviour:
       rotation: {x: -90, y: 90, z: 0}
     oculus:
       position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0}
+      rotation: {x: -90, y: 90, z: 0}
   rightHand: {fileID: 8249085357153839448}
   rightHandOffsets:
     webXR:
@@ -475,7 +475,7 @@ MonoBehaviour:
       rotation: {x: -90, y: -90, z: 0}
     oculus:
       position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0}
+      rotation: {x: -90, y: -90, z: 0}
 --- !u!1 &8496055607834206701
 GameObject:
   m_ObjectHideFlags: 0
