@@ -81,6 +81,7 @@ public class TrackedParts : MonoBehaviour
         /// <summary>Oculus values.</summary>
         public PhysicalOffset oculus;
 
+        /// <summary>Returns the platform specific offset.</summary>
         public PhysicalOffset Offset {
             get {
 #if UNITY_WEBGL

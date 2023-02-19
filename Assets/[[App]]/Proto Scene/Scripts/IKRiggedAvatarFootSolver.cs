@@ -3,17 +3,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This component uses IK rigged legs to make the feet walk.
+/// </summary>
 public class IKRiggedAvatarFootSolver : MonoBehaviour {
 
     #region Interface Variables
 
+    /// <summary>The body of the IK rig.</summary>
+    [Tooltip("The body of the IK rig.")]
     [SerializeField] Transform body;
+
+    /// <summary>The other foot.</summary>
+    [Tooltip("The other foot.")]
     [SerializeField] IKRiggedAvatarFootSolver otherFoot;
+
+    /// <summary>The base step speed.</summary>
+    [Tooltip("The base step speed.")]
     [SerializeField] float footSpeed = 2;
+
+    /// <summary>Step height.</summary>
+    [Tooltip("Step height.")]
     [SerializeField] float stepHeight = 0.3f;
+
+    /// <summary>A speed multiplier applied according to step distance.</summary>
+    [Tooltip("A speed multiplier applied according to step distance.")]
     [SerializeField] float stepDistanceSpeedMultiplier = 0.4f;
 
     /// <summary>The foot offsets.</summary>
+    [Tooltip("The foot offsets.")]
     [SerializeField] protected TrackedParts.PlatformPhysicalOffset offsets;
 
     #endregion

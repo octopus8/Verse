@@ -19,12 +19,6 @@ public class IKRiggedAvatar : MonoBehaviour
     [Tooltip("Right hand IK target.")]
     [SerializeField] protected GameObject rightHandIKTarget;
 
-    /// <summary>Head geometry object.</summary>
-    /// <remarks>This object is hidden for the local player.</remarks>
-    [Tooltip("Head geometry object.")]
-    [SerializeField] protected GameObject headGeometryObject;
-
-
     #region Class Variables
 
     /// <summary>The required TrackedParts component.</summary>
@@ -65,7 +59,9 @@ public class IKRiggedAvatar : MonoBehaviour
     }
 
 
-
+    /// <summary>
+    /// Caches references to objects and initializes values.
+    /// </summary>
     private void Start() {
         Assert.IsTrue(AvatarRoot != null);
 
@@ -76,10 +72,12 @@ public class IKRiggedAvatar : MonoBehaviour
         leftHandOffset.transform.localPosition = trackedParts.LeftHandOffset.position;
 
         headOriginalRotation = Quaternion.Inverse(AvatarRoot.rotation) * trackedParts.HeadRoot.rotation;
-
     }
 
 
+    /// <summary>
+    /// Updates tracked transforms.
+    /// </summary>
     private void FixedUpdate() {
 
         // Set the AvatarRoot transform.
@@ -92,15 +90,22 @@ public class IKRiggedAvatar : MonoBehaviour
         trackedParts.RightHandTransform.position = trackedRightHandSource.transform.position;
         trackedParts.RightHandTransform.rotation = trackedRightHandSource.transform.rotation;
 
-        // XXX TEST
-//        rightHandOffset.transform.localPosition = trackedParts.RightHandOffset.position;
-//        leftHandOffset.transform.localPosition = trackedParts.LeftHandOffset.position;
+        // test
+        if (true) {
+            rightHandOffset.transform.localPosition = trackedParts.RightHandOffset.position;
+            leftHandOffset.transform.localPosition = trackedParts.LeftHandOffset.position;
+        }
+
 
         rightHandIKTarget.transform.SetPositionAndRotation(rightHandOffset.transform.position, trackedRightHandSource.transform.rotation * Quaternion.Euler(trackedParts.RightHandOffset.rotation));
         leftHandIKTarget.transform.SetPositionAndRotation(leftHandOffset.transform.position, trackedLeftHandSource.transform.rotation * Quaternion.Euler(trackedParts.LeftHandOffset.rotation));
     }
 
 
+    /// <summary>
+    /// Updates the head root rotation.
+    /// </summary>
+    /// <remarks>This is done in LateUpdate to override animation.</remarks>
     private void LateUpdate() {
         // Set the head rotation. Note: The position is set indirectly by setting the AvatarRoot position.
         trackedParts.HeadRoot.rotation = trackedHeadSource.rotation * headOriginalRotation;
@@ -123,15 +128,6 @@ public class IKRiggedAvatar : MonoBehaviour
         trackedLeftHandSource = leftHand;
         trackedRightHandSource = rightHand;
     }
-
-
-    /// <summary>
-    /// Configures the player depending on whether or not it is a local player or not.
-    /// </summary>
-    /// <param name="isLocalPlayer">Flag indicating the avatar is for a local player.</param>
-    public void SetIsLocalPlayer(bool isLocalPlayer) {
-        headGeometryObject?.SetActive(!isLocalPlayer);
-     }
 
     #endregion
 

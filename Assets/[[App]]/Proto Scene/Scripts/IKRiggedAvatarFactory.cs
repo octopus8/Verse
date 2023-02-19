@@ -7,8 +7,11 @@ using UnityEngine;
 public class IKRiggedAvatarFactory : AvatarFactory {
 
     /// <summary>The avatar prefab.</summary>
-    [Tooltip("The avatar prefab.")]
-    [SerializeField] protected GameObject avatarPrefab;
+    [Tooltip("The local avatar prefab.")]
+    [SerializeField] protected GameObject localAvatarPrefab;
+
+    [Tooltip("The remote avatar prefab.")]
+    [SerializeField] protected GameObject remoteAvatarPrefab;
 
 
 
@@ -22,7 +25,13 @@ public class IKRiggedAvatarFactory : AvatarFactory {
         offsetObject.transform.parent = avatarRootObject.transform;
 
         // Create the avatar.
-        GameObject avatar = Instantiate(avatarPrefab, offsetObject.transform);
+        GameObject avatar;
+
+        if (isLocalPlayer) {
+            avatar = Instantiate(localAvatarPrefab, offsetObject.transform);
+        } else {
+            avatar = Instantiate(remoteAvatarPrefab, offsetObject.transform);
+        }
 
         // Offset the avatar by the head offset.
         offsetObject.transform.localPosition = avatar.GetComponent<TrackedParts>().HeadOffset;
@@ -31,7 +40,6 @@ public class IKRiggedAvatarFactory : AvatarFactory {
         IKRiggedAvatar iKRiggedAvatar = avatar.GetComponent<IKRiggedAvatar>();
         iKRiggedAvatar.AvatarRoot = avatarRootObject.transform;
         iKRiggedAvatar.SetTrackedSources(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
-        iKRiggedAvatar.SetIsLocalPlayer(isLocalPlayer);
 
         return avatar;
     }
