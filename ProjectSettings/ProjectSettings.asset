@@ -156,7 +156,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: us.o8c.verse
-    Standalone: com.Octopus8Creations.Experimental
+    Standalone: us.o8c.verse
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -732,7 +732,7 @@ PlayerSettings:
   allowUnsafeCode: 1
   useDeterministicCompilation: 1
   enableRoslynAnalyzers: 1
-  selectedPlatform: 3
+  selectedPlatform: 0
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 0
