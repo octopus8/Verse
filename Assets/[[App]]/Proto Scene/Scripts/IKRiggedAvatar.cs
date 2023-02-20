@@ -19,6 +19,10 @@ public class IKRiggedAvatar : MonoBehaviour
     [Tooltip("Right hand IK target.")]
     [SerializeField] protected GameObject rightHandIKTarget;
 
+    /// <summary>Head object.</summary>
+    [Tooltip("Head object.")]
+    [SerializeField] protected GameObject headObject;
+
     #region Class Variables
 
     /// <summary>The required TrackedParts component.</summary>
@@ -127,6 +131,11 @@ public class IKRiggedAvatar : MonoBehaviour
         trackedHeadSource = head;
         trackedLeftHandSource = leftHand;
         trackedRightHandSource = rightHand;
+    }
+
+
+    public void SetIsLocalPlayer(bool isLocalPlayer) {
+        headObject.SetActive(!isLocalPlayer);
     }
 
     #endregion

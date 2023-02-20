@@ -474,9 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833bba85ed896d4449350dfbbc3edfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localAvatarPrefab: {fileID: 7435514421948059472, guid: 92d0c622adb79d347b0714b87b3a5bf7,
-    type: 3}
-  remoteAvatarPrefab: {fileID: 7435514421948059472, guid: 92d0c622adb79d347b0714b87b3a5bf7,
+  avatarPrefab: {fileID: 4131719208070581277, guid: 4f0b16fb4338dab42bca5629075ad29e,
     type: 3}
 --- !u!4 &673494669
 Transform:
