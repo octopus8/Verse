@@ -1120,16 +1120,16 @@ MonoBehaviour:
       position: {x: -0.02, y: -0.02, z: -0.18}
       rotation: {x: -90, y: 180, z: 0}
     oculus:
-      position: {x: -0.03, y: -0.03, z: -0.13}
-      rotation: {x: -90, y: 180, z: 0}
+      position: {x: 0, y: -0.03, z: -0.13}
+      rotation: {x: -70, y: 180, z: 0}
   rightHand: {fileID: 7951288603154066341}
   rightHandOffsets:
     webXR:
       position: {x: 0.02, y: -0.02, z: -0.18}
       rotation: {x: 90, y: 0, z: 0}
     oculus:
-      position: {x: 0.03, y: -0.03, z: -0.13}
-      rotation: {x: 90, y: 0, z: 0}
+      position: {x: 0, y: -0.03, z: -0.13}
+      rotation: {x: 70, y: 0, z: 0}
 --- !u!114 &5751819447289889727
 MonoBehaviour:
   m_ObjectHideFlags: 0
