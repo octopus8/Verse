@@ -87,7 +87,8 @@ public class StartScenePlayerConnection : MonoBehaviour
             controllers.SetTrackedSources(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
 
             // Add avatar hider.
-            player.AddComponent<AvatarHider>().Avatar = avatar;
+            // XXX TEST
+//            player.AddComponent<AvatarHider>().Avatar = avatar;
         }
         else {
             player.name = "Remote Player";

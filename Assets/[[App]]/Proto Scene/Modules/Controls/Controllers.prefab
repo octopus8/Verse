@@ -1237,16 +1237,16 @@ MonoBehaviour:
   leftHand: {fileID: 4691390932505519209}
   leftHandOffsets:
     webXR:
-      position: {x: 0.09, y: -0.03, z: -0.03}
-      rotation: {x: 0, y: 90, z: 0}
+      position: {x: 0, y: 0, z: -0.08}
+      rotation: {x: 0, y: 0, z: 0}
     oculus:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
   rightHand: {fileID: 4691390931194891926}
   rightHandOffsets:
     webXR:
-      position: {x: -0.07, y: -0.03, z: -0.03}
-      rotation: {x: 0, y: -90, z: 0}
+      position: {x: 0, y: 0, z: -0.08}
+      rotation: {x: 0, y: 0, z: 0}
     oculus:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
