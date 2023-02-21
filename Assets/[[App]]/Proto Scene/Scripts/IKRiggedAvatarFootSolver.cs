@@ -124,7 +124,7 @@ public class IKRiggedAvatarFootSolver : MonoBehaviour {
     /// <summary>
     /// Handles stepping the foot.
     /// </summary>
-    void Update() {
+    void LateUpdate() {
         float speedUpdateTimeSeconds = 0.25f;
 
         if (Time.time - lastSpeedUpdateTime > speedUpdateTimeSeconds) {

@@ -180,8 +180,8 @@ MonoBehaviour:
       position: {x: 0, y: 0.04, z: 0}
       rotation: {x: 0, y: 90, z: -150.5}
     oculus:
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0}
+      position: {x: 0, y: 0.04, z: 0}
+      rotation: {x: 0, y: 90, z: -150.5}
 --- !u!1 &1714213702664185787
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,8 +633,8 @@ MonoBehaviour:
       position: {x: 0, y: 0.04, z: 0}
       rotation: {x: 0, y: 90, z: -150.5}
     oculus:
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0}
+      position: {x: 0, y: 0.04, z: 0}
+      rotation: {x: 0, y: 90, z: -150.5}
 --- !u!1 &7848187336359540471
 GameObject:
   m_ObjectHideFlags: 0
