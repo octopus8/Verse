@@ -30,7 +30,7 @@ public class ControllerDisplay : MonoBehaviour
     /// </summary>
     private void Update() {
 
-        float minimumHeadXRotation = -25;
+        float minimumHeadXRotation = 25;
 
         Transform headTransform = O8CSystem.Instance.DeviceTracking.GetHeadTransform();
 
