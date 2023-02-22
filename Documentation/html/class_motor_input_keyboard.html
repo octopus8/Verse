@@ -89,30 +89,49 @@ Inheritance diagram for MotorInputKeyboard:</div>
  <div class="center">
   <img src="class_motor_input_keyboard.png" usemap="#MotorInputKeyboard_map" alt=""/>
   <map id="MotorInputKeyboard_map" name="MotorInputKeyboard_map">
+<area href="class_motor_input.html" title="Parent class for IMotorInput MonoBehaviour implementations." alt="MotorInput" shape="rect" coords="68,56,195,80"/>
 <area href="interface_i_motor_input.html" title="Input to a motor." alt="IMotorInput" shape="rect" coords="137,0,264,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aec2e0daddb5c2b40a40afe91494eafa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_input_keyboard.html#aec2e0daddb5c2b40a40afe91494eafa2">SetInputTransform</a> (Transform transform)</td></tr>
-<tr class="memdesc:aec2e0daddb5c2b40a40afe91494eafa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the transform to transform input before applying.<dl class="params"><dt>Parameters</dt><dd>
+<tr class="memitem:a262320878ea7d61e9fcbe0c03774b0c6"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_input_keyboard.html#a262320878ea7d61e9fcbe0c03774b0c6">SetInputTransform</a> (Transform transform)</td></tr>
+<tr class="memdesc:a262320878ea7d61e9fcbe0c03774b0c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the transform to transform input before applying.<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">transform</td><td>The transform to use.</td></tr>
   </table>
   </dd>
 </dl>
   <br /></td></tr>
-<tr class="separator:aec2e0daddb5c2b40a40afe91494eafa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13e1f34761673d36c0527894b831aea0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_input_keyboard.html#a13e1f34761673d36c0527894b831aea0">SetMotor</a> (<a class="el" href="interface_i_actor_motor.html">IActorMotor</a> motor)</td></tr>
-<tr class="memdesc:a13e1f34761673d36c0527894b831aea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the motor to apply the input to.<dl class="params"><dt>Parameters</dt><dd>
+<tr class="separator:a262320878ea7d61e9fcbe0c03774b0c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af873cef2f7794ecfeeb1815fad581532"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_input_keyboard.html#af873cef2f7794ecfeeb1815fad581532">SetMotor</a> (<a class="el" href="interface_i_actor_motor.html">IActorMotor</a> motor)</td></tr>
+<tr class="memdesc:af873cef2f7794ecfeeb1815fad581532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the motor to apply the input to.<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">motor</td><td></td></tr>
+    <tr><td class="paramname">motor</td><td>The motor to use for the input.</td></tr>
   </table>
   </dd>
 </dl>
   <br /></td></tr>
-<tr class="separator:a13e1f34761673d36c0527894b831aea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:af873cef2f7794ecfeeb1815fad581532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c6a6a3c62ddb7d57f85427ffaea8cd6"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_input.html#a9c6a6a3c62ddb7d57f85427ffaea8cd6">SetInputTransform</a> (Transform transform)</td></tr>
+<tr class="memdesc:a9c6a6a3c62ddb7d57f85427ffaea8cd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the transform to transform input before applying.<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transform</td><td>The transform to use.</td></tr>
+  </table>
+  </dd>
+</dl>
+  <br /></td></tr>
+<tr class="separator:a9c6a6a3c62ddb7d57f85427ffaea8cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35f53fd2ab6f9c14a061be1a60fb0cab"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_input.html#a35f53fd2ab6f9c14a061be1a60fb0cab">SetMotor</a> (<a class="el" href="interface_i_actor_motor.html">IActorMotor</a> motor)</td></tr>
+<tr class="memdesc:a35f53fd2ab6f9c14a061be1a60fb0cab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the motor to apply the input to.<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">motor</td><td>The motor to use for the input.</td></tr>
+  </table>
+  </dd>
+</dl>
+  <br /></td></tr>
+<tr class="separator:a35f53fd2ab6f9c14a061be1a60fb0cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a78c66e39ad878ce24d9e4e23ec5955"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_motor_input.html#a5a78c66e39ad878ce24d9e4e23ec5955">SetMotor</a> (<a class="el" href="interface_i_actor_motor.html">IActorMotor</a> motor)</td></tr>
 <tr class="memdesc:a5a78c66e39ad878ce24d9e4e23ec5955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the motor to apply the input to.  <br /></td></tr>
 <tr class="separator:a5a78c66e39ad878ce24d9e4e23ec5955"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,10 +141,10 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a29a18082f2308aeb8babef3da8d358ed"><td class="memItemLeft" align="right" valign="top"><a id="a29a18082f2308aeb8babef3da8d358ed" name="a29a18082f2308aeb8babef3da8d358ed"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
-<tr class="memdesc:a29a18082f2308aeb8babef3da8d358ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends input to the motor. <br /></td></tr>
-<tr class="separator:a29a18082f2308aeb8babef3da8d358ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8cb07fa90af4a68f4cff23f1a578e25"><td class="memItemLeft" align="right" valign="top"><a id="ae8cb07fa90af4a68f4cff23f1a578e25" name="ae8cb07fa90af4a68f4cff23f1a578e25"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>FixedUpdate</b> ()</td></tr>
+<tr class="memdesc:ae8cb07fa90af4a68f4cff23f1a578e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends input to the motor. <br /></td></tr>
+<tr class="separator:ae8cb07fa90af4a68f4cff23f1a578e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -141,20 +160,28 @@ Transform&#160;</td><td class="memItemRight" valign="bottom"><b>inputTransform</
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Keyboard motor input, used for debugging. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aec2e0daddb5c2b40a40afe91494eafa2" name="aec2e0daddb5c2b40a40afe91494eafa2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec2e0daddb5c2b40a40afe91494eafa2">&#9670;&#160;</a></span>SetInputTransform()</h2>
+<a id="a262320878ea7d61e9fcbe0c03774b0c6" name="a262320878ea7d61e9fcbe0c03774b0c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a262320878ea7d61e9fcbe0c03774b0c6">&#9670;&#160;</a></span>SetInputTransform()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void MotorInputKeyboard.SetInputTransform </td>
+          <td class="memname">override void MotorInputKeyboard.SetInputTransform </td>
           <td>(</td>
           <td class="paramtype">Transform&#160;</td>
           <td class="paramname"><em>transform</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Sets the transform to transform input before applying.<dl class="params"><dt>Parameters</dt><dd>
@@ -165,35 +192,43 @@ Transform&#160;</td><td class="memItemRight" valign="bottom"><b>inputTransform</
 </dl>
  </p>
 
-<p>Implements <a class="el" href="interface_i_motor_input.html#a077564ba41e0c376d1ce0c4ba2dedd92">IMotorInput</a>.</p>
+<p>Implements <a class="el" href="class_motor_input.html#a9c6a6a3c62ddb7d57f85427ffaea8cd6">MotorInput</a>.</p>
 
 </div>
 </div>
-<a id="a13e1f34761673d36c0527894b831aea0" name="a13e1f34761673d36c0527894b831aea0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13e1f34761673d36c0527894b831aea0">&#9670;&#160;</a></span>SetMotor()</h2>
+<a id="af873cef2f7794ecfeeb1815fad581532" name="af873cef2f7794ecfeeb1815fad581532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af873cef2f7794ecfeeb1815fad581532">&#9670;&#160;</a></span>SetMotor()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void MotorInputKeyboard.SetMotor </td>
+          <td class="memname">override void MotorInputKeyboard.SetMotor </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="interface_i_actor_motor.html">IActorMotor</a>&#160;</td>
           <td class="paramname"><em>motor</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Sets the motor to apply the input to.<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">motor</td><td></td></tr>
+    <tr><td class="paramname">motor</td><td>The motor to use for the input.</td></tr>
   </table>
   </dd>
 </dl>
  </p>
 
-<p>Implements <a class="el" href="interface_i_motor_input.html#a5a78c66e39ad878ce24d9e4e23ec5955">IMotorInput</a>.</p>
+<p>Implements <a class="el" href="class_motor_input.html#a35f53fd2ab6f9c14a061be1a60fb0cab">MotorInput</a>.</p>
 
 </div>
 </div>

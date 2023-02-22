@@ -4,7 +4,7 @@ using UnityEngine;
 /// <summary>
 /// Keyboard motor input, used for debugging.
 /// </summary>
-public class MotorInputKeyboard : MonoBehaviour, IMotorInput {
+public class MotorInputKeyboard : MotorInput {
 
     #region Class Variables
 
@@ -24,7 +24,7 @@ public class MotorInputKeyboard : MonoBehaviour, IMotorInput {
     /// <summary>
     /// Sends input to the motor.
     /// </summary>
-    protected void Update() {
+    protected void FixedUpdate() {
 
         if (null == actorMotor) {
             return;
@@ -48,7 +48,7 @@ public class MotorInputKeyboard : MonoBehaviour, IMotorInput {
         moveDir.Normalize();
 
         float yRotation = inputTransform.rotation.eulerAngles.y;
-        Vector3 dir = new Vector3(moveDir.x, 0, moveDir.y);
+        Vector3 dir = new Vector3(moveDir.x, 0, moveDir.z);
         dir = Quaternion.Euler(0, yRotation, 0) * dir;
 
         actorMotor.Move(dir);
@@ -56,12 +56,12 @@ public class MotorInputKeyboard : MonoBehaviour, IMotorInput {
     }
 
     /// <inheritdoc />
-    public void SetInputTransform(Transform transform) {
+    override public void SetInputTransform(Transform transform) {
         inputTransform = transform;
     }
 
     /// <inheritdoc />
-    public void SetMotor(IActorMotor motor) {
+    override public void SetMotor(IActorMotor motor) {
         actorMotor = motor;
     }
 

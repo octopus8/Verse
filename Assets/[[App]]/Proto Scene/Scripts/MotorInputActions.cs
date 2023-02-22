@@ -4,7 +4,7 @@ using UnityEngine;
 /// <summary>
 /// Simple motor input.
 /// </summary>
-public class MotorInputSimple : MonoBehaviour, IMotorInput {
+public class MotorInputActions : MotorInput {
 
     #region Class Variables
 
@@ -36,7 +36,7 @@ public class MotorInputSimple : MonoBehaviour, IMotorInput {
     /// <summary>
     /// Sends input to the motor.
     /// </summary>
-    protected void Update() {
+    protected void FixedUpdate() {
         if (null == actorMotor) {
             return;
         }
@@ -52,13 +52,13 @@ public class MotorInputSimple : MonoBehaviour, IMotorInput {
 
 
     /// <inheritdoc />
-    public void SetInputTransform(Transform transform) {
+    override public void SetInputTransform(Transform transform) {
         inputTransform = transform;
     }
 
 
     /// <inheritdoc />
-    public void SetMotor(IActorMotor motor) {
+    override public void SetMotor(IActorMotor motor) {
         actorMotor = motor;
     }
 

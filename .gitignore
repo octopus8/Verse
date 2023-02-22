@@ -49,7 +49,6 @@ crashlytics-build.properties
 ._*
 .Spotlight-V100
 .Trashes
-Icon?
 ehthumbs.db
 Thumbs.db
 
@@ -105,10 +104,10 @@ Thumbs.db
 /Assets/Crazy Minnow Studio
 /Assets/Crazy Minnow Studio.meta
 /Assets/FrostweepGames.meta
-/Resources
 /Assets/PolygonSciFiCity
 /Assets/PolygonSciFiCity.meta
 /Assets/\[Examples\]
 /Assets/\[Examples\].meta
 /Assets/\[Dev\]
 /Assets/\[Dev\].meta
+/Builds/PC

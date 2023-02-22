@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['motorinputkeyboard_0',['MotorInputKeyboard',['../class_motor_input_keyboard.html',1,'']]],
-  ['motorinputsimple_1',['MotorInputSimple',['../class_motor_input_simple.html',1,'']]]
+  ['hotmicindicator_0',['HotMicIndicator',['../class_hot_mic_indicator.html',1,'']]]
 ];

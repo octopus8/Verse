@@ -23,8 +23,6 @@ namespace O8C.Util {
             O8CSystem.Instance.DeviceTracking.RemoveHeadTarget(gameObject);
         }
 
-
     }
-
 
 }

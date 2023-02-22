@@ -41,7 +41,6 @@ namespace O8C {
         /// <inheritdoc />
         abstract public Transform GetHeadTransform();
 
-
     }
 
 }

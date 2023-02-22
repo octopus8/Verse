@@ -9,9 +9,12 @@ public class StartScenePlayerConnection : MonoBehaviour
 {
     #region Inspector Variables
 
-    /// <summary>The avatar prefab.</summary>
-    [Tooltip("The avatar prefab.")]
-    [SerializeField] protected GameObject avatarPrefab;
+    /// <summary>The avatar factory.</summary>
+    [SerializeField] protected AvatarFactory avatarFactory;
+
+    /// <summary>The player start transform.</summary>
+    [Tooltip("The player start transform.")]
+    [SerializeField] protected Transform startTransform;
 
     /// <summary>The hot mic indicator prefab.</summary>
     [Tooltip("The hot mic indicator prefab.")]
@@ -21,9 +24,8 @@ public class StartScenePlayerConnection : MonoBehaviour
     [Tooltip("The controllsers prefab.")]
     [SerializeField] protected GameObject controllersPrefab;
 
-    /// <summary>The player start transform.</summary>
-    [Tooltip("The player start transform.")]
-    [SerializeField] protected Transform startTransform;
+    /// <summary>The set of motor inputs.</summary>
+    [SerializeField] MotorInput[] motorInputs;
 
     #endregion
 
@@ -39,6 +41,7 @@ public class StartScenePlayerConnection : MonoBehaviour
         O8CSystem.Instance.PlayerConnection.AddPlayerConnectedObserver(OnPlayerConnected);
         O8CSystem.Instance.PlayerConnection.AddPlayerDisconnectedObserver(OnPlayerDisconnected);
     }
+
 
 
     /// <summary>
@@ -65,34 +68,34 @@ public class StartScenePlayerConnection : MonoBehaviour
     private void OnPlayerConnected(GameObject player, bool isLocalPlayer) {
 
         var networkPlayer = player.GetComponent<IO8CNetworkPlayer>();
-
-
-        var avatar = Instantiate(avatarPrefab, player.transform).GetComponent<O8CActorParts>();
-
-        networkPlayer.AddHeadFollower(avatar.HeadRoot);
-        networkPlayer.AddLeftHandFollower(avatar.LeftHandRoot);
-        networkPlayer.AddRightHandFollower(avatar.RightHandRoot);
+        GameObject avatar = avatarFactory.CreateAvatar(player, networkPlayer, isLocalPlayer);
 
         if (isLocalPlayer) {
-            player.AddComponent<StartSceneMicrophoneController>();
+            player.name = "Local Player";
             var actorMotor = player.AddComponent<ActorMotorSimple>();
-            IMotorInput motorInput = player.AddComponent<MotorInputSimple>();
-            motorInput.SetMotor(actorMotor);
-            motorInput.SetInputTransform(avatar.BodyJoint.transform);
+            foreach (var motorInput in motorInputs) {
+                motorInput.SetMotor(actorMotor);
+                motorInput.SetInputTransform(player.transform);
+            }
             O8CSystem.Instance.DeviceTracking.SetPlayAreaFollower(player);
 
-            Instantiate(hotMicIndicatorPrefab, avatar.HeadRoot.transform);
+            player.AddComponent<StartSceneMicrophoneController>();
+            Instantiate(hotMicIndicatorPrefab, O8CSystem.Instance.DeviceTracking.GetHeadTransform());
 
-            var controllers = Instantiate(controllersPrefab, player.transform).GetComponent<O8CActorParts>();
-            networkPlayer.AddLeftHandFollower(controllers.LeftHandRoot);
-            networkPlayer.AddRightHandFollower(controllers.RightHandRoot);
-            ControllerDisplay controllerDisplay = controllers.gameObject.GetComponent<ControllerDisplay>();
-            controllerDisplay.AvatarActorParts = avatar;
+            // Add Controllers display.
+            var controllers = Instantiate(controllersPrefab, player.transform).GetComponent<MinimalAvatar>();
+            controllers.SetTrackedSources(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
 
-            player.transform.rotation = startTransform.rotation;
-            player.transform.position = startTransform.position;
+            // Add avatar hider.
+            player.AddComponent<AvatarHider>().Avatar = avatar;
+        }
+        else {
+            player.name = "Remote Player";
         }
 
+
+        player.transform.rotation = startTransform.rotation;
+        player.transform.position = startTransform.position;
 
     }
 

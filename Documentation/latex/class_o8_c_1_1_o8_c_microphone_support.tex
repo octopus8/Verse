@@ -15,11 +15,20 @@ Inheritance diagram for O8\+C.\+O8\+CMicrophone\+Support\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_microphone_support_a127e672a39782987d363caf867b1ad79}{Set\+Support\+Active}} (bool support\+Active)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the active state for support.
+
+This is only used by \mbox{\hyperlink{class_o8_c_1_1_o8_c_system}{O8\+CSystem}} on deployed \mbox{\hyperlink{namespace_o8_c_1_1_web_g_l}{Web\+GL}} versions.  \end{DoxyCompactList}\item 
 abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_microphone_support_a1af3097c5c7c0ed49c3915e1374b6b20}{Start\+Record}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Start record. \end{DoxyCompactList}\item 
 abstract void \mbox{\hyperlink{class_o8_c_1_1_o8_c_microphone_support_aac222436909b2f5a13a1ff5ee0c8985f}{Stop\+Record}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Stop record. \end{DoxyCompactList}\item 
+abstract bool \mbox{\hyperlink{class_o8_c_1_1_o8_c_microphone_support_ac4896bf74fdea4d09f0dcd5cde8e87ac}{Is\+Recording}} ()
+\begin{DoxyCompactList}\small\item\em Provides access to the recording status.
+
+\begin{DoxyReturn}{Returns}
+The recording status.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_microphone_support_af29f4d2327c3cc5b49da586b5fc73df3}{Set\+Support\+Active}} (bool support\+Active)
@@ -27,7 +36,9 @@ void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_microphone_support_af29f4d2327c3
 void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_microphone_support_abc73a6f9dc877b69e1aa91634b3ab355}{Start\+Record}} ()
 \begin{DoxyCompactList}\small\item\em Start record. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_microphone_support_ab449df5abcf3e594b3ef48cbf450bf06}{Stop\+Record}} ()
-\begin{DoxyCompactList}\small\item\em Stop record. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Stop record. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_microphone_support_a653d5f43c09e1cf51accb35be1104443}{Is\+Recording}} ()
+\begin{DoxyCompactList}\small\item\em Provides access to the recording status. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -36,15 +47,42 @@ Parent class for IO8\+CMicrophone\+Support Mono\+Behaviour implementations.
 This class only contains abstract implementations of the interface and is intended to allow implementors of the interface to be used in the inspector. 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o8_c_1_1_o8_c_microphone_support_ac4896bf74fdea4d09f0dcd5cde8e87ac}\label{class_o8_c_1_1_o8_c_microphone_support_ac4896bf74fdea4d09f0dcd5cde8e87ac}} 
+\index{O8C.O8CMicrophoneSupport@{O8C.O8CMicrophoneSupport}!IsRecording@{IsRecording}}
+\index{IsRecording@{IsRecording}!O8C.O8CMicrophoneSupport@{O8C.O8CMicrophoneSupport}}
+\doxysubsubsection{\texorpdfstring{IsRecording()}{IsRecording()}}
+{\footnotesize\ttfamily abstract bool O8\+C.\+O8\+CMicrophone\+Support.\+Is\+Recording (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Provides access to the recording status.
+
+\begin{DoxyReturn}{Returns}
+The recording status.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_microphone_support_a653d5f43c09e1cf51accb35be1104443}{O8\+C.\+IO8\+CMicrophone\+Support}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_voice_pro_microphone_support_ae7d9e971d040aeb1076acb158b9f761b}{O8\+C.\+O8\+CVoice\+Pro\+Microphone\+Support}}.
+
 \mbox{\Hypertarget{class_o8_c_1_1_o8_c_microphone_support_a127e672a39782987d363caf867b1ad79}\label{class_o8_c_1_1_o8_c_microphone_support_a127e672a39782987d363caf867b1ad79}} 
 \index{O8C.O8CMicrophoneSupport@{O8C.O8CMicrophoneSupport}!SetSupportActive@{SetSupportActive}}
 \index{SetSupportActive@{SetSupportActive}!O8C.O8CMicrophoneSupport@{O8C.O8CMicrophoneSupport}}
 \doxysubsubsection{\texorpdfstring{SetSupportActive()}{SetSupportActive()}}
 {\footnotesize\ttfamily abstract void O8\+C.\+O8\+CMicrophone\+Support.\+Set\+Support\+Active (\begin{DoxyParamCaption}\item[{bool}]{support\+Active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-\{Sets the active state for support.
 
-This is only used by \mbox{\hyperlink{class_o8_c_1_1_o8_c_system}{O8\+CSystem}} on deployed \mbox{\hyperlink{namespace_o8_c_1_1_web_g_l}{Web\+GL}} versions. \} 
+
+Sets the active state for support.
+
+This is only used by \mbox{\hyperlink{class_o8_c_1_1_o8_c_system}{O8\+CSystem}} on deployed \mbox{\hyperlink{namespace_o8_c_1_1_web_g_l}{Web\+GL}} versions.  
+
+
 
 Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_microphone_support_af29f4d2327c3cc5b49da586b5fc73df3}{O8\+C.\+IO8\+CMicrophone\+Support}}.
 
@@ -58,7 +96,11 @@ Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_voice_pro_microphone_support
 \doxysubsubsection{\texorpdfstring{StartRecord()}{StartRecord()}}
 {\footnotesize\ttfamily abstract void O8\+C.\+O8\+CMicrophone\+Support.\+Start\+Record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-\{Start record.\} 
+
+
+Start record. 
+
+
 
 Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_microphone_support_abc73a6f9dc877b69e1aa91634b3ab355}{O8\+C.\+IO8\+CMicrophone\+Support}}.
 
@@ -72,7 +114,11 @@ Implemented in \mbox{\hyperlink{class_o8_c_1_1_o8_c_voice_pro_microphone_support
 \doxysubsubsection{\texorpdfstring{StopRecord()}{StopRecord()}}
 {\footnotesize\ttfamily abstract void O8\+C.\+O8\+CMicrophone\+Support.\+Stop\+Record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-\{Stop record.\} 
+
+
+Stop record. 
+
+
 
 Implements \mbox{\hyperlink{interface_o8_c_1_1_i_o8_c_microphone_support_ab449df5abcf3e594b3ef48cbf450bf06}{O8\+C.\+IO8\+CMicrophone\+Support}}.
 

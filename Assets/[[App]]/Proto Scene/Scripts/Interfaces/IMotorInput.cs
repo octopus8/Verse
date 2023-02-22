@@ -10,7 +10,7 @@ public interface IMotorInput
     /// <summary>
     /// Sets the motor to apply the input to.
     /// </summary>
-    /// <param name="motor"></param>
+    /// <param name="motor">The motor to use for the input.</param>
     public void SetMotor(IActorMotor motor);
 
 
@@ -19,6 +19,5 @@ public interface IMotorInput
     /// </summary>
     /// <param name="transform">The transform to use.</param>
     public void SetInputTransform(Transform transform);
-
 
 }

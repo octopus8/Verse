@@ -4,8 +4,6 @@ using Zinnia.Tracking.Follow;
 
 namespace O8C {
 
-
-
     /// <summary>
     /// On Start, this component notifies the system of a new player and connects tracked objects to tracked targets.
     /// OnDestroy, the system is notified of the player removal and tracked objects are removed from tracked targets.
@@ -42,8 +40,12 @@ namespace O8C {
 
 
 
+        #region Class Variables
+
         /// <summary>Flag indicating the application is quitting.</summary>
         protected bool isApplicationQuitting = false;
+
+        #endregion
 
 
 
@@ -94,34 +96,61 @@ namespace O8C {
             }
         }
 
+
+        /// <inheritdoc />
+        public Transform GetHeadTransform() {
+            return head.transform;
+        }
+
+
+        /// <inheritdoc />
+        public Transform GetLeftHandTransform() {
+            return handLeft.transform;
+        }
+
+
+        /// <inheritdoc />
+        public Transform GetRightHandTransform() {
+            return handRight.transform;
+        }
+
+
+        /// <inheritdoc />
         public void AddHeadFollower(GameObject head) {
             headFollower.Targets.Add(head);
         }
 
+
+        /// <inheritdoc />
         public void AddLeftHandFollower(GameObject leftHand) {
             leftHandFollower.Targets.Add(leftHand);
         }
 
+
+        /// <inheritdoc />
         public void AddRightHandFollower(GameObject rightHand) {
             rightHandFollower.Targets.Add(rightHand);
         }
 
+
+        /// <inheritdoc />
         public void RemoveHeadFollower(GameObject head) {
             headFollower.Targets.Remove(head);
         }
 
+
+        /// <inheritdoc />
         public void RemoveLeftHandFollower(GameObject leftHand) {
             leftHandFollower.Targets.Remove(leftHand);
         }
 
+
+        /// <inheritdoc />
         public void RemoveRightHandFollower(GameObject rightHand) {
             rightHandFollower.Targets.Remove(rightHand);
         }
 
-
-
         #endregion
-
 
     }
 }

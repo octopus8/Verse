@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['righthand_0',['RightHand',['../class_o8_c_1_1_o8_c_avatar_parts.html#ac5f8128bc7aa1103fd1782ba3efe0728',1,'O8C::O8CAvatarParts']]]
+  ['offset_0',['Offset',['../struct_tracked_parts_1_1_platform_physical_offset.html#ae32d5676c102a2cf7ee6d484a73480c3',1,'TrackedParts::PlatformPhysicalOffset']]]
 ];

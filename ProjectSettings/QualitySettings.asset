@@ -229,7 +229,7 @@ QualitySettings:
       type: 2}
     excludedTargetPlatforms: []
   m_PerPlatformDefaultQuality:
-    Android: 2
+    Android: 0
     Lumin: 5
     Nintendo 3DS: 5
     Nintendo Switch: 5
@@ -237,7 +237,7 @@ QualitySettings:
     PSP2: 2
     Server: 0
     Stadia: 5
-    Standalone: 5
+    Standalone: 0
     WebGL: 0
     Windows Store Apps: 5
     XboxOne: 5
