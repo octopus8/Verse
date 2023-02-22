@@ -16,7 +16,8 @@
     <a href="https://o8c.us/verse/Verse.zip">PC Deployment</a>
     ·
     <a href="https://o8c.us/verse/Verse.apk">Android Deployment</a>
-    ·
+    <br />
+    <br />
     <a href="https://o8c.us/verse/documentation/html/index.html">Documentation</a>
   </p>
 </div>
