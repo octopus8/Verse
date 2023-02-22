@@ -88,14 +88,16 @@ public class StartScenePlayerConnection : MonoBehaviour
 
             // Add avatar hider.
             player.AddComponent<AvatarHider>().Avatar = avatar;
+
+            // Initialize the player position.
+            player.transform.rotation = startTransform.rotation;
+            player.transform.position = startTransform.position;
         }
         else {
             player.name = "Remote Player";
         }
 
 
-        player.transform.rotation = startTransform.rotation;
-        player.transform.position = startTransform.position;
 
     }
 
