@@ -68,13 +68,13 @@ Thumbs.db
 /Assets/Gamestrap
 /Assets/Gamestrap.meta
 
-/Builds/Quest
 /Builds/WebGL
+/Builds/Android
+/Builds/PC
 
 /Assets/AutoHand
 /Assets/FrostweepGames
 /Assets/FrostweepGamesPlugins
-/Builds/Android
 /Assets/ParrelSync
 /Assets/Mirror
 /Assets/ScriptTemplates
