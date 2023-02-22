@@ -13,20 +13,21 @@
     <br />
     <a href="https://o8c.us/verse">WebXR Deployment</a>
     ·
+    <a href="https://o8c.us/verse/Verse.zip">PC Deployment</a>
+    ·
+    <a href="https://o8c.us/verse/Verse.apk">Android Deployment</a>
+    ·
     <a href="https://o8c.us/verse/documentation/html/index.html">Documentation</a>
   </p>
 </div>
 
 ## Milestones
-* 1.0.04 -  Avatar with IK Arms and Legs
-  * Full body local and remote avatar with IK arms
-  * Full body local and remote avatar with IK legs
-* 1.0.05 - Import VR Body Asset
-  * Head is prevented from going through a wall
-  * Body can climb stairs
-  * Bonus
-    * Easy hand interactions
-* 1.0.06 - Name Input and Nameplate  
+* 1.0.05 - NPC  
+  * NPC walking in a circle with animated arms and legs
+* 1.0.06 - Networked World Pointers
+  * Local user can activate/deactivate a world pointer
+  * Remote players activate/deactivate world pointers appropriately
+* 1.0.07 - Name Input and Nameplate  
   * User can enter a name
   * User's name is displayed over the user
   * Nameplate has a limited scale as it moves away and closer
@@ -50,6 +51,9 @@
   * Hide hands and display controllers when looking down at both hands
   * Hide controllers and display hands when looking away from both hands
   * Display microphone, turn, and move control annotations    
+* 1.0.04 -  Avatar with IK Arms and Legs
+  * Full body local and remote avatar with IK arms
+  * Full body local and remote avatar with IK legs
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
