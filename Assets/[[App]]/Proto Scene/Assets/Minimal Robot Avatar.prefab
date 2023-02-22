@@ -463,7 +463,7 @@ MonoBehaviour:
   leftHand: {fileID: 198240739584458447}
   leftHandOffsets:
     webXR:
-      position: {x: 0, y: 0, z: 0}
+      position: {x: 0, y: 0, z: -0.07}
       rotation: {x: -90, y: 90, z: 0}
     oculus:
       position: {x: 0, y: 0, z: 0}
@@ -471,7 +471,7 @@ MonoBehaviour:
   rightHand: {fileID: 8249085357153839448}
   rightHandOffsets:
     webXR:
-      position: {x: 0, y: 0, z: 0}
+      position: {x: 0, y: 0, z: -0.07}
       rotation: {x: -90, y: -90, z: 0}
     oculus:
       position: {x: 0, y: 0, z: 0}

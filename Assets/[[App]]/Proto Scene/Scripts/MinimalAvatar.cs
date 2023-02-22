@@ -55,11 +55,11 @@ public class MinimalAvatar : MonoBehaviour {
         }
         if (null != trackedRightHandSource) {
             trackedParts.RightHandTransform.SetPositionAndRotation(trackedRightHandSource.transform.position, trackedRightHandSource.transform.rotation * Quaternion.Euler(trackedParts.RightHandOffset.rotation));
-            trackedParts.RightHandTransform.localPosition += trackedParts.RightHandOffset.position;
+            trackedParts.RightHandTransform.localPosition += trackedRightHandSource.transform.localRotation * trackedParts.RightHandOffset.position;
         }
         if (null != trackedLeftHandSource) {
             trackedParts.LeftHandTransform.SetPositionAndRotation(trackedLeftHandSource.transform.position, trackedLeftHandSource.transform.rotation * Quaternion.Euler(trackedParts.LeftHandOffset.rotation));
-            trackedParts.LeftHandTransform.localPosition += trackedParts.LeftHandOffset.position;
+            trackedParts.LeftHandTransform.localPosition += trackedLeftHandSource.transform.localRotation * trackedParts.LeftHandOffset.position;
         }
     }
 

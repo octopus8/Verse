@@ -11,6 +11,8 @@ using UnityEngine.Assertions;
 [RequireComponent(typeof(TrackedParts))]
 public class IKRiggedAvatar : MonoBehaviour
 {
+    #region Interface Variables
+
     /// <summary>Left hand IK target.</summary>
     [Tooltip("Left hand IK target.")]
     [SerializeField] protected GameObject leftHandIKTarget;
@@ -22,6 +24,10 @@ public class IKRiggedAvatar : MonoBehaviour
     /// <summary>Head object.</summary>
     [Tooltip("Head object.")]
     [SerializeField] protected GameObject headObject;
+
+    #endregion
+
+
 
     #region Class Variables
 
@@ -67,14 +73,18 @@ public class IKRiggedAvatar : MonoBehaviour
     /// Caches references to objects and initializes values.
     /// </summary>
     private void Start() {
+        // Assert values have been set.
         Assert.IsTrue(AvatarRoot != null);
 
+        // Cache a reference to the offset objects.
         leftHandOffset = trackedParts.LeftHandTransform.GetChild(0).gameObject;
         rightHandOffset = trackedParts.RightHandTransform.GetChild(0).gameObject;
 
+        // Set the position of the offset objects to the tracked parts offset.
         rightHandOffset.transform.localPosition = trackedParts.RightHandOffset.position;
         leftHandOffset.transform.localPosition = trackedParts.LeftHandOffset.position;
 
+        // Cache the head's original rotation.
         headOriginalRotation = Quaternion.Inverse(AvatarRoot.rotation) * trackedParts.HeadRoot.rotation;
     }
 
@@ -89,6 +99,7 @@ public class IKRiggedAvatar : MonoBehaviour
         float yRot = trackedHeadSource.transform.rotation.eulerAngles.y;
         AvatarRoot.rotation = Quaternion.Euler(0f, yRot, 0f);
 
+        // Set the tracked part transforms to the tracked sources.
         trackedParts.LeftHandTransform.position = trackedLeftHandSource.transform.position;
         trackedParts.LeftHandTransform.rotation = trackedLeftHandSource.transform.rotation;
         trackedParts.RightHandTransform.position = trackedRightHandSource.transform.position;
@@ -100,7 +111,7 @@ public class IKRiggedAvatar : MonoBehaviour
             leftHandOffset.transform.localPosition = trackedParts.LeftHandOffset.position;
         }
 
-
+        // Set the IK target positions.
         rightHandIKTarget.transform.SetPositionAndRotation(rightHandOffset.transform.position, trackedRightHandSource.transform.rotation * Quaternion.Euler(trackedParts.RightHandOffset.rotation));
         leftHandIKTarget.transform.SetPositionAndRotation(leftHandOffset.transform.position, trackedLeftHandSource.transform.rotation * Quaternion.Euler(trackedParts.LeftHandOffset.rotation));
     }
