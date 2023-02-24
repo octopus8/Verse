@@ -31,7 +31,7 @@ public class IKRiggedSpawnable : MonoBehaviour
         // If server (or local test), then add a controller.
         NetworkIdentity networkIdentity = GetComponent<NetworkIdentity>();
         if (localTest || networkIdentity.isServer) {
-            NPCController controllerInstance = Instantiate(controller.gameObject, spawned.transform).GetComponent<NPCController>();
+            NPCControllerCircle controllerInstance = Instantiate(controller.gameObject, spawned.transform).GetComponent<NPCControllerCircle>();
             controllerInstance.RootTransform = transform;
         }
 

@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCController : MonoBehaviour
-{
+public class NPCControllerCircle : NPCController {
+
     float distanceUnits = 5.0f;
     float speedRotationsPerSecond = 0.03f;
     Vector3 startPosition;
