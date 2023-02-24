@@ -44,7 +44,7 @@ public class SpawnableIKRiggedActor : MonoBehaviour
         riggedAvatar.AvatarRoot = transform;
 
         // Add and initialize the arm controller.
-        IKRiggedArmAnimationController armController = spawned.AddComponent<IKRiggedArmAnimationController>();
+        IKRiggedActorArmAnimationController armController = spawned.AddComponent<IKRiggedActorArmAnimationController>();
         armController.SetFootSolvers(riggedAvatar.LeftFootSolver, riggedAvatar.RightFootSolver);
         armController.SetAnimationController(runtimeAnimatorController);
 

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Animations.Rigging;
 
 
-public class IKRiggedArmAnimationController : MonoBehaviour
+public class IKRiggedActorArmAnimationController : MonoBehaviour
 {
     protected IKRiggedAvatarFootSolver leftFootSolver;
     protected IKRiggedAvatarFootSolver rightFootSolver;

@@ -6,9 +6,9 @@
 public struct App
 {
     /// <summary>Show avatar event.</summary>
-    static public string ShowAvatarEventID = "ShowAvatar";
+    static public string ShowLocalAvatarEventID = "ShowAvatar";
 
     /// <summary>Hide avatar event.</summary>
-    static public string HideAvatarEventID = "HideAvatar";
+    static public string HideLocalAvatarEventID = "HideAvatar";
 
 }

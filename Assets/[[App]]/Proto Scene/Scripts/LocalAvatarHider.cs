@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// This component handles "show/hide avatar" events.
 /// </summary>
-public class AvatarHider : MonoBehaviour {
+public class LocalAvatarHider : MonoBehaviour {
 
     /// <summary>The avatar GameObject.</summary>
     public GameObject Avatar { private get; set; }
@@ -14,8 +14,8 @@ public class AvatarHider : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        O8CSystem.Instance.EventManager.StartListening(App.ShowAvatarEventID, OnShowAvatar);
-        O8CSystem.Instance.EventManager.StartListening(App.HideAvatarEventID, OnHideAvatar); 
+        O8CSystem.Instance.EventManager.StartListening(App.ShowLocalAvatarEventID, OnShowAvatar);
+        O8CSystem.Instance.EventManager.StartListening(App.HideLocalAvatarEventID, OnHideAvatar); 
     }
 
 
@@ -23,8 +23,8 @@ public class AvatarHider : MonoBehaviour {
     /// Unregisters event handlers.
     /// </summary>
     private void OnDestroy() {
-        O8CSystem.Instance.EventManager.StopListening(App.ShowAvatarEventID, OnShowAvatar);
-        O8CSystem.Instance.EventManager.StopListening(App.HideAvatarEventID, OnHideAvatar);
+        O8CSystem.Instance.EventManager.StopListening(App.ShowLocalAvatarEventID, OnShowAvatar);
+        O8CSystem.Instance.EventManager.StopListening(App.HideLocalAvatarEventID, OnHideAvatar);
     }
 
 
