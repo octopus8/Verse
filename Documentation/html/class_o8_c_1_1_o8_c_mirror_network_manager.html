@@ -80,7 +80,6 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#events">Events</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_o8_c_1_1_o8_c_mirror_network_manager-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">O8C.O8CMirrorNetworkManager Class Reference</div></div>
 </div><!--header-->
@@ -164,24 +163,6 @@ Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnConnect</b></td><
 Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnDisconnect</b></td></tr>
 <tr class="memdesc:a922715654adc41468d69a2da9152482c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Action called on nectork disconnect. <br /></td></tr>
 <tr class="separator:a922715654adc41468d69a2da9152482c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a0da58418f31cf368ed4cf5bc03e8e816"><td class="memItemLeft" align="right" valign="top"><a id="a0da58418f31cf368ed4cf5bc03e8e816" name="a0da58418f31cf368ed4cf5bc03e8e816"></a>
-new void&#160;</td><td class="memItemRight" valign="bottom"><b>Awake</b> ()</td></tr>
-<tr class="memdesc:a0da58418f31cf368ed4cf5bc03e8e816"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the ports to use for the network transports. <br /></td></tr>
-<tr class="separator:a0da58418f31cf368ed4cf5bc03e8e816"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad998e50b69efcba469c1a103703f3d2e"><td class="memItemLeft" align="right" valign="top"><a id="ad998e50b69efcba469c1a103703f3d2e" name="ad998e50b69efcba469c1a103703f3d2e"></a>
-new void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
-<tr class="memdesc:ad998e50b69efcba469c1a103703f3d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">If not the server, the client is started. <br /></td></tr>
-<tr class="separator:ad998e50b69efcba469c1a103703f3d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eb9d62f12d1d2093b71a5f0d08b1f63"><td class="memItemLeft" align="right" valign="top">async UniTask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o8_c_1_1_o8_c_mirror_network_manager.html#a0eb9d62f12d1d2093b71a5f0d08b1f63">ReconnectWhenReady</a> ()</td></tr>
-<tr class="memdesc:a0eb9d62f12d1d2093b71a5f0d08b1f63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to reconnect to the server until a connection is re-established.  <br /></td></tr>
-<tr class="separator:a0eb9d62f12d1d2093b71a5f0d08b1f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1027e61a3d3bdb54f55290306c7f14e9"><td class="memItemLeft" align="right" valign="top"><a id="a1027e61a3d3bdb54f55290306c7f14e9" name="a1027e61a3d3bdb54f55290306c7f14e9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>NetworkEventReceivedHandler</b> (NetworkConnection connection, TransportVoiceMessage message)</td></tr>
-<tr class="memdesc:a1027e61a3d3bdb54f55290306c7f14e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distributes the voice message among ready users. <br /></td></tr>
-<tr class="separator:a1027e61a3d3bdb54f55290306c7f14e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages starting/stopping the server/client. </p>
@@ -261,34 +242,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>NetworkEventReceivedH
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a0eb9d62f12d1d2093b71a5f0d08b1f63" name="a0eb9d62f12d1d2093b71a5f0d08b1f63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0eb9d62f12d1d2093b71a5f0d08b1f63">&#9670;&#160;</a></span>ReconnectWhenReady()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">async UniTask O8C.O8CMirrorNetworkManager.ReconnectWhenReady </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Attempts to reconnect to the server until a connection is re-established. </p>
-<dl class="section return"><dt>Returns</dt><dd>UniTask</dd></dl>
 
 </div>
 </div>

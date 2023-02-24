@@ -76,7 +76,6 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_i_k_rigged_avatar-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">IKRiggedAvatar Class Reference</div></div>
 </div><!--header-->
@@ -150,59 +149,13 @@ Properties</h2></td></tr>
 <a class="el" href="class_i_k_rigged_avatar_foot_solver.html">IKRiggedAvatarFootSolver</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RightFootSolver</b><code> [get]</code></td></tr>
 <tr class="separator:aa6b28690517a0a6531c13edb4e9c1ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0698d2a7a57c85032673260900458101"><td class="memItemLeft" align="right" valign="top"><a id="a0698d2a7a57c85032673260900458101" name="a0698d2a7a57c85032673260900458101"></a>
-Transform&#160;</td><td class="memItemRight" valign="bottom"><b>AvatarRoot</b><code> [set, private get]</code></td></tr>
+Transform&#160;</td><td class="memItemRight" valign="bottom"><b>AvatarRoot</b><code> [set]</code></td></tr>
 <tr class="memdesc:a0698d2a7a57c85032673260900458101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows the avatar root transform to be set. <br /></td></tr>
 <tr class="separator:a0698d2a7a57c85032673260900458101"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a42ed3370aaf1f9ea85fa2bd2e92586d6"><td class="memItemLeft" align="right" valign="top"><a id="a42ed3370aaf1f9ea85fa2bd2e92586d6" name="a42ed3370aaf1f9ea85fa2bd2e92586d6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Awake</b> ()</td></tr>
-<tr class="memdesc:a42ed3370aaf1f9ea85fa2bd2e92586d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Caches component references. <br /></td></tr>
-<tr class="separator:a42ed3370aaf1f9ea85fa2bd2e92586d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6234938fcf1b249bfc2f382b6ac0cee"><td class="memItemLeft" align="right" valign="top"><a id="aa6234938fcf1b249bfc2f382b6ac0cee" name="aa6234938fcf1b249bfc2f382b6ac0cee"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
-<tr class="memdesc:aa6234938fcf1b249bfc2f382b6ac0cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Caches references to objects and initializes values. <br /></td></tr>
-<tr class="separator:aa6234938fcf1b249bfc2f382b6ac0cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a382e879a5e284a06ae728ceee8f216d3"><td class="memItemLeft" align="right" valign="top"><a id="a382e879a5e284a06ae728ceee8f216d3" name="a382e879a5e284a06ae728ceee8f216d3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>FixedUpdate</b> ()</td></tr>
-<tr class="memdesc:a382e879a5e284a06ae728ceee8f216d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates tracked transforms. <br /></td></tr>
-<tr class="separator:a382e879a5e284a06ae728ceee8f216d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fe56392adccc1151a9a627ab95f0d44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_k_rigged_avatar.html#a4fe56392adccc1151a9a627ab95f0d44">LateUpdate</a> ()</td></tr>
-<tr class="memdesc:a4fe56392adccc1151a9a627ab95f0d44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the head root rotation.  <br /></td></tr>
-<tr class="separator:a4fe56392adccc1151a9a627ab95f0d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This component synchronizes IK rigged avatar rigged part transforms with tracked part transforms. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4fe56392adccc1151a9a627ab95f0d44" name="a4fe56392adccc1151a9a627ab95f0d44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fe56392adccc1151a9a627ab95f0d44">&#9670;&#160;</a></span>LateUpdate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void IKRiggedAvatar.LateUpdate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Updates the head root rotation. </p>
-<p>This is done in LateUpdate to override animation.</p>
-
-</div>
-</div>
 <a id="aeef843e2af6c8fbc91c45712cf50e3aa" name="aeef843e2af6c8fbc91c45712cf50e3aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeef843e2af6c8fbc91c45712cf50e3aa">&#9670;&#160;</a></span>SetTrackedSources()</h2>
 

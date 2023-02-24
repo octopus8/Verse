@@ -74,8 +74,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_start_scene_player_connection-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">StartScenePlayerConnection Class Reference</div></div>
 </div><!--header-->
@@ -108,125 +106,10 @@ GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>hotMicIndicator
 GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>controllersPrefab</b></td></tr>
 <tr class="memdesc:a22a18a57b6a26cfe2366364527493cab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The controllers prefab. <br /></td></tr>
 <tr class="separator:a22a18a57b6a26cfe2366364527493cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a356995268274434f7d19160931524cb3"><td class="memItemLeft" align="right" valign="top"><a id="a356995268274434f7d19160931524cb3" name="a356995268274434f7d19160931524cb3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
-<tr class="memdesc:a356995268274434f7d19160931524cb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers callbacks. <br /></td></tr>
-<tr class="separator:a356995268274434f7d19160931524cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32ec5af41005663cf05fc677bf6e6bce"><td class="memItemLeft" align="right" valign="top"><a id="a32ec5af41005663cf05fc677bf6e6bce" name="a32ec5af41005663cf05fc677bf6e6bce"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroy</b> ()</td></tr>
-<tr class="memdesc:a32ec5af41005663cf05fc677bf6e6bce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregisters callbacks. <br /></td></tr>
-<tr class="separator:a32ec5af41005663cf05fc677bf6e6bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34bec993a9579a6488cafdd66bb6ddc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_start_scene_player_connection.html#a34bec993a9579a6488cafdd66bb6ddc7">OnPlayerConnected</a> (GameObject player, bool isLocalPlayer)</td></tr>
-<tr class="memdesc:a34bec993a9579a6488cafdd66bb6ddc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called upon a player connecting, the avatar for the player is added and configured. If the player is a local player, input and motor components are added to the player, and the player is set as the play area follower.  <br /></td></tr>
-<tr class="separator:a34bec993a9579a6488cafdd66bb6ddc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32b02c81299be59d0e853645bbc377e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_start_scene_player_connection.html#a32b02c81299be59d0e853645bbc377e4">OnPlayerDisconnected</a> (GameObject player, bool isLocalPlayer)</td></tr>
-<tr class="memdesc:a32b02c81299be59d0e853645bbc377e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called upon a player disconnecting.  <br /></td></tr>
-<tr class="separator:a32b02c81299be59d0e853645bbc377e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:ae71a5f786eae39d1b3caa8572ff5ff43"><td class="memItemLeft" align="right" valign="top"><a id="ae71a5f786eae39d1b3caa8572ff5ff43" name="ae71a5f786eae39d1b3caa8572ff5ff43"></a>
-<a class="el" href="class_motor_input.html">MotorInput</a>[]&#160;</td><td class="memItemRight" valign="bottom"><b>motorInputs</b></td></tr>
-<tr class="memdesc:ae71a5f786eae39d1b3caa8572ff5ff43"><td class="mdescLeft">&#160;</td><td class="mdescRight">The set of motor inputs. <br /></td></tr>
-<tr class="separator:ae71a5f786eae39d1b3caa8572ff5ff43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles new player connections. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a34bec993a9579a6488cafdd66bb6ddc7" name="a34bec993a9579a6488cafdd66bb6ddc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34bec993a9579a6488cafdd66bb6ddc7">&#9670;&#160;</a></span>OnPlayerConnected()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StartScenePlayerConnection.OnPlayerConnected </td>
-          <td>(</td>
-          <td class="paramtype">GameObject&#160;</td>
-          <td class="paramname"><em>player</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isLocalPlayer</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Callback called upon a player connecting, the avatar for the player is added and configured. If the player is a local player, input and motor components are added to the player, and the player is set as the play area follower. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">player</td><td>The new player GameObject.</td></tr>
-    <tr><td class="paramname">isLocalPlayer</td><td>Flag indicating the player is a local player.</td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a32b02c81299be59d0e853645bbc377e4" name="a32b02c81299be59d0e853645bbc377e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32b02c81299be59d0e853645bbc377e4">&#9670;&#160;</a></span>OnPlayerDisconnected()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StartScenePlayerConnection.OnPlayerDisconnected </td>
-          <td>(</td>
-          <td class="paramtype">GameObject&#160;</td>
-          <td class="paramname"><em>player</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isLocalPlayer</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Callback called upon a player disconnecting. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">player</td><td>The player that has disconnected.</td></tr>
-    <tr><td class="paramname">isLocalPlayer</td><td>Flag indicating the player is a local player.</td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>E:/Business/Projects/O8C/Verse/Verse - WebGL/Assets/[[App]]/Proto Scene/Scripts/StartScenePlayerConnection.cs</li>
 </ul>
 </div><!-- contents -->
