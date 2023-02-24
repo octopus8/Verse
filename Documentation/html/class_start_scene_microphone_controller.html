@@ -73,6 +73,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_start_scene_microphone_controller-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">StartSceneMicrophoneController Class Reference</div></div>
 </div><!--header-->
@@ -86,9 +88,74 @@ Inheritance diagram for StartSceneMicrophoneController:</div>
  <div class="center">
   <img src="class_start_scene_microphone_controller.png" alt=""/>
  </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a5ef7303e3a800eea3d0cf2dcc4a37616"><td class="memItemLeft" align="right" valign="top"><a id="a5ef7303e3a800eea3d0cf2dcc4a37616" name="a5ef7303e3a800eea3d0cf2dcc4a37616"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Awake</b> ()</td></tr>
+<tr class="memdesc:a5ef7303e3a800eea3d0cf2dcc4a37616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="class_verse_input_actions.html">VerseInputActions</a>. <br /></td></tr>
+<tr class="separator:a5ef7303e3a800eea3d0cf2dcc4a37616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45dd73b9c15a91db8c68d530b2c1debb"><td class="memItemLeft" align="right" valign="top"><a id="a45dd73b9c15a91db8c68d530b2c1debb" name="a45dd73b9c15a91db8c68d530b2c1debb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroy</b> ()</td></tr>
+<tr class="memdesc:a45dd73b9c15a91db8c68d530b2c1debb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the <a class="el" href="class_verse_input_actions.html">VerseInputActions</a>. <br /></td></tr>
+<tr class="separator:a45dd73b9c15a91db8c68d530b2c1debb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36b097bf1487a2e20b72e59ceff653c0"><td class="memItemLeft" align="right" valign="top"><a id="a36b097bf1487a2e20b72e59ceff653c0" name="a36b097bf1487a2e20b72e59ceff653c0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEnable</b> ()</td></tr>
+<tr class="memdesc:a36b097bf1487a2e20b72e59ceff653c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the input and registers an input callback. <br /></td></tr>
+<tr class="separator:a36b097bf1487a2e20b72e59ceff653c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb6a466f86f9a6414f9d74b9e02bc4a3"><td class="memItemLeft" align="right" valign="top"><a id="afb6a466f86f9a6414f9d74b9e02bc4a3" name="afb6a466f86f9a6414f9d74b9e02bc4a3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDisable</b> ()</td></tr>
+<tr class="memdesc:afb6a466f86f9a6414f9d74b9e02bc4a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures the microphone is not recording and unregisters an input callback. <br /></td></tr>
+<tr class="separator:afb6a466f86f9a6414f9d74b9e02bc4a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2812f4819e1bcc64069c528bad513a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_start_scene_microphone_controller.html#a1d2812f4819e1bcc64069c528bad513a">VoiceBroadcastGlobal_performed</a> (InputAction.CallbackContext context)</td></tr>
+<tr class="memdesc:a1d2812f4819e1bcc64069c528bad513a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called upon VoiceBroadcastGlobal input action.  <br /></td></tr>
+<tr class="separator:a1d2812f4819e1bcc64069c528bad513a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9071546588b5f46b909f93499d0995a5"><td class="memItemLeft" align="right" valign="top"><a id="a9071546588b5f46b909f93499d0995a5" name="a9071546588b5f46b909f93499d0995a5"></a>
+<a class="el" href="class_verse_input_actions.html">VerseInputActions</a>&#160;</td><td class="memItemRight" valign="bottom"><b>inputActions</b></td></tr>
+<tr class="memdesc:a9071546588b5f46b909f93499d0995a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The input actions. <br /></td></tr>
+<tr class="separator:a9071546588b5f46b909f93499d0995a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Registers callbacks for the VoiceBroadcastGlobal input and upon the event, recording is started or stopped. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1d2812f4819e1bcc64069c528bad513a" name="a1d2812f4819e1bcc64069c528bad513a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d2812f4819e1bcc64069c528bad513a">&#9670;&#160;</a></span>VoiceBroadcastGlobal_performed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StartSceneMicrophoneController.VoiceBroadcastGlobal_performed </td>
+          <td>(</td>
+          <td class="paramtype">InputAction::CallbackContext&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback called upon VoiceBroadcastGlobal input action. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>Unused</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>E:/Business/Projects/O8C/Verse/Verse - WebGL/Assets/[[App]]/Proto Scene/Scripts/StartSceneMicrophoneController.cs</li>
 </ul>
 </div><!-- contents -->

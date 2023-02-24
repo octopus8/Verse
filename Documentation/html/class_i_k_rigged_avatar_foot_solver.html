@@ -76,6 +76,8 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_i_k_rigged_avatar_foot_solver-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">IKRiggedAvatarFootSolver Class Reference</div></div>
 </div><!--header-->
@@ -115,6 +117,98 @@ Properties</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsMoving</b><code> [get]</code></td></tr>
 <tr class="memdesc:a72fe9ff9e7a600573b42035295f3b757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not the foot is stepping. <br /></td></tr>
 <tr class="separator:a72fe9ff9e7a600573b42035295f3b757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab0c991a0b4d682c86747990ae47ebb9d"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_k_rigged_avatar_foot_solver.html#ab0c991a0b4d682c86747990ae47ebb9d">Start</a> ()</td></tr>
+<tr class="memdesc:ab0c991a0b4d682c86747990ae47ebb9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes values.  <br /></td></tr>
+<tr class="separator:ab0c991a0b4d682c86747990ae47ebb9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a427d9469f662c471fbd69de288df49f6"><td class="memItemLeft" align="right" valign="top"><a id="a427d9469f662c471fbd69de288df49f6" name="a427d9469f662c471fbd69de288df49f6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LateUpdate</b> ()</td></tr>
+<tr class="memdesc:a427d9469f662c471fbd69de288df49f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles stepping the foot. <br /></td></tr>
+<tr class="separator:a427d9469f662c471fbd69de288df49f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeec368ebe97c05038b42daa9b84bdd1a"><td class="memItemLeft" align="right" valign="top"><a id="aeec368ebe97c05038b42daa9b84bdd1a" name="aeec368ebe97c05038b42daa9b84bdd1a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDrawGizmos</b> ()</td></tr>
+<tr class="memdesc:aeec368ebe97c05038b42daa9b84bdd1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws gizmos. <br /></td></tr>
+<tr class="separator:aeec368ebe97c05038b42daa9b84bdd1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7f1580f171968f0c0dd3214fd98eaa82"><td class="memItemLeft" align="right" valign="top"><a id="a7f1580f171968f0c0dd3214fd98eaa82" name="a7f1580f171968f0c0dd3214fd98eaa82"></a>
+Transform&#160;</td><td class="memItemRight" valign="bottom"><b>body</b></td></tr>
+<tr class="memdesc:a7f1580f171968f0c0dd3214fd98eaa82"><td class="mdescLeft">&#160;</td><td class="mdescRight">The body of the IK rig. <br /></td></tr>
+<tr class="separator:a7f1580f171968f0c0dd3214fd98eaa82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af12eee445e736d11313a2852b3903f87"><td class="memItemLeft" align="right" valign="top"><a id="af12eee445e736d11313a2852b3903f87" name="af12eee445e736d11313a2852b3903f87"></a>
+<a class="el" href="class_i_k_rigged_avatar_foot_solver.html">IKRiggedAvatarFootSolver</a>&#160;</td><td class="memItemRight" valign="bottom"><b>otherFoot</b></td></tr>
+<tr class="memdesc:af12eee445e736d11313a2852b3903f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">The other foot. <br /></td></tr>
+<tr class="separator:af12eee445e736d11313a2852b3903f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40e7d1209d2e482d368132dd23093998"><td class="memItemLeft" align="right" valign="top"><a id="a40e7d1209d2e482d368132dd23093998" name="a40e7d1209d2e482d368132dd23093998"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>footSpeed</b> = 2</td></tr>
+<tr class="memdesc:a40e7d1209d2e482d368132dd23093998"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base step speed. <br /></td></tr>
+<tr class="separator:a40e7d1209d2e482d368132dd23093998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88425e9f52327c6d6608fea0adf3e89"><td class="memItemLeft" align="right" valign="top"><a id="ac88425e9f52327c6d6608fea0adf3e89" name="ac88425e9f52327c6d6608fea0adf3e89"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>stepHeight</b> = 0.3f</td></tr>
+<tr class="memdesc:ac88425e9f52327c6d6608fea0adf3e89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Step height. <br /></td></tr>
+<tr class="separator:ac88425e9f52327c6d6608fea0adf3e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac39132e702f3531d0702b4366729e85b"><td class="memItemLeft" align="right" valign="top"><a id="ac39132e702f3531d0702b4366729e85b" name="ac39132e702f3531d0702b4366729e85b"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>stepDistanceSpeedMultiplier</b> = 0.4f</td></tr>
+<tr class="memdesc:ac39132e702f3531d0702b4366729e85b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A speed multiplier applied according to step distance. <br /></td></tr>
+<tr class="separator:ac39132e702f3531d0702b4366729e85b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7960e64bf1ceba30b6334e2c09dc1fb8"><td class="memItemLeft" align="right" valign="top"><a id="a7960e64bf1ceba30b6334e2c09dc1fb8" name="a7960e64bf1ceba30b6334e2c09dc1fb8"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>footSpacing</b></td></tr>
+<tr class="memdesc:a7960e64bf1ceba30b6334e2c09dc1fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The lateral space between the feet. <br /></td></tr>
+<tr class="separator:a7960e64bf1ceba30b6334e2c09dc1fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac68fb58bc417d20408c367993c4cb8de"><td class="memItemLeft" align="right" valign="top"><a id="ac68fb58bc417d20408c367993c4cb8de" name="ac68fb58bc417d20408c367993c4cb8de"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>currentStepProgression</b></td></tr>
+<tr class="memdesc:ac68fb58bc417d20408c367993c4cb8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current step progression, from 0 to 1. <br /></td></tr>
+<tr class="separator:ac68fb58bc417d20408c367993c4cb8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59ab29b3efa331838555a5695d6bbb5a"><td class="memItemLeft" align="right" valign="top"><a id="a59ab29b3efa331838555a5695d6bbb5a" name="a59ab29b3efa331838555a5695d6bbb5a"></a>
+Vector3&#160;</td><td class="memItemRight" valign="bottom"><b>oldFootPosition</b></td></tr>
+<tr class="memdesc:a59ab29b3efa331838555a5695d6bbb5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The previous foot position, when stepping. <br /></td></tr>
+<tr class="separator:a59ab29b3efa331838555a5695d6bbb5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978b86182a39131b6f851781c147e4ea"><td class="memItemLeft" align="right" valign="top"><a id="a978b86182a39131b6f851781c147e4ea" name="a978b86182a39131b6f851781c147e4ea"></a>
+Vector3&#160;</td><td class="memItemRight" valign="bottom"><b>currentFootPosition</b></td></tr>
+<tr class="memdesc:a978b86182a39131b6f851781c147e4ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current foot position. <br /></td></tr>
+<tr class="separator:a978b86182a39131b6f851781c147e4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91ab4290b33a6c90cc74a07757343289"><td class="memItemLeft" align="right" valign="top"><a id="a91ab4290b33a6c90cc74a07757343289" name="a91ab4290b33a6c90cc74a07757343289"></a>
+Vector3&#160;</td><td class="memItemRight" valign="bottom"><b>newFootPosition</b></td></tr>
+<tr class="memdesc:a91ab4290b33a6c90cc74a07757343289"><td class="mdescLeft">&#160;</td><td class="mdescRight">The target foot position, when stepping. <br /></td></tr>
+<tr class="separator:a91ab4290b33a6c90cc74a07757343289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b42d972f62f7e62ff9daf60b15a8898"><td class="memItemLeft" align="right" valign="top"><a id="a2b42d972f62f7e62ff9daf60b15a8898" name="a2b42d972f62f7e62ff9daf60b15a8898"></a>
+Vector3&#160;</td><td class="memItemRight" valign="bottom"><b>oldFootNormal</b></td></tr>
+<tr class="memdesc:a2b42d972f62f7e62ff9daf60b15a8898"><td class="mdescLeft">&#160;</td><td class="mdescRight">The old foot normal, when stepping. <br /></td></tr>
+<tr class="separator:a2b42d972f62f7e62ff9daf60b15a8898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7c0728d8f226a43b5b309d0a646766"><td class="memItemLeft" align="right" valign="top"><a id="adc7c0728d8f226a43b5b309d0a646766" name="adc7c0728d8f226a43b5b309d0a646766"></a>
+Vector3&#160;</td><td class="memItemRight" valign="bottom"><b>currentFootNormal</b></td></tr>
+<tr class="memdesc:adc7c0728d8f226a43b5b309d0a646766"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current foot normal. <br /></td></tr>
+<tr class="separator:adc7c0728d8f226a43b5b309d0a646766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a359abca8168d8055e7ca29f84a0298ad"><td class="memItemLeft" align="right" valign="top"><a id="a359abca8168d8055e7ca29f84a0298ad" name="a359abca8168d8055e7ca29f84a0298ad"></a>
+Vector3&#160;</td><td class="memItemRight" valign="bottom"><b>newFootNormal</b></td></tr>
+<tr class="memdesc:a359abca8168d8055e7ca29f84a0298ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">The target foot normal, when stepping. <br /></td></tr>
+<tr class="separator:a359abca8168d8055e7ca29f84a0298ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57a725468b658792db9759b897fa80f5"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_k_rigged_avatar_foot_solver.html#a57a725468b658792db9759b897fa80f5">raycastPos</a> = Vector3.zero</td></tr>
+<tr class="memdesc:a57a725468b658792db9759b897fa80f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position of the last raycast.  <br /></td></tr>
+<tr class="separator:a57a725468b658792db9759b897fa80f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af57f972d488aae7f1734979f29de3e83"><td class="memItemLeft" align="right" valign="top"><a id="af57f972d488aae7f1734979f29de3e83" name="af57f972d488aae7f1734979f29de3e83"></a>
+Vector3&#160;</td><td class="memItemRight" valign="bottom"><b>lastBodyPosition</b></td></tr>
+<tr class="memdesc:af57f972d488aae7f1734979f29de3e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">The last body position, when stepping. <br /></td></tr>
+<tr class="separator:af57f972d488aae7f1734979f29de3e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6da1400505ad5028f97320a0a8d71ad3"><td class="memItemLeft" align="right" valign="top"><a id="a6da1400505ad5028f97320a0a8d71ad3" name="a6da1400505ad5028f97320a0a8d71ad3"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>lastSpeedUpdateTime</b></td></tr>
+<tr class="memdesc:a6da1400505ad5028f97320a0a8d71ad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The last time the step speed was computed. <br /></td></tr>
+<tr class="separator:a6da1400505ad5028f97320a0a8d71ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af033746d282c8b340aa88b7f8c56b6ff"><td class="memItemLeft" align="right" valign="top"><a id="af033746d282c8b340aa88b7f8c56b6ff" name="af033746d282c8b340aa88b7f8c56b6ff"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>bodySpeedMetersPerSecond</b></td></tr>
+<tr class="memdesc:af033746d282c8b340aa88b7f8c56b6ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current speed of the body, in meters per second. <br /></td></tr>
+<tr class="separator:af033746d282c8b340aa88b7f8c56b6ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89b33120cd8d47d89b7f9b7a2125d74b"><td class="memItemLeft" align="right" valign="top"><a id="a89b33120cd8d47d89b7f9b7a2125d74b" name="a89b33120cd8d47d89b7f9b7a2125d74b"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>lastStepTime</b> = float.MinValue</td></tr>
+<tr class="memdesc:a89b33120cd8d47d89b7f9b7a2125d74b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The last time this foot stepped. <br /></td></tr>
+<tr class="separator:a89b33120cd8d47d89b7f9b7a2125d74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2723106fbf0b21e2dc131c41d1f9a87"><td class="memItemLeft" align="right" valign="top"><a id="aa2723106fbf0b21e2dc131c41d1f9a87" name="aa2723106fbf0b21e2dc131c41d1f9a87"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>minStepTime</b> = 1f</td></tr>
+<tr class="memdesc:aa2723106fbf0b21e2dc131c41d1f9a87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum time between steps. <br /></td></tr>
+<tr class="separator:aa2723106fbf0b21e2dc131c41d1f9a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This component uses IK rigged legs to make the feet walk. </p>
@@ -136,6 +230,60 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsMoving</b><code> [g
 
 <p>Callback called upon teleport. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ab0c991a0b4d682c86747990ae47ebb9d" name="ab0c991a0b4d682c86747990ae47ebb9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0c991a0b4d682c86747990ae47ebb9d">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator IKRiggedAvatarFootSolver.Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes values. </p>
+<dl class="section return"><dt>Returns</dt><dd>Coroutine</dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a57a725468b658792db9759b897fa80f5" name="a57a725468b658792db9759b897fa80f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57a725468b658792db9759b897fa80f5">&#9670;&#160;</a></span>raycastPos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 IKRiggedAvatarFootSolver.raycastPos = Vector3.zero</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Position of the last raycast. </p>
+<p>This is at a class level because it is used by OnDrawGizmos</p>
 
 </div>
 </div>

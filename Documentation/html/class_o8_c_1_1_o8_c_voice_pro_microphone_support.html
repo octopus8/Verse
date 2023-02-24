@@ -79,6 +79,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_o8_c_1_1_o8_c_voice_pro_microphone_support-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">O8C.O8CVoiceProMicrophoneSupport Class Reference</div></div>
 </div><!--header-->
@@ -144,6 +145,16 @@ Protected Attributes</h2></td></tr>
 Recorder&#160;</td><td class="memItemRight" valign="bottom"><b>recorder</b></td></tr>
 <tr class="memdesc:adc6ae8ad67f0d6f9119a8f5a357b856f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Recorder component. <br /></td></tr>
 <tr class="separator:adc6ae8ad67f0d6f9119a8f5a357b856f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a7c3cb759c427102a7124ca39009c488e"><td class="memItemLeft" align="right" valign="top"><a id="a7c3cb759c427102a7124ca39009c488e" name="a7c3cb759c427102a7124ca39009c488e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
+<tr class="memdesc:a7c3cb759c427102a7124ca39009c488e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores references and schedules microphone refreshing. <br /></td></tr>
+<tr class="separator:a7c3cb759c427102a7124ca39009c488e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac783f891db19216633dfbd1aa562ac63"><td class="memItemLeft" align="right" valign="top">async UniTask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o8_c_1_1_o8_c_voice_pro_microphone_support.html#ac783f891db19216633dfbd1aa562ac63">RefreshMicrophonesOnStart</a> ()</td></tr>
+<tr class="memdesc:ac783f891db19216633dfbd1aa562ac63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits a period of time, then sets the microphone for the recorder.  <br /></td></tr>
+<tr class="separator:ac783f891db19216633dfbd1aa562ac63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Waits a period of time after start, then sets the microphone for the attached recorder component. </p>
@@ -175,6 +186,34 @@ Recorder&#160;</td><td class="memItemRight" valign="bottom"><b>recorder</b></td>
  </p>
 
 <p>Implements <a class="el" href="class_o8_c_1_1_o8_c_microphone_support.html#ac4896bf74fdea4d09f0dcd5cde8e87ac">O8C.O8CMicrophoneSupport</a>.</p>
+
+</div>
+</div>
+<a id="ac783f891db19216633dfbd1aa562ac63" name="ac783f891db19216633dfbd1aa562ac63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac783f891db19216633dfbd1aa562ac63">&#9670;&#160;</a></span>RefreshMicrophonesOnStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">async UniTask O8C.O8CVoiceProMicrophoneSupport.RefreshMicrophonesOnStart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Waits a period of time, then sets the microphone for the recorder. </p>
+<dl class="section return"><dt>Returns</dt><dd>UniTask</dd></dl>
 
 </div>
 </div>

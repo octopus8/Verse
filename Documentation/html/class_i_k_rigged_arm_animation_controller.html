@@ -75,6 +75,9 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_i_k_rigged_arm_animation_controller-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">IKRiggedArmAnimationController Class Reference</div></div>
 </div><!--header-->
@@ -88,6 +91,9 @@ Inheritance diagram for IKRiggedArmAnimationController:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aa3a2ef0fe9c2bb66e36d92192ed9d726"><td class="memItemLeft" align="right" valign="top"><a id="aa3a2ef0fe9c2bb66e36d92192ed9d726" name="aa3a2ef0fe9c2bb66e36d92192ed9d726"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAnimationController</b> (RuntimeAnimatorController animController)</td></tr>
+<tr class="separator:aa3a2ef0fe9c2bb66e36d92192ed9d726"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49b476427d2e011dca54979c99264e67"><td class="memItemLeft" align="right" valign="top"><a id="a49b476427d2e011dca54979c99264e67" name="a49b476427d2e011dca54979c99264e67"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetFootSolvers</b> (<a class="el" href="class_i_k_rigged_avatar_foot_solver.html">IKRiggedAvatarFootSolver</a> leftFootSolver, <a class="el" href="class_i_k_rigged_avatar_foot_solver.html">IKRiggedAvatarFootSolver</a> rightFootSolver)</td></tr>
 <tr class="separator:a49b476427d2e011dca54979c99264e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -100,6 +106,41 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ad161078f7b0ea1c607c41a327bf4fe70"><td class="memItemLeft" align="right" valign="top"><a id="ad161078f7b0ea1c607c41a327bf4fe70" name="ad161078f7b0ea1c607c41a327bf4fe70"></a>
 <a class="el" href="class_i_k_rigged_avatar_foot_solver.html">IKRiggedAvatarFootSolver</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rightFootSolver</b></td></tr>
 <tr class="separator:ad161078f7b0ea1c607c41a327bf4fe70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a84c84755e2c739f5f29218220bf301cf"><td class="memItemLeft" align="right" valign="top"><a id="a84c84755e2c739f5f29218220bf301cf" name="a84c84755e2c739f5f29218220bf301cf"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>AnimationState</b> { <b>idle</b>
+, <b>leftLeg</b>
+, <b>rightLeg</b>
+ }</td></tr>
+<tr class="separator:a84c84755e2c739f5f29218220bf301cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a8b28ea3474cbb314c7cee1749cb3ac8d"><td class="memItemLeft" align="right" valign="top"><a id="a8b28ea3474cbb314c7cee1749cb3ac8d" name="a8b28ea3474cbb314c7cee1749cb3ac8d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
+<tr class="separator:a8b28ea3474cbb314c7cee1749cb3ac8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2da1a242a9034a2d322e2acef765bbd"><td class="memItemLeft" align="right" valign="top"><a id="ab2da1a242a9034a2d322e2acef765bbd" name="ab2da1a242a9034a2d322e2acef765bbd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
+<tr class="separator:ab2da1a242a9034a2d322e2acef765bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa0071f86e8df29eefe009afaeb72101d"><td class="memItemLeft" align="right" valign="top"><a id="aa0071f86e8df29eefe009afaeb72101d" name="aa0071f86e8df29eefe009afaeb72101d"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>startAnimTime</b></td></tr>
+<tr class="separator:aa0071f86e8df29eefe009afaeb72101d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdac14ad507b9dcb08dd839271b1f22a"><td class="memItemLeft" align="right" valign="top"><a id="abdac14ad507b9dcb08dd839271b1f22a" name="abdac14ad507b9dcb08dd839271b1f22a"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>endAnimTime</b></td></tr>
+<tr class="separator:abdac14ad507b9dcb08dd839271b1f22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78f0de4a7b15b68d1b2224af4069c2c4"><td class="memItemLeft" align="right" valign="top"><a id="a78f0de4a7b15b68d1b2224af4069c2c4" name="a78f0de4a7b15b68d1b2224af4069c2c4"></a>
+AnimationState&#160;</td><td class="memItemRight" valign="bottom"><b>animationState</b> = AnimationState.idle</td></tr>
+<tr class="separator:a78f0de4a7b15b68d1b2224af4069c2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95e356c1de6e76c4d4fd433f95fa7dd4"><td class="memItemLeft" align="right" valign="top"><a id="a95e356c1de6e76c4d4fd433f95fa7dd4" name="a95e356c1de6e76c4d4fd433f95fa7dd4"></a>
+Animator&#160;</td><td class="memItemRight" valign="bottom"><b>animator</b></td></tr>
+<tr class="separator:a95e356c1de6e76c4d4fd433f95fa7dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127519ff7c029d5b81c05f483bf7d082"><td class="memItemLeft" align="right" valign="top"><a id="a127519ff7c029d5b81c05f483bf7d082" name="a127519ff7c029d5b81c05f483bf7d082"></a>
+RuntimeAnimatorController&#160;</td><td class="memItemRight" valign="bottom"><b>animatorController</b></td></tr>
+<tr class="separator:a127519ff7c029d5b81c05f483bf7d082"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>E:/Business/Projects/O8C/Verse/Verse - WebGL/Assets/[[App]]/Proto Scene/Scripts/IKRiggedArmAnimationController.cs</li>

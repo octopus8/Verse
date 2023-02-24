@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7349374418550588074}
   - component: {fileID: 2865535078814951378}
   m_Layer: 0
-  m_Name: Robot Spawnable
+  m_Name: Robot NPC Spawnable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
