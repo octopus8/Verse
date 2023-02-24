@@ -97,7 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f87f42d150951a4479f95fb8dc4e9a6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actorPrefab: {fileID: 5656788071515817157}
+  actorPrefab: {fileID: 4131719208070581277, guid: 4f0b16fb4338dab42bca5629075ad29e,
+    type: 3}
   runtimeAnimatorController: {fileID: 9100000, guid: c1307af3f6219de448b6540a2db75b7a,
     type: 2}
   controllerPrefab: {fileID: 5978124206135514801, guid: ded11268907aef84cb956175224b77ae,
