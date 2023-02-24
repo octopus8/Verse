@@ -23,7 +23,7 @@ public class NPCControllerCircle : NPCController {
     Vector3 startPosition;
 
     /// <summary>The rigged avatar.</summary>
-    IKRiggedAvatar riggedAvatar;
+    IKRiggedActor riggedAvatar;
 
     /// <summary>How fast the NPC moves along the Y axis, in units per second.</summary>
     float crouchSpeed = 5.0f;
@@ -45,7 +45,7 @@ public class NPCControllerCircle : NPCController {
     /// </summary>
     private void Awake() {
         RootTransform = transform;
-        riggedAvatar = transform.parent.GetComponent<IKRiggedAvatar>();
+        riggedAvatar = transform.parent.GetComponent<IKRiggedActor>();
     }
 
 

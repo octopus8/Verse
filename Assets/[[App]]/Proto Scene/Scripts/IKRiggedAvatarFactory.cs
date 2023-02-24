@@ -29,7 +29,7 @@ public class IKRiggedAvatarFactory : AvatarFactory {
         offsetObject.transform.localPosition = avatar.GetComponent<TrackedParts>().HeadOffset;
 
         // Initialize the IKRiggedAvatar component.
-        IKRiggedAvatar iKRiggedAvatar = avatar.GetComponent<IKRiggedAvatar>();
+        IKRiggedActor iKRiggedAvatar = avatar.GetComponent<IKRiggedActor>();
         iKRiggedAvatar.AvatarRoot = avatarRootObject.transform;
         iKRiggedAvatar.SetTrackedSources(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
         iKRiggedAvatar.SetIsLocalPlayer(isLocalPlayer);

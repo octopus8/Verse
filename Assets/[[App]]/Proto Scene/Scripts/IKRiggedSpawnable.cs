@@ -40,7 +40,7 @@ public class IKRiggedSpawnable : MonoBehaviour
         GameObject spawned = Instantiate(actorPrefab, transform);
 
         // Set the actor root.
-        IKRiggedAvatar riggedAvatar = spawned.GetComponent<IKRiggedAvatar>();
+        IKRiggedActor riggedAvatar = spawned.GetComponent<IKRiggedActor>();
         riggedAvatar.AvatarRoot = transform;
 
         // Add and initialize the arm controller.

@@ -6,7 +6,7 @@ using UnityEngine.Assertions;
 /// This component synchronizes IK rigged avatar rigged part transforms with tracked part transforms.
 /// </summary>
 [RequireComponent(typeof(TrackedParts))]
-public class IKRiggedAvatar : MonoBehaviour
+public class IKRiggedActor : MonoBehaviour
 {
     #region Interface Variables
 
