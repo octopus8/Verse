@@ -6,9 +6,9 @@ using UnityEngine;
 /// 
 /// </summary>
 /// <remarks>
-/// * This component is part of prefabs instantiated by a Spawner.
+/// * This component is part of the prefab instantiated by a Spawner.
 /// </remarks>
-public class IKRiggedSpawnable : MonoBehaviour
+public class SpawnableIKRiggedActor : MonoBehaviour
 {
 
     #region Interface Variables
