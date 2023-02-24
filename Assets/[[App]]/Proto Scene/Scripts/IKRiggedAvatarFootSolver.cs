@@ -208,6 +208,17 @@ public class IKRiggedAvatarFootSolver : MonoBehaviour {
 
     #region Public Methods
 
+
+    public float GetStepProgression() {
+        return currentStepProgression;
+    }
+
+    public Vector3 GetFootTargetPosition() {
+        return newFootPosition;
+    }
+
+
+
     /// <summary>
     /// Callback called upon teleport.
     /// </summary>

@@ -22,7 +22,16 @@ public class IKRiggedAvatar : MonoBehaviour
     [Tooltip("Head object.")]
     [SerializeField] protected GameObject headObject;
 
+    [SerializeField] protected IKRiggedAvatarFootSolver leftFootSolver;
+
+    [SerializeField] protected IKRiggedAvatarFootSolver rightFootSolver;
+
+    public IKRiggedAvatarFootSolver LeftFootSolver { get { return leftFootSolver; } }
+    public IKRiggedAvatarFootSolver RightFootSolver { get { return rightFootSolver; } }
+
     #endregion
+
+
 
 
 
@@ -78,21 +87,25 @@ public class IKRiggedAvatar : MonoBehaviour
     private void FixedUpdate() {
 
         // Set the AvatarRoot transform.
-        AvatarRoot.transform.position = trackedHeadSource.transform.position;
-        float yRot = trackedHeadSource.transform.rotation.eulerAngles.y;
-        AvatarRoot.rotation = Quaternion.Euler(0f, yRot, 0f);
+        if (null != trackedHeadSource) {
+            AvatarRoot.transform.position = trackedHeadSource.transform.position;
+            float yRot = trackedHeadSource.transform.rotation.eulerAngles.y;
+            AvatarRoot.rotation = Quaternion.Euler(0f, yRot, 0f);
+        }
 
-        // Set the tracked part transforms to the tracked sources.
-        trackedParts.LeftHandTransform.position = trackedLeftHandSource.transform.position;
-        trackedParts.LeftHandTransform.rotation = trackedLeftHandSource.transform.rotation;
-        trackedParts.RightHandTransform.position = trackedRightHandSource.transform.position;
-        trackedParts.RightHandTransform.rotation = trackedRightHandSource.transform.rotation;
+        if (null != trackedLeftHandSource) {
+            trackedParts.LeftHandTransform.position = trackedLeftHandSource.transform.position;
+            trackedParts.LeftHandTransform.rotation = trackedLeftHandSource.transform.rotation;
+            leftHandIKTarget.transform.SetPositionAndRotation(trackedLeftHandSource.transform.position, trackedLeftHandSource.transform.rotation * Quaternion.Euler(trackedParts.LeftHandOffset.rotation));
+            leftHandIKTarget.transform.localPosition += trackedLeftHandSource.transform.localRotation * trackedParts.LeftHandOffset.position;
+        }
 
-        // Set the IK target positions.
-        rightHandIKTarget.transform.SetPositionAndRotation(trackedRightHandSource.transform.position, trackedRightHandSource.transform.rotation * Quaternion.Euler(trackedParts.RightHandOffset.rotation));
-        rightHandIKTarget.transform.localPosition += trackedRightHandSource.transform.localRotation * trackedParts.RightHandOffset.position;
-        leftHandIKTarget.transform.SetPositionAndRotation(trackedLeftHandSource.transform.position, trackedLeftHandSource.transform.rotation * Quaternion.Euler(trackedParts.LeftHandOffset.rotation));
-        leftHandIKTarget.transform.localPosition += trackedLeftHandSource.transform.localRotation * trackedParts.LeftHandOffset.position;
+        if (null != trackedRightHandSource) {
+            trackedParts.RightHandTransform.position = trackedRightHandSource.transform.position;
+            trackedParts.RightHandTransform.rotation = trackedRightHandSource.transform.rotation;
+            rightHandIKTarget.transform.SetPositionAndRotation(trackedRightHandSource.transform.position, trackedRightHandSource.transform.rotation * Quaternion.Euler(trackedParts.RightHandOffset.rotation));
+            rightHandIKTarget.transform.localPosition += trackedRightHandSource.transform.localRotation * trackedParts.RightHandOffset.position;
+        }
     }
 
 
@@ -102,7 +115,9 @@ public class IKRiggedAvatar : MonoBehaviour
     /// <remarks>This is done in LateUpdate to override animation.</remarks>
     private void LateUpdate() {
         // Set the head rotation. Note: The position is set indirectly by setting the AvatarRoot position.
-        trackedParts.HeadRoot.rotation = trackedHeadSource.rotation * headOriginalRotation;
+        if (null != trackedHeadSource) {
+            trackedParts.HeadRoot.rotation = trackedHeadSource.rotation * headOriginalRotation;
+        }
     }
 
     #endregion

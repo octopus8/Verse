@@ -823,7 +823,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f016161ec990ad643bd236fdfb80773b,
         type: 3}
       propertyPath: m_Name
-      value: IK Rigged Separated Head Robot Variant
+      value: IK Rigged Robot Actor
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f016161ec990ad643bd236fdfb80773b,
         type: 3}
@@ -835,6 +835,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 53069a4bc288a944199031d976d3cbe0, type: 2}
+    - target: {fileID: 5866666021909216657, guid: f016161ec990ad643bd236fdfb80773b,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f016161ec990ad643bd236fdfb80773b, type: 3}
 --- !u!4 &60321448780297401 stripped
@@ -1087,6 +1092,8 @@ MonoBehaviour:
   leftHandIKTarget: {fileID: 855623060435678086}
   rightHandIKTarget: {fileID: 6646930615460130339}
   headObject: {fileID: 1634376333568047102}
+  leftFootSolver: {fileID: 5866348588542431843}
+  rightFootSolver: {fileID: 7596610922334982036}
 --- !u!4 &4171918865698464424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8326562585737653276, guid: f016161ec990ad643bd236fdfb80773b,

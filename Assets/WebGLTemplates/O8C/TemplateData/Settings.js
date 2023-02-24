@@ -1,3 +1,3 @@
 
-var requireVR = false;
+var requireVR = true;
 
