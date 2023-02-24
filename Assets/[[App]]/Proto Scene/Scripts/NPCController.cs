@@ -12,7 +12,7 @@ public class NPCController : MonoBehaviour
 
     IKRiggedAvatar riggedAvatar;
     float crouchSpeed = 5.0f;
-    float serverCrouchDistance = 0.0f;
+    float serverCrouchDistance = 0.02f;
 
     public Transform RootTransform { private get; set; }
 

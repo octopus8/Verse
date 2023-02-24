@@ -22,10 +22,11 @@ public class Spawnable : MonoBehaviour
         Animator animator = spawned.GetComponent<Animator>();
         animator.runtimeAnimatorController = runtimeAnimatorController;
 
-        // Set the foot solvers.
+        // Add and initialize the arm controller.
         IKRiggedArmAnimationController armController = spawned.AddComponent<IKRiggedArmAnimationController>();
         armController.SetFootSolvers(riggedAvatar.LeftFootSolver, riggedAvatar.RightFootSolver);
 
+        // If server (or local test), then add a controller.
         NetworkIdentity networkIdentity = GetComponent<NetworkIdentity>();
         if (localTest || networkIdentity.isServer) {
             NPCController controller = spawned.AddComponent<NPCController>();
