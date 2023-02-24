@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3987346362487759951}
   - component: {fileID: 5978124206135514801}
   m_Layer: 0
-  m_Name: NPC Controller Circle
+  m_Name: Circling NPC Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

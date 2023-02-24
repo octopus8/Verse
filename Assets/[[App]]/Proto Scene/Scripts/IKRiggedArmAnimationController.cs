@@ -20,9 +20,13 @@ public class IKRiggedArmAnimationController : MonoBehaviour
 
     Animator animator;
 
+    RuntimeAnimatorController animatorController;
+
     void Start()
     {
+        // Set the animation congtroller.
         animator = GetComponent<Animator>();
+        animator.runtimeAnimatorController = animatorController;
 
         // Turn off arm IK.
         RigBuilder rigBuilder = GetComponent<RigBuilder>();
@@ -32,6 +36,10 @@ public class IKRiggedArmAnimationController : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void SetAnimationController(RuntimeAnimatorController animController) {
+        animatorController = animController;
     }
 
     public void SetFootSolvers(IKRiggedAvatarFootSolver leftFootSolver, IKRiggedAvatarFootSolver rightFootSolver) {

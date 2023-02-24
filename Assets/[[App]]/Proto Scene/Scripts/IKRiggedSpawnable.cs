@@ -10,12 +10,25 @@ using UnityEngine;
 /// </remarks>
 public class IKRiggedSpawnable : MonoBehaviour
 {
-    [SerializeField] protected GameObject prefab;
+
+    #region Interface Variables
+
+    /// <summary>The actor prefab.</summary>
+    [Tooltip("The actor prefab.")]
+    [SerializeField] protected GameObject actorPrefab;
+
+    /// <summary>The animation controller to use for the actor.</summary>
+    [Tooltip("The animation controller to use for the actor.")]
     [SerializeField] protected RuntimeAnimatorController runtimeAnimatorController;
 
-    [SerializeField] protected NPCController controller;
+    /// <summary>NPC controller prefab.</summary>
+    [SerializeField] protected NPCController controllerPrefab;
 
+    /// <summary>Flag indicating the spawnable is a local test.</summary>
     [SerializeField] protected bool localTest = false;
+
+    #endregion
+
 
 
     /// <summary>
@@ -24,24 +37,21 @@ public class IKRiggedSpawnable : MonoBehaviour
     void Start()
     {
         // Create the actor.
-        GameObject spawned = Instantiate(prefab, transform);
+        GameObject spawned = Instantiate(actorPrefab, transform);
 
         // Set the actor root.
         IKRiggedAvatar riggedAvatar = spawned.GetComponent<IKRiggedAvatar>();
         riggedAvatar.AvatarRoot = transform;
 
-        // Set the animation controller.
-        Animator animator = spawned.GetComponent<Animator>();
-        animator.runtimeAnimatorController = runtimeAnimatorController;
-
         // Add and initialize the arm controller.
         IKRiggedArmAnimationController armController = spawned.AddComponent<IKRiggedArmAnimationController>();
         armController.SetFootSolvers(riggedAvatar.LeftFootSolver, riggedAvatar.RightFootSolver);
+        armController.SetAnimationController(runtimeAnimatorController);
 
         // If server (or local test), then add a controller.
         NetworkIdentity networkIdentity = GetComponent<NetworkIdentity>();
         if (localTest || networkIdentity.isServer) {
-            NPCControllerCircle controllerInstance = Instantiate(controller.gameObject, spawned.transform).GetComponent<NPCControllerCircle>();
+            NPCControllerCircle controllerInstance = Instantiate(controllerPrefab.gameObject, spawned.transform).GetComponent<NPCControllerCircle>();
             controllerInstance.RootTransform = transform;
         }
     }
