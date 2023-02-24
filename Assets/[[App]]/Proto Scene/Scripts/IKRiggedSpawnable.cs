@@ -1,10 +1,12 @@
 using Mirror;
 using UnityEngine;
 
-public class Spawnable : MonoBehaviour
+public class IKRiggedSpawnable : MonoBehaviour
 {
     [SerializeField] protected GameObject prefab;
     [SerializeField] protected RuntimeAnimatorController runtimeAnimatorController;
+
+    [SerializeField] protected NPCController controller;
 
     [SerializeField] protected bool localTest = false;
 
@@ -29,8 +31,8 @@ public class Spawnable : MonoBehaviour
         // If server (or local test), then add a controller.
         NetworkIdentity networkIdentity = GetComponent<NetworkIdentity>();
         if (localTest || networkIdentity.isServer) {
-            NPCController controller = spawned.AddComponent<NPCController>();
-            controller.RootTransform = transform;
+            NPCController controllerInstance = Instantiate(controller.gameObject, spawned.transform).GetComponent<NPCController>();
+            controllerInstance.RootTransform = transform;
         }
 
     }

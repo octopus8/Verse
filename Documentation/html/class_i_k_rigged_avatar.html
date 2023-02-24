@@ -95,8 +95,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeef843e2af6c8fbc91c45712cf50e3aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_k_rigged_avatar.html#aeef843e2af6c8fbc91c45712cf50e3aa">SetTrackedSources</a> (Transform head, Transform leftHand, Transform rightHand)</td></tr>
 <tr class="memdesc:aeef843e2af6c8fbc91c45712cf50e3aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the tracked transforms used to animate the avatar.  <br /></td></tr>
 <tr class="separator:aeef843e2af6c8fbc91c45712cf50e3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7b3fb522748240209c6f0e527139f98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_k_rigged_avatar.html#ae7b3fb522748240209c6f0e527139f98">SetIsLocalPlayer</a> (bool isLocalPlayer)</td></tr>
-<tr class="memdesc:ae7b3fb522748240209c6f0e527139f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the player depending on whether or not it is a local player or not.  <br /></td></tr>
+<tr class="memitem:ae7b3fb522748240209c6f0e527139f98"><td class="memItemLeft" align="right" valign="top"><a id="ae7b3fb522748240209c6f0e527139f98" name="ae7b3fb522748240209c6f0e527139f98"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetIsLocalPlayer</b> (bool isLocalPlayer)</td></tr>
 <tr class="separator:ae7b3fb522748240209c6f0e527139f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -109,9 +109,16 @@ GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>leftHandIKTarge
 GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>rightHandIKTarget</b></td></tr>
 <tr class="memdesc:abc5a01ff637ad3d473685aece28dadad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Right hand IK target. <br /></td></tr>
 <tr class="separator:abc5a01ff637ad3d473685aece28dadad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed4e2672ea82d5c975f0e8399cf1ea9f"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_k_rigged_avatar.html#aed4e2672ea82d5c975f0e8399cf1ea9f">headGeometryObject</a></td></tr>
-<tr class="memdesc:aed4e2672ea82d5c975f0e8399cf1ea9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Head geometry object.  <br /></td></tr>
-<tr class="separator:aed4e2672ea82d5c975f0e8399cf1ea9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4619e2107d98a09704de727bfd3a769f"><td class="memItemLeft" align="right" valign="top"><a id="a4619e2107d98a09704de727bfd3a769f" name="a4619e2107d98a09704de727bfd3a769f"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>headObject</b></td></tr>
+<tr class="memdesc:a4619e2107d98a09704de727bfd3a769f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Head object. <br /></td></tr>
+<tr class="separator:a4619e2107d98a09704de727bfd3a769f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d6c8809f2231ae104e880217edd730a"><td class="memItemLeft" align="right" valign="top"><a id="a8d6c8809f2231ae104e880217edd730a" name="a8d6c8809f2231ae104e880217edd730a"></a>
+<a class="el" href="class_i_k_rigged_avatar_foot_solver.html">IKRiggedAvatarFootSolver</a>&#160;</td><td class="memItemRight" valign="bottom"><b>leftFootSolver</b></td></tr>
+<tr class="separator:a8d6c8809f2231ae104e880217edd730a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a392eff4e973296dad64c2cd19310d970"><td class="memItemLeft" align="right" valign="top"><a id="a392eff4e973296dad64c2cd19310d970" name="a392eff4e973296dad64c2cd19310d970"></a>
+<a class="el" href="class_i_k_rigged_avatar_foot_solver.html">IKRiggedAvatarFootSolver</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rightFootSolver</b></td></tr>
+<tr class="separator:a392eff4e973296dad64c2cd19310d970"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cf2fb79df423c731c6f36c44762aeb5"><td class="memItemLeft" align="right" valign="top"><a id="a2cf2fb79df423c731c6f36c44762aeb5" name="a2cf2fb79df423c731c6f36c44762aeb5"></a>
 <a class="el" href="class_tracked_parts.html">TrackedParts</a>&#160;</td><td class="memItemRight" valign="bottom"><b>trackedParts</b></td></tr>
 <tr class="memdesc:a2cf2fb79df423c731c6f36c44762aeb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The required <a class="el" href="class_tracked_parts.html" title="Provides access to rigged part objects so they can be animated.">TrackedParts</a> component. <br /></td></tr>
@@ -132,17 +139,15 @@ Transform&#160;</td><td class="memItemRight" valign="bottom"><b>trackedRightHand
 Quaternion&#160;</td><td class="memItemRight" valign="bottom"><b>headOriginalRotation</b></td></tr>
 <tr class="memdesc:a0f115e7449a247b3aecf8b778edae551"><td class="mdescLeft">&#160;</td><td class="mdescRight">The original rotation of the head. <br /></td></tr>
 <tr class="separator:a0f115e7449a247b3aecf8b778edae551"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5345274b760dc21d47e17113cc89026b"><td class="memItemLeft" align="right" valign="top"><a id="a5345274b760dc21d47e17113cc89026b" name="a5345274b760dc21d47e17113cc89026b"></a>
-GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>leftHandOffset</b></td></tr>
-<tr class="memdesc:a5345274b760dc21d47e17113cc89026b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The left hand offset object. <br /></td></tr>
-<tr class="separator:a5345274b760dc21d47e17113cc89026b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade48fd884eaf13aa9ef8e4ae78e6ffd6"><td class="memItemLeft" align="right" valign="top"><a id="ade48fd884eaf13aa9ef8e4ae78e6ffd6" name="ade48fd884eaf13aa9ef8e4ae78e6ffd6"></a>
-GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>rightHandOffset</b></td></tr>
-<tr class="memdesc:ade48fd884eaf13aa9ef8e4ae78e6ffd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The right hand offset object. <br /></td></tr>
-<tr class="separator:ade48fd884eaf13aa9ef8e4ae78e6ffd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
+<tr class="memitem:a47658fe0c69f4ed26b6784ff723d9e67"><td class="memItemLeft" align="right" valign="top"><a id="a47658fe0c69f4ed26b6784ff723d9e67" name="a47658fe0c69f4ed26b6784ff723d9e67"></a>
+<a class="el" href="class_i_k_rigged_avatar_foot_solver.html">IKRiggedAvatarFootSolver</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LeftFootSolver</b><code> [get]</code></td></tr>
+<tr class="separator:a47658fe0c69f4ed26b6784ff723d9e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6b28690517a0a6531c13edb4e9c1ccd"><td class="memItemLeft" align="right" valign="top"><a id="aa6b28690517a0a6531c13edb4e9c1ccd" name="aa6b28690517a0a6531c13edb4e9c1ccd"></a>
+<a class="el" href="class_i_k_rigged_avatar_foot_solver.html">IKRiggedAvatarFootSolver</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RightFootSolver</b><code> [get]</code></td></tr>
+<tr class="separator:aa6b28690517a0a6531c13edb4e9c1ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0698d2a7a57c85032673260900458101"><td class="memItemLeft" align="right" valign="top"><a id="a0698d2a7a57c85032673260900458101" name="a0698d2a7a57c85032673260900458101"></a>
 Transform&#160;</td><td class="memItemRight" valign="bottom"><b>AvatarRoot</b><code> [set]</code></td></tr>
 <tr class="memdesc:a0698d2a7a57c85032673260900458101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows the avatar root transform to be set. <br /></td></tr>
@@ -150,34 +155,7 @@ Transform&#160;</td><td class="memItemRight" valign="bottom"><b>AvatarRoot</b><c
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This component synchronizes IK rigged avatar rigged part transforms with tracked part transforms. </p>
-<p>This class ASSUMES the left and right hand tracked parts of the avatar have an offset object. This object is used to transform the IK rig. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae7b3fb522748240209c6f0e527139f98" name="ae7b3fb522748240209c6f0e527139f98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7b3fb522748240209c6f0e527139f98">&#9670;&#160;</a></span>SetIsLocalPlayer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void IKRiggedAvatar.SetIsLocalPlayer </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isLocalPlayer</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Configures the player depending on whether or not it is a local player or not. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">isLocalPlayer</td><td>Flag indicating the avatar is for a local player.</td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="aeef843e2af6c8fbc91c45712cf50e3aa" name="aeef843e2af6c8fbc91c45712cf50e3aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeef843e2af6c8fbc91c45712cf50e3aa">&#9670;&#160;</a></span>SetTrackedSources()</h2>
 
@@ -219,32 +197,6 @@ Transform&#160;</td><td class="memItemRight" valign="bottom"><b>AvatarRoot</b><c
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="aed4e2672ea82d5c975f0e8399cf1ea9f" name="aed4e2672ea82d5c975f0e8399cf1ea9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed4e2672ea82d5c975f0e8399cf1ea9f">&#9670;&#160;</a></span>headGeometryObject</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">GameObject IKRiggedAvatar.headGeometryObject</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Head geometry object. </p>
-<p>This object is hidden for the local player.</p>
 
 </div>
 </div>

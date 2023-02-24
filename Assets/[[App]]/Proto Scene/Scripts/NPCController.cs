@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(IKRiggedAvatar))]
 public class NPCController : MonoBehaviour
 {
     float distanceUnits = 5.0f;
@@ -18,12 +17,13 @@ public class NPCController : MonoBehaviour
 
     private void Awake() {
         RootTransform = transform;
-        riggedAvatar = GetComponent<IKRiggedAvatar>();
+        riggedAvatar = transform.parent.GetComponent<IKRiggedAvatar>();
     }
 
     void Start() {
         startPosition = transform.position;
     }
+
 
 
     void Update() {

@@ -100,3 +100,6 @@ MonoBehaviour:
   prefab: {fileID: 4131719208070581277, guid: 4f0b16fb4338dab42bca5629075ad29e, type: 3}
   runtimeAnimatorController: {fileID: 9100000, guid: c1307af3f6219de448b6540a2db75b7a,
     type: 2}
+  controller: {fileID: 5978124206135514801, guid: ded11268907aef84cb956175224b77ae,
+    type: 3}
+  localTest: 0
