@@ -22,12 +22,12 @@ public class IKRiggedActor : MonoBehaviour
     [Tooltip("Head object.")]
     [SerializeField] protected GameObject headObject;
 
-    [SerializeField] protected IKRiggedAvatarFootSolver leftFootSolver;
+    [SerializeField] protected IKRiggedActorFootSolver leftFootSolver;
 
-    [SerializeField] protected IKRiggedAvatarFootSolver rightFootSolver;
+    [SerializeField] protected IKRiggedActorFootSolver rightFootSolver;
 
-    public IKRiggedAvatarFootSolver LeftFootSolver { get { return leftFootSolver; } }
-    public IKRiggedAvatarFootSolver RightFootSolver { get { return rightFootSolver; } }
+    public IKRiggedActorFootSolver LeftFootSolver { get { return leftFootSolver; } }
+    public IKRiggedActorFootSolver RightFootSolver { get { return rightFootSolver; } }
 
     #endregion
 

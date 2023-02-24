@@ -4,8 +4,8 @@ using UnityEngine.Animations.Rigging;
 
 public class IKRiggedActorArmAnimationController : MonoBehaviour
 {
-    protected IKRiggedAvatarFootSolver leftFootSolver;
-    protected IKRiggedAvatarFootSolver rightFootSolver;
+    protected IKRiggedActorFootSolver leftFootSolver;
+    protected IKRiggedActorFootSolver rightFootSolver;
 
     float startAnimTime;
     float endAnimTime;
@@ -42,7 +42,7 @@ public class IKRiggedActorArmAnimationController : MonoBehaviour
         animatorController = animController;
     }
 
-    public void SetFootSolvers(IKRiggedAvatarFootSolver leftFootSolver, IKRiggedAvatarFootSolver rightFootSolver) {
+    public void SetFootSolvers(IKRiggedActorFootSolver leftFootSolver, IKRiggedActorFootSolver rightFootSolver) {
         this.leftFootSolver = leftFootSolver;
         this.rightFootSolver = rightFootSolver;
     }

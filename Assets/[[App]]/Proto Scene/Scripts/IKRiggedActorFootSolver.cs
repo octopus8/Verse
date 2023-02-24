@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// This component uses IK rigged legs to make the feet walk.
 /// </summary>
-public class IKRiggedAvatarFootSolver : MonoBehaviour {
+public class IKRiggedActorFootSolver : MonoBehaviour {
 
     #region Interface Variables
 
@@ -15,7 +15,7 @@ public class IKRiggedAvatarFootSolver : MonoBehaviour {
 
     /// <summary>The other foot.</summary>
     [Tooltip("The other foot.")]
-    [SerializeField] IKRiggedAvatarFootSolver otherFoot;
+    [SerializeField] IKRiggedActorFootSolver otherFoot;
 
     /// <summary>The base step speed.</summary>
     [Tooltip("The base step speed.")]
