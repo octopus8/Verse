@@ -9,8 +9,8 @@ var searchData=
   ['headoffset_6',['HeadOffset',['../class_tracked_parts.html#ad9ea9ff8c0b017596cc1ddeb7aa896ff',1,'TrackedParts']]],
   ['headoffset_7',['headOffset',['../class_tracked_parts.html#aa3a1394694f98177be1aff7498d7076e',1,'TrackedParts']]],
   ['headoriginalrotation_8',['headOriginalRotation',['../class_i_k_rigged_avatar.html#a0f115e7449a247b3aecf8b778edae551',1,'IKRiggedAvatar']]],
-  ['headroot_9',['HeadRoot',['../class_tracked_parts.html#a1bf6fae05032c4bb2736296f13b22657',1,'TrackedParts']]],
-  ['headroot_10',['headRoot',['../class_tracked_parts.html#a415b2ec8c212d28dcea813041fc7b99b',1,'TrackedParts']]],
+  ['headroot_9',['headRoot',['../class_tracked_parts.html#a415b2ec8c212d28dcea813041fc7b99b',1,'TrackedParts']]],
+  ['headroot_10',['HeadRoot',['../class_tracked_parts.html#a1bf6fae05032c4bb2736296f13b22657',1,'TrackedParts']]],
   ['hideavatareventid_11',['HideAvatarEventID',['../struct_app.html#a47f555fcfc99ab0b66d5e4ec027a52af',1,'App']]],
   ['hotmicindicator_12',['HotMicIndicator',['../class_hot_mic_indicator.html',1,'']]],
   ['hotmicindicatorprefab_13',['hotMicIndicatorPrefab',['../class_start_scene_player_connection.html#aa053efcd89c572170a2dcf4f349f9603',1,'StartScenePlayerConnection']]]

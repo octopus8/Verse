@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['verseinputactions_0',['VerseInputActions',['../class_verse_input_actions.html',1,'']]]
+  ['webxrcontrollerleft_0',['WebXRControllerLeft',['../class_o8_c_1_1_web_g_l_1_1_web_x_r_controller_left.html',1,'O8C::WebGL']]],
+  ['webxrcontrollerright_1',['WebXRControllerRight',['../class_o8_c_1_1_web_g_l_1_1_web_x_r_controller_right.html',1,'O8C::WebGL']]]
 ];

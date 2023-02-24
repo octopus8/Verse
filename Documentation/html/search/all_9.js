@@ -6,6 +6,5 @@ var searchData=
   ['lefthandiktarget_3',['leftHandIKTarget',['../class_i_k_rigged_avatar.html#af632e428d40aa7f6a426c84aca12b713',1,'IKRiggedAvatar']]],
   ['lefthandoffset_4',['LeftHandOffset',['../class_tracked_parts.html#a3add79d27f0106a9e6bb4db77f5bbdb5',1,'TrackedParts']]],
   ['lefthandoffsets_5',['leftHandOffsets',['../class_tracked_parts.html#a80e1b08e7e4975051714793fd3fe0672',1,'TrackedParts']]],
-  ['lefthandtransform_6',['LeftHandTransform',['../class_tracked_parts.html#ae9575ef6156f3c4db5fee91bf24e051a',1,'TrackedParts']]],
-  ['localnpctest_7',['LocalNPCTest',['../class_local_n_p_c_test.html',1,'']]]
+  ['lefthandtransform_6',['LeftHandTransform',['../class_tracked_parts.html#ae9575ef6156f3c4db5fee91bf24e051a',1,'TrackedParts']]]
 ];

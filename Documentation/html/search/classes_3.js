@@ -6,12 +6,14 @@ var searchData=
   ['ikriggedavatar_3',['IKRiggedAvatar',['../class_i_k_rigged_avatar.html',1,'']]],
   ['ikriggedavatarfactory_4',['IKRiggedAvatarFactory',['../class_i_k_rigged_avatar_factory.html',1,'']]],
   ['ikriggedavatarfootsolver_5',['IKRiggedAvatarFootSolver',['../class_i_k_rigged_avatar_foot_solver.html',1,'']]],
-  ['imotorinput_6',['IMotorInput',['../interface_i_motor_input.html',1,'']]],
-  ['io8cappfocusstate_7',['IO8CAppFocusState',['../interface_o8_c_1_1_i_o8_c_app_focus_state.html',1,'O8C']]],
-  ['io8cdevicetracking_8',['IO8CDeviceTracking',['../interface_o8_c_1_1_i_o8_c_device_tracking.html',1,'O8C']]],
-  ['io8cmicrophonesupport_9',['IO8CMicrophoneSupport',['../interface_o8_c_1_1_i_o8_c_microphone_support.html',1,'O8C']]],
-  ['io8cnetwork_10',['IO8CNetwork',['../interface_o8_c_1_1_i_o8_c_network.html',1,'O8C']]],
-  ['io8cnetworkplayer_11',['IO8CNetworkPlayer',['../interface_o8_c_1_1_i_o8_c_network_player.html',1,'O8C']]],
-  ['io8cplayerconnection_12',['IO8CPlayerConnection',['../interface_o8_c_1_1_i_o8_c_player_connection.html',1,'O8C']]],
-  ['iplayeractions_13',['IPlayerActions',['../interface_verse_input_actions_1_1_i_player_actions.html',1,'VerseInputActions']]]
+  ['ikriggedspawnable_6',['IKRiggedSpawnable',['../class_i_k_rigged_spawnable.html',1,'']]],
+  ['imotorinput_7',['IMotorInput',['../interface_i_motor_input.html',1,'']]],
+  ['inpccontroller_8',['INPCController',['../interface_i_n_p_c_controller.html',1,'']]],
+  ['io8cappfocusstate_9',['IO8CAppFocusState',['../interface_o8_c_1_1_i_o8_c_app_focus_state.html',1,'O8C']]],
+  ['io8cdevicetracking_10',['IO8CDeviceTracking',['../interface_o8_c_1_1_i_o8_c_device_tracking.html',1,'O8C']]],
+  ['io8cmicrophonesupport_11',['IO8CMicrophoneSupport',['../interface_o8_c_1_1_i_o8_c_microphone_support.html',1,'O8C']]],
+  ['io8cnetwork_12',['IO8CNetwork',['../interface_o8_c_1_1_i_o8_c_network.html',1,'O8C']]],
+  ['io8cnetworkplayer_13',['IO8CNetworkPlayer',['../interface_o8_c_1_1_i_o8_c_network_player.html',1,'O8C']]],
+  ['io8cplayerconnection_14',['IO8CPlayerConnection',['../interface_o8_c_1_1_i_o8_c_player_connection.html',1,'O8C']]],
+  ['iplayeractions_15',['IPlayerActions',['../interface_verse_input_actions_1_1_i_player_actions.html',1,'VerseInputActions']]]
 ];

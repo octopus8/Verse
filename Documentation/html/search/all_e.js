@@ -20,5 +20,6 @@ var searchData=
   ['righthandoffset_17',['RightHandOffset',['../class_tracked_parts.html#a1fb352b117c626797560653915adae1c',1,'TrackedParts']]],
   ['righthandoffsets_18',['rightHandOffsets',['../class_tracked_parts.html#a96bfac4e8c08fbadffbaac4730b881fa',1,'TrackedParts']]],
   ['righthandtransform_19',['RightHandTransform',['../class_tracked_parts.html#a8413f9accf4ef956a718197bc05f28d6',1,'TrackedParts']]],
-  ['rotation_20',['rotation',['../struct_tracked_parts_1_1_physical_offset.html#a79c6fc32e4d5522905e8702d9bc14482',1,'TrackedParts::PhysicalOffset']]]
+  ['roottransform_20',['RootTransform',['../class_n_p_c_controller_circle.html#a48f8bf136d8168b23397182b361ff8d4',1,'NPCControllerCircle']]],
+  ['rotation_21',['rotation',['../struct_tracked_parts_1_1_physical_offset.html#a79c6fc32e4d5522905e8702d9bc14482',1,'TrackedParts::PhysicalOffset']]]
 ];

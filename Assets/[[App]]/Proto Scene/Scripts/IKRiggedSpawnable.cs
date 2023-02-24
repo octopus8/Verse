@@ -1,6 +1,13 @@
 using Mirror;
 using UnityEngine;
 
+
+/// <summary>
+/// 
+/// </summary>
+/// <remarks>
+/// * This component is part of prefabs instantiated by a Spawner.
+/// </remarks>
 public class IKRiggedSpawnable : MonoBehaviour
 {
     [SerializeField] protected GameObject prefab;
@@ -11,6 +18,9 @@ public class IKRiggedSpawnable : MonoBehaviour
     [SerializeField] protected bool localTest = false;
 
 
+    /// <summary>
+    /// Instanitates and initializes the actor.
+    /// </summary>
     void Start()
     {
         // Create the actor.
@@ -34,7 +44,6 @@ public class IKRiggedSpawnable : MonoBehaviour
             NPCControllerCircle controllerInstance = Instantiate(controller.gameObject, spawned.transform).GetComponent<NPCControllerCircle>();
             controllerInstance.RootTransform = transform;
         }
-
     }
 
 }

@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+/// <summary>
+/// Interface for NPC controllers.
+/// </summary>
 public interface INPCController { 
 
 }
