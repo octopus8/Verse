@@ -46,7 +46,7 @@ public class SpawnableIKRiggedActor : MonoBehaviour
         // Add and initialize the arm controller.
         IKRiggedActorArmAnimationController armController = spawned.AddComponent<IKRiggedActorArmAnimationController>();
         armController.SetFootSolvers(riggedAvatar.LeftFootSolver, riggedAvatar.RightFootSolver);
-        armController.SetAnimationController(runtimeAnimatorController);
+        armController.AnimatorController = runtimeAnimatorController;
 
         // If server (or local test), then add a controller.
         NetworkIdentity networkIdentity = GetComponent<NetworkIdentity>();

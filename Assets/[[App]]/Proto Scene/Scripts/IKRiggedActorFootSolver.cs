@@ -85,6 +85,12 @@ public class IKRiggedActorFootSolver : MonoBehaviour {
     /// <summary>Returns whether or not the foot is stepping.</summary>
     protected bool IsMoving { get { return currentStepProgression < 1; } }
 
+    /// <summary>Returns the current step progression.</summary>
+    public float StepProgression { get { return currentStepProgression; } }
+
+    /// <summary>Returns the foot's target position.</summary>
+    public Vector3 FootTargetPosition { get { return newFootPosition; } }
+
     #endregion
 
 
@@ -206,17 +212,6 @@ public class IKRiggedActorFootSolver : MonoBehaviour {
 
 
     #region Public Methods
-
-
-    public float GetStepProgression() {
-        return currentStepProgression;
-    }
-
-    public Vector3 GetFootTargetPosition() {
-        return newFootPosition;
-    }
-
-
 
     /// <summary>
     /// Callback called upon teleport.

@@ -20,13 +20,15 @@ public class IKRiggedActorArmAnimationController : MonoBehaviour
 
     Animator animator;
 
-    RuntimeAnimatorController animatorController;
+    public RuntimeAnimatorController AnimatorController { private get; set; }
+
+
 
     void Start()
     {
         // Set the animation congtroller.
         animator = GetComponent<Animator>();
-        animator.runtimeAnimatorController = animatorController;
+        animator.runtimeAnimatorController = AnimatorController;
 
         // Turn off arm IK.
         RigBuilder rigBuilder = GetComponent<RigBuilder>();
@@ -38,9 +40,6 @@ public class IKRiggedActorArmAnimationController : MonoBehaviour
         }
     }
 
-    public void SetAnimationController(RuntimeAnimatorController animController) {
-        animatorController = animController;
-    }
 
     public void SetFootSolvers(IKRiggedActorFootSolver leftFootSolver, IKRiggedActorFootSolver rightFootSolver) {
         this.leftFootSolver = leftFootSolver;
@@ -50,7 +49,7 @@ public class IKRiggedActorArmAnimationController : MonoBehaviour
     private void Update() {
         AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
         bool isAnimating = false;
-        float currentAnimationProgress = leftFootSolver.GetStepProgression();
+        float currentAnimationProgress = leftFootSolver.StepProgression;
         if (currentAnimationProgress < 1.0f) {
             isAnimating = true;
             if (animationState != AnimationState.leftLeg) {
@@ -63,7 +62,7 @@ public class IKRiggedActorArmAnimationController : MonoBehaviour
             }
         }
         else {
-            currentAnimationProgress = rightFootSolver.GetStepProgression();
+            currentAnimationProgress = rightFootSolver.StepProgression;
             if (currentAnimationProgress < 1.0f) {
                 isAnimating = true;
                 if (animationState != AnimationState.rightLeg) {

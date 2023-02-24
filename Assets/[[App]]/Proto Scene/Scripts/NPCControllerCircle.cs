@@ -69,7 +69,7 @@ public class NPCControllerCircle : NPCController {
         Vector3 pos = startPosition + offset;
 
         // Compute the Y position.
-        pos.y = (riggedAvatar.LeftFootSolver.GetFootTargetPosition().y + riggedAvatar.RightFootSolver.GetFootTargetPosition().y) * 0.5f;
+        pos.y = (riggedAvatar.LeftFootSolver.FootTargetPosition.y + riggedAvatar.RightFootSolver.FootTargetPosition.y) * 0.5f;
         pos.y = Mathf.Lerp(transform.position.y, pos.y, Mathf.Clamp(Time.deltaTime * crouchSpeed, 0, 1)) - serverCrouchDistance;
 
         // Set the root position.
