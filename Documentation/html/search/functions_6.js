@@ -7,5 +7,5 @@ var searchData=
   ['onserverdisconnect_4',['OnServerDisconnect',['../class_o8_c_1_1_o8_c_mirror_network_manager.html#a5117ac32d4575cba66510feb8a2253bf',1,'O8C::O8CMirrorNetworkManager']]],
   ['onstartserver_5',['OnStartServer',['../class_o8_c_1_1_o8_c_mirror_network_manager.html#a5503e09f6a81c2d80efec34ddf1ac2aa',1,'O8C::O8CMirrorNetworkManager']]],
   ['onstopserver_6',['OnStopServer',['../class_o8_c_1_1_o8_c_mirror_network_manager.html#a2e92f756e68f4572754821fb47f35f1b',1,'O8C::O8CMirrorNetworkManager']]],
-  ['onteleport_7',['OnTeleport',['../class_i_k_rigged_avatar_foot_solver.html#ad3466d4fa8addb0071394a46bdedb421',1,'IKRiggedAvatarFootSolver']]]
+  ['onteleport_7',['OnTeleport',['../class_i_k_rigged_actor_foot_solver.html#a8af53ba7de872b15f31d4ed91ecd70ae',1,'IKRiggedActorFootSolver']]]
 ];
