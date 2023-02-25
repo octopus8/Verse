@@ -6,15 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(WorldPointerVisibility))]
 public class WorldPointer : MonoBehaviour
 {
-    WorldPointerNetworking worldPointerNetworking;
-    WorldPointerVisibility worldPointerVisibility;
-
-    private void Awake() {
-        worldPointerNetworking = GetComponent<WorldPointerNetworking>();
-        worldPointerVisibility = GetComponent<WorldPointerVisibility>();
-    }
-
     public bool IsLocalPlayer { set {
+            WorldPointerNetworking worldPointerNetworking = GetComponent<WorldPointerNetworking>();
+            WorldPointerVisibility worldPointerVisibility = GetComponent<WorldPointerVisibility>();
             worldPointerNetworking.IsLocalPlayer = value;
             worldPointerVisibility.IsLocalPlayer = value;
         }
