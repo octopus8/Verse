@@ -79,7 +79,7 @@ public class StartScenePlayerConnection : MonoBehaviour
             }
             O8CSystem.Instance.DeviceTracking.SetPlayAreaFollower(player);
 
-            player.AddComponent<StartSceneMicrophoneController>();
+            player.AddComponent<MicrophoneRecordController>();
             Instantiate(hotMicIndicatorPrefab, O8CSystem.Instance.DeviceTracking.GetHeadTransform());
 
             // Add Controllers display.

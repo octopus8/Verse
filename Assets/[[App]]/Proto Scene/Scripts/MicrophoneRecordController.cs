@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 /// <summary>
 /// Registers callbacks for the VoiceBroadcastGlobal input and upon the event, recording is started or stopped.
 /// </summary>
-public class StartSceneMicrophoneController : MonoBehaviour
+public class MicrophoneRecordController : MonoBehaviour
 {
     /// <summary>The input actions.</summary>
     VerseInputActions inputActions;
