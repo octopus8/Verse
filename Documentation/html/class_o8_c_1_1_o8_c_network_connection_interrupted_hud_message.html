@@ -78,6 +78,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_o8_c_1_1_o8_c_network_connection_interrupted_hud_message-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">O8C.O8CNetworkConnectionInterruptedHudMessage Class Reference</div></div>
 </div><!--header-->
@@ -110,11 +111,38 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>currentSecond</b> = 0<
 float&#160;</td><td class="memItemRight" valign="bottom"><b>nextUpdateTime</b> = 0</td></tr>
 <tr class="memdesc:aa03811fefb334650d94fdefcce1d7dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The next time to update the display. <br /></td></tr>
 <tr class="separator:aa03811fefb334650d94fdefcce1d7dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:adf279ed15354446552cb41a10bcc3a5d"><td class="memItemLeft" align="right" valign="top"><a id="adf279ed15354446552cb41a10bcc3a5d" name="adf279ed15354446552cb41a10bcc3a5d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Awake</b> ()</td></tr>
+<tr class="memdesc:adf279ed15354446552cb41a10bcc3a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures the display is not active. <br /></td></tr>
+<tr class="separator:adf279ed15354446552cb41a10bcc3a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a40d9b8891b00056b96d004c5519a2"><td class="memItemLeft" align="right" valign="top"><a id="a25a40d9b8891b00056b96d004c5519a2" name="a25a40d9b8891b00056b96d004c5519a2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
+<tr class="memdesc:a25a40d9b8891b00056b96d004c5519a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribes to events. <br /></td></tr>
+<tr class="separator:a25a40d9b8891b00056b96d004c5519a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae70313eef7ac42b34072d32e8c4ca434"><td class="memItemLeft" align="right" valign="top"><a id="ae70313eef7ac42b34072d32e8c4ca434" name="ae70313eef7ac42b34072d32e8c4ca434"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroy</b> ()</td></tr>
+<tr class="memdesc:ae70313eef7ac42b34072d32e8c4ca434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribes to events. <br /></td></tr>
+<tr class="separator:ae70313eef7ac42b34072d32e8c4ca434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06b7161260cdff60cdc3dc7049c92f62"><td class="memItemLeft" align="right" valign="top"><a id="a06b7161260cdff60cdc3dc7049c92f62" name="a06b7161260cdff60cdc3dc7049c92f62"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
+<tr class="memdesc:a06b7161260cdff60cdc3dc7049c92f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the display is active, the message is updated. <br /></td></tr>
+<tr class="separator:a06b7161260cdff60cdc3dc7049c92f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac014e75dbf3d82de6cf79e7de9dd53bf"><td class="memItemLeft" align="right" valign="top"><a id="ac014e75dbf3d82de6cf79e7de9dd53bf" name="ac014e75dbf3d82de6cf79e7de9dd53bf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnNetworkConnect</b> ()</td></tr>
+<tr class="memdesc:ac014e75dbf3d82de6cf79e7de9dd53bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called upon network connection. <br /></td></tr>
+<tr class="separator:ac014e75dbf3d82de6cf79e7de9dd53bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09896c7c3235282d97f439ef5bc54405"><td class="memItemLeft" align="right" valign="top"><a id="a09896c7c3235282d97f439ef5bc54405" name="a09896c7c3235282d97f439ef5bc54405"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnNetworkDisconnect</b> ()</td></tr>
+<tr class="memdesc:a09896c7c3235282d97f439ef5bc54405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called upon network disconnect. <br /></td></tr>
+<tr class="separator:a09896c7c3235282d97f439ef5bc54405"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Displays a message upon network disconnect, and removes it upon reconnecting. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>E:/Business/Projects/O8C/Verse/Verse - WebGL/Assets/[O8CSystem]/Scripts/System/O8CNetworkConnectionInterruptedHudMessage.cs</li>
+<li>E:/Business/Projects/O8C/Verse/Verse - Linux Server/Assets/[O8CSystem]/Scripts/System/O8CNetworkConnectionInterruptedHudMessage.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

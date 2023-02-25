@@ -2,7 +2,7 @@ using UnityEngine;
 
 
 /// <summary>
-/// Actor motor.
+/// Interface for Actor motors.
 /// </summary>
 /// <remarks>
 /// A "motor" is something that moves and turns an object.

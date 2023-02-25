@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['webxrcontrollerleft_0',['WebXRControllerLeft',['../class_o8_c_1_1_web_g_l_1_1_web_x_r_controller_left.html',1,'O8C::WebGL']]],
-  ['webxrcontrollerright_1',['WebXRControllerRight',['../class_o8_c_1_1_web_g_l_1_1_web_x_r_controller_right.html',1,'O8C::WebGL']]]
+  ['trackedparts_0',['TrackedParts',['../class_tracked_parts.html',1,'']]]
 ];

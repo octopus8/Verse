@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['physicaloffset_0',['PhysicalOffset',['../struct_tracked_parts_1_1_physical_offset.html',1,'TrackedParts']]],
-  ['platformphysicaloffset_1',['PlatformPhysicalOffset',['../struct_tracked_parts_1_1_platform_physical_offset.html',1,'TrackedParts']]],
-  ['playeractions_2',['PlayerActions',['../struct_verse_input_actions_1_1_player_actions.html',1,'VerseInputActions']]]
+  ['npccontroller_0',['NPCController',['../class_n_p_c_controller.html',1,'']]],
+  ['npccontrollercircle_1',['NPCControllerCircle',['../class_n_p_c_controller_circle.html',1,'']]],
+  ['npcspawner_2',['NPCSpawner',['../class_n_p_c_spawner.html',1,'']]]
 ];
