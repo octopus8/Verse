@@ -36,6 +36,9 @@ namespace O8C {
         [Tooltip("The right hand follower")]
         [SerializeField] protected ObjectFollower rightHandFollower;
 
+
+        [SerializeField] protected GameObject testWorldPointer;
+
         #endregion
 
 
@@ -61,6 +64,10 @@ namespace O8C {
                 O8CSystem.Instance.DeviceTracking.AddLeftHandTarget(handLeft);
             }
             O8CSystem.Instance.PlayerConnection.PlayerConnected(gameObject, isLocalPlayer);
+
+            // XXX test
+            testWorldPointer.GetComponent<WorldPointer>().IsLocalPlayer = isLocalPlayer;
+            testWorldPointer.SetActive(true);
         }
 
 
