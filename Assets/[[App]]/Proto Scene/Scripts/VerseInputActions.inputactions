@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "WorldPointer",
+                    "type": "Button",
+                    "id": "eef2344c-0811-44cb-8bc7-28ad10cc26c6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -108,6 +117,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "968095ef-67e9-4903-b212-f217980452ed",
+                    "path": "<WebXRControllerRight>/triggerButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WorldPointer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c3c486a6-8bcd-4ee1-86b1-250cc571c772",
+                    "path": "<XRController>{RightHand}/triggerButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WorldPointer",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -10,6 +10,8 @@ public class IKRiggedAvatarFactory : AvatarFactory {
     [Tooltip("The avatar prefab.")]
     [SerializeField] protected GameObject avatarPrefab;
 
+    [SerializeField] protected GameObject worldPointerPrefab;
+
 
     /// <inheritdoc />
     public override GameObject CreateAvatar(GameObject player, IO8CNetworkPlayer networkPlayer, bool isLocalPlayer) {
@@ -26,13 +28,17 @@ public class IKRiggedAvatarFactory : AvatarFactory {
         avatar = Instantiate(avatarPrefab, offsetObject.transform);
 
         // Offset the avatar by the head offset.
-        offsetObject.transform.localPosition = avatar.GetComponent<TrackedParts>().HeadOffset;
+        TrackedParts avatarTrackedParts = avatar.GetComponent<TrackedParts>();
+        offsetObject.transform.localPosition = avatarTrackedParts.HeadOffset;
 
         // Initialize the IKRiggedAvatar component.
         IKRiggedActor iKRiggedAvatar = avatar.GetComponent<IKRiggedActor>();
         iKRiggedAvatar.AvatarRoot = avatarRootObject.transform;
         iKRiggedAvatar.SetTrackedSources(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
         iKRiggedAvatar.SetIsLocalPlayer(isLocalPlayer);
+
+        // Add the world pointer.
+        Instantiate(worldPointerPrefab, avatarTrackedParts.RightHandTransform);
 
         return avatar;
     }

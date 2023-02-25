@@ -53,6 +53,15 @@ public partial class @VerseInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""WorldPointer"",
+                    ""type"": ""Button"",
+                    ""id"": ""eef2344c-0811-44cb-8bc7-28ad10cc26c6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -132,6 +141,28 @@ public partial class @VerseInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Turn"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""968095ef-67e9-4903-b212-f217980452ed"",
+                    ""path"": ""<WebXRControllerRight>/triggerButton"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WorldPointer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c3c486a6-8bcd-4ee1-86b1-250cc571c772"",
+                    ""path"": ""<XRController>{RightHand}/triggerButton"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WorldPointer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -143,6 +174,7 @@ public partial class @VerseInputActions : IInputActionCollection2, IDisposable
         m_Player_VoiceBroadcastGlobal = m_Player.FindAction("VoiceBroadcastGlobal", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Turn = m_Player.FindAction("Turn", throwIfNotFound: true);
+        m_Player_WorldPointer = m_Player.FindAction("WorldPointer", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -205,6 +237,7 @@ public partial class @VerseInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_VoiceBroadcastGlobal;
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Turn;
+    private readonly InputAction m_Player_WorldPointer;
     public struct PlayerActions
     {
         private @VerseInputActions m_Wrapper;
@@ -212,6 +245,7 @@ public partial class @VerseInputActions : IInputActionCollection2, IDisposable
         public InputAction @VoiceBroadcastGlobal => m_Wrapper.m_Player_VoiceBroadcastGlobal;
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Turn => m_Wrapper.m_Player_Turn;
+        public InputAction @WorldPointer => m_Wrapper.m_Player_WorldPointer;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -230,6 +264,9 @@ public partial class @VerseInputActions : IInputActionCollection2, IDisposable
                 @Turn.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTurn;
                 @Turn.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTurn;
                 @Turn.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTurn;
+                @WorldPointer.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWorldPointer;
+                @WorldPointer.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWorldPointer;
+                @WorldPointer.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWorldPointer;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -243,6 +280,9 @@ public partial class @VerseInputActions : IInputActionCollection2, IDisposable
                 @Turn.started += instance.OnTurn;
                 @Turn.performed += instance.OnTurn;
                 @Turn.canceled += instance.OnTurn;
+                @WorldPointer.started += instance.OnWorldPointer;
+                @WorldPointer.performed += instance.OnWorldPointer;
+                @WorldPointer.canceled += instance.OnWorldPointer;
             }
         }
     }
@@ -252,5 +292,6 @@ public partial class @VerseInputActions : IInputActionCollection2, IDisposable
         void OnVoiceBroadcastGlobal(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnTurn(InputAction.CallbackContext context);
+        void OnWorldPointer(InputAction.CallbackContext context);
     }
 }

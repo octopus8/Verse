@@ -63,7 +63,7 @@ public class PlayerConnectionHandler : MonoBehaviour
     /// If the player is a local player, input and motor components are added to the player, and
     /// the player is set as the play area follower.
     /// </summary>
-    /// <param name="player">The new player GameObject.</param>
+    /// <param name="player">The new IO8CNetworkPlayer GameObject.</param>
     /// <param name="isLocalPlayer">Flag indicating the player is a local player.</param>
     private void OnPlayerConnected(GameObject player, bool isLocalPlayer) {
 
@@ -79,6 +79,7 @@ public class PlayerConnectionHandler : MonoBehaviour
             }
             O8CSystem.Instance.DeviceTracking.SetPlayAreaFollower(player);
 
+            // Add the hot mic controller to the player. Instantiate the hot mic indicator prefab and attach it to the head.
             player.AddComponent<MicrophoneRecordController>();
             Instantiate(hotMicIndicatorPrefab, O8CSystem.Instance.DeviceTracking.GetHeadTransform());
 

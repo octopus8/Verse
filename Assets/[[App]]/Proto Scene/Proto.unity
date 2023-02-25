@@ -476,6 +476,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   avatarPrefab: {fileID: 4131719208070581277, guid: 4f0b16fb4338dab42bca5629075ad29e,
     type: 3}
+  worldPointerPrefab: {fileID: 420748786424491404, guid: 1c5d594de0f63d44f997af187a91f493,
+    type: 3}
 --- !u!4 &673494669
 Transform:
   m_ObjectHideFlags: 0
