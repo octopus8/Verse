@@ -3,9 +3,9 @@ using UnityEngine;
 
 
 /// <summary>
-/// Handles new player connections.
+/// Creates and destroys players upon connection and disconnection.
 /// </summary>
-public class StartScenePlayerConnection : MonoBehaviour
+public class PlayerConnectionHandler : MonoBehaviour
 {
     #region Inspector Variables
 
