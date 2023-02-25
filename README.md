@@ -23,8 +23,6 @@
 </div>
 
 ## Milestones
-* 1.0.05 - NPC  
-  * NPC walking in a circle with animated arms and legs
 * 1.0.06 - Networked World Pointers
   * Local user can activate/deactivate a world pointer
   * Remote players activate/deactivate world pointers appropriately
@@ -55,6 +53,8 @@
 * 1.0.04 -  Avatar with IK Arms and Legs
   * Full body local and remote avatar with IK arms
   * Full body local and remote avatar with IK legs
+* 1.0.05 - NPC  
+  * NPC walking in a circle with animated arms and legs
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
