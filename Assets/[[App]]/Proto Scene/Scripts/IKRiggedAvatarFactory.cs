@@ -38,7 +38,8 @@ public class IKRiggedAvatarFactory : AvatarFactory {
         iKRiggedAvatar.SetIsLocalPlayer(isLocalPlayer);
 
         // Add the world pointer.
-        Instantiate(worldPointerPrefab, avatarTrackedParts.RightHandTransform);
+        WorldPointer worldPointer = Instantiate(worldPointerPrefab, avatarTrackedParts.RightHandTransform).GetComponent<WorldPointer>();
+        worldPointer.IsLocalPlayer = isLocalPlayer;
 
         return avatar;
     }
