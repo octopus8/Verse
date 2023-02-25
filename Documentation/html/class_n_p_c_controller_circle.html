@@ -74,6 +74,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_n_p_c_controller_circle-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">NPCControllerCircle Class Reference</div></div>
 </div><!--header-->
@@ -95,9 +98,54 @@ Inheritance diagram for NPCControllerCircle:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a48f8bf136d8168b23397182b361ff8d4"><td class="memItemLeft" align="right" valign="top"><a id="a48f8bf136d8168b23397182b361ff8d4" name="a48f8bf136d8168b23397182b361ff8d4"></a>
-Transform&#160;</td><td class="memItemRight" valign="bottom"><b>RootTransform</b><code> [set]</code></td></tr>
+Transform&#160;</td><td class="memItemRight" valign="bottom"><b>RootTransform</b><code> [set, private get]</code></td></tr>
 <tr class="memdesc:a48f8bf136d8168b23397182b361ff8d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NPC root transform. <br /></td></tr>
 <tr class="separator:a48f8bf136d8168b23397182b361ff8d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a54f01196d4d4c7bb7cce1d1a43d3faf0"><td class="memItemLeft" align="right" valign="top"><a id="a54f01196d4d4c7bb7cce1d1a43d3faf0" name="a54f01196d4d4c7bb7cce1d1a43d3faf0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Awake</b> ()</td></tr>
+<tr class="memdesc:a54f01196d4d4c7bb7cce1d1a43d3faf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes values and caches references. <br /></td></tr>
+<tr class="separator:a54f01196d4d4c7bb7cce1d1a43d3faf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae97301d8639c149a7e884fa6dcd15ba2"><td class="memItemLeft" align="right" valign="top"><a id="ae97301d8639c149a7e884fa6dcd15ba2" name="ae97301d8639c149a7e884fa6dcd15ba2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
+<tr class="memdesc:ae97301d8639c149a7e884fa6dcd15ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes values. <br /></td></tr>
+<tr class="separator:ae97301d8639c149a7e884fa6dcd15ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b2f519166e13ed31b8919a9425f8b47"><td class="memItemLeft" align="right" valign="top"><a id="a2b2f519166e13ed31b8919a9425f8b47" name="a2b2f519166e13ed31b8919a9425f8b47"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
+<tr class="memdesc:a2b2f519166e13ed31b8919a9425f8b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the NPC position. <br /></td></tr>
+<tr class="separator:a2b2f519166e13ed31b8919a9425f8b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a748d924f245e5d21845459d0193bad86"><td class="memItemLeft" align="right" valign="top"><a id="a748d924f245e5d21845459d0193bad86" name="a748d924f245e5d21845459d0193bad86"></a>
+Vector3&#160;</td><td class="memItemRight" valign="bottom"><b>startPosition</b></td></tr>
+<tr class="memdesc:a748d924f245e5d21845459d0193bad86"><td class="mdescLeft">&#160;</td><td class="mdescRight">NPC start position (the center of the circle). <br /></td></tr>
+<tr class="separator:a748d924f245e5d21845459d0193bad86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eb478459b1da5e7f4432447eb4d0df7"><td class="memItemLeft" align="right" valign="top"><a id="a1eb478459b1da5e7f4432447eb4d0df7" name="a1eb478459b1da5e7f4432447eb4d0df7"></a>
+<a class="el" href="class_i_k_rigged_actor.html">IKRiggedActor</a>&#160;</td><td class="memItemRight" valign="bottom"><b>riggedAvatar</b></td></tr>
+<tr class="memdesc:a1eb478459b1da5e7f4432447eb4d0df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rigged avatar. <br /></td></tr>
+<tr class="separator:a1eb478459b1da5e7f4432447eb4d0df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3435777c055646ce7add0a1b6090c8aa"><td class="memItemLeft" align="right" valign="top"><a id="a3435777c055646ce7add0a1b6090c8aa" name="a3435777c055646ce7add0a1b6090c8aa"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>crouchSpeed</b> = 5.0f</td></tr>
+<tr class="memdesc:a3435777c055646ce7add0a1b6090c8aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">How fast the NPC moves along the Y axis, in units per second. <br /></td></tr>
+<tr class="separator:a3435777c055646ce7add0a1b6090c8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1114222fce3cc3644aff92a1cc70679"><td class="memItemLeft" align="right" valign="top"><a id="ae1114222fce3cc3644aff92a1cc70679" name="ae1114222fce3cc3644aff92a1cc70679"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>serverCrouchDistance</b> = 0.02f</td></tr>
+<tr class="memdesc:ae1114222fce3cc3644aff92a1cc70679"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Y offset, so the NPC isn't walking at full height. <br /></td></tr>
+<tr class="separator:ae1114222fce3cc3644aff92a1cc70679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a161654590a0adcd228b07edc3c108607"><td class="memItemLeft" align="right" valign="top"><a id="a161654590a0adcd228b07edc3c108607" name="a161654590a0adcd228b07edc3c108607"></a>
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>circleRadiusUnits</b> = 5.0f</td></tr>
+<tr class="memdesc:a161654590a0adcd228b07edc3c108607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Radius of the circle. <br /></td></tr>
+<tr class="separator:a161654590a0adcd228b07edc3c108607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca81908c70de505cb8673ec74833cb8e"><td class="memItemLeft" align="right" valign="top"><a id="aca81908c70de505cb8673ec74833cb8e" name="aca81908c70de505cb8673ec74833cb8e"></a>
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>speedRotationsPerSecond</b> = 0.03f</td></tr>
+<tr class="memdesc:aca81908c70de505cb8673ec74833cb8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation speed, in rotations per second. <br /></td></tr>
+<tr class="separator:aca81908c70de505cb8673ec74833cb8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>NPC controller that walks the NPC in a circle. </p>

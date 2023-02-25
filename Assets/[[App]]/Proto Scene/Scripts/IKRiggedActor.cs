@@ -8,6 +8,7 @@ using UnityEngine.Assertions;
 [RequireComponent(typeof(TrackedParts))]
 public class IKRiggedActor : MonoBehaviour
 {
+
     #region Interface Variables
 
     /// <summary>Left hand IK target.</summary>
@@ -22,16 +23,19 @@ public class IKRiggedActor : MonoBehaviour
     [Tooltip("Head object.")]
     [SerializeField] protected GameObject headObject;
 
+    /// <summary>The left foot solver.</summary>
     [SerializeField] protected IKRiggedActorFootSolver leftFootSolver;
 
+    /// <summary>The right foot solver.</summary>
     [SerializeField] protected IKRiggedActorFootSolver rightFootSolver;
 
+    /// <summary>Provides access to the left foot solver.</summary>
     public IKRiggedActorFootSolver LeftFootSolver { get { return leftFootSolver; } }
+
+    /// <summary>Provides access to the right foot solver.</summary>
     public IKRiggedActorFootSolver RightFootSolver { get { return rightFootSolver; } }
 
     #endregion
-
-
 
 
 
@@ -139,6 +143,10 @@ public class IKRiggedActor : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// Called to configure the actor as a local player; the head geometry is disabled.
+    /// </summary>
+    /// <param name="isLocalPlayer">Flag indicating actor is a local player.</param>
     public void SetIsLocalPlayer(bool isLocalPlayer) {
         headObject.SetActive(!isLocalPlayer);
     }

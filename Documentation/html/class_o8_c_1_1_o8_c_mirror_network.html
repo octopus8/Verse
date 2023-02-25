@@ -80,6 +80,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#events">Events</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_o8_c_1_1_o8_c_mirror_network-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">O8C.O8CMirrorNetwork Class Reference</div></div>
 </div><!--header-->
@@ -146,6 +147,29 @@ Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnConnect</b></td><
 Action&#160;</td><td class="memItemRight" valign="bottom"><b>OnDisconnect</b></td></tr>
 <tr class="memdesc:ad3c914b6b77c51c54470bca5beb9e313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event handler upon disconnecting. <br /></td></tr>
 <tr class="separator:ad3c914b6b77c51c54470bca5beb9e313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a11405efe2e93a6ca9db771d6117afcc0"><td class="memItemLeft" align="right" valign="top"><a id="a11405efe2e93a6ca9db771d6117afcc0" name="a11405efe2e93a6ca9db771d6117afcc0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Awake</b> ()</td></tr>
+<tr class="memdesc:a11405efe2e93a6ca9db771d6117afcc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores references and attaches platform specific startup components. <br /></td></tr>
+<tr class="separator:a11405efe2e93a6ca9db771d6117afcc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed9fbced4c7461f229bff946b77f2a3f"><td class="memItemLeft" align="right" valign="top"><a id="aed9fbced4c7461f229bff946b77f2a3f" name="aed9fbced4c7461f229bff946b77f2a3f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
+<tr class="memdesc:aed9fbced4c7461f229bff946b77f2a3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds event handlers. <br /></td></tr>
+<tr class="separator:aed9fbced4c7461f229bff946b77f2a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630d8e5e954fcd464786c60cd0790645"><td class="memItemLeft" align="right" valign="top"><a id="a630d8e5e954fcd464786c60cd0790645" name="a630d8e5e954fcd464786c60cd0790645"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroy</b> ()</td></tr>
+<tr class="memdesc:a630d8e5e954fcd464786c60cd0790645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes event handlers. <br /></td></tr>
+<tr class="separator:a630d8e5e954fcd464786c60cd0790645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5634bac73b853475dc2ca22f9ef750b7"><td class="memItemLeft" align="right" valign="top"><a id="a5634bac73b853475dc2ca22f9ef750b7" name="a5634bac73b853475dc2ca22f9ef750b7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleConnectEvent</b> ()</td></tr>
+<tr class="memdesc:a5634bac73b853475dc2ca22f9ef750b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback registered for O8CMirrorNetworkManager.OnConnect events, this method calls the OnConnect action. <br /></td></tr>
+<tr class="separator:a5634bac73b853475dc2ca22f9ef750b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f48cc9e550f74b4d81028fa45273791"><td class="memItemLeft" align="right" valign="top"><a id="a1f48cc9e550f74b4d81028fa45273791" name="a1f48cc9e550f74b4d81028fa45273791"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleDisconnectEvent</b> ()</td></tr>
+<tr class="memdesc:a1f48cc9e550f74b4d81028fa45273791"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback registered for O8CMirrorNetworkManager.OnDisconnect events, this method calls the OnDisconnect action. <br /></td></tr>
+<tr class="separator:a1f48cc9e550f74b4d81028fa45273791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The Mirror implementation of O8CNetwork. </p>

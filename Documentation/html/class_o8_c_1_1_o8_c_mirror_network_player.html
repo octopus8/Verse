@@ -79,6 +79,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_o8_c_1_1_o8_c_mirror_network_player-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">O8C.O8CMirrorNetworkPlayer Class Reference</div></div>
 </div><!--header-->
@@ -222,6 +223,19 @@ ObjectFollower&#160;</td><td class="memItemRight" valign="bottom"><b>rightHandFo
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isApplicationQuitting</b> = false</td></tr>
 <tr class="memdesc:a881c120a21a09a13abe48376283a9942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating the application is quitting. <br /></td></tr>
 <tr class="separator:a881c120a21a09a13abe48376283a9942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ac96a5550abc9c5c14847e9965424ab11"><td class="memItemLeft" align="right" valign="top"><a id="ac96a5550abc9c5c14847e9965424ab11" name="ac96a5550abc9c5c14847e9965424ab11"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Start</b> ()</td></tr>
+<tr class="memdesc:ac96a5550abc9c5c14847e9965424ab11"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the player is a local player, the networked tracked objects are added to tracked targets. Additionally, the system is notified of the new player. <br /></td></tr>
+<tr class="separator:ac96a5550abc9c5c14847e9965424ab11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78091b8789bbc9913e7c721e47ea44c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o8_c_1_1_o8_c_mirror_network_player.html#a78091b8789bbc9913e7c721e47ea44c0">OnApplicationQuit</a> ()</td></tr>
+<tr class="memdesc:a78091b8789bbc9913e7c721e47ea44c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a flag indicating the application is quitting.  <br /></td></tr>
+<tr class="separator:a78091b8789bbc9913e7c721e47ea44c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5675ec9bf2c8b11d9d41ab8ab059f878"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o8_c_1_1_o8_c_mirror_network_player.html#a5675ec9bf2c8b11d9d41ab8ab059f878">OnDestroy</a> ()</td></tr>
+<tr class="memdesc:a5675ec9bf2c8b11d9d41ab8ab059f878"><td class="mdescLeft">&#160;</td><td class="mdescRight">The system is notified of the player being destroyed, and if the player is a local player, the networked tracked objects are removed from tracked targets.  <br /></td></tr>
+<tr class="separator:a5675ec9bf2c8b11d9d41ab8ab059f878"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>On Start, this component notifies the system of a new player and connects tracked objects to tracked targets. OnDestroy, the system is notified of the player removal and tracked objects are removed from tracked targets. </p>
@@ -373,6 +387,62 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isApplicationQuitting
  </p>
 
 <p>Implements <a class="el" href="interface_o8_c_1_1_i_o8_c_network_player.html#a04ecb40afa46226049e6392b88c544ab">O8C.IO8CNetworkPlayer</a>.</p>
+
+</div>
+</div>
+<a id="a78091b8789bbc9913e7c721e47ea44c0" name="a78091b8789bbc9913e7c721e47ea44c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78091b8789bbc9913e7c721e47ea44c0">&#9670;&#160;</a></span>OnApplicationQuit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void O8C.O8CMirrorNetworkPlayer.OnApplicationQuit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets a flag indicating the application is quitting. </p>
+<p>The isApplicationQuitting is used by OnDestroy to handle a network player leaving as opposed to the application quitting. </p>
+
+</div>
+</div>
+<a id="a5675ec9bf2c8b11d9d41ab8ab059f878" name="a5675ec9bf2c8b11d9d41ab8ab059f878"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5675ec9bf2c8b11d9d41ab8ab059f878">&#9670;&#160;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void O8C.O8CMirrorNetworkPlayer.OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The system is notified of the player being destroyed, and if the player is a local player, the networked tracked objects are removed from tracked targets. </p>
+<p>If the application is quitting, then system objects may have been destroyed. The app is quitting so proper destruction of objects is not important. Therefore, if the application is quitting, then nothing is done. </p>
 
 </div>
 </div>

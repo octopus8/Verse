@@ -12,7 +12,9 @@ public class LocalAvatarHider : MonoBehaviour {
 
 
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Registers event handlers.
+    /// </summary>
     void Start() {
         O8CSystem.Instance.EventManager.StartListening(App.ShowLocalAvatarEventID, OnShowAvatar);
         O8CSystem.Instance.EventManager.StartListening(App.HideLocalAvatarEventID, OnHideAvatar); 
