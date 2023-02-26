@@ -68,7 +68,7 @@ public class WorldPointerNetworking : NetworkBehaviour {
     /// <param name="oldValue"></param>
     /// <param name="newValue"></param>
     protected void OnPointerActivationChanged(bool oldValue, bool newValue) {
-        if (!isLocalPlayer) {
+        if (!IsLocalPlayer) {
             worldPointerVisibility.SetVisible(newValue);
         }
     }

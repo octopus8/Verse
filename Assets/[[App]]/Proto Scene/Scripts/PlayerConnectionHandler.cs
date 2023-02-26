@@ -105,6 +105,7 @@ public class PlayerConnectionHandler : MonoBehaviour
             player.name = "Remote Player";
         }
 
+        // Create a world pointer and add it to the avatar.
         WorldPointer worldPointer = Instantiate(worldPointerPrefab, avatar.transform).GetComponent<WorldPointer>();
         worldPointer.IsLocalPlayer = isLocalPlayer;
         TrackedParts trackedParts = avatar.GetComponent<TrackedParts>();
