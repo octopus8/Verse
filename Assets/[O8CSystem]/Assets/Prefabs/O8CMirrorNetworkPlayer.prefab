@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 7422727979308297351}
   - component: {fileID: 7422727979308297350}
   - component: {fileID: 4113340525534065422}
+  - component: {fileID: 7759484753272037635}
   m_Layer: 0
   m_Name: O8CMirrorNetworkPlayer
   m_TagString: Untagged
@@ -444,6 +445,20 @@ MonoBehaviour:
   leftHandFollower: {fileID: 5988835291720000564}
   rightHandFollower: {fileID: 8301496790277102276}
   testWorldPointer: {fileID: 6518236312791294299}
+--- !u!114 &7759484753272037635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7422727979308297357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e0738c78b871b4fb182637d9300845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!1 &7422727979600516040
 GameObject:
   m_ObjectHideFlags: 0

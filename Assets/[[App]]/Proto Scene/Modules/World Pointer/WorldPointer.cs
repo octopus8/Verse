@@ -11,8 +11,8 @@ public class WorldPointer : MonoBehaviour
 
     private void Start() {
         worldPointerVisibility = GetComponent<WorldPointerVisibility>();
-        GameObject networkRoot = GetComponentInParent<NetworkIdentity>().gameObject;
-        worldPointerNetworking = networkRoot.AddComponent<WorldPointerNetworking>();
+        worldPointerNetworking = GetComponentInParent<WorldPointerNetworking>();
+        worldPointerNetworking.WorldPointerVisibility = worldPointerVisibility;
 
         worldPointerNetworking.IsLocalPlayer = IsLocalPlayer;
         worldPointerVisibility.IsLocalPlayer = IsLocalPlayer;
