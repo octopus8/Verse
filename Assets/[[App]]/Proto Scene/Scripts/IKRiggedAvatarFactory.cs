@@ -11,7 +11,6 @@ public class IKRiggedAvatarFactory : AvatarFactory {
     [Tooltip("The avatar prefab.")]
     [SerializeField] protected GameObject avatarPrefab;
 
-    [SerializeField] protected GameObject worldPointerPrefab;
 
 
     /// <inheritdoc />
@@ -37,11 +36,6 @@ public class IKRiggedAvatarFactory : AvatarFactory {
         iKRiggedAvatar.AvatarRoot = avatarRootObject.transform;
         iKRiggedAvatar.SetTrackedSources(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
         iKRiggedAvatar.SetIsLocalPlayer(isLocalPlayer);
-
-        // Add the world pointer.
-        WorldPointer worldPointer = Instantiate(worldPointerPrefab, avatarTrackedParts.RightHandTransform).GetComponent<WorldPointer>();
-        NetworkServer.Spawn(worldPointer.gameObject);
-        worldPointer.IsLocalPlayer = isLocalPlayer;
 
         return avatar;
     }

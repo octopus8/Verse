@@ -476,8 +476,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   avatarPrefab: {fileID: 4131719208070581277, guid: 4f0b16fb4338dab42bca5629075ad29e,
     type: 3}
-  worldPointerPrefab: {fileID: 420748786424491404, guid: 1c5d594de0f63d44f997af187a91f493,
-    type: 3}
 --- !u!4 &673494669
 Transform:
   m_ObjectHideFlags: 0
@@ -6919,7 +6917,6 @@ MonoBehaviour:
   playerSpawnMethod: 0
   spawnPrefabs:
   - {fileID: 5656788071515817157, guid: 8f09dcc71aa3a1a4fa096a51bf6dc9df, type: 3}
-  - {fileID: 420748786424491404, guid: 1c5d594de0f63d44f997af187a91f493, type: 3}
   telepathyTransport: {fileID: 2988095195293886690}
   simpleWebTransport: {fileID: 1474365810401396064}
 --- !u!1 &2988095195293886689
