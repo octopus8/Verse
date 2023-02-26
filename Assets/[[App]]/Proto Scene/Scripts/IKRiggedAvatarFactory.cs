@@ -1,3 +1,4 @@
+using Mirror;
 using O8C;
 using UnityEngine;
 
@@ -39,6 +40,7 @@ public class IKRiggedAvatarFactory : AvatarFactory {
 
         // Add the world pointer.
         WorldPointer worldPointer = Instantiate(worldPointerPrefab, avatarTrackedParts.RightHandTransform).GetComponent<WorldPointer>();
+        NetworkServer.Spawn(worldPointer.gameObject);
         worldPointer.IsLocalPlayer = isLocalPlayer;
 
         return avatar;

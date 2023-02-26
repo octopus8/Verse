@@ -2,6 +2,8 @@ using Mirror;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(WorldPointerVisibility))]
+
 public class WorldPointerNetworking : NetworkBehaviour {
 
     /// <summary>The input actions.</summary>
@@ -12,12 +14,16 @@ public class WorldPointerNetworking : NetworkBehaviour {
     protected bool pointerActivated = false;
 
 
-    public WorldPointerVisibility WorldPointerVisibility { private get; set; }
+    WorldPointerVisibility worldPointerVisibility;
+//    public WorldPointerVisibility WorldPointerVisibility { private get; set; }
 
     public bool IsLocalPlayer { private get; set; }
 
 
 
+    private void Awake() {
+        worldPointerVisibility = GetComponent<WorldPointerVisibility>();
+    }
 
 
     private void Start() {
@@ -63,7 +69,7 @@ public class WorldPointerNetworking : NetworkBehaviour {
     /// <param name="newValue"></param>
     protected void OnPointerActivationChanged(bool oldValue, bool newValue) {
         if (!isLocalPlayer) {
-            WorldPointerVisibility.SetVisible(newValue);
+            worldPointerVisibility.SetVisible(newValue);
         }
     }
 
