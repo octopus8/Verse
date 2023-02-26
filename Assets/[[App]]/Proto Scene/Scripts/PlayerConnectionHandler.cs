@@ -21,8 +21,15 @@ public class PlayerConnectionHandler : MonoBehaviour
     [SerializeField] protected GameObject hotMicIndicatorPrefab;
 
     /// <summary>The controllers prefab.</summary>
-    [Tooltip("The controllsers prefab.")]
+    [Tooltip("The controllers prefab.")]
     [SerializeField] protected GameObject controllersPrefab;
+
+    /// <summary>The world pointer prefab.</summary>
+    [Tooltip("The world pointer prefab.")]
+    [SerializeField] protected GameObject worldPointerPrefab;
+
+
+    
 
     /// <summary>The set of motor inputs.</summary>
     [SerializeField] MotorInput[] motorInputs;
@@ -98,12 +105,14 @@ public class PlayerConnectionHandler : MonoBehaviour
             player.name = "Remote Player";
         }
 
-
-
+        WorldPointer worldPointer = Instantiate(worldPointerPrefab, avatar.transform).GetComponent<WorldPointer>();
+        worldPointer.IsLocalPlayer = isLocalPlayer;
+        TrackedParts trackedParts = avatar.GetComponent<TrackedParts>();
+        worldPointer.RootTransform = trackedParts.RightHandTransform;
     }
 
 
-    /// <summary>
+    /// <summary><
     /// Callback called upon a player disconnecting.
     /// </summary>
     /// <param name="player">The player that has disconnected.</param>

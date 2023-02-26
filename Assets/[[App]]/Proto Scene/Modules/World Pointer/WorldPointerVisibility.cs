@@ -8,6 +8,9 @@ public class WorldPointerVisibility : MonoBehaviour
     /// <summary>The input actions.</summary>
     VerseInputActions inputActions;
 
+    public Transform RootTransform { set => pointer.transform.parent = transform; } 
+
+
     public bool IsLocalPlayer { set {
             if (value) {
                 inputActions = new VerseInputActions();
@@ -16,6 +19,7 @@ public class WorldPointerVisibility : MonoBehaviour
             }
         }
     }
+
 
 
 

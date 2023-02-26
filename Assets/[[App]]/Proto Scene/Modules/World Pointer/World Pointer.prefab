@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3229345043969935552}
   - component: {fileID: 3513825276382893753}
   m_Layer: 0
-  m_Name: WorldPointer
+  m_Name: World Pointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

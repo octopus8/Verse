@@ -424,6 +424,8 @@ MonoBehaviour:
     type: 3}
   controllersPrefab: {fileID: 5609869831568237768, guid: fa3ab848ddd3a114787c0eac6a560a29,
     type: 3}
+  worldPointerPrefab: {fileID: 420748786424491404, guid: 1c5d594de0f63d44f997af187a91f493,
+    type: 3}
   motorInputs:
   - {fileID: 2131338}
   - {fileID: 987828322}
