@@ -35,7 +35,7 @@ public class MicrophoneRecordController : MonoBehaviour
     /// </summary>
     private void OnEnable() {
         inputActions.Player.VoiceBroadcastGlobal.Enable();
-        inputActions.Player.VoiceBroadcastGlobal.performed += VoiceBroadcastGlobal_performed;
+        inputActions.Player.VoiceBroadcastGlobal.started += VoiceBroadcastGlobalStarted;
 
     }
 
@@ -45,7 +45,7 @@ public class MicrophoneRecordController : MonoBehaviour
     /// </summary>
     private void OnDisable() {
         O8CSystem.Instance.MicrophoneSupport.StopRecord();
-        inputActions.Player.VoiceBroadcastGlobal.performed -= VoiceBroadcastGlobal_performed;
+        inputActions.Player.VoiceBroadcastGlobal.started -= VoiceBroadcastGlobalStarted;
     }
 
     #endregion
@@ -56,7 +56,7 @@ public class MicrophoneRecordController : MonoBehaviour
     /// Callback called upon VoiceBroadcastGlobal input action.
     /// </summary>
     /// <param name="context">Unused</param>
-    private void VoiceBroadcastGlobal_performed(InputAction.CallbackContext context) {
+    private void VoiceBroadcastGlobalStarted(InputAction.CallbackContext context) {
         if (context.ReadValueAsButton()) {
             Debug.Log("Global broadcast start");
             O8CSystem.Instance.MicrophoneSupport.StartRecord();

@@ -8,14 +8,16 @@ public class WorldPointerVisibility : MonoBehaviour
     /// <summary>The input actions.</summary>
     VerseInputActions inputActions;
 
-    public Transform RootTransform { set => pointer.transform.parent = transform; } 
+    public Transform RootTransform { set => pointer.transform.parent = transform; }
 
+    bool isLocalPlayer;
 
     public bool IsLocalPlayer { set {
+            isLocalPlayer = value; 
             if (value) {
                 inputActions = new VerseInputActions();
                 inputActions.Player.WorldPointer.Enable();
-                inputActions.Player.WorldPointer.performed += WorldPointer_performed;
+                inputActions.Player.WorldPointer.started += WorldPointerStarted;
             }
         }
     }
@@ -25,10 +27,16 @@ public class WorldPointerVisibility : MonoBehaviour
 
     void Start()
     {
-        // XXX TEST
-//        pointer.SetActive(false);
+        pointer.SetActive(false);
     }
 
+    private void OnDestroy() {
+        if (isLocalPlayer) {
+            inputActions.Player.WorldPointer.started -= WorldPointerStarted;
+            inputActions.Player.WorldPointer.Disable();
+
+        }
+    }
 
 
 
@@ -37,14 +45,9 @@ public class WorldPointerVisibility : MonoBehaviour
     }
 
 
-    /// <summary>
-    /// Callback called upon VoiceBroadcastGlobal input action.
-    /// </summary>
-    /// <param name="context">Input</param>
-    private void WorldPointer_performed(InputAction.CallbackContext context) {
-        Debug.Log("Setting pointer visible " + context.ReadValueAsButton());
-        SetVisible(context.ReadValueAsButton());
+    private void WorldPointerStarted(InputAction.CallbackContext context) {
+        bool isVisible = context.ReadValueAsButton();
+        Debug.Log("World Pointer " + isVisible);
+        SetVisible(isVisible);
     }
-
-
 }

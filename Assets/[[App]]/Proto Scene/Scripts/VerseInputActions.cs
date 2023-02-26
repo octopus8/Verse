@@ -60,7 +60,7 @@ public partial class @VerseInputActions : IInputActionCollection2, IDisposable
                     ""id"": ""eef2344c-0811-44cb-8bc7-28ad10cc26c6"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Hold"",
+                    ""interactions"": ""Hold(duration=1.401298E-45)"",
                     ""initialStateCheck"": false
                 }
             ],
