@@ -37,11 +37,9 @@ public class IKRiggedAvatarFactory : AvatarFactory {
         iKRiggedAvatar.SetTrackedSources(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
         iKRiggedAvatar.SetIsLocalPlayer(isLocalPlayer);
 
-/*
         // Add the world pointer.
         WorldPointer worldPointer = Instantiate(worldPointerPrefab, avatarTrackedParts.RightHandTransform).GetComponent<WorldPointer>();
         worldPointer.IsLocalPlayer = isLocalPlayer;
-*/
 
         return avatar;
     }

@@ -163,6 +163,17 @@ public partial class @VerseInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""WorldPointer"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f58ef358-807d-43a7-ada7-b579a7a9fc01"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WorldPointer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }

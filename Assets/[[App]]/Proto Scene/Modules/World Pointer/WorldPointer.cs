@@ -1,14 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
-[RequireComponent(typeof(WorldPointerNetworking))]
 [RequireComponent(typeof(WorldPointerVisibility))]
 public class WorldPointer : MonoBehaviour
 {
+    WorldPointerNetworking worldPointerNetworking;
+    WorldPointerVisibility worldPointerVisibility;
+
+    private void Awake() {
+        worldPointerVisibility = GetComponent<WorldPointerVisibility>();
+
+        GameObject networkRoot = GetComponentInParent<NetworkIdentity>().gameObject;
+        worldPointerNetworking = networkRoot.AddComponent<WorldPointerNetworking>();
+    }
+
+
     public bool IsLocalPlayer { set {
-            WorldPointerNetworking worldPointerNetworking = GetComponent<WorldPointerNetworking>();
-            WorldPointerVisibility worldPointerVisibility = GetComponent<WorldPointerVisibility>();
             worldPointerNetworking.IsLocalPlayer = value;
             worldPointerVisibility.IsLocalPlayer = value;
         }
