@@ -2,7 +2,6 @@ using Mirror;
 using UnityEngine;
 
 [RequireComponent(typeof(WorldPointerVisibility))]
-[RequireComponent(typeof(WorldPointerNetworking))]
 
 public class WorldPointer : MonoBehaviour
 {
@@ -19,7 +18,10 @@ public class WorldPointer : MonoBehaviour
         worldPointerVisibility = GetComponent<WorldPointerVisibility>();
         worldPointerVisibility.IsLocalPlayer = IsLocalPlayer;
         worldPointerVisibility.RootTransform = RootTransform;
-        worldPointerNetworking = GetComponent<WorldPointerNetworking>();
+
+//        worldPointerNetworking = GetComponent<WorldPointerNetworking>();
+        worldPointerNetworking = GetComponentInParent<WorldPointerNetworking>();
+        worldPointerNetworking.WorldPointerVisibility = worldPointerVisibility;
         worldPointerNetworking.IsLocalPlayer = IsLocalPlayer;
     }
 
