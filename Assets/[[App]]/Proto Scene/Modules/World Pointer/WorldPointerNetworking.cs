@@ -16,7 +16,18 @@ public class WorldPointerNetworking : NetworkBehaviour {
 //    WorldPointerVisibility worldPointerVisibility;
     public WorldPointerVisibility WorldPointerVisibility { private get; set; }
 
-    public bool IsLocalPlayer { private get; set; }
+    bool isPlayerLocal = false;
+    public bool IsLocalPlayer { private get {
+            return isPlayerLocal; 
+        }
+        set {
+            isPlayerLocal = value;
+            if (value) {
+                inputActions = new VerseInputActions();
+                inputActions.Player.WorldPointer.Enable();
+                inputActions.Player.WorldPointer.started += WorldPointerStarted;
+            }
+        } }
 
 
 
@@ -27,12 +38,6 @@ public class WorldPointerNetworking : NetworkBehaviour {
 
     private void Start() {
         if (IsLocalPlayer) {
-            if (isServer) {
-                NetworkIdentity networkIdentity = GetComponent<NetworkIdentity>();
-                NetworkIdentity rootNetworkIdentity = GetComponentInParent<NetworkIdentity>();
-                networkIdentity.AssignClientAuthority(rootNetworkIdentity.connectionToClient);
-            }
-
             inputActions = new VerseInputActions();
             inputActions.Player.WorldPointer.Enable();
             inputActions.Player.WorldPointer.started += WorldPointerStarted;
@@ -41,7 +46,7 @@ public class WorldPointerNetworking : NetworkBehaviour {
     }
 
 
-
+        
 
 
     /// <summary>
