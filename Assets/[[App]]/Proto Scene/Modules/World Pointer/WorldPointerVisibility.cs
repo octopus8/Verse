@@ -8,7 +8,7 @@ public class WorldPointerVisibility : MonoBehaviour
     /// <summary>The input actions.</summary>
     VerseInputActions inputActions;
 
-    public Transform RootTransform { set => pointer.transform.parent = transform; }
+    public Transform RootTransform { set { pointer.transform.parent = value; pointer.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity); } }
 
     bool isLocalPlayer;
 
@@ -31,6 +31,7 @@ public class WorldPointerVisibility : MonoBehaviour
     }
 
     private void OnDestroy() {
+        Destroy(pointer);
         if (isLocalPlayer) {
             inputActions.Player.WorldPointer.started -= WorldPointerStarted;
             inputActions.Player.WorldPointer.Disable();
@@ -44,7 +45,7 @@ public class WorldPointerVisibility : MonoBehaviour
             return;
         }
 
-        float maxDistance = 10.0f;
+        float maxDistance = 20.0f;
 
         Vector3 scale = Vector3.one;
         if (Physics.Raycast(pointer.transform.position, pointer.transform.forward, out RaycastHit hit, maxDistance)) {

@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: sceneId
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7422727979308297344, guid: e6c3e13e5e27b144e8f723ade2dd823f,
+        type: 3}
+      propertyPath: m_AssetId
+      value: 898d27e045ca8e44c9959a3ef165abf5
+      objectReference: {fileID: 0}
     - target: {fileID: 7422727979308297345, guid: e6c3e13e5e27b144e8f723ade2dd823f,
         type: 3}
       propertyPath: m_RootOrder
@@ -70,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 7422727979308297357, guid: e6c3e13e5e27b144e8f723ade2dd823f,
         type: 3}
       propertyPath: m_Name
-      value: O8CMirrorNetworkPlayer
+      value: AppNetworkPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6c3e13e5e27b144e8f723ade2dd823f, type: 3}
@@ -94,3 +99,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+--- !u!114 &3904937377124782943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320610784765284900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4f0568c0f2a934396817057a603b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
