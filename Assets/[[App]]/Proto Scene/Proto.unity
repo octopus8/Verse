@@ -6913,7 +6913,7 @@ MonoBehaviour:
   networkAddress: o8c.us
   maxConnections: 999
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 7422727979308297357, guid: e6c3e13e5e27b144e8f723ade2dd823f,
+  playerPrefab: {fileID: 1320610784765284900, guid: 898d27e045ca8e44c9959a3ef165abf5,
     type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
