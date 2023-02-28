@@ -46,7 +46,7 @@ public class WorldPointerVisibility : MonoBehaviour
 
         float maxDistance = 10.0f;
 
-        Vector3 scale = Vector3.zero;
+        Vector3 scale = Vector3.one;
         if (Physics.Raycast(pointer.transform.position, pointer.transform.forward, out RaycastHit hit, maxDistance)) {
             scale.z = hit.distance;
         } else {
