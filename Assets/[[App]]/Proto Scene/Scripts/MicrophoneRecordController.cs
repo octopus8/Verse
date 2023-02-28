@@ -1,4 +1,5 @@
 using O8C;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,6 +12,7 @@ public class MicrophoneRecordController : MonoBehaviour
     /// <summary>The input actions.</summary>
     VerseInputActions inputActions;
 
+    Coroutine stopOnStart = null;
 
     #region Base Methods
 
@@ -59,12 +61,31 @@ public class MicrophoneRecordController : MonoBehaviour
     private void VoiceBroadcastGlobalStarted(InputAction.CallbackContext context) {
         if (context.ReadValueAsButton()) {
             Debug.Log("Global broadcast start");
+            if (stopOnStart != null) {
+                StopCoroutine(stopOnStart);
+                stopOnStart = null;
+            }                
             O8CSystem.Instance.MicrophoneSupport.StartRecord();
         }
         else {
             Debug.Log("Global broadcast end");
-            O8CSystem.Instance.MicrophoneSupport.StopRecord();
+            if (O8CSystem.Instance.MicrophoneSupport.IsRecording()) {
+                O8CSystem.Instance.MicrophoneSupport.StopRecord();
+            } else {
+                stopOnStart = StartCoroutine(StopRecordOnStart());
+            }
         }
     }
 
+    IEnumerator StopRecordOnStart() {
+        while (true) {
+            if (O8CSystem.Instance.MicrophoneSupport.IsRecording()) {
+                O8CSystem.Instance.MicrophoneSupport.StopRecord();
+                yield break;
+            }
+            else {
+                yield return null;
+            }
+        }
+    }
 }
