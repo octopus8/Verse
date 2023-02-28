@@ -39,6 +39,22 @@ public class WorldPointerVisibility : MonoBehaviour
     }
 
 
+    private void FixedUpdate() {
+        if (!pointer.activeInHierarchy) {
+            return;
+        }
+
+        float maxDistance = 10.0f;
+
+        Vector3 scale = Vector3.zero;
+        if (Physics.Raycast(pointer.transform.position, pointer.transform.forward, out RaycastHit hit, maxDistance)) {
+            scale.z = hit.distance;
+        } else {
+            scale.z = maxDistance;
+        }
+        pointer.transform.localScale = scale;
+    }
+
 
     public void SetVisible(bool isVisible) {
         pointer.SetActive(isVisible);
