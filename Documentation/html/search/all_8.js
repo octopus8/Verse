@@ -8,9 +8,9 @@ var searchData=
   ['ikriggedavatarfactory_5',['IKRiggedAvatarFactory',['../class_i_k_rigged_avatar_factory.html',1,'']]],
   ['imotorinput_6',['IMotorInput',['../interface_i_motor_input.html',1,'']]],
   ['indicator_7',['indicator',['../class_hot_mic_indicator.html#a4443d5fc03ec329af340ccea88ff801a',1,'HotMicIndicator']]],
-  ['initialize_8',['Initialize',['../class_o8_c_1_1_web_g_l_1_1_web_x_r_controller_left.html#a881eb5ab3ae98ac71aabac9a3b001181',1,'O8C.WebGL.WebXRControllerLeft.Initialize()'],['../class_o8_c_1_1_web_g_l_1_1_web_x_r_controller_right.html#a396188ccd2a6b5cebbfdf30b84a20887',1,'O8C.WebGL.WebXRControllerRight.Initialize()']]],
+  ['initialize_8',['Initialize',['../class_o8_c_1_1_web_g_l_1_1_web_x_r_controller_right.html#a396188ccd2a6b5cebbfdf30b84a20887',1,'O8C.WebGL.WebXRControllerRight.Initialize()'],['../class_o8_c_1_1_web_g_l_1_1_web_x_r_controller_left.html#a881eb5ab3ae98ac71aabac9a3b001181',1,'O8C.WebGL.WebXRControllerLeft.Initialize()']]],
   ['inpccontroller_9',['INPCController',['../interface_i_n_p_c_controller.html',1,'']]],
-  ['inputactions_10',['inputActions',['../class_motor_input_actions.html#a0acdaa24dc9688cb6cca2fee28d04023',1,'MotorInputActions.inputActions()'],['../class_start_scene_microphone_controller.html#a9071546588b5f46b909f93499d0995a5',1,'StartSceneMicrophoneController.inputActions()']]],
+  ['inputactions_10',['inputActions',['../class_world_pointer_visibility.html#aa47dc5ea5318097db3646acabb94245c',1,'WorldPointerVisibility.inputActions()'],['../class_microphone_record_controller.html#a4e14921fac16ec4150d27d4df0eebb78',1,'MicrophoneRecordController.inputActions()'],['../class_motor_input_actions.html#a0acdaa24dc9688cb6cca2fee28d04023',1,'MotorInputActions.inputActions()'],['../class_world_pointer_networking.html#a6c62360b8dffa200476ca3c289dc316c',1,'WorldPointerNetworking.inputActions()']]],
   ['inputtransform_11',['inputTransform',['../class_motor_input_actions.html#a289a7ed2368024110e8604bb61486b22',1,'MotorInputActions.inputTransform()'],['../class_motor_input_keyboard.html#afdd5f25e3b27cdd73ae5941ad0c42546',1,'MotorInputKeyboard.inputTransform()']]],
   ['instance_12',['Instance',['../class_o8_c_1_1_o8_c_system.html#a0c3e283ad8afa2a3275fd9d99a9a0e86',1,'O8C::O8CSystem']]],
   ['io8cappfocusstate_13',['IO8CAppFocusState',['../interface_o8_c_1_1_i_o8_c_app_focus_state.html',1,'O8C']]],
@@ -22,7 +22,10 @@ var searchData=
   ['iplayeractions_19',['IPlayerActions',['../interface_verse_input_actions_1_1_i_player_actions.html',1,'VerseInputActions']]],
   ['isapplicationquitting_20',['isApplicationQuitting',['../class_o8_c_1_1_o8_c_mirror_network_player.html#a881c120a21a09a13abe48376283a9942',1,'O8C::O8CMirrorNetworkPlayer']]],
   ['isdeployedwebgl_21',['IsDeployedWebGL',['../class_o8_c_1_1_o8_c_system.html#a5bfc8241685b48fb9f43b97511cdc114',1,'O8C::O8CSystem']]],
-  ['ismoving_22',['IsMoving',['../class_i_k_rigged_actor_foot_solver.html#a9ed0e8750a0e6c7d07d31c234c9ef128',1,'IKRiggedActorFootSolver']]],
-  ['isproduction_23',['IsProduction',['../class_o8_c_1_1_o8_c_system.html#a0b3c1b84f4cf861bd83fe611c1c0f7e7',1,'O8C::O8CSystem']]],
-  ['isrecording_24',['IsRecording',['../interface_o8_c_1_1_i_o8_c_microphone_support.html#a653d5f43c09e1cf51accb35be1104443',1,'O8C.IO8CMicrophoneSupport.IsRecording()'],['../class_o8_c_1_1_o8_c_microphone_support.html#ac4896bf74fdea4d09f0dcd5cde8e87ac',1,'O8C.O8CMicrophoneSupport.IsRecording()'],['../class_o8_c_1_1_o8_c_voice_pro_microphone_support.html#ae7d9e971d040aeb1076acb158b9f761b',1,'O8C.O8CVoiceProMicrophoneSupport.IsRecording()']]]
+  ['islocalplayer_22',['IsLocalPlayer',['../class_world_pointer_networking.html#a359d8aaad4a870e27270ea2657a4e6bd',1,'WorldPointerNetworking.IsLocalPlayer()'],['../class_world_pointer_visibility.html#abff2a6e704b7378fd91b29f106ddd9cc',1,'WorldPointerVisibility.IsLocalPlayer()']]],
+  ['islocalplayer_23',['isLocalPlayer',['../class_world_pointer_visibility.html#a4000dff82caacc1f3634f84396656ec8',1,'WorldPointerVisibility']]],
+  ['ismoving_24',['IsMoving',['../class_i_k_rigged_actor_foot_solver.html#a9ed0e8750a0e6c7d07d31c234c9ef128',1,'IKRiggedActorFootSolver']]],
+  ['isplayerlocal_25',['isPlayerLocal',['../class_world_pointer_networking.html#ad0f589e76c579c445d2967f74b597e37',1,'WorldPointerNetworking']]],
+  ['isproduction_26',['IsProduction',['../class_o8_c_1_1_o8_c_system.html#a0b3c1b84f4cf861bd83fe611c1c0f7e7',1,'O8C::O8CSystem']]],
+  ['isrecording_27',['IsRecording',['../interface_o8_c_1_1_i_o8_c_microphone_support.html#a653d5f43c09e1cf51accb35be1104443',1,'O8C.IO8CMicrophoneSupport.IsRecording()'],['../class_o8_c_1_1_o8_c_microphone_support.html#ac4896bf74fdea4d09f0dcd5cde8e87ac',1,'O8C.O8CMicrophoneSupport.IsRecording()'],['../class_o8_c_1_1_o8_c_voice_pro_microphone_support.html#ae7d9e971d040aeb1076acb158b9f761b',1,'O8C.O8CVoiceProMicrophoneSupport.IsRecording()']]]
 ];

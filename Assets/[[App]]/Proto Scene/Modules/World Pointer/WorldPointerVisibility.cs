@@ -1,19 +1,45 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
+
 public class WorldPointerVisibility : MonoBehaviour
 {
-    [SerializeField] protected GameObject pointer;
+    #region Interface Variables
+
+    /// <summary>The pointer geometry.</summary>
+    [SerializeField] protected GameObject pointerGeometry;
+
+    #endregion
+
+
+
+    /// <summary>Maximum distance of pointer.</summary>
+    const float maxDistance = 20.0f;
+
+
+
+    #region Class Variables
 
     /// <summary>The input actions.</summary>
-    VerseInputActions inputActions;
+    protected VerseInputActions inputActions;
 
-    public Transform RootTransform { set { pointer.transform.parent = value; pointer.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity); } }
+    /// <summary>Flag indicating the player is a local player.</summary>
+    protected bool isLocalPlayer;
 
-    bool isLocalPlayer;
+    #endregion
 
-    public bool IsLocalPlayer { set {
-            isLocalPlayer = value; 
+
+
+    #region Properties
+
+    /// <summary>Allows the root transform of the pointer geometry to be set.</summary>
+    public Transform RootTransform { set { pointerGeometry.transform.parent = value; pointerGeometry.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity); } }
+
+    /// <summary>Allows the local player flag to be set. Upon setting this flag to true, input is polled.</summary>
+    public bool IsLocalPlayer {
+        set {
+            isLocalPlayer = value;
             if (value) {
                 inputActions = new VerseInputActions();
                 inputActions.Player.WorldPointer.Enable();
@@ -22,16 +48,26 @@ public class WorldPointerVisibility : MonoBehaviour
         }
     }
 
+    #endregion
 
 
 
+    #region Base Methods
+
+    /// <summary>
+    /// Initializes pointer visibility.
+    /// </summary>
     void Start()
     {
-        pointer.SetActive(false);
+        pointerGeometry.SetActive(false);
     }
 
+
+    /// <summary>
+    /// Handles destroying the player.
+    /// </summary>
     private void OnDestroy() {
-        Destroy(pointer);
+        Destroy(pointerGeometry);
         if (isLocalPlayer) {
             inputActions.Player.WorldPointer.started -= WorldPointerStarted;
             inputActions.Player.WorldPointer.Disable();
@@ -40,31 +76,55 @@ public class WorldPointerVisibility : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// Sets the pointer length, if active.
+    /// </summary>
     private void FixedUpdate() {
-        if (!pointer.activeInHierarchy) {
+        // If the pointer is not active, then do nothing.
+        if (!pointerGeometry.activeInHierarchy) {
             return;
         }
 
-        float maxDistance = 20.0f;
-
+        // Do raycast and set the pointer length.
         Vector3 scale = Vector3.one;
-        if (Physics.Raycast(pointer.transform.position, pointer.transform.forward, out RaycastHit hit, maxDistance)) {
+        if (Physics.Raycast(pointerGeometry.transform.position, pointerGeometry.transform.forward, out RaycastHit hit, maxDistance)) {
             scale.z = hit.distance;
         } else {
             scale.z = maxDistance;
         }
-        pointer.transform.localScale = scale;
+        pointerGeometry.transform.localScale = scale;
     }
 
+    #endregion
 
+
+
+    #region Public Methods
+
+    /// <summary>
+    /// Sets the pointer visibility.
+    /// </summary>
+    /// <param name="isVisible">Flag indicating visibility.</param>
     public void SetVisible(bool isVisible) {
-        pointer.SetActive(isVisible);
+        pointerGeometry.SetActive(isVisible);
     }
 
+    #endregion
 
+
+
+    #region Private Methods
+
+    /// <summary>
+    /// Callback called upon world pointer input.
+    /// </summary>
+    /// <param name="context">Input data</param>
     private void WorldPointerStarted(InputAction.CallbackContext context) {
         bool isVisible = context.ReadValueAsButton();
         Debug.Log("World Pointer " + isVisible);
         SetVisible(isVisible);
     }
+
+    #endregion
+
 }

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['voicebroadcastglobal_0',['VoiceBroadcastGlobal',['../struct_verse_input_actions_1_1_player_actions.html#a630c390fcde85cb3c70f9e5db4a3bb7f',1,'VerseInputActions::PlayerActions']]]
+  ['worldpointervisibility_0',['WorldPointerVisibility',['../class_world_pointer_networking.html#a20af96cf3e4a3485b736014a2423f1ee',1,'WorldPointerNetworking']]]
 ];

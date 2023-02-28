@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['voicebroadcastglobal_5fperformed_0',['VoiceBroadcastGlobal_performed',['../class_start_scene_microphone_controller.html#a1d2812f4819e1bcc64069c528bad513a',1,'StartSceneMicrophoneController']]]
+  ['voicebroadcastglobalstarted_0',['VoiceBroadcastGlobalStarted',['../class_microphone_record_controller.html#a32175d0e96d42e1378b359da3b929f88',1,'MicrophoneRecordController']]]
 ];

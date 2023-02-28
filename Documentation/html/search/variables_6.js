@@ -10,5 +10,5 @@ var searchData=
   ['headoriginalrotation_7',['headOriginalRotation',['../class_i_k_rigged_actor.html#a0aa776c3a038c8c2d4b3fadc18d438a3',1,'IKRiggedActor']]],
   ['headroot_8',['headRoot',['../class_tracked_parts.html#a415b2ec8c212d28dcea813041fc7b99b',1,'TrackedParts']]],
   ['hidelocalavatareventid_9',['HideLocalAvatarEventID',['../struct_app.html#ae0525e5741b5017febd332da7e58afba',1,'App']]],
-  ['hotmicindicatorprefab_10',['hotMicIndicatorPrefab',['../class_start_scene_player_connection.html#aa053efcd89c572170a2dcf4f349f9603',1,'StartScenePlayerConnection']]]
+  ['hotmicindicatorprefab_10',['hotMicIndicatorPrefab',['../class_player_connection_handler.html#ae6fe41e0804a44a5a32aedfa5218cc2f',1,'PlayerConnectionHandler']]]
 ];

@@ -5,6 +5,6 @@ var searchData=
   ['animationstate_2',['animationState',['../class_i_k_rigged_actor_arm_animation_controller.html#a56fb4b850b5cc9e70b1016632afc7342',1,'IKRiggedActorArmAnimationController']]],
   ['animator_3',['animator',['../class_i_k_rigged_actor_arm_animation_controller.html#ac6502748f5c2dfacaab035289f9ef56b',1,'IKRiggedActorArmAnimationController']]],
   ['appfocusstate_4',['appFocusState',['../class_o8_c_1_1_o8_c_system.html#aa525f185b686b4d07bed7a25d3cd45fc',1,'O8C::O8CSystem']]],
-  ['avatarfactory_5',['avatarFactory',['../class_start_scene_player_connection.html#a7119813dfdf0c87428239187c4632357',1,'StartScenePlayerConnection']]],
+  ['avatarfactory_5',['avatarFactory',['../class_player_connection_handler.html#a0d3d6a23b68a01943c01600cd2649d66',1,'PlayerConnectionHandler']]],
   ['avatarprefab_6',['avatarPrefab',['../class_i_k_rigged_avatar_factory.html#a017e8d07595d03d96913594d0cbe4581',1,'IKRiggedAvatarFactory.avatarPrefab()'],['../class_minimal_avatar_factory.html#a28f54d809a63eeede45cad8547af2016',1,'MinimalAvatarFactory.avatarPrefab()']]]
 ];

@@ -11,9 +11,9 @@ var searchData=
   ['headoffset_8',['headOffset',['../class_tracked_parts.html#aa3a1394694f98177be1aff7498d7076e',1,'TrackedParts']]],
   ['headoffset_9',['HeadOffset',['../class_tracked_parts.html#ad9ea9ff8c0b017596cc1ddeb7aa896ff',1,'TrackedParts']]],
   ['headoriginalrotation_10',['headOriginalRotation',['../class_i_k_rigged_actor.html#a0aa776c3a038c8c2d4b3fadc18d438a3',1,'IKRiggedActor']]],
-  ['headroot_11',['headRoot',['../class_tracked_parts.html#a415b2ec8c212d28dcea813041fc7b99b',1,'TrackedParts']]],
-  ['headroot_12',['HeadRoot',['../class_tracked_parts.html#a1bf6fae05032c4bb2736296f13b22657',1,'TrackedParts']]],
+  ['headroot_11',['HeadRoot',['../class_tracked_parts.html#a1bf6fae05032c4bb2736296f13b22657',1,'TrackedParts']]],
+  ['headroot_12',['headRoot',['../class_tracked_parts.html#a415b2ec8c212d28dcea813041fc7b99b',1,'TrackedParts']]],
   ['hidelocalavatareventid_13',['HideLocalAvatarEventID',['../struct_app.html#ae0525e5741b5017febd332da7e58afba',1,'App']]],
   ['hotmicindicator_14',['HotMicIndicator',['../class_hot_mic_indicator.html',1,'']]],
-  ['hotmicindicatorprefab_15',['hotMicIndicatorPrefab',['../class_start_scene_player_connection.html#aa053efcd89c572170a2dcf4f349f9603',1,'StartScenePlayerConnection']]]
+  ['hotmicindicatorprefab_15',['hotMicIndicatorPrefab',['../class_player_connection_handler.html#ae6fe41e0804a44a5a32aedfa5218cc2f',1,'PlayerConnectionHandler']]]
 ];
