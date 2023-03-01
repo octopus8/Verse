@@ -2,9 +2,12 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-
+/// <summary>
+/// Handles world pointer visibility (and length).
+/// </summary>
 public class WorldPointerVisibility : MonoBehaviour
 {
+
     #region Interface Variables
 
     /// <summary>The pointer geometry.</summary>
@@ -14,12 +17,10 @@ public class WorldPointerVisibility : MonoBehaviour
 
 
 
+    #region Class Variables
+
     /// <summary>Maximum distance of pointer.</summary>
     const float maxDistance = 20.0f;
-
-
-
-    #region Class Variables
 
     /// <summary>The input actions.</summary>
     protected VerseInputActions inputActions;

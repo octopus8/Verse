@@ -22,7 +22,7 @@ var searchData=
   ['iplayeractions_19',['IPlayerActions',['../interface_verse_input_actions_1_1_i_player_actions.html',1,'VerseInputActions']]],
   ['isapplicationquitting_20',['isApplicationQuitting',['../class_o8_c_1_1_o8_c_mirror_network_player.html#a881c120a21a09a13abe48376283a9942',1,'O8C::O8CMirrorNetworkPlayer']]],
   ['isdeployedwebgl_21',['IsDeployedWebGL',['../class_o8_c_1_1_o8_c_system.html#a5bfc8241685b48fb9f43b97511cdc114',1,'O8C::O8CSystem']]],
-  ['islocalplayer_22',['IsLocalPlayer',['../class_world_pointer_networking.html#a359d8aaad4a870e27270ea2657a4e6bd',1,'WorldPointerNetworking.IsLocalPlayer()'],['../class_world_pointer_visibility.html#abff2a6e704b7378fd91b29f106ddd9cc',1,'WorldPointerVisibility.IsLocalPlayer()']]],
+  ['islocalplayer_22',['IsLocalPlayer',['../class_world_pointer.html#a3f78a234582e21a0341b0fcaf5ec1912',1,'WorldPointer.IsLocalPlayer()'],['../class_world_pointer_networking.html#a359d8aaad4a870e27270ea2657a4e6bd',1,'WorldPointerNetworking.IsLocalPlayer()'],['../class_world_pointer_visibility.html#abff2a6e704b7378fd91b29f106ddd9cc',1,'WorldPointerVisibility.IsLocalPlayer()']]],
   ['islocalplayer_23',['isLocalPlayer',['../class_world_pointer_visibility.html#a4000dff82caacc1f3634f84396656ec8',1,'WorldPointerVisibility']]],
   ['ismoving_24',['IsMoving',['../class_i_k_rigged_actor_foot_solver.html#a9ed0e8750a0e6c7d07d31c234c9ef128',1,'IKRiggedActorFootSolver']]],
   ['isplayerlocal_25',['isPlayerLocal',['../class_world_pointer_networking.html#ad0f589e76c579c445d2967f74b597e37',1,'WorldPointerNetworking']]],

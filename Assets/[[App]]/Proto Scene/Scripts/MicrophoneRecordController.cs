@@ -9,10 +9,14 @@ using UnityEngine.InputSystem;
 /// </summary>
 public class MicrophoneRecordController : MonoBehaviour
 {
-    /// <summary>The input actions.</summary>
-    VerseInputActions inputActions;
 
-    Coroutine stopOnStart = null;
+    /// <summary>The input actions.</summary>
+    protected VerseInputActions inputActions;
+
+    /// <summary>Coroutine used to stop record on start.</summary>
+    protected Coroutine stopOnStart = null;
+
+
 
     #region Base Methods
 
@@ -58,7 +62,7 @@ public class MicrophoneRecordController : MonoBehaviour
     /// Callback called upon VoiceBroadcastGlobal input action.
     /// </summary>
     /// <param name="context">Unused</param>
-    private void VoiceBroadcastGlobalStarted(InputAction.CallbackContext context) {
+    protected void VoiceBroadcastGlobalStarted(InputAction.CallbackContext context) {
         if (context.ReadValueAsButton()) {
             Debug.Log("Global broadcast start");
             if (stopOnStart != null) {
@@ -77,7 +81,13 @@ public class MicrophoneRecordController : MonoBehaviour
         }
     }
 
-    IEnumerator StopRecordOnStart() {
+
+    /// <summary>
+    /// Stops recording as soon as recording is detected.
+    /// </summary>
+    /// <remarks>Starting record can take a few frames. In that time, a request to stop may be made. This stop must happen after the record starts.</remarks>
+    /// <returns>Coroutine</returns>
+    protected IEnumerator StopRecordOnStart() {
         while (true) {
             if (O8CSystem.Instance.MicrophoneSupport.IsRecording()) {
                 O8CSystem.Instance.MicrophoneSupport.StopRecord();

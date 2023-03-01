@@ -7,7 +7,10 @@ var searchData=
   ['webxrplatform_4',['webXRPlatform',['../class_o8_c_1_1_o8_c_platform_rig_platform_selector.html#a39dd2399577d4239c00dd54a82d695fa',1,'O8C::O8CPlatformRigPlatformSelector']]],
   ['worldpointer_5',['WorldPointer',['../class_world_pointer.html',1,'']]],
   ['worldpointernetworking_6',['WorldPointerNetworking',['../class_world_pointer_networking.html',1,'']]],
-  ['worldpointerprefab_7',['worldPointerPrefab',['../class_player_connection_handler.html#a15b559e03b032c5965ab69e22d190703',1,'PlayerConnectionHandler']]],
-  ['worldpointerstarted_8',['WorldPointerStarted',['../class_world_pointer_networking.html#a9980c078dcb993c0d3b79c9c3c19f229',1,'WorldPointerNetworking.WorldPointerStarted()'],['../class_world_pointer_visibility.html#af9e377d313c374578ea752a4c49b8357',1,'WorldPointerVisibility.WorldPointerStarted()']]],
-  ['worldpointervisibility_9',['WorldPointerVisibility',['../class_world_pointer_visibility.html',1,'WorldPointerVisibility'],['../class_world_pointer_networking.html#a20af96cf3e4a3485b736014a2423f1ee',1,'WorldPointerNetworking.WorldPointerVisibility()']]]
+  ['worldpointernetworking_7',['worldPointerNetworking',['../class_world_pointer.html#a1506bee4920e4235b4cc3765804f4bcc',1,'WorldPointer']]],
+  ['worldpointerprefab_8',['worldPointerPrefab',['../class_player_connection_handler.html#a15b559e03b032c5965ab69e22d190703',1,'PlayerConnectionHandler']]],
+  ['worldpointerstarted_9',['WorldPointerStarted',['../class_world_pointer_networking.html#a9980c078dcb993c0d3b79c9c3c19f229',1,'WorldPointerNetworking.WorldPointerStarted()'],['../class_world_pointer_visibility.html#af9e377d313c374578ea752a4c49b8357',1,'WorldPointerVisibility.WorldPointerStarted()']]],
+  ['worldpointervisibility_10',['WorldPointerVisibility',['../class_world_pointer_visibility.html',1,'']]],
+  ['worldpointervisibility_11',['worldPointerVisibility',['../class_world_pointer.html#ab0cba52c2ab2ee459f4f708548f6ce70',1,'WorldPointer']]],
+  ['worldpointervisibility_12',['WorldPointerVisibility',['../class_world_pointer_networking.html#a20af96cf3e4a3485b736014a2423f1ee',1,'WorldPointerNetworking']]]
 ];

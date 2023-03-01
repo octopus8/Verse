@@ -26,7 +26,7 @@ var searchData=
   ['righthandoffset_23',['RightHandOffset',['../class_tracked_parts.html#a1fb352b117c626797560653915adae1c',1,'TrackedParts']]],
   ['righthandoffsets_24',['rightHandOffsets',['../class_tracked_parts.html#a96bfac4e8c08fbadffbaac4730b881fa',1,'TrackedParts']]],
   ['righthandtransform_25',['RightHandTransform',['../class_tracked_parts.html#a8413f9accf4ef956a718197bc05f28d6',1,'TrackedParts']]],
-  ['roottransform_26',['RootTransform',['../class_world_pointer_visibility.html#a5bdeda1dfe9a0692cf3bbf6e3d475da9',1,'WorldPointerVisibility.RootTransform()'],['../class_n_p_c_controller_circle.html#a48f8bf136d8168b23397182b361ff8d4',1,'NPCControllerCircle.RootTransform()']]],
+  ['roottransform_26',['RootTransform',['../class_world_pointer.html#a76e941bef1dd51c69b0c9d36b83cf0f7',1,'WorldPointer.RootTransform()'],['../class_world_pointer_visibility.html#a5bdeda1dfe9a0692cf3bbf6e3d475da9',1,'WorldPointerVisibility.RootTransform()'],['../class_n_p_c_controller_circle.html#a48f8bf136d8168b23397182b361ff8d4',1,'NPCControllerCircle.RootTransform()']]],
   ['rotation_27',['rotation',['../struct_tracked_parts_1_1_physical_offset.html#a79c6fc32e4d5522905e8702d9bc14482',1,'TrackedParts::PhysicalOffset']]],
   ['runtimeanimatorcontroller_28',['runtimeAnimatorController',['../class_spawnable_i_k_rigged_actor.html#a7a981b5a95662d2898d351d6a159f54b',1,'SpawnableIKRiggedActor']]]
 ];

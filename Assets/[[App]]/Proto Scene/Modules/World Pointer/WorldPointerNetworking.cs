@@ -1,8 +1,10 @@
 using Mirror;
-using UnityEngine;
 using UnityEngine.InputSystem;
 
 
+/// <summary>
+/// Handles world pointer networking.
+/// </summary>
 public class WorldPointerNetworking : NetworkBehaviour {
 
     #region Class Variables
