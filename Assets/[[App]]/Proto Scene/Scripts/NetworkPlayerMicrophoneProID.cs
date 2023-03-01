@@ -4,9 +4,9 @@ using Mirror;
 
 
 /// <summary>
-/// Provides support for 
+/// This component is attached to a O8CMirrorNetworkPlayer to provide access to a player's Microphone Pro ID. 
 /// </summary>
-public class MicrophoneNetworking : NetworkBehaviour {
+public class NetworkPlayerMicrophoneProID : NetworkBehaviour {
 
     /// <summary>
     /// Synchronized Microphone Pro ID.
