@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f41ad3f7da8dd34b88861881f0db743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointer: {fileID: 5969683997279355760}
+  pointerGeometry: {fileID: 5969683997279355760}
 --- !u!1 &5006039803909137375
 GameObject:
   m_ObjectHideFlags: 0
