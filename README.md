@@ -23,9 +23,6 @@
 </div>
 
 ## Milestones
-* 1.0.06 - Networked World Pointers
-  * Local user can activate/deactivate a world pointer
-  * Remote players activate/deactivate world pointers appropriately
 * 1.0.07 - Name Input and Nameplate  
   * User can enter a name
   * User's name is displayed over the user
@@ -55,6 +52,9 @@
   * Full body local and remote avatar with IK legs
 * 1.0.05 - NPC  
   * NPC walking in a circle with animated arms and legs
+* 1.0.06 - Networked World Pointers
+  * Local user can activate/deactivate a world pointer
+  * Remote players activate/deactivate world pointers appropriately
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
