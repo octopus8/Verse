@@ -68,6 +68,9 @@ namespace O8C {
         /// <summary>
         /// Sets the ports to use for the network transports.
         /// </summary>
+        /// <remarks>
+        /// PC and Android always use the production server.
+        /// </remarks>
         private new void Awake() {
             base.Awake();
 
@@ -76,8 +79,7 @@ namespace O8C {
             Debug.Log("Server Type: Dev");
             telepathyTransport.port = telepathyTransportDevPort;
             simpleWebTransport.port = simpleWebTransportDevPort;
-        }
-        else {
+        } else {
             Debug.Log("Server Type: PRODUCTION");
             telepathyTransport.port = telepathyTransportProdPort;
             simpleWebTransport.port = simpleWebTransportProdPort;
@@ -86,14 +88,13 @@ namespace O8C {
         if (Application.absoluteURL.Contains("dev")) {
             telepathyTransport.port = telepathyTransportDevPort;
             simpleWebTransport.port = simpleWebTransportDevPort;
-        }
-        else {
+        } else {
             telepathyTransport.port = telepathyTransportProdPort;
             simpleWebTransport.port = simpleWebTransportProdPort;
         }
 #elif UNITY_EDITOR
-            telepathyTransport.port = telepathyTransportDevPort;
-            simpleWebTransport.port = simpleWebTransportDevPort;
+        telepathyTransport.port = telepathyTransportDevPort;
+        simpleWebTransport.port = simpleWebTransportDevPort;
 #else
         telepathyTransport.port = telepathyTransportProdPort;
         simpleWebTransport.port = simpleWebTransportProdPort;
