@@ -93,7 +93,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8538180591785806580}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &972915593941634927
 GameObject:
@@ -211,7 +211,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8538180591785806580}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2404427025643869661
 GameObject:
@@ -242,38 +242,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5460466429673618708}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4145069068924867111
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5077334076105821966}
-  m_Layer: 0
-  m_Name: Left Arm Tracking
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5077334076105821966
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4145069068924867111}
-  m_LocalRotation: {x: -4.99366e-20, y: 7.8796586e-10, z: -0.00000002623889, w: 1}
-  m_LocalPosition: {x: -0.9067001, y: 1.3286, z: 0.009599999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8538180591785806580}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4239803613388717106
 GameObject:
@@ -304,7 +273,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7951288603154066341}
   - {fileID: 4104381150333038415}
   - {fileID: 7691444715113158840}
   m_Father: {fileID: 3015801792258350779}
@@ -421,7 +389,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5077334076105821966}
   - {fileID: 4573772215604300384}
   - {fileID: 3857165555605298488}
   m_Father: {fileID: 3015801792258350779}
@@ -576,7 +543,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5460466429673618708}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6915322492242822474
 GameObject:
@@ -692,37 +659,6 @@ MonoBehaviour:
     m_HintWeight: 1
     m_MaintainTargetPositionOffset: 0
     m_MaintainTargetRotationOffset: 0
---- !u!1 &8709956456234086297
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7951288603154066341}
-  m_Layer: 0
-  m_Name: Right Arm Tracking
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7951288603154066341
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8709956456234086297}
-  m_LocalRotation: {x: -4.99366e-20, y: 7.8796586e-10, z: -0.00000002623889, w: 1}
-  m_LocalPosition: {x: 0.9067001, y: 1.3286, z: 0.009599999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5460466429673618708}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3861759076731564364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1061,21 +997,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headRoot: {fileID: 8271250428527765891}
   headOffset: {x: 0, y: -1.7, z: -0.12}
-  leftHand: {fileID: 5077334076105821966}
+  leftHand: {fileID: 4573772215604300384}
   leftHandOffsets:
     webXR:
       position: {x: -0.02, y: -0.02, z: -0.18}
       rotation: {x: -90, y: 180, z: 0}
     oculus:
-      position: {x: 0, y: -0.03, z: -0.13}
+      position: {x: -0.02895413, y: -0.05003513, z: -0.1134864}
       rotation: {x: -70, y: 180, z: 0}
-  rightHand: {fileID: 7951288603154066341}
+  rightHand: {fileID: 4104381150333038415}
   rightHandOffsets:
     webXR:
       position: {x: 0.02, y: -0.02, z: -0.18}
       rotation: {x: 90, y: 0, z: 0}
     oculus:
-      position: {x: 0, y: -0.03, z: -0.13}
+      position: {x: 0.02895413, y: -0.05003513, z: -0.1134864}
       rotation: {x: 70, y: 0, z: 0}
 --- !u!114 &5751819447289889727
 MonoBehaviour:

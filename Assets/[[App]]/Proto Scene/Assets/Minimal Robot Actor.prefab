@@ -466,7 +466,7 @@ MonoBehaviour:
       position: {x: 0, y: 0, z: -0.07}
       rotation: {x: -90, y: 90, z: 0}
     oculus:
-      position: {x: 0, y: 0, z: 0}
+      position: {x: -0.02978284, y: -0.001458045, z: -0.01464641}
       rotation: {x: -90, y: 90, z: 0}
   rightHand: {fileID: 8249085357153839448}
   rightHandOffsets:
@@ -474,7 +474,7 @@ MonoBehaviour:
       position: {x: 0, y: 0, z: -0.07}
       rotation: {x: -90, y: -90, z: 0}
     oculus:
-      position: {x: 0, y: 0, z: 0}
+      position: {x: 0.02978284, y: -0.001458045, z: -0.01464641}
       rotation: {x: -90, y: -90, z: 0}
 --- !u!1 &8496055607834206701
 GameObject:

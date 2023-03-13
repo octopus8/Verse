@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// This component handles "show/hide avatar" events.
 /// </summary>
-public class LocalAvatarHider : MonoBehaviour {
+public class LocalAvatarHideEventHandler : MonoBehaviour {
 
     /// <summary>The avatar GameObject.</summary>
     public GameObject Avatar { private get; set; }

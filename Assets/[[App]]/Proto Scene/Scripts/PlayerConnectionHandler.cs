@@ -74,28 +74,36 @@ public class PlayerConnectionHandler : MonoBehaviour
     /// <param name="isLocalPlayer">Flag indicating the player is a local player.</param>
     private void OnPlayerConnected(GameObject player, bool isLocalPlayer) {
 
+        // Create the avatar for the player.
         var networkPlayer = player.GetComponent<IO8CNetworkPlayer>();
         GameObject avatar = avatarFactory.CreateAvatar(player, networkPlayer, isLocalPlayer);
 
+        // If the player is a local player...
         if (isLocalPlayer) {
+
+            // Set the player GameObject name.
             player.name = "Local Player";
+
+            // Set the play area to follow the player.
+            O8CSystem.Instance.DeviceTracking.SetPlayAreaFollower(player);
+
+            // Add the actor motor and connect input.
             var actorMotor = player.AddComponent<ActorMotorSimple>();
             foreach (var motorInput in motorInputs) {
                 motorInput.SetMotor(actorMotor);
                 motorInput.SetInputTransform(player.transform);
             }
-            O8CSystem.Instance.DeviceTracking.SetPlayAreaFollower(player);
-
-            // Add the hot mic controller to the player. Instantiate the hot mic indicator prefab and attach it to the head.
-            player.AddComponent<MicrophoneRecordController>();
-            Instantiate(hotMicIndicatorPrefab, O8CSystem.Instance.DeviceTracking.GetHeadTransform());
 
             // Add Controllers display.
             var controllers = Instantiate(controllersPrefab, player.transform).GetComponent<MinimalAvatar>();
             controllers.SetTrackedSources(networkPlayer.GetHeadTransform(), networkPlayer.GetLeftHandTransform(), networkPlayer.GetRightHandTransform());
 
-            // Add avatar hider.
-            player.AddComponent<LocalAvatarHider>().Avatar = avatar;
+            // Add the hot mic controller to the player. Instantiate the hot mic indicator prefab and attach it to the head.
+            player.AddComponent<MicrophoneRecordController>();
+            Instantiate(hotMicIndicatorPrefab, O8CSystem.Instance.DeviceTracking.GetHeadTransform());
+
+            // Add "hide avatar" event handler.
+            player.AddComponent<LocalAvatarHideEventHandler>().Avatar = avatar;
 
             // Initialize the player position.
             player.transform.rotation = startTransform.rotation;
@@ -124,6 +132,6 @@ public class PlayerConnectionHandler : MonoBehaviour
         }
     }
 
-    #endregion
+#endregion
 
 }

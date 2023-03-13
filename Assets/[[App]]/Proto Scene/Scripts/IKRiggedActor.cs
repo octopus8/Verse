@@ -97,18 +97,13 @@ public class IKRiggedActor : MonoBehaviour
             AvatarRoot.rotation = Quaternion.Euler(0f, yRot, 0f);
         }
 
+        // BLEE Note: Is this check needed? (and the one below)
         if (null != trackedLeftHandSource) {
-            trackedParts.LeftHandTransform.position = trackedLeftHandSource.transform.position;
-            trackedParts.LeftHandTransform.rotation = trackedLeftHandSource.transform.rotation;
-            leftHandIKTarget.transform.SetPositionAndRotation(trackedLeftHandSource.transform.position, trackedLeftHandSource.transform.rotation * Quaternion.Euler(trackedParts.LeftHandOffset.rotation));
-            leftHandIKTarget.transform.localPosition += trackedLeftHandSource.transform.localRotation * trackedParts.LeftHandOffset.position;
+            leftHandIKTarget.transform.SetPositionAndRotation(trackedLeftHandSource.transform.position + (trackedLeftHandSource.transform.rotation * trackedParts.LeftHandOffset.position), trackedLeftHandSource.transform.rotation * Quaternion.Euler(trackedParts.LeftHandOffset.rotation));
         }
 
         if (null != trackedRightHandSource) {
-            trackedParts.RightHandTransform.position = trackedRightHandSource.transform.position;
-            trackedParts.RightHandTransform.rotation = trackedRightHandSource.transform.rotation;
-            rightHandIKTarget.transform.SetPositionAndRotation(trackedRightHandSource.transform.position, trackedRightHandSource.transform.rotation * Quaternion.Euler(trackedParts.RightHandOffset.rotation));
-            rightHandIKTarget.transform.localPosition += trackedRightHandSource.transform.localRotation * trackedParts.RightHandOffset.position;
+            rightHandIKTarget.transform.SetPositionAndRotation(trackedRightHandSource.transform.position + (trackedRightHandSource.transform.rotation * trackedParts.RightHandOffset.position), trackedRightHandSource.transform.rotation * Quaternion.Euler(trackedParts.RightHandOffset.rotation));
         }
     }
 
